@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Tests" verbose="5" data-provider-thread-count="1">
+	<test name="Test1">
+		<parameter name="application.properties" value="src/main/resources/application.properties"/>
+		<classes>
+			<!--class name="kksng.etax_automation.tests.LoginTests"/-->
+			<!--class name="kksng.courier_automation.tests.TC0101_SF"/-->
+			<class name="kksng.courier_automation.tests.TC0102_WB"/>
+		</classes>
+	</test>  
+</suite>
