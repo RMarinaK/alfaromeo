@@ -1,0 +1,5 @@
+mc.yandex.ru:HSTS	0	16555	1461933135333,1,0
+services.addons.mozilla.org:HSTS	54	16569	1463153288431,1,0
+addons.mozilla.org:HSTS	0	16470	1454574625131,1,0
+blocklist.addons.mozilla.org:HSTS	52	16568	1463064348784,1,0
+addons.cdn.mozilla.net:HSTS	0	16456	1453356093513,1,0
