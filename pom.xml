@@ -208,7 +208,7 @@
     <profile>
 		<id>remote_ff_test</id>
 		<activation>
-        	<activeByDefault>false</activeByDefault>
+        	<activeByDefault>true</activeByDefault>
       	</activation>
       <build>
         <plugins>
@@ -230,7 +230,7 @@
         <user.password></user.password>
         <grid2.hub>http://10.2.0.67:4445/wd/hub</grid2.hub>
         <site.url>http://www.test7.srvtest-tehnosila.ru/</site.url>
-        <browser.name>firefox</browser.name>
+        <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
@@ -275,7 +275,7 @@
      <profile>
 		<id>remote_chrome_test</id>
 		<activation>
-        	<activeByDefault>true</activeByDefault>
+        	<activeByDefault>false</activeByDefault>
       	</activation>
       <build>
         <plugins>

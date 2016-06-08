@@ -1,2 +1,4 @@
-/logback/
-/test-output/
+target
+/target
+test-output
+/test-output
