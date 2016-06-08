@@ -38,7 +38,6 @@ public class Smoke_Mobile extends TestBase{
         return(retObjArr);
     }
 	
-	
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email) throws IOException, InterruptedException{ //3
 		// авторизация
@@ -74,10 +73,6 @@ public class Smoke_Mobile extends TestBase{
 		mobilepageorder.setOrderFromOrderContactPhone(phone);
 		mobilepageorder.setOrderFromOrderContactEmail(email);
 		mobilepageorder.clickRadioButtonDelivery();
-		mobilepageorder.clickButtonSubmitOrder();
-		
-
-		
-
+		mobilepageorder.clickButtonSubmitOrder();	
 	}
 }

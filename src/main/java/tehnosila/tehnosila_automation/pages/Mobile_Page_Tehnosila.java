@@ -27,20 +27,6 @@ public class Mobile_Page_Tehnosila extends PagesBase{
 	
 	@FindBy(id = "menu_trigger")
 	public WebElement menutrigger; // Меню
-		
-
-	@FindBy(xpath="//a[@href='http://m.tehnosila.ru/catalog']") //  div[@id='menu_popup']/ul/li/a/   xpath = "//span[contains(text(),'Каталог товаров')]/../.."
-	public WebElement catalog; // Каталог товаров
-	
-	
-	@FindBy(xpath="//a[@href='http://m.tehnosila.ru/catalog/tv_i_video']")
-	private WebElement tvaudiovideo; // Телевизоры, аудио, видео
-	
-	@FindBy(xpath="//a[@href='http://m.tehnosila.ru/catalog/tv_i_video/televizory']")
-	private WebElement tv; // Телевизоры
-	
-	@FindBy(xpath="//a[@href='http://m.tehnosila.ru/catalog/tv_i_video/televizory/televizory']")
-	private WebElement ledtv; // LED телевизоры
 	
 	@Override
 	void tryToOpen() {
@@ -59,24 +45,27 @@ public class Mobile_Page_Tehnosila extends PagesBase{
 	
 	// жмаканье на кнопку "Каталог товаров"
 	public void clickCatalog() {
-		if(!app.getNavigationHelper().waitPresense(By.xpath("//div[@id='menu_popup']"), 0))
-		    return;
+	//	if(!app.getNavigationHelper().waitPresense(By.xpath("//div[@id='menu_popup']"), 0))
+	//	    return;
+		WebElement catalog = driver.findElement(By.xpath("//a[contains(@href,  '" + URL_MATCH + "catalog')]"));
 		catalog.click(); 
 	}	
 	
 	// жмаканье на кнопку "Телевизоры, аудио, видео"
 	public void clickTVAudioVideo() {
+		WebElement tvaudiovideo = driver.findElement(By.xpath("//a[contains(@href,  '" + URL_MATCH + "catalog/tv_i_video')]"));
 		tvaudiovideo.click(); 
 	}
 	
 	// жмаканье на кнопку "Телевизоры"
 	public void clickTV() {
+		WebElement tv = driver.findElement(By.xpath("//a[contains(@href,  '" + URL_MATCH + "catalog/tv_i_video/televizory')]"));
 		tv.click(); 
 	}
 	
 	// жмаканье на кнопку "LED телевизоры"
 	public void clickLEDTV() {
+		WebElement ledtv = driver.findElement(By.xpath("//a[contains(@href,  '" + URL_MATCH + "catalog/tv_i_video/televizory/televizory')]"));
 		ledtv.click(); 
 	}
-	
 }

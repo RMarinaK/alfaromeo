@@ -4,9 +4,7 @@
 	<test name="Interchange">
 		<parameter name="application.properties" value="src/main/resources/application.properties"/>
 		<classes>
-			<class name="tehnosila.tehnosila_automation.tests.Smoke_Terminal"/>			
+			<class name="tehnosila.tehnosila_automation.tests.Smoke_Mobile"/>		
 		</classes>
-	</test>  
-	
-	
+	</test>  	
 </suite>
