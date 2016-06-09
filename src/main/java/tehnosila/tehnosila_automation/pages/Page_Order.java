@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import tehnosila.tehnosila_automation.AppManager.ScreenShot;
+
 /**
  * @author MRasstrigina
  *
@@ -79,7 +81,14 @@ public class Page_Order extends PagesBase{
 	}	
 	
 	// жмаканье на "Завершить оформление"
-	public void clickButtonSubmitOrder() {
-		buttonsubmitorder.click(); 
-	}	
+	public void clickButtonSubmitOrder() throws Exception {
+		try {
+			buttonsubmitorder.click(); 
+			Log.info("жмаканье на Завершить оформление");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }    
+	}	 	
 }

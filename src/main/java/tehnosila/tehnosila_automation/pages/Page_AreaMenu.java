@@ -49,7 +49,7 @@ public class Page_AreaMenu extends PagesBase {
     	  boolean flag = app.getNavigationHelper().waitPresense(By.xpath("//img[@alt='Техносила']"), 10);
     	  Log.info("***QA: Is the logo displayed? "+ flag);
     	  return flag;
-    	 }	
+    }	
     
 	// вытягивание ФИО пользователя
 	public String getUserName(){

@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import tehnosila.tehnosila_automation.AppManager.ScreenShot;
+
 /**
  * @author MRasstrigina
  *
@@ -24,8 +26,14 @@ public class Page_Cart extends PagesBase{
 	}
 	
 	// жмаканье на "Офорить заказ"
-	public void clickButtonOrdering() {
-		buttonordering.click(); 
-	}	
-
+	public void clickButtonOrdering() throws Exception {
+		try {
+			buttonordering.click(); 
+			Log.info("жмаканье на Офорить заказ");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }    
+	}	 
 }

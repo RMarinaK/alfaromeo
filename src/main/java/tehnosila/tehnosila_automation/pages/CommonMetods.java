@@ -1,5 +1,6 @@
 package tehnosila.tehnosila_automation.pages;
 
+import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
 
 import org.openqa.selenium.By;
@@ -7,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 
 /**
  * @author MRasstrigina
@@ -20,11 +22,20 @@ public class CommonMetods extends Page_AreaMenu {
 	@FindBy(linkText = "ссылке")
 	public WebElement linkText; // ссылка "ссылке" в информационном сообщении
 	
-	@FindBy(xpath = "//div[@id='viewModel']/div/h3") 
-	private WebElement title; // заголовок на страницах
+//	@FindBy(xpath = "//div[@id='viewModel']/div/h3") 
+//	private WebElement title; // заголовок на страницах
 	
 	@FindBy(xpath = "//div[@class='filter-tool']/h3") 
 	private WebElement titlefilter; // заголовок фильтра на страницах реестров документов
+	
+	@FindBy(id = "logo")
+	public WebElement logo; // логотип
+	
+	@FindBy(xpath = "//title") 
+	private WebElement title; // title на страницах
+	
+	@FindBy(xpath = "//h1") 
+	private WebElement header; // заголовок на страницах
 	
     // жмаканье на ссылку "ссылке" в информационном сообщении
     public void clickLinkText() {
@@ -53,5 +64,51 @@ public class CommonMetods extends Page_AreaMenu {
 
 	public void RefreshTerm(){
 		app.getNavigationHelper().refreshPage();
+	}
+	
+	// жмаканье на логотип
+	public void clickLogo() throws Exception {
+		try {
+			logo.click(); 
+			Log.info("Логотип");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }    
+	}
+	
+	// вытягивание названия страницы
+	public String getTitle(){
+		return driver.getTitle();
+	}
+	
+	// вытягивание заголовка страницы
+	public String getHeader(){
+		return header.getText();
+	}
+	
+	// проверка отображения Title
+	public void assertTitle(String title) throws Exception {
+		try {
+			Assert.assertEquals(title, getTitle()); // проверка отображения Title
+			Log.info("***QA: Title "+ getTitle());
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }    
+	}	
+		
+	// проверка отображения Header
+	public void assertHeader(String header) throws Exception {
+		try {
+			Assert.assertEquals(header, getHeader()); // проверка отображения Header
+			Log.info("***QA: Header "+ getHeader());
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }    
 	}
 }

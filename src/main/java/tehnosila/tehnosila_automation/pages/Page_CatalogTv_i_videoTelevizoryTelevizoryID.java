@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import tehnosila.tehnosila_automation.AppManager.ScreenShot;
+
 public class Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
 	private static Logger Log = LoggerFactory.getLogger(Page_CatalogTv_i_videoTelevizoryTelevizory.class);
 	//DSE: url to check page
@@ -25,13 +27,27 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
 	}
 	
 	// жмаканье на "Купить"
-	public void clickButtonBuy() {
-		buttonbuy.click(); 
-	}
-	
-	// жмаканье на "Кнопка "Перейти в корзину"
-	public void clickPopupButtonToCart() {
-		popupbuttontocart.click(); 
-	}
+	public void clickButtonBuy() throws Exception {
+		try {
+			buttonbuy.click(); 
+			Log.info("жмаканье на Купить");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }    
+	}	 
+		
+	// жмаканье на "Перейти в корзину"
+	public void clickPopupButtonToCart() throws Exception {
+		try {
+			popupbuttontocart.click(); 
+			Log.info("жмаканье на Перейти в корзину");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }    
+	}	 
 	
 }

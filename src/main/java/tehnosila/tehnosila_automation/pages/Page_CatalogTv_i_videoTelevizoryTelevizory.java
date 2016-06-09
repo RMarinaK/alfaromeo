@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import tehnosila.tehnosila_automation.AppManager.ScreenShot;
+
 public class Page_CatalogTv_i_videoTelevizoryTelevizory extends PagesBase{
 	private static Logger Log = LoggerFactory.getLogger(Page_CatalogTv_i_videoTelevizoryTelevizory.class);
 	//DSE: url to check page
@@ -27,8 +29,15 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizory extends PagesBase{
 	}
 	
 	// жмаканье на "Первый телевизор"
-	public void clickItemInFowrapFirst() {
-		iteminfowrapfirst.click(); 
+	public void clickItemInFowrapFirst() throws Exception {
+		try {
+			iteminfowrapfirst.click(); 
+			Log.info("Первый телевизор");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         } 
 	}	
 
 }
