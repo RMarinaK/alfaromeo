@@ -241,7 +241,7 @@
     <profile>
 		<id>remote_chrome_test_mobile</id>
 		<activation>
-        	<activeByDefault>true</activeByDefault>
+        	<activeByDefault>false</activeByDefault>
       	</activation>
       <build>
         <plugins>

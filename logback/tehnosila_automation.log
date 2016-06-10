@@ -1,0 +1,47 @@
+10.06.2016 11:42:28.901 INFO  t.t.t.TestBase:getTableArray:53 - startRow=1, endRow=3, startCol=0, endCol=22
+10.06.2016 11:42:29.260 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:42:29.644 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:42:30.220 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:42:32.106 INFO  t.t.p.Page_Tehnosila:clickFeedback:335 - Обратная связь
+10.06.2016 11:42:32.431 INFO  t.t.p.CommonMetods:assertTitle:95 - ***QA: Title Обратная связь
+10.06.2016 11:42:32.517 INFO  t.t.p.CommonMetods:assertHeader:107 - ***QA: Header Обратная связь
+10.06.2016 11:42:35.443 INFO  t.t.p.Page_HelpFeedback:clickButtonSend:113 - жмаканье на Отправить
+10.06.2016 11:42:35.570 INFO  t.t.p.Page_HelpFeedback:assertMessage:130 - ***QA: Message Спасибо за Ваше обращение.
+10.06.2016 11:43:52.624 INFO  t.t.t.TestBase:getTableArray:53 - startRow=1, endRow=3, startCol=0, endCol=22
+10.06.2016 11:43:53.009 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:43:53.423 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:43:53.768 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:43:53.835 INFO  t.t.p.Page_Tehnosila:clickFeedback:335 - Обратная связь
+10.06.2016 11:43:56.103 INFO  t.t.p.CommonMetods:assertTitle:95 - ***QA: Title Обратная связь
+10.06.2016 11:43:56.189 INFO  t.t.p.CommonMetods:assertHeader:107 - ***QA: Header Обратная связь
+10.06.2016 11:43:59.170 INFO  t.t.p.Page_HelpFeedback:clickButtonSend:113 - жмаканье на Отправить
+10.06.2016 11:43:59.303 INFO  t.t.p.Page_HelpFeedback:assertMessage:130 - ***QA: Message Спасибо за Ваше обращение.
+10.06.2016 11:45:05.639 INFO  t.t.t.TestBase:getTableArray:53 - startRow=1, endRow=3, startCol=0, endCol=22
+10.06.2016 11:45:06.008 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:45:06.666 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:45:07.171 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:45:07.233 INFO  t.t.p.Page_Tehnosila:clickFeedback:335 - Обратная связь
+10.06.2016 11:45:09.527 INFO  t.t.p.CommonMetods:assertTitle:95 - ***QA: Title Обратная связь
+10.06.2016 11:45:09.617 INFO  t.t.p.CommonMetods:assertHeader:107 - ***QA: Header Обратная связь
+10.06.2016 11:45:12.504 INFO  t.t.p.Page_HelpFeedback:clickButtonSend:113 - жмаканье на Отправить
+10.06.2016 11:45:12.604 INFO  t.t.p.Page_HelpFeedback:assertMessage:130 - ***QA: Message Спасибо за Ваше обращение.
+10.06.2016 11:45:42.831 INFO  t.t.p.Page_HelpFeedback:clickButtonBack:146 - Element Not Found
+10.06.2016 11:46:56.109 INFO  t.t.t.TestBase:getTableArray:53 - startRow=1, endRow=3, startCol=0, endCol=22
+10.06.2016 11:46:56.502 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:46:57.423 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:46:57.737 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:46:57.811 INFO  t.t.p.Page_Tehnosila:clickFeedback:335 - Обратная связь
+10.06.2016 11:46:59.946 INFO  t.t.p.CommonMetods:assertTitle:95 - ***QA: Title Обратная связь
+10.06.2016 11:47:00.030 INFO  t.t.p.CommonMetods:assertHeader:107 - ***QA: Header Обратная связь
+10.06.2016 11:47:02.973 INFO  t.t.p.Page_HelpFeedback:clickButtonSend:113 - жмаканье на Отправить
+10.06.2016 11:47:03.084 INFO  t.t.p.Page_HelpFeedback:assertMessage:130 - ***QA: Message Спасибо за Ваше обращение.
+10.06.2016 11:47:22.811 INFO  t.t.p.Page_HelpFeedback:clickButtonBack:147 - Element Not Found
+10.06.2016 11:47:38.389 INFO  t.t.t.TestBase:getTableArray:53 - startRow=1, endRow=3, startCol=0, endCol=22
+10.06.2016 11:47:38.762 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:47:39.109 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:47:39.391 INFO  t.t.p.MyPageFactory:getPage:40 - ***QA: We are on the http://www.test7.srvtest-tehnosila.ru/ page
+10.06.2016 11:47:39.458 INFO  t.t.p.Page_Tehnosila:clickFeedback:335 - Обратная связь
+10.06.2016 11:47:41.668 INFO  t.t.p.CommonMetods:assertTitle:95 - ***QA: Title Обратная связь
+10.06.2016 11:47:41.756 INFO  t.t.p.CommonMetods:assertHeader:107 - ***QA: Header Обратная связь
+10.06.2016 11:47:44.645 INFO  t.t.p.Page_HelpFeedback:clickButtonSend:113 - жмаканье на Отправить
+10.06.2016 11:47:44.742 INFO  t.t.p.Page_HelpFeedback:assertMessage:130 - ***QA: Message Спасибо за Ваше обращение.
