@@ -40,12 +40,9 @@ public class Page_HelpFeedback extends PagesBase{
 	@FindBy(xpath="//div[contains(text(),'Спасибо за Ваше обращение.')]")
 	private WebElement message; // кнопка Спасибо за Ваше обращение.
 	
-	@FindBy(linkText = "Вернуться на главную")
-	public WebElement linkText; // ссылка "ссылке" в информационном сообщении
-	
-	@FindBy(linkText ="Вернуться на главную")
-	private WebElement buttonback; // кнопка Вернуться на главную
-	
+	@FindBy(xpath = "//a[contains(text(),'Вернуться на главную')]")
+	private WebElement buttonBack; //Кнопка "Вернуться на главную"
+		
 	@Override
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
@@ -138,9 +135,9 @@ public class Page_HelpFeedback extends PagesBase{
 	// жмаканье на "Вернуться на главную"
 	public void clickButtonBack() throws Exception {
 		try {
-			driver.findElement(By.linkText("Вернуться на главную")).click();
-		//	WebElement linkText =  driver.findElement(By.linkText("Вернуться на главную"));
-		//	linkText.click(); 
+		
+			buttonBack.click();
+			
 			Log.info("жмаканье на Вернуться на главную");
 		}
 	    catch(Exception e) {      
