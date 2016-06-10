@@ -82,6 +82,12 @@ public class Page_Tehnosila extends PagesBase{
 	@FindBy(xpath="//a[contains(text(),'Обратная связь')]")
 	private WebElement feedback; // Обратная связь
 	
+	@FindBy(xpath="//div[@id='authorization']/span")
+	private WebElement menucabinet; // Меню Кабинет
+	
+	@FindBy(xpath="//a[contains(text(),'Войти на сайт')]")
+	private WebElement login; // Войти на сайт
+	
 	@Override
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
@@ -340,5 +346,32 @@ public class Page_Tehnosila extends PagesBase{
             ScreenShot.takeScreenShot();       
       
 	    }
+	}
+	
+// -----------------------------------------------------------------------------------------------------------------------------
+	// Авторизация
+	
+	// жмаканье на меню "Кабинет"
+	public void clickMenuCabinet() throws Exception {
+		try {
+			menucabinet.click(); 
+			Log.info("меню Кабинет");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }    
+	}
+	
+	// жмаканье на "Войти на сайт"
+	public void clickLogIn() throws Exception {
+		try {
+			login.click(); 
+			Log.info("Войти на сайт");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }    
 	}
 }
