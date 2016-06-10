@@ -14,6 +14,7 @@ import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
 import tehnosila.tehnosila_automation.pages.Page_Cart;
 import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizory;
 import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizoryID;
+import tehnosila.tehnosila_automation.pages.Page_HelpFeedback;
 import tehnosila.tehnosila_automation.pages.Page_Order;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 
@@ -44,10 +45,12 @@ public class Links_Footer extends TestBase{
 			String infocontacts, String infostores, String infolease, String infolegal,
 			String webshophowtobuy, String webshoppayment, String webshopdelivery,
 			String webshoppickup, String webshopexchange, String webshopguide,
-			String helpfeedback) throws Exception{ 
+			String helpfeedback, String inputname, String inputemail, String inputphone,
+			String inputcity, String textareamessage, String message) throws Exception{ 
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
-		// О компании Техносила
+		Page_HelpFeedback pagehelpfeedback = MyPageFactory.getPage(Page_HelpFeedback.class);
+/*		// О компании Техносила
 		pagetehnosila.clickAboutTC();
 		commonmetods.assertTitle(infoabout);
 		commonmetods.assertHeader(infoabout);
@@ -116,12 +119,22 @@ public class Links_Footer extends TestBase{
 		pagetehnosila.clickGuide();
 		commonmetods.assertTitle(webshopguide);
 		commonmetods.assertHeader(webshopguide);
-		commonmetods.clickLogo();
+		commonmetods.clickLogo();*/
 		// Обратная связь
 		pagetehnosila.clickFeedback();
 		commonmetods.assertTitle(helpfeedback);
 		commonmetods.assertHeader(helpfeedback);
-		commonmetods.clickLogo();
+		// Отправка feedback
+		pagehelpfeedback.setName(inputname);
+		pagehelpfeedback.setEmail(inputemail);
+		pagehelpfeedback.setPhone(inputphone);
+		pagehelpfeedback.setCity(inputcity);
+		pagehelpfeedback.setMessage(textareamessage);
+		pagehelpfeedback.clickButtonSend();
+		pagehelpfeedback.assertMessage(message);
+		pagehelpfeedback.clickButtonBack();
+		
+		
 	}
 	
 }
