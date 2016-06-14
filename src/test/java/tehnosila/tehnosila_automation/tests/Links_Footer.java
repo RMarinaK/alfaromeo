@@ -1,25 +1,10 @@
-/**
- * 
- */
 package tehnosila.tehnosila_automation.tests;
 
 import java.io.File;
-import java.io.IOException;
-
-import org.testng.Assert;
-
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
-import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
-import tehnosila.tehnosila_automation.pages.Page_Cart;
-import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizory;
-import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizoryID;
 import tehnosila.tehnosila_automation.pages.Page_HelpFeedback;
-import tehnosila.tehnosila_automation.pages.Page_Order;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -28,10 +13,6 @@ import org.testng.annotations.Test;
  *
  */
 public class Links_Footer extends TestBase{
-		
-	private static Logger Log = LoggerFactory.getLogger(Links_Footer.class);
-
-	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
         Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"LinksFooter"+File.separator+"LinksFooter.xls",
@@ -46,8 +27,8 @@ public class Links_Footer extends TestBase{
 			String webshophowtobuy, String webshoppayment, String webshopdelivery,
 			String webshoppickup, String webshopexchange, String webshopguide,
 			String helpfeedback,  String purchaseOnCredit, String bonusProgramm, String setupAndInstallation,
-			 String giftCards, String servicePlus, String insuranceTechniques, String tehnotrendProgram,
-			 String warrantyService, String serviceCenterLocations, String inputname, String inputemail, String inputphone,
+			String giftCards, String servicePlus, String insuranceTechniques, String tehnotrendProgram,
+			String warrantyService, String serviceCenterLocations, String inputname, String inputemail, String inputphone,
 			String inputcity, String textareamessage, String message) throws Exception{ 
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
@@ -137,7 +118,7 @@ public class Links_Footer extends TestBase{
 		pagehelpfeedback.clickButtonBack();
 		
 		//---------------
-		//УСЛУГИ И СЕРВИС
+		//УСЛУГИ И СЕРВИС (Пестерев Д.О. 14.06.2016)
 		//---------------
 		
 		//Покупка в кредит
@@ -145,11 +126,10 @@ public class Links_Footer extends TestBase{
 		commonmetods.assertTitle(purchaseOnCredit);
 		commonmetods.assertHeader(purchaseOnCredit);
 		commonmetods.clickLogo();
-//		//Бонусная программа - нужна доработка
-//		pagetehnosila.clickBonusProgramm();
-//		commonmetods.assertTitle(bonusProgramm);
-//		commonmetods.assertHeader(bonusProgramm);
-//		commonmetods.clickLogo();
+		//Бонусная программа - нужна доработка
+		pagetehnosila.clickBonusProgramm();	
+		commonmetods.assertTitle(bonusProgramm);
+		pagetehnosila.tryToOpen();
 		//Настройка и установка
 		pagetehnosila.clickSetupAndInstallation();
 		commonmetods.assertTitle(setupAndInstallation);
@@ -186,8 +166,7 @@ public class Links_Footer extends TestBase{
 		commonmetods.assertTitle(tittleServiceCenterLocations);
 		commonmetods.assertHeader(serviceCenterLocations);
 		commonmetods.clickLogo();
-		
-		
+	
 	}
 	
 }
