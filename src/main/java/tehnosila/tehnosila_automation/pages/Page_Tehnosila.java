@@ -110,7 +110,7 @@ public class Page_Tehnosila extends PagesBase {
 	private WebElement serviceCenterLocations; // Адреса сервисных центров
 
 	@Override
-	void tryToOpen() {
+	public void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}
 
