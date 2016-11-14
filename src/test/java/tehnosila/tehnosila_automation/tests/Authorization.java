@@ -49,8 +49,8 @@ public class Authorization extends TestBase{
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		
-		pagetehnosila.clickMenuCabinet();
-		pagetehnosila.clickLogIn();
+	//	pagetehnosila.clickMenuCabinet();
+	//	pagetehnosila.clickLogIn();
 
 	}
 	
