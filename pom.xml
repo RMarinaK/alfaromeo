@@ -165,7 +165,7 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url>test7.srvtest-tehnosila.ru</site.url>
+        <site.url>http://test7.srvtest-tehnosila.ru</site.url>
         <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
@@ -182,7 +182,7 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url>test7.srvtest-tehnosila.ru</site.url>
+        <site.url>http://test7.srvtest-tehnosila.ru</site.url>
         <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
@@ -196,7 +196,7 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url>test7.srvtest-tehnosila.ru</site.url>
+        <site.url>http://test7.srvtest-tehnosila.ru</site.url>
         <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
