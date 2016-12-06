@@ -1,5 +1,6 @@
 package tehnosila.tehnosila_automation.pages;
 
+import tehnosila.tehnosila_automation.AppManager.NavigationHelper;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
 
@@ -18,7 +19,12 @@ import org.testng.Assert;
 // Класс общих методов
 public class CommonMetods extends Page_AreaMenu {
 	private static Logger Log = LoggerFactory.getLogger(CommonMetods.class);
-	
+
+	@Override
+	public boolean isOnThisPage(){
+		return true;
+	}
+
 	@FindBy(linkText = "ссылке")
 	public WebElement linkText; // ссылка "ссылке" в информационном сообщении
 	
