@@ -2,8 +2,11 @@ logback
 /logback
 test-output
 /test-output
+target
+/target
 
 test-output/**
 logback/**
+target/**
 
 *.class
