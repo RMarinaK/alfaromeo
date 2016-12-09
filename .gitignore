@@ -1,8 +1,9 @@
-target
-/target
+logback
+/logback
 test-output
 /test-output
 
-target/**
+test-output/**
+logback/**
 
 *.class
