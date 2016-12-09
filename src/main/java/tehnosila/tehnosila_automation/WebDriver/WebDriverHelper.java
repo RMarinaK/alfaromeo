@@ -92,7 +92,6 @@ public class WebDriverHelper {
 			mobileEmulation.put("deviceName", "Google Nexus 5");  //
 			Map<String, Object> chromeOptions = new HashMap<String, Object>();
 			chromeOptions.put("mobileEmulation", mobileEmulation);
-			//chromeOptions.put("excludeSwitches", "ignore-certificate-errors");
 			capabilities = DesiredCapabilities.chrome();
 			capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 			break;
@@ -119,7 +118,6 @@ public class WebDriverHelper {
 			mobileEmulation11.put("userAgent", "Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19");
 
 			Map<String, Object> chromeOptions11 = new HashMap<String, Object>();
-			//chromeOptions11.put("excludeSwitches", "ignore-certificate-errors");
 			chromeOptions11.put("mobileEmulation", mobileEmulation11);
 			capabilities = DesiredCapabilities.chrome();
 			capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions11);
@@ -148,9 +146,9 @@ public class WebDriverHelper {
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 			capabilities = DesiredCapabilities.chrome();
-			ChromeOptions desktopChromeOptions = new ChromeOptions();
-			desktopChromeOptions.addArguments("excludeSwitches", "ignore-certificate-errors");
-			capabilities.setCapability(ChromeOptions.CAPABILITY, desktopChromeOptions);
+			//ChromeOptions desktopChromeOptions = new ChromeOptions();
+			//desktopChromeOptions.addArguments("excludeSwitches", "ignore-certificate-errors");
+			//capabilities.setCapability(ChromeOptions.CAPABILITY, desktopChromeOptions);
 			break;	
 		case "phantomjs":
 			System.setProperty("phantomjs.binary.path", "src/main/resources/phantomjs.exe");
