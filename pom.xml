@@ -12,20 +12,7 @@
 	  <suites>${env.SUITES}</suites>
   </properties>
   
-
-<profiles>
-    <profile>
-        <id>suite-absent</id>
-        <activation>
-            <property>
-                <name>!env.SUITES</name>
-            </property>
-        </activation>
-        <properties>
-            <suites>default.suite.name</suites>
-        </properties>
-    </profile>
-</profiles>	
+	
 	
   <dependencies>
     <dependency>
@@ -171,6 +158,8 @@
   
   <!-- PROFILES -->
   
+	
+
   <profiles>
     <profile>
       <id>local_ff_test</id>
@@ -220,13 +209,17 @@
       </properties>
     </profile>
     
-          <!-- FF DESCTOP -->
-    
+          <!-- Chrome DESCTOP -->
+
     <profile>
-		<id>remote_ff_test</id>
-		<activation>
+		<id>chrome_ff_test</id>
+	<activation>
         	<activeByDefault>true</activeByDefault>
+		<property>
+                  <name>!env.SUITES</name>
+                 </property>
       	</activation>
+	    
       <build>
         <plugins>
         <plugin>
@@ -243,6 +236,7 @@
       </build>
       <properties>
         <env>test</env>
+	<suites>default.suite.name</suites>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub>http://10.2.0.67:4445/wd/hub</grid2.hub>
