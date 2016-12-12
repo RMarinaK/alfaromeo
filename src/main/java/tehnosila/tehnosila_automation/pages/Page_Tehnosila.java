@@ -28,13 +28,13 @@ public class Page_Tehnosila extends PagesBase {
 	@FindBy(id = "all-goods")
 	public WebElement allgoods; // Каталог товаров
 
-	@FindBy(xpath = "//div[@class='cat-top-level']/ul/li/a[contains(text(),'Телевизоры, аудио, видео')]")
+	@FindBy(xpath = "//div[@id='main-categories']/div/ul/li/a[contains(text(),'Телевизоры, аудио, видео')]")//
 	private WebElement tvaudiovideo; // Телевизоры, аудио, видео
 
-	@FindBy(xpath = "//div[@id='category-172']/ul/li/a[contains(text(),'Телевизоры')]")
+	@FindBy(xpath = "//div[@id='category-172']/ul/li/a")//[contains(text(),'Телевизоры')]
 	private WebElement tv; // Телевизоры
 
-	@FindBy(xpath = "//div[@id='category-364']/ul/li/a[contains(text(),'LED телевизоры')]")
+	@FindBy(xpath = "//div[@id='category-364']/ul/li/a")//[contains(text(),'LED телевизоры')]
 	private WebElement ledtv; // LED телевизоры
 
 	@FindBy(xpath = "//a[contains(text(),'О компании Техносила')]")
@@ -108,6 +108,12 @@ public class Page_Tehnosila extends PagesBase {
 
 	@FindBy(xpath = "//a[contains(text(),'Адреса сервисных центров')]")
 	private WebElement serviceCenterLocations; // Адреса сервисных центров
+	
+	@FindBy(xpath = "//div[@id='authorization']/span")
+	public WebElement authorization; // Кабинет
+	
+	@FindBy(xpath = "//a[contains(text(),'Войти на сайт')]")
+	private WebElement login; // Адреса сервисных центров
 
 	@Override
 	public void tryToOpen() {
@@ -455,5 +461,31 @@ public class Page_Tehnosila extends PagesBase {
 			ScreenShot.takeScreenShot();
 		}
 	}
-
+	
+	// -----------------------------------------------------------------------------------------------------------------------------
+	// Авторизация
+	
+	//клик по Кабинет
+	public void clickMenuCabinet() throws Exception {
+		try {
+			authorization.click();
+			Log.info("Меню Кабинет");
+			ScreenShot.takeScreenShot();
+		} catch (Exception e) {
+			Log.info("Element Not Found");
+			ScreenShot.takeScreenShot();
+		}
+	}
+	
+	//клик по Войти на сайт
+	public void clickLogIn() throws Exception {
+		try {
+			login.click();
+			Log.info("Войти на сайт");
+			ScreenShot.takeScreenShot();
+		} catch (Exception e) {
+			Log.info("Element Not Found");
+			ScreenShot.takeScreenShot();
+		}
+	}
 }

@@ -15,6 +15,7 @@ import tehnosila.tehnosila_automation.pages.Page_Cart;
 import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizory;
 import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizoryID;
 import tehnosila.tehnosila_automation.pages.Page_Order;
+import tehnosila.tehnosila_automation.pages.Page_PassportLogin;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 
 import org.slf4j.Logger;
@@ -33,14 +34,14 @@ public class Authorization extends TestBase{
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"SmokeTests.xls",
-                "SmokeTests", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"Authorization"+File.separator+"Authorization.xls",
+                "Authorization", "Data");
         return(retObjArr);
     }
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email) throws Exception{ //3
+	public void loginTest(String email, String password) throws Exception{ //3
 		// авторизация
 	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
 	//	app.getLoginHelper().login(senderLogin,password); 
@@ -48,9 +49,12 @@ public class Authorization extends TestBase{
 	//	Assert.assertTrue(areamenu.isLogo()); // проверка наличия логотипчика
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
-		
-	//	pagetehnosila.clickMenuCabinet();
-	//	pagetehnosila.clickLogIn();
+		Page_PassportLogin pagepasswordlogin = MyPageFactory.getPage(Page_PassportLogin.class);
+		pagetehnosila.clickMenuCabinet();
+		pagetehnosila.clickLogIn();
+		pagepasswordlogin.setEmail(email);
+		pagepasswordlogin.setPassword(password);
+		pagepasswordlogin.clickButtonEnter();
 
 	}
 	

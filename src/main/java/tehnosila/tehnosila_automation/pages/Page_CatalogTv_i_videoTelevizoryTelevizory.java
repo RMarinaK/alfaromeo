@@ -25,7 +25,7 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizory extends PagesBase{
 	
 	// ожидание пока страница прогрузится
 	public void getWaitPage(){
-		app.getNavigationHelper().getPage(URL_MATCH);
+		app.getNavigationHelper().getPage("http://www.tehnosila.ru/catalog/tv_i_video");
 	}
 	
 	// жмаканье на "Первый телевизор"

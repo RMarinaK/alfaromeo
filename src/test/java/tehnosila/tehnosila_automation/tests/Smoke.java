@@ -15,6 +15,7 @@ import tehnosila.tehnosila_automation.pages.Page_Cart;
 import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizory;
 import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizoryID;
 import tehnosila.tehnosila_automation.pages.Page_Order;
+import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 
 import org.slf4j.Logger;
@@ -52,6 +53,7 @@ public class Smoke extends TestBase{
 		Page_CatalogTv_i_videoTelevizoryTelevizoryID pagecatalogtvivideotelevizorytelevizoryid = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizoryID.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
+		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);
 		pagetehnosila.clickLEDTV();
 		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
 		pagecatalogtvivideotelevizorytelevizory.clickItemInFowrapFirst();
@@ -63,6 +65,9 @@ public class Smoke extends TestBase{
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickRadioButtonDelivery();
 		pageorder.clickButtonSubmitOrder();
+	//	pageordersuccess.assertTitle();
+		pageordersuccess.clickButtonSubmitOrder();
+		
 	}
 	
 }
