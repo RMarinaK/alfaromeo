@@ -9,7 +9,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	 	<logback.version>1.0.1</logback.version>
 		<project.test.baseurl>http://test7.srvtest-tehnosila.ru/</project.test.baseurl>
-	  <suites>${env.SUITES}</suites>
   </properties>
   
 	
@@ -215,9 +214,6 @@
 		<id>chrome_ff_test</id>
 	<activation>
         	<activeByDefault>true</activeByDefault>
-		<property>
-                  <name>!env.SUITES</name>
-                 </property>
       	</activation>
 	    
       <build>
@@ -228,7 +224,7 @@
           <version>2.17</version>
           <configuration>
             <suiteXmlFiles>
-              <suiteXmlFile>src/test/resources/${suites}.xml</suiteXmlFile>
+              <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
             </suiteXmlFiles>
           </configuration>
         </plugin>
