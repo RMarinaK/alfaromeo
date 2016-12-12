@@ -232,7 +232,6 @@
       </build>
       <properties>
         <env>test</env>
-	<suites>default.suite.name</suites>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub>http://10.2.0.67:4445/wd/hub</grid2.hub>
