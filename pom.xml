@@ -11,6 +11,24 @@
 		<project.test.baseurl>http://test7.srvtest-tehnosila.ru/</project.test.baseurl>
   </properties>
   
+<properties>
+    <suites>${env.SUITES}</suites>
+</properties>
+
+<profiles>
+    <profile>
+        <id>suite-absent</id>
+        <activation>
+            <property>
+                <name>!env.SUITES</name>
+            </property>
+        </activation>
+        <properties>
+            <suites>default.suite.name</suites>
+        </properties>
+    </profiles>
+</profiles>	
+	
   <dependencies>
     <dependency>
       <groupId>org.testng</groupId>
@@ -219,7 +237,7 @@
           <version>2.17</version>
           <configuration>
             <suiteXmlFiles>
-              <suiteXmlFile>src/test/resources/${suiteFile}.xml</suiteXmlFile>
+              <suiteXmlFile>src/test/resources/${suites}.xml</suiteXmlFile>
             </suiteXmlFiles>
           </configuration>
         </plugin>
