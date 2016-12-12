@@ -10,6 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.Rotatable;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.WebDriver;
@@ -21,8 +23,12 @@ import org.openqa.selenium.remote.AddRotatable;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.security.UserAndPassword;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import tehnosila.tehnosila_automation.AppManager.ApplicationManager;
+import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 import tehnosila.tehnosila_automation.util.Browser;
 import tehnosila.tehnosila_automation.util.PropertyLoader;
 
@@ -146,9 +152,9 @@ public class WebDriverHelper {
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 			capabilities = DesiredCapabilities.chrome();
-			//ChromeOptions desktopChromeOptions = new ChromeOptions();
-			//desktopChromeOptions.addArguments("excludeSwitches", "ignore-certificate-errors");
-			//capabilities.setCapability(ChromeOptions.CAPABILITY, desktopChromeOptions);
+			ChromeOptions desktopChromeOptions = new ChromeOptions();
+			desktopChromeOptions.addArguments("excludeSwitches", "ignore-certificate-errors");
+			capabilities.setCapability(ChromeOptions.CAPABILITY, desktopChromeOptions);
 			break;	
 		case "phantomjs":
 			System.setProperty("phantomjs.binary.path", "src/main/resources/phantomjs.exe");
@@ -175,6 +181,18 @@ public class WebDriverHelper {
  		 * Once set, the implicit wait is set for the life of the WebDriver object instance.*/
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    driver.get(baseUrl);
+
+	 /*   try {
+	    	
+	    	if (alertAuth != null && alertAuth.getText().length() > 1) {
+	    	Alert alertAuth = driver.switchTo().alert();
+	    	   alertAuth.authenticateUsing(new UserAndPassword("admin","yficfqn"));
+		    return;
+	    	}
+	    } catch (NoAlertPresentException e) {
+
+	    } */
+	    
 
 	}
 	
