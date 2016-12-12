@@ -9,11 +9,9 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	 	<logback.version>1.0.1</logback.version>
 		<project.test.baseurl>http://test7.srvtest-tehnosila.ru/</project.test.baseurl>
+	  <suites>${env.SUITES}</suites>
   </properties>
   
-<properties>
-    <suites>${env.SUITES}</suites>
-</properties>
 
 <profiles>
     <profile>
@@ -26,7 +24,7 @@
         <properties>
             <suites>default.suite.name</suites>
         </properties>
-    </profiles>
+    </profile>
 </profiles>	
 	
   <dependencies>
