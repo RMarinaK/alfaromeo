@@ -53,9 +53,10 @@ public class Smoke extends TestBase{
 		Page_CatalogTv_i_videoTelevizoryTelevizoryID pagecatalogtvivideotelevizorytelevizoryid = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizoryID.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
-		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);
-		pagetehnosila.clickLEDTV();
+		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
+		pagetehnosila.clickTVVA();
 		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
+		pagetehnosila.clickTV();
 		pagecatalogtvivideotelevizorytelevizory.clickItemInFowrapFirst();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
