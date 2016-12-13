@@ -198,7 +198,7 @@
       <id>local_chrome_test</id>
        <properties>
         <env>local</env>
-	       <suiteXmlFiles>
+	<suiteXmlFiles>
             <suiteXmlFile>src/test/resources/${Suite}.xml</suiteXmlFile>
         </suiteXmlFiles>
         <user.username></user.username>
