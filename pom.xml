@@ -198,6 +198,9 @@
       <id>local_chrome_test</id>
        <properties>
         <env>local</env>
+	       <suiteXmlFiles>
+            <suiteXmlFile>src/test/resources/${Suite}.xml</suiteXmlFile>
+        </suiteXmlFiles>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
