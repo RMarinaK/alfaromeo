@@ -31,10 +31,12 @@ public class Page_Tehnosila extends PagesBase {
 	@FindBy(xpath = "//div[@id='main-categories']/div/ul/li/a[contains(text(),'Телевизоры, аудио, видео')]")//
 	private WebElement tvaudiovideo; // Телевизоры, аудио, видео
 
-	@FindBy(xpath = "//div[@id='category-172']/ul/li/a")//[contains(text(),'Телевизоры')]
+	@FindBy(xpath = "//div[@id='category-172']/ul/li/a[contains(text(),'   Телевизоры ')]")//
 	private WebElement tv; // Телевизоры
 
-	@FindBy(xpath = "//div[@id='category-364']/ul/li/a")//[contains(text(),'LED телевизоры')]
+	//@FindBy(xpath = "//div[@id='category-364']/ul/li/a[contains(text(),'LED телевизоры')]")//
+//	@FindBy(xpath = "//li[@data-submenu-id='category-198']/a[contains(text(),'LED телевизоры')]")
+	@FindBy(xpath = "//a[@class='item first-in-row']")
 	private WebElement ledtv; // LED телевизоры
 
 	@FindBy(xpath = "//a[contains(text(),'О компании Техносила')]")
@@ -120,32 +122,12 @@ public class Page_Tehnosila extends PagesBase {
 		driver.get(this.URL_MATCH);
 	}
 
-	// жмаканье на кнопку "Каталог товаров"
-	public void clickAllGoods() throws Exception {
-		try {
-			allgoods.click();
-			Log.info("Каталог товаров");
-		} catch (Exception e) {
-			Log.info("Element Not Found");
-			ScreenShot.takeScreenShot();
-		}
-	}
+	
 
-	// жмаканье на кнопку "Телевизоры, аудио, видео"
-	public void clickTVAudioVideo() throws Exception {
-		try {
-			tvaudiovideo.click();
-			Log.info("Телевизоры, аудио, видео");
-		} catch (Exception e) {
-			Log.info("Element Not Found");
-			ScreenShot.takeScreenShot();
-		}
-	}
-
-	// жмаканье на кнопку "Телевизоры"
+	// жмаканье на кнопку "Телевизоры LED"
 	public void clickTV() throws Exception {
 		try {
-			tv.click();
+			ledtv.click();
 			Log.info("Телевизоры");
 		} catch (Exception e) {
 			Log.info("Element Not Found");
@@ -153,14 +135,21 @@ public class Page_Tehnosila extends PagesBase {
 		}
 	}
 
-	// жмаканье на кнопку "LED телевизоры"
-	public void clickLEDTV() throws Exception {
+	// жмаканье на кнопку "tvaudiovideo"
+	public void clickTVVA() throws Exception {
 		try {
+			/*Action dragAndDrop = builder.moveToElement(allgoods).moveToElement(tvaudiovideo).moveToElement(tv)
+					.moveToElement(ledtv).click(ledtv).release(ledtv).build();*/
+			
 			Actions builder = new Actions(driver);
-			Action dragAndDrop = builder.moveToElement(allgoods).moveToElement(tvaudiovideo).moveToElement(tv)
-					.moveToElement(ledtv).click(ledtv).release(ledtv).build();
+			Action dragAndDrop = builder
+					.moveToElement(allgoods)
+					.moveToElement(tvaudiovideo)
+					.click(tvaudiovideo)
+					.release(tvaudiovideo)
+					.build();
 			dragAndDrop.perform();
-			Log.info("LED телевизоры");
+			Log.info("tvaudiovideo");
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
