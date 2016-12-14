@@ -196,6 +196,17 @@
    
     <profile>
       <id>local_chrome_test</id>
+	<build>
+        	<plugins>
+        		<plugin>
+          			<configuration>
+            				<suiteXmlFiles>
+              					<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+            				</suiteXmlFiles>
+          			</configuration>
+        		</plugin>
+      		</plugins>
+      </build>
        <properties>
         <env>local</env>
 	<suiteXmlFiles>
