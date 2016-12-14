@@ -162,26 +162,18 @@
   <profiles>
     <profile>
       <id>local_ff_test</id>
-      <activation>
-        	<activeByDefault>false</activeByDefault>
-      </activation>
-      <properties>
-        <env>local</env>
-        <user.username></user.username>
-        <user.password></user.password>
-        <grid2.hub></grid2.hub>
-        <site.url>${project.test.baseurl}</site.url>
-        <browser.name>firefox</browser.name>
-        <browser.version></browser.version>
-        <browser.platform></browser.platform>
-      </properties>
-    </profile>
-    
-    <profile>
-      <id>local_ff_ntest</id>
-      <activation>
-        	<activeByDefault>false</activeByDefault>
-      </activation>
+	<build>
+          <plugins>
+            <plugin>
+		<artifactId>maven-surefire-plugin</artifactId>
+          	  <configuration>
+            	    <suiteXmlFiles>
+              		<suiteXmlFile>src/test/resources/${Suite}.xml</suiteXmlFile>
+            	    </suiteXmlFiles>
+          	  </configuration>
+            </plugin>
+      	</plugins>
+      </build>
       <properties>
         <env>local</env>
         <user.username></user.username>
@@ -195,18 +187,18 @@
     </profile>
    
     <profile>
-      <id>local_chrome_test</id>
+        <id>local_chrome_test</id>
 	<build>
-        	<plugins>
-        		<plugin>
-				<artifactId>maven-surefire-plugin</artifactId>
-          			<configuration>
-            				<suiteXmlFiles>
-              					<suiteXmlFile>src/test/resources/${Suite}.xml</suiteXmlFile>
-            				</suiteXmlFiles>
-          			</configuration>
-        		</plugin>
-      		</plugins>
+          <plugins>
+            <plugin>
+		<artifactId>maven-surefire-plugin</artifactId>
+          	  <configuration>
+            	    <suiteXmlFiles>
+              		<suiteXmlFile>src/test/resources/${Suite}.xml</suiteXmlFile>
+            	    </suiteXmlFiles>
+          	  </configuration>
+            </plugin>
+      	</plugins>
       </build>
        <properties>
         <env>local</env>
@@ -220,6 +212,84 @@
       </properties>
     </profile>
     
+    <profile>
+      <id>local_ie_test</id>
+	<build>
+          <plugins>
+            <plugin>
+		<artifactId>maven-surefire-plugin</artifactId>
+          	  <configuration>
+            	    <suiteXmlFiles>
+              		<suiteXmlFile>src/test/resources/${Suite}.xml</suiteXmlFile>
+            	    </suiteXmlFiles>
+          	  </configuration>
+            </plugin>
+      	</plugins>
+      </build>
+      <properties>
+        <env>local</env>
+        <user.username></user.username>
+        <user.password></user.password>
+        <grid2.hub></grid2.hub>
+        <site.url>${project.test.baseurl}</site.url>
+        <browser.name>ie</browser.name>
+        <browser.version></browser.version>
+        <browser.platform></browser.platform>
+      </properties>
+    </profile>	  
+	  
+ <profile>
+        <id>local_chrome_mobile_test</id>
+	<build>
+          <plugins>
+            <plugin>
+		<artifactId>maven-surefire-plugin</artifactId>
+          	  <configuration>
+            	    <suiteXmlFiles>
+              		<suiteXmlFile>src/test/resources/${Suite}.xml</suiteXmlFile>
+            	    </suiteXmlFiles>
+          	  </configuration>
+            </plugin>
+      	</plugins>
+      </build>
+       <properties>
+        <env>local</env>
+        <user.username></user.username>
+        <user.password></user.password>
+        <grid2.hub></grid2.hub>
+        <site.url>${project.test.baseurl}</site.url>
+        <browser.name>chromemobile</browser.name>
+        <browser.version></browser.version>
+        <browser.platform></browser.platform>
+      </properties>
+    </profile>	  
+	  
+ <profile>
+        <id>local_chrome_terminal_test</id>
+	<build>
+          <plugins>
+            <plugin>
+		<artifactId>maven-surefire-plugin</artifactId>
+          	  <configuration>
+            	    <suiteXmlFiles>
+              		<suiteXmlFile>src/test/resources/${Suite}.xml</suiteXmlFile>
+            	    </suiteXmlFiles>
+          	  </configuration>
+            </plugin>
+      	</plugins>
+      </build>
+       <properties>
+        <env>local</env>
+        <user.username></user.username>
+        <user.password></user.password>
+        <grid2.hub></grid2.hub>
+        <site.url>${project.test.baseurl}</site.url>
+        <browser.name>chrometerminal</browser.name>
+        <browser.version></browser.version>
+        <browser.platform></browser.platform>
+      </properties>
+    </profile>		  
+	  
           <!-- Chrome DESCTOP -->
 
     <profile>
@@ -349,23 +419,6 @@
         <user.password></user.password>
         <grid2.hub>http://10.2.0.67:4445/wd/hub</grid2.hub>
         <site.url>http://www.test7.srvtest-tehnosila.ru/</site.url>
-        <browser.name>ie</browser.name>
-        <browser.version></browser.version>
-        <browser.platform></browser.platform>
-      </properties>
-    </profile>
-    
-    <profile>
-      <id>local_ie_test</id>
-      <activation>
-        <activeByDefault>false</activeByDefault>
-      </activation>
-      <properties>
-        <env>local</env>
-        <user.username></user.username>
-        <user.password></user.password>
-        <grid2.hub></grid2.hub>
-        <site.url>${project.test.baseurl}</site.url>
         <browser.name>ie</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
