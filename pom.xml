@@ -201,7 +201,7 @@
         		<plugin>
           			<configuration>
             				<suiteXmlFiles>
-              					<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+              					<suiteXmlFile>src/test/resources/${Suite}.xml</suiteXmlFile>
             				</suiteXmlFiles>
           			</configuration>
         		</plugin>
@@ -209,9 +209,6 @@
       </build>
        <properties>
         <env>local</env>
-	<suiteXmlFiles>
-            <suiteXmlFile>src/test/resources/${Suite}.xml</suiteXmlFile>
-        </suiteXmlFiles>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
