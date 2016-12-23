@@ -136,10 +136,10 @@ public class Links_Footer extends TestBase{
 		commonmetods.assertHeader(setupAndInstallation);
 		commonmetods.clickLogo();
 		//Подарочные карты
-		pagetehnosila.clickGiftCards();
+	/*	pagetehnosila.clickGiftCards();
 		commonmetods.assertTitle(giftCards);
 		commonmetods.assertHeader(giftCards);
-		commonmetods.clickLogo();
+		commonmetods.clickLogo();*/
 		//Сервис плюс
 		pagetehnosila.clickServicePlus();
 		commonmetods.assertTitle(servicePlus);
