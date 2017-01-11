@@ -115,7 +115,7 @@ public class Links_Footer extends TestBase{
 		pagehelpfeedback.setMessage(textareamessage);
 		pagehelpfeedback.clickButtonSend();
 		pagehelpfeedback.assertMessage(message);
-		pagehelpfeedback.clickButtonBack();
+		commonmetods.clickLogo();
 		
 		//---------------
 		//УСЛУГИ И СЕРВИС (Пестерев Д.О. 14.06.2016)
