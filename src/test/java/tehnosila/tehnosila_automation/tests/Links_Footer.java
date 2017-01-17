@@ -151,10 +151,10 @@ public class Links_Footer extends TestBase{
 		commonmetods.assertHeader(insuranceTechniques);
 		commonmetods.clickLogo();
 		//Программа Технотренд
-		pagetehnosila.clickTehnotrendProgram();
+		/*pagetehnosila.clickTehnotrendProgram();
 		commonmetods.assertTitle(tehnotrendProgram);
 		commonmetods.assertHeader(tehnotrendProgram);
-		commonmetods.clickLogo();
+		commonmetods.clickLogo();*/
 		//Гарантийное обслуживание
 		pagetehnosila.clickWarrantyService();
 		commonmetods.assertTitle(warrantyService);
