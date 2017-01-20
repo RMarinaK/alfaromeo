@@ -107,15 +107,7 @@ public class Links_Footer extends TestBase{
 		pagetehnosila.clickFeedback();
 		commonmetods.assertTitle(helpfeedback);
 		commonmetods.assertHeader(helpfeedback);
-		// Отправка feedback
-		pagehelpfeedback.setName(inputname);
-		pagehelpfeedback.setEmail(inputemail);
-		pagehelpfeedback.setPhone(inputphone);
-		pagehelpfeedback.setCity(inputcity);
-		pagehelpfeedback.setMessage(textareamessage);
-		pagehelpfeedback.clickButtonSend();
-		pagehelpfeedback.assertMessage(message);
-		commonmetods.clickLogo();
+		
 		
 		//---------------
 		//УСЛУГИ И СЕРВИС (Пестерев Д.О. 14.06.2016)
@@ -165,6 +157,15 @@ public class Links_Footer extends TestBase{
 		String tittleServiceCenterLocations = "Cервисные центры"; //Говнохардкод, т.к. какая-то беда с кодировкой/раскладкой, при чтении из LinksFooter.xls
 		commonmetods.assertTitle(tittleServiceCenterLocations);
 		commonmetods.assertHeader(serviceCenterLocations);
+		commonmetods.clickLogo();
+		// Отправка feedback
+		pagehelpfeedback.setName(inputname);
+		pagehelpfeedback.setEmail(inputemail);
+		pagehelpfeedback.setPhone(inputphone);
+		pagehelpfeedback.setCity(inputcity);
+		pagehelpfeedback.setMessage(textareamessage);
+		pagehelpfeedback.clickButtonSend();
+		pagehelpfeedback.assertMessage(message);
 		commonmetods.clickLogo();
 	
 	}
