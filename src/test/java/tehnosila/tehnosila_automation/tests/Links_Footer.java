@@ -103,10 +103,7 @@ public class Links_Footer extends TestBase{
 		commonmetods.assertTitle(webshopguide);
 		commonmetods.assertHeader(webshopguide);
 		commonmetods.clickLogo();
-		// Обратная связь
-		pagetehnosila.clickFeedback();
-		commonmetods.assertTitle(helpfeedback);
-		commonmetods.assertHeader(helpfeedback);
+		
 		
 		
 		//---------------
@@ -158,6 +155,11 @@ public class Links_Footer extends TestBase{
 		commonmetods.assertTitle(tittleServiceCenterLocations);
 		commonmetods.assertHeader(serviceCenterLocations);
 		commonmetods.clickLogo();
+		
+		// Обратная связь
+		pagetehnosila.clickFeedback();
+		commonmetods.assertTitle(helpfeedback);
+		commonmetods.assertHeader(helpfeedback);
 		// Отправка feedback
 		pagehelpfeedback.setName(inputname);
 		pagehelpfeedback.setEmail(inputemail);
