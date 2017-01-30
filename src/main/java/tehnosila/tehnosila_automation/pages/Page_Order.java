@@ -1,5 +1,6 @@
 package tehnosila.tehnosila_automation.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
@@ -16,6 +17,8 @@ public class Page_Order extends PagesBase{
 	private static Logger Log = LoggerFactory.getLogger(Page_Order.class);
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL()+"#/order";
+	
+
 	
 	@FindBy(id="OrderForm_orderContact_fio")
 	private WebElement orderfromordercontactfio; // Поле "Ваше имя"
@@ -36,6 +39,8 @@ public class Page_Order extends PagesBase{
 	//@FindBy(xpath="//button[@class='button yellow pressable submitOrder']")
 	@FindBy(xpath="//div[@id='submit-order']/button")
 	private WebElement buttonsubmitorder; // Кнопка "Завершить оформление"
+
+	
 
 	
 	protected boolean isNecessaryToChangeParam(String param){
@@ -86,15 +91,41 @@ public class Page_Order extends PagesBase{
 		buttonenter.click();
 	}	
 	
+	
+	/*public String getNumber(){
+		return driver.findElement(By.xpath("//div[@id='test_order-number']")).getText();
+	}*/
+	
+/*	@FindBy(xpath="//div[contains(text(),'СПАСИБО! ВАШ ЗАКАЗ ПРИНЯТ!')]")
+	private WebElement message; // Сообщение Спасибо! Ваш заказ принят!*/
+	
+	// вытягивание Спасибо! Ваш заказ принят!
+/*	public String getMessage(){
+		return message.getText();
+	}*/
+	
+//	private String getOrders = super.getBaseURL()+"#/sys/getOrders?gID="+getNumber();	
+	// ожидание пока отработает прелоэдер
+
 	// жмаканье на "Завершить оформление"
 	public void clickButtonSubmitOrder() throws Exception {
 		try {
 			buttonsubmitorder.click(); 
 			Log.info("жмаканье на Завершить оформление");
+			//commonmetods.refreshPage();
+			//Waiting();
+		//	Log.info("Номер заказа " + message.getText());
+	//		WebElement webElement = driver.findElement(By.id("test_order-number"));
+		//	webElement.getText();
 		}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
          }    
-	}	 	
+	}	
+   
+       
+
+            
+	
 }

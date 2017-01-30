@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -63,7 +65,7 @@ public class NavigationHelper extends NavigationBase{
 			e.printStackTrace();
 			return false;
 		}
-	}
+	}	
 	
 	public boolean isDisplayedAfter(WebElement ele, int timeoutSeconds){
 		waitVisible(ele, timeoutSeconds);
@@ -114,8 +116,6 @@ public class NavigationHelper extends NavigationBase{
 		waitPresense(id,2);
 		driver.findElement(id).click();
 	}
-	
-
 	
 	public void filterClickAndWait(){
 		click(By.id("tb-filter"));
@@ -170,9 +170,7 @@ public class NavigationHelper extends NavigationBase{
             return -1;
         }
 		return 1;
-	}
-	
-	
+	}		
 	
 	protected boolean veryfyTextByLocator(By locator, String sText){
 		if (!driver.findElement(locator).getText().contains(sText)) {
@@ -207,8 +205,7 @@ public class NavigationHelper extends NavigationBase{
 //	        Log.debug(ele.getText());
 //	      }
 	      return elements;	
-	}
-	
+	}	
 	
 	public boolean isElementPresent(By by){
 		try{
@@ -219,8 +216,6 @@ public class NavigationHelper extends NavigationBase{
 			return false;
 			}
 		}
-
-
 	
 	public void refreshPage(){
 		driver.navigate().refresh();
@@ -230,7 +225,18 @@ public class NavigationHelper extends NavigationBase{
 		driver.get(URL);
 	}
 	
+	// Открытие новой вкладки в браузере
+	public void openInNewWindow(String url) {
+	    ((JavascriptExecutor) driver)
+	                 .executeScript("window.open(arguments[0])", url);
+	}
 	
+	// открытие страницы по URL
+	public void getgetOrders(String URL){ //String URL
+		//openInNewWindow(URL);
+		//driver.switchTo().window(URL);
+		driver.navigate().to(URL);
+	}
 	
 	
 }

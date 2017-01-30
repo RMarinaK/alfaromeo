@@ -17,6 +17,7 @@ import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTele
 import tehnosila.tehnosila_automation.pages.Page_Order;
 import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
+import tehnosila.tehnosila_automation.pages.Sys_getOrders;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,7 +42,7 @@ public class Smoke extends TestBase{
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email) throws Exception{ //3
+	public void loginTest(String fio, String phone, String email, String paymentName) throws Exception{ //3
 		// авторизация
 	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
 	//	app.getLoginHelper().login(senderLogin,password); 
@@ -54,6 +55,8 @@ public class Smoke extends TestBase{
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
+		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
+		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		pagetehnosila.clickTVVA();
 		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
 		pagetehnosila.clickTV();
@@ -66,9 +69,12 @@ public class Smoke extends TestBase{
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickRadioButtonDelivery();
 		pageorder.clickButtonSubmitOrder();
-	//	pageordersuccess.assertTitle();
-		pageordersuccess.clickButtonSubmitOrder();
-		
+		pageordersuccess.assertTitle();
+	//	pageordersuccess.clickButtonSubmitOrder();
+		pageordersuccess.getOrders();
+	//	commonmetods.refreshPage();
+	//	pagecart.clickButtonOrdering();
+		sysgetorders.assertPaymentName(paymentName);
 	}
 	
 }

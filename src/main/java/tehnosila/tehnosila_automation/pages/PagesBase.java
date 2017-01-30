@@ -5,6 +5,7 @@ package tehnosila.tehnosila_automation.pages;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
@@ -39,6 +40,10 @@ public abstract class PagesBase {
 	@FindBy(xpath="//div[@class='preloader']/i")
 	public WebElement loader;
 	
+	
+	@FindBy(xpath = "//div[@class='Notification']/a[contains(text(),'Нет')]")
+	private WebElement noNotification; // форма запроса "Включить уведомления о скидках и акциях"
+	
 	public String getBaseURL(){
 		return app.getWebDriverHelper().getBaseURL();
 	}
@@ -72,6 +77,14 @@ public abstract class PagesBase {
      	}
     }
     
+    
+    // Получение текста скрытого элемента
+    public String getTextByJavascript(final WebElement element) {
+        String script = "var element = arguments[0];" 
+		        + "return element.textContent;"
+                        ;
+        return (String) ((JavascriptExecutor)driver).executeScript(script, element);
+    }
 
     
 	private boolean isAlertPresent() {
