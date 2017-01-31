@@ -180,18 +180,22 @@ public class WebDriverHelper {
  		 * or elements if they are not immediately available. The default setting is 0.
  		 * Once set, the implicit wait is set for the life of the WebDriver object instance.*/
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	    driver.get(baseUrl);
+	    driver.get("http://"+baseUrl);
 
-	 /*   try {
-	    	
-	    	if (alertAuth != null && alertAuth.getText().length() > 1) {
+	//    (new WebDriverWait(driver, 1))
+    //    .until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("easyXDM_flocktory_default7546_provider"));
+	    
+	    
+	    try {
 	    	Alert alertAuth = driver.switchTo().alert();
+	    	if (alertAuth != null && alertAuth.getText().length() > 1) {
+	    
 	    	   alertAuth.authenticateUsing(new UserAndPassword("admin","yficfqn"));
 		    return;
 	    	}
 	    } catch (NoAlertPresentException e) {
 
-	    } */
+	    } 
 	    
 
 	}
@@ -205,6 +209,10 @@ public class WebDriverHelper {
 	}
 	
 	public String getBaseURL() {
+		return "http://"+baseUrl;
+	}
+	
+	public String getBaseURLnotHttp() {
 		return baseUrl;
 	}
 	
