@@ -72,6 +72,18 @@ public class Page_OrderSuccess extends PagesBase{
 	public void getOrders() throws Exception{
 		String number = getNumber();
 		app.getNavigationHelper().getgetOrders(getBaseURL()+"sys/getOrders?gID="+number+"&show_test=1");
+				try {
+			Alert alertAuth = driver.switchTo().alert();
+	    	if (alertAuth != null && alertAuth.getText().length() > 1) {
+	    	
+	    	   alertAuth.authenticateUsing(new UserAndPassword("admin","yficfqn"));
+		    return;
+	    	}
+	    } catch (NoAlertPresentException e) {
+
+	    } 
+		
+		
 		try {
 			Assert.assertEquals(number, getID()); 
 			Log.info("***QA: Номер заказа "+ getID());
