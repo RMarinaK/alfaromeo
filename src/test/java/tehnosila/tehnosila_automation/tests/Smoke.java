@@ -4,13 +4,9 @@
 package tehnosila.tehnosila_automation.tests;
 
 import java.io.File;
-import java.io.IOException;
 
-import org.testng.Assert;
 
-import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
-import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
 import tehnosila.tehnosila_automation.pages.Page_Cart;
 import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizory;
 import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizoryID;
@@ -42,7 +38,7 @@ public class Smoke extends TestBase{
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String paymentName) throws Exception{ //3
+	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{ //3
 		// авторизация
 	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
 	//	app.getLoginHelper().login(senderLogin,password); 
@@ -55,12 +51,12 @@ public class Smoke extends TestBase{
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
-		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		pagetehnosila.clickTVVA();
 		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
 		pagetehnosila.clickTV();
-		pagecatalogtvivideotelevizorytelevizory.clickItemInFowrapFirst();
+	//	pagecatalogtvivideotelevizorytelevizory.clickItemInFowrapFirst();
+		pagecatalogtvivideotelevizorytelevizory.clickOpenCourierDescription();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
 		pagecart.clickButtonOrdering();
@@ -74,7 +70,9 @@ public class Smoke extends TestBase{
 		pageordersuccess.getOrders();
 	//	commonmetods.refreshPage();
 	//	pagecart.clickButtonOrdering();
+		sysgetorders.assertOrders();
 		sysgetorders.assertPaymentName(paymentName);
+		sysgetorders.assertDeliveryName(deliveryName);
 	}
 	
 }
