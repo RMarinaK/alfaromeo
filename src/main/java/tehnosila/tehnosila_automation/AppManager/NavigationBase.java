@@ -19,5 +19,7 @@ public class NavigationBase {
 		driver = appManager.getWebDriverHelper().getDriver();
 		
 	}
+	
+	public static String numberorder;
 
 }
