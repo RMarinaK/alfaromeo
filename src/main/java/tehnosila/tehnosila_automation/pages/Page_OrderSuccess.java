@@ -1,14 +1,17 @@
 package tehnosila.tehnosila_automation.pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.security.UserAndPassword;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 
-
+import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 public class Page_OrderSuccess extends PagesBase{
@@ -26,9 +29,6 @@ public class Page_OrderSuccess extends PagesBase{
 
 	@FindBy(id="test_order-number")
 	private WebElement ordernumber; // Номер заказа
-	
-	@FindBy(xpath="//Invoice")
-	private WebElement invoicegid; // Номер заказа
 	
 	@Override
 	void tryToOpen() {
@@ -63,38 +63,11 @@ public class Page_OrderSuccess extends PagesBase{
          }    
 	}	
 	
-	// вытягивание номера заказа
-	public String getID(){
-		return invoicegid.getAttribute("gid");
-	}
-	
 	// ожидание пока страница прогрузится и проверка соответствия номер заказа
 	public void getOrders() throws Exception{
-		String number = getNumber();
-		app.getNavigationHelper().getgetOrders(getBaseURL()+"sys/getOrders?gID="+number+"&show_test=1");
-				try {
-			Alert alertAuth = driver.switchTo().alert();
-	    	if (alertAuth != null && alertAuth.getText().length() > 1) {
-	    	
-	    	   alertAuth.authenticateUsing(new UserAndPassword("admin","yficfqn"));
-		    return;
-	    	}
-	    } catch (NoAlertPresentException e) {
-
-	    } 
-		
-		
-		try {
-			Assert.assertEquals(number, getID()); 
-			Log.info("***QA: Номер заказа "+ getID());
-
-		}
-	    catch(Exception e) {      
-	    	Log.info("Element Not Found");     
-           ScreenShot.takeScreenShot();       
-        }  
-	}	
-	
+		NavigationBase.numberorder = getNumber();
+		app.getNavigationHelper().getgetOrders("http://admin:yficfqn@www."+getBaseURLnotHttp()+"sys/getOrders?gID="+NavigationBase.numberorder+"&show_test=1");
+	}
 	
 	
 	// жмаканье на "Завершить оформление"

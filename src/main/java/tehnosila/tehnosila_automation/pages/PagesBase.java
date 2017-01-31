@@ -48,6 +48,10 @@ public abstract class PagesBase {
 		return app.getWebDriverHelper().getBaseURL();
 	}
 	
+	public String getBaseURLnotHttp(){
+		return app.getWebDriverHelper().getBaseURLnotHttp();
+	}
+	
     public boolean isOnThisPage(){
         return true;
     }
