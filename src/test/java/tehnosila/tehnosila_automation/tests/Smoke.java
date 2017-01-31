@@ -55,8 +55,8 @@ public class Smoke extends TestBase{
 		pagetehnosila.clickTVVA();
 		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
 		pagetehnosila.clickTV();
-	//	pagecatalogtvivideotelevizorytelevizory.clickItemInFowrapFirst();
-		pagecatalogtvivideotelevizorytelevizory.clickOpenCourierDescription();
+		pagecatalogtvivideotelevizorytelevizory.clickItemInFowrapFirst();
+		//pagecatalogtvivideotelevizorytelevizory.clickOpenCourierDescription();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
 		pagecart.clickButtonOrdering();
