@@ -4,15 +4,12 @@
 	<test name="Interchange">
 		<parameter name="application.properties" value="src/main/resources/application.properties"/>
 		<classes>
-<<<<<<< HEAD
 			<class name="tehnosila.tehnosila_automation.tests.SelfDeliverCash"/>
 			<class name="tehnosila.tehnosila_automation.tests.SelfDeliveryCardOnDelivery"/>
 			<class name="tehnosila.tehnosila_automation.tests.SelfDeliveryCreditInStore"/>
-=======
-			<class name="tehnosila.tehnosila_automation.tests.Smoke"/>
 			<class name="tehnosila.tehnosila_automation.tests.Authorization"/>
 			<class name="tehnosila.tehnosila_automation.tests.Links_Footer"/>
->>>>>>> 76a3810728e224dceccbaa568cb06b25485a5b03
+
 		</classes>
 	</test>  
 </suite>
