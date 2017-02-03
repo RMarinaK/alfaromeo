@@ -316,8 +316,8 @@
         <env>test</env>
         <user.username></user.username>
         <user.password></user.password>
-        <grid2.hub>http://10.2.0.67:4445/wd/hub</grid2.hub>
-        <site.url>http://www.test7.srvtest-tehnosila.ru/</site.url>
+        <grid2.hub>http://localhost:4445/wd/hub</grid2.hub>
+        <site.url>tehnosila.ru/</site.url>
         <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>

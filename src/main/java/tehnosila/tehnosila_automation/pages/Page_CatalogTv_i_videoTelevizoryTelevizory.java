@@ -18,6 +18,14 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizory extends PagesBase{
 	@FindBy(xpath="//div[@class='item-info-wrap first']")
 	private WebElement iteminfowrapfirst; // Первый телевизор
 	
+	@FindBy(xpath="//a[@id='open-self-delivery-description']/../../../../..")//a[@id='open-courier-description']
+	private WebElement openselfdeliverydescription; // Первый телевизор самовывоз
+	
+	@FindBy(xpath="//a[@id='open-courier-description']/../../../../..")//a[@id='open-courier-description']
+	private WebElement opencourierdescription; // Первый телевизор с доставкой
+	
+
+	
 	@Override
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
@@ -29,9 +37,9 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizory extends PagesBase{
 	}
 	
 	// жмаканье на "Первый телевизор"
-	public void clickItemInFowrapFirst() throws Exception {
+	public void clickOpenSelfDeliveryDescription() throws Exception {
 		try {
-			iteminfowrapfirst.click(); 
+			openselfdeliverydescription.click(); 
 			Log.info("Первый телевизор");
 		}
 	    catch(Exception e) {      
@@ -39,5 +47,17 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizory extends PagesBase{
             ScreenShot.takeScreenShot();       
          } 
 	}	
+	
+	// жмаканье на Первый телевизор с доставкой
+	public void clickOpenCourierDescription() throws Exception {
+		try {
+			opencourierdescription.click(); 
+			Log.info("Первый телевизор с доставкой");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         } 
+	}
 
 }

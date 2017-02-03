@@ -24,21 +24,22 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-public class Smoke extends TestBase{
+// Самовывоз оплата Наличными
+public class CourierCash extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Smoke.class);
+	private static Logger Log = LoggerFactory.getLogger(CourierCash.class);
 
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"SmokeTests.xls",
-                "SmokeTests", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"CourierCash.xls",
+                "CourierCash", "Data");
         return(retObjArr);
     }
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{ //3
+	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
 		// авторизация
 	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
 	//	app.getLoginHelper().login(senderLogin,password); 
@@ -52,18 +53,21 @@ public class Smoke extends TestBase{
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
+		
 		pagetehnosila.clickTVVA();
 		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
 		pagetehnosila.clickTV();
-		pagecatalogtvivideotelevizorytelevizory.clickItemInFowrapFirst();
-		//pagecatalogtvivideotelevizorytelevizory.clickOpenCourierDescription();
+		pagecatalogtvivideotelevizorytelevizory.clickOpenSelfDeliveryDescription();
+	//	pagecatalogtvivideotelevizorytelevizory.clickOpenCourierDescription();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
-		pageorder.clickRadioButtonDelivery();
+		pageorder.clickFirstPoint();
+		//pageorder.clickRCardOnDelivery(paymentName);
+		pageorder.clickRCash(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 	//	pageordersuccess.clickButtonSubmitOrder();
@@ -71,7 +75,7 @@ public class Smoke extends TestBase{
 	//	commonmetods.refreshPage();
 	//	pagecart.clickButtonOrdering();
 		sysgetorders.assertOrders();
-		sysgetorders.assertPaymentName(paymentName);
+		sysgetorders.assertPaymentName(paymentNameGO);
 		sysgetorders.assertDeliveryName(deliveryName);
 	}
 	

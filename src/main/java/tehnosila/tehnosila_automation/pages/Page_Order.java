@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 /**
@@ -39,9 +40,21 @@ public class Page_Order extends PagesBase{
 	//@FindBy(xpath="//button[@class='button yellow pressable submitOrder']")
 	@FindBy(xpath="//div[@id='submit-order']/button")
 	private WebElement buttonsubmitorder; // Кнопка "Завершить оформление"
-
 	
-
+	@FindBy(xpath="//div[@id='listPoints']/ul")
+	private WebElement firstpoint; // Первый пункт самовывоза
+	
+	@FindBy(xpath="//div[@id='listPoints']/ul/li[@class='as-tab__shops-cell as-tab__shops-cell_date']/button")
+	private WebElement buttonselect; // Кнопка "Выбрать"
+	
+	@FindBy(xpath="//input[@id='r-cash']/../span")
+	private WebElement rcash; // Наличными
+	
+	@FindBy(xpath="//input[@id='r-cardOnDelivery']/../span")
+	private WebElement rcardondelivery; // Банковской картой
+	
+	@FindBy(xpath="//input[@id='r-CreditInStore']/../span")
+	private WebElement rcreditinstore; //  Рассрочка или кредит в магазине
 	
 	protected boolean isNecessaryToChangeParam(String param){
 		if(param.equals(" ")||param.equals("")){
@@ -85,12 +98,37 @@ public class Page_Order extends PagesBase{
 		}
 	}
 	
-	// Выбор первого пункта вывоза
-	public void clickRadioButtonDelivery() {
-		radiobuttondelivery.click(); 
-		buttonenter.click();
+	// жмаканье первый пункт самовывоза
+	public void clickFirstPoint() throws Exception {
+		try {
+			firstpoint.click(); 
+			Log.info("жмаканье на первый пункт самовывоза");
+			buttonselect.click();
+			Log.info("жмаканье на Выбрать");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }    
 	}	
 	
+	// Наличными
+	public void clickRCash(String paymentName) {
+		rcash.click();
+		NavigationBase.prcash = paymentName;
+	}	
+	
+	// Банковской картой
+	public void clickRCardOnDelivery(String paymentName) {
+		rcardondelivery.click(); 
+		NavigationBase.prcardondelivery = paymentName;
+	}	
+	
+	// Рассрочка или кредит в магазине
+	public void clickRCreditInStore(String paymentName) {
+		rcreditinstore.click(); 
+		NavigationBase.prcardondelivery = paymentName;
+	}	
 	
 	/*public String getNumber(){
 		return driver.findElement(By.xpath("//div[@id='test_order-number']")).getText();

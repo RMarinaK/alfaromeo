@@ -41,7 +41,7 @@ public class Sys_getOrders extends PagesBase{
 	//	проверка отображения типа оплаты 
 	public void assertOrders() throws Exception {
 		try {
-			Assert.assertEquals(NavigationBase.numberorder, getID()); 
+			Assert.assertEquals(NavigationBase.pnumberorder, getID()); 
 			Log.info("***QA: Номер заказа "+ getID());
 
 		}
@@ -54,6 +54,7 @@ public class Sys_getOrders extends PagesBase{
 	//	проверка отображения типа оплаты 
 	public void assertPaymentName(String paymentName) throws Exception {
 		try {
+			//String ppaymentName = NavigationBase.prcardondelivery;
 			Assert.assertEquals(paymentName, getTextByJavascript(paymentname)); 
 			Log.info("***QA: Тип оплаты " +  getTextByJavascript(paymentname));
 		}

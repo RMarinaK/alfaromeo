@@ -20,6 +20,9 @@ public class NavigationBase {
 		
 	}
 	
-	public static String numberorder;
+	public static String pnumberorder;
+	public static String prcash;
+	public static String prcardondelivery;
+	public static String prcreditinstore;
 
 }

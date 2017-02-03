@@ -121,9 +121,7 @@ public class Page_Tehnosila extends PagesBase {
 	public void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}
-
 	
-
 	// жмаканье на кнопку "Телевизоры LED"
 	public void clickTV() throws Exception {
 		try {
