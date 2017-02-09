@@ -39,7 +39,7 @@ public class CourierCash extends TestBase{
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
+	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
 		// авторизация
 	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
 	//	app.getLoginHelper().login(senderLogin,password); 
@@ -57,23 +57,22 @@ public class CourierCash extends TestBase{
 		pagetehnosila.clickTVVA();
 		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
 		pagetehnosila.clickTV();
-		pagecatalogtvivideotelevizorytelevizory.clickOpenSelfDeliveryDescription();
-	//	pagecatalogtvivideotelevizorytelevizory.clickOpenCourierDescription();
+		pagecatalogtvivideotelevizorytelevizory.clickOpenCourierDescription();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
+		pagecart.clickRCourierDelivery();
+		pagecart.waitCartLoadingLayer();
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
-		pageorder.clickFirstPoint();
-		//pageorder.clickRCardOnDelivery(paymentName);
+		pageorder.setMetro();
+		pageorder.setOrderFormOrderAddressStreet(street);
+		pageorder.setOrderFormOrderAddressHouse(house);
 		pageorder.clickRCash(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
-	//	pageordersuccess.clickButtonSubmitOrder();
 		pageordersuccess.getOrders();
-	//	commonmetods.refreshPage();
-	//	pagecart.clickButtonOrdering();
 		sysgetorders.assertOrders();
 		sysgetorders.assertPaymentName(paymentNameGO);
 		sysgetorders.assertDeliveryName(deliveryName);

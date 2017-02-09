@@ -25,21 +25,21 @@ import org.testng.annotations.Test;
  *
  */
 // Самовывоз оплата банковской картой
-public class SelfDeliveryCreditInStore extends TestBase{
+public class OnlineSelfDeliveryCardOnDelivery extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(SelfDeliveryCreditInStore.class);
+	private static Logger Log = LoggerFactory.getLogger(OnlineSelfDeliveryCardOnDelivery.class);
 
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"SelfDeliveryCreditInStore.xls",
-                "SelfDeliveryCreditInStore", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"OnlineSelfDeliveryCardOnDelivery.xls",
+                "OnlinSelfDeliveryCardOnDelivery", "Data");
         return(retObjArr);
     }
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
+	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{ //3
 		// авторизация
 	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
 	//	app.getLoginHelper().login(senderLogin,password); 
@@ -65,12 +65,12 @@ public class SelfDeliveryCreditInStore extends TestBase{
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
-		pageorder.clickRCreditInStore(paymentName);
+		pageorder.clickROnlineCardOnDelivery(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
-		sysgetorders.assertPaymentName(paymentNameGO);
+		sysgetorders.assertPaymentName(paymentName);
 		sysgetorders.assertDeliveryName(deliveryName);
 	}
 	

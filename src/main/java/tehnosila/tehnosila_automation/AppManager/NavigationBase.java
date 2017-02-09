@@ -24,5 +24,6 @@ public class NavigationBase {
 	public static String prcash;
 	public static String prcardondelivery;
 	public static String prcreditinstore;
+	public static String prbank;
 
 }

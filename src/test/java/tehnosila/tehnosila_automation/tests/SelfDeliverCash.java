@@ -58,7 +58,6 @@ public class SelfDeliverCash extends TestBase{
 		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
 		pagetehnosila.clickTV();
 		pagecatalogtvivideotelevizorytelevizory.clickOpenSelfDeliveryDescription();
-	//	pagecatalogtvivideotelevizorytelevizory.clickOpenCourierDescription();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
 		pagecart.clickButtonOrdering();
@@ -66,14 +65,10 @@ public class SelfDeliverCash extends TestBase{
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
-		//pageorder.clickRCardOnDelivery(paymentName);
 		pageorder.clickRCash(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
-	//	pageordersuccess.clickButtonSubmitOrder();
 		pageordersuccess.getOrders();
-	//	commonmetods.refreshPage();
-	//	pagecart.clickButtonOrdering();
 		sysgetorders.assertOrders();
 		sysgetorders.assertPaymentName(paymentNameGO);
 		sysgetorders.assertDeliveryName(deliveryName);
