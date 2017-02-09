@@ -7,15 +7,12 @@
 			<class name="tehnosila.tehnosila_automation.tests.SelfDeliverCash"/>
 			<class name="tehnosila.tehnosila_automation.tests.SelfDeliveryCardOnDelivery"/>
 			<class name="tehnosila.tehnosila_automation.tests.SelfDeliveryCreditInStore"/>
-<<<<<<< HEAD
 			<class name="tehnosila.tehnosila_automation.tests.CourierCash"/>
 			<class name="tehnosila.tehnosila_automation.tests.CourierCardOnDelivery"/>
 			<class name="tehnosila.tehnosila_automation.tests.OnlineCourierBank"/>
 			<class name="tehnosila.tehnosila_automation.tests.OnlineCourierCardOnDelivery"/>
 			<class name="tehnosila.tehnosila_automation.tests.OnlineSelfDeliverBank"/>
 			<class name="tehnosila.tehnosila_automation.tests.OnlineSelfDeliveryCardOnDelivery"/>
-=======
->>>>>>> 7de46565248d7412f6bb5045c30e7f927adc3f85
 			<class name="tehnosila.tehnosila_automation.tests.Authorization"/>
 			<class name="tehnosila.tehnosila_automation.tests.SelfDeliverCash"/>
 			<class name="tehnosila.tehnosila_automation.tests.SelfDeliveryCardOnDelivery"/>
@@ -27,10 +24,6 @@
 			<class name="tehnosila.tehnosila_automation.tests.OnlineSelfDeliverBank"/>
 			<class name="tehnosila.tehnosila_automation.tests.OnlineSelfDeliveryCardOnDelivery"/>
 			<class name="tehnosila.tehnosila_automation.tests.Links_Footer"/>
-<<<<<<< HEAD
-=======
-
->>>>>>> 7de46565248d7412f6bb5045c30e7f927adc3f85
 		</classes>
 	</test>  
 </suite>
