@@ -195,33 +195,68 @@ public class Page_Order extends PagesBase{
 	}	
 	
 	// Наличными
-	public void clickRCash(String paymentName) {
-		rcash.click();
-		NavigationBase.prcash = paymentName;
+	public void clickRCash(String paymentName) throws Exception {
+		try {
+			rcash.click();
+			NavigationBase.prcash = paymentName;
+			Log.info("жмаканье на Наличными");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }  
 	}	
 	
 	// Банковской картой
-	public void clickRCardOnDelivery(String paymentName) {
-		rcardondelivery.click(); 
-		NavigationBase.prcardondelivery = paymentName;
+	public void clickRCardOnDelivery(String paymentName) throws Exception {
+		try {
+			rcardondelivery.click(); 
+			NavigationBase.prcardondelivery = paymentName;
+			Log.info("жмаканье на Банковской картой");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }  
 	}	
 	
 	// Рассрочка или кредит в магазине
-	public void clickRCreditInStore(String paymentName) {
-		rcreditinstore.click(); 
-		NavigationBase.prcardondelivery = paymentName;
+	public void clickRCreditInStore(String paymentName) throws Exception {
+		try {
+			rcreditinstore.click(); 
+			NavigationBase.prcardondelivery = paymentName;
+			Log.info("жмаканье на Рассрочка или кредит в магазине");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }  
 	}	
 	
 	// Онлайн Банковской картой
-	public void clickROnlineCardOnDelivery(String paymentName) {
-		ronlainecardondelivery.click(); 
-		NavigationBase.prcardondelivery = paymentName;
+	public void clickROnlineCardOnDelivery(String paymentName) throws Exception {
+		try {
+			ronlainecardondelivery.click(); 
+			NavigationBase.prcardondelivery = paymentName;
+			Log.info("жмаканье на Онлайн Банковской картой");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }  
 	}
 	
 	// По счету (для юр. лиц)
-	public void clickRBank(String paymentName) {
-		rbank.click();
-		NavigationBase.prbank = paymentName;
+	public void clickRBank(String paymentName) throws Exception {
+		try {
+			rbank.click();
+			NavigationBase.prbank = paymentName;
+			Log.info("жмаканье на По счету (для юр. лиц)");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }  
 	}	
 	
 	// Ввод ИНН
