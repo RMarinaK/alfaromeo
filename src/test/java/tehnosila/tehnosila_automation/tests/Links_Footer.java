@@ -112,8 +112,8 @@ public class Links_Footer extends TestBase{
 		
 		//Покупка в кредит
 		pagetehnosila.clickPurchaseOnCredit();
-		commonmetods.assertTitle(purchaseOnCredit);
-		commonmetods.assertHeader(purchaseOnCredit);
+	/*	commonmetods.assertTitle(purchaseOnCredit);
+		commonmetods.assertHeader(purchaseOnCredit);*/
 		commonmetods.clickLogo();
 		//Бонусная программа - нужна доработка
 		pagetehnosila.clickBonusProgramm();	
