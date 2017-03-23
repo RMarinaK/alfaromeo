@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Самовывоз оплата Наличными
+// Доставка оплата Наличными
 public class OnlineCourierBank extends TestBase{
 		
 	private static Logger Log = LoggerFactory.getLogger(OnlineCourierBank.class);

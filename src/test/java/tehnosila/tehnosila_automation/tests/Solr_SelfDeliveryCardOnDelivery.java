@@ -5,7 +5,7 @@ package tehnosila.tehnosila_automation.tests;
 
 import java.io.File;
 
-
+import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Cart;
 import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizory;
@@ -24,52 +24,52 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Доставка оплата банковской картой
-public class OnlineCourierCardOnDelivery extends TestBase{
+// Самовывоз оплата банковской картой
+public class Solr_SelfDeliveryCardOnDelivery extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(OnlineCourierCardOnDelivery.class);
+	private static Logger Log = LoggerFactory.getLogger(Solr_SelfDeliveryCardOnDelivery.class);
 
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"OnlineCourierCardOnDelivery.xls",
-                "OnlineCourierCardOnDelivery", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"SelfDeliveryCardOnDelivery.xls",
+                "SelfDeliveryCardOnDelivery", "Data");
         return(retObjArr);
     }
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email,  String street, String house, String paymentName, String deliveryName) throws Exception{ //3
+	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{ //3
 		// авторизация
 	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
 	//	app.getLoginHelper().login(senderLogin,password); 
 //		Page_AreaMenu areamenu = MyPageFactory.getPage(Page_AreaMenu.class);
 	//	Assert.assertTrue(areamenu.isLogo()); // проверка наличия логотипчика
 		
+		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_int + NavigationBase.psolrand
+				+ NavigationBase.psolrpriceValue + NavigationBase.psolrand + NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
+		//"http://10.9.1.226:8983/solr/master_technosila_Product_default/select?q=assortmentLevelValues_int%3A%2211%22+AND+pickupAvailabilityType_1_string%3A%22AVAILABLE%22&wt=json&indent=true&fl=code_string"
+	//	app.getNavigationHelper().getPage("http://10.9.1.155:8983/solr/master_technosila_Product_default/select?q=assortmentLevelValues_int%3A%2211%22+AND+pickupAvailabilityType_1_string%3A%22AVAILABLE%22&wt=json&indent=true&fl=code_string");
+		app.getNavigationHelper().assertPRE();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
-		Page_CatalogTv_i_videoTelevizoryTelevizory pagecatalogtvivideotelevizorytelevizory = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizory.class);
+		pagetehnosila.getPage();
+	//	Page_CatalogTv_i_videoTelevizoryTelevizory pagecatalogtvivideotelevizorytelevizory = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizory.class);
 		Page_CatalogTv_i_videoTelevizoryTelevizoryID pagecatalogtvivideotelevizorytelevizoryid = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizoryID.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		
-		pagetehnosila.clickTVVA();
-		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
-		pagetehnosila.clickTV();
-		pagecatalogtvivideotelevizorytelevizory.clickOpenCourierDescription();
+		pagetehnosila.setSearchField();
+		pagetehnosila.clickProduct();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
-		pagecart.clickRCourierDelivery();
-		pagecart.waitCartLoadingLayer();
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
-		pageorder.setMetro();
-		pageorder.setOrderFormOrderAddressStreet(street);
-		pageorder.setOrderFormOrderAddressHouse(house);
-		pageorder.clickROnlineCardOnDelivery(paymentName);
+		pageorder.clickFirstPoint();
+		pageorder.clickRCardOnDelivery(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();

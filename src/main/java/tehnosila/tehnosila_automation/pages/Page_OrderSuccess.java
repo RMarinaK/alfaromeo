@@ -66,7 +66,7 @@ public class Page_OrderSuccess extends PagesBase{
 	// ожидание пока страница прогрузится и проверка соответствия номер заказа
 	public void getOrders() throws Exception{
 		NavigationBase.pnumberorder = getNumber();
-		app.getNavigationHelper().getgetOrders("http://admin:yficfqn@www."+getBaseURLnotHttp()+"sys/getOrders?gID="+NavigationBase.pnumberorder+"&show_test=1");
+		app.getNavigationHelper().getURL("http://admin:yficfqn@www."+getBaseURLnotHttp()+"sys/getOrders?gID="+NavigationBase.pnumberorder+"&show_test=1");
 		Log.info("***QA: http://admin:yficfqn@www."+getBaseURLnotHttp()+"sys/getOrders?gID="+NavigationBase.pnumberorder+"&show_test=1");
 	}
 	
@@ -84,6 +84,7 @@ public class Page_OrderSuccess extends PagesBase{
             ScreenShot.takeScreenShot();       
          }    
 	}*/
-
+	
+	
 
 }

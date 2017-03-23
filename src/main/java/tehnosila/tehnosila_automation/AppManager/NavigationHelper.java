@@ -231,12 +231,34 @@ public class NavigationHelper extends NavigationBase{
 	                 .executeScript("window.open(arguments[0])", url);
 	}
 	
+	public String getBaseURL(){
+		return getBaseURL();
+	}
+	
 	// открытие страницы по URL
-	public void getgetOrders(String URL){ //String URL
+	public void getURL(String URL){ //String URL
 		//openInNewWindow(URL);
 		//driver.switchTo().window(URL);
 		driver.navigate().to(URL);
 	}
+
+	public String getPre(){ 
+			return driver.findElement(By.xpath("//pre")).getText();
+		}
+	
+	
+	public void assertPRE() throws Exception {
+		String stringpre = getPre();
+	//	Log.info("***QA: Message "+ stringpre);
+		int start = stringpre.indexOf("\"code_string\":\"");
+		psolrarticle = "";
+		if (start > 0) {
+			String productpart = stringpre.substring(start + 15);
+			psolrarticle = productpart.substring(0, productpart.indexOf("\"}"));
+		}
+		Log.info("***QA: Message "+ psolrarticle);
+	}
+	
 	
 	
 }

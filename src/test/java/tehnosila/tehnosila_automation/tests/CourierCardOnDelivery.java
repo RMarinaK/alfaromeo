@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Самовывоз оплата банковской картой
+// Доставка оплата банковской картой
 public class CourierCardOnDelivery extends TestBase{
 		
 	private static Logger Log = LoggerFactory.getLogger(CourierCardOnDelivery.class);

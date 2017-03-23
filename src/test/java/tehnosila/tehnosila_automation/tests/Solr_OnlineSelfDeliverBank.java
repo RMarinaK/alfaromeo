@@ -5,7 +5,7 @@ package tehnosila.tehnosila_automation.tests;
 
 import java.io.File;
 
-
+import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Cart;
 import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizory;
@@ -25,9 +25,9 @@ import org.testng.annotations.Test;
  *
  */
 // Самовывоз оплата Юридическое лицо
-public class OnlineSelfDeliverBank extends TestBase{
+public class Solr_OnlineSelfDeliverBank extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(OnlineSelfDeliverBank.class);
+	private static Logger Log = LoggerFactory.getLogger(Solr_OnlineSelfDeliverBank.class);
 
 	
 	@DataProvider(name = "DP1")
@@ -48,18 +48,22 @@ public class OnlineSelfDeliverBank extends TestBase{
 //		Page_AreaMenu areamenu = MyPageFactory.getPage(Page_AreaMenu.class);
 	//	Assert.assertTrue(areamenu.isLogo()); // проверка наличия логотипчика
 		
+		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_int + NavigationBase.psolrand
+				+ NavigationBase.psolrpriceValue + NavigationBase.psolrand + NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
+		//"http://10.9.1.226:8983/solr/master_technosila_Product_default/select?q=assortmentLevelValues_int%3A%2211%22+AND+pickupAvailabilityType_1_string%3A%22AVAILABLE%22&wt=json&indent=true&fl=code_string"
+	//	app.getNavigationHelper().getPage("http://10.9.1.155:8983/solr/master_technosila_Product_default/select?q=assortmentLevelValues_int%3A%2211%22+AND+pickupAvailabilityType_1_string%3A%22AVAILABLE%22&wt=json&indent=true&fl=code_string");
+		app.getNavigationHelper().assertPRE();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
-		Page_CatalogTv_i_videoTelevizoryTelevizory pagecatalogtvivideotelevizorytelevizory = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizory.class);
+		pagetehnosila.getPage();
+//		Page_CatalogTv_i_videoTelevizoryTelevizory pagecatalogtvivideotelevizorytelevizory = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizory.class);
 		Page_CatalogTv_i_videoTelevizoryTelevizoryID pagecatalogtvivideotelevizorytelevizoryid = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizoryID.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		
-		pagetehnosila.clickTVVA();
-		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
-		pagetehnosila.clickTV();
-		pagecatalogtvivideotelevizorytelevizory.clickOpenSelfDeliveryDescription();
+		pagetehnosila.setSearchField();
+		pagetehnosila.clickProduct();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
 		pagecart.clickButtonOrdering();

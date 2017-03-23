@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import tehnosila.tehnosila_automation.AppManager.ApplicationManager;
+import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 import org.openqa.selenium.By;
@@ -117,10 +118,50 @@ public class Page_Tehnosila extends PagesBase {
 	@FindBy(xpath = "//a[contains(text(),'Войти на сайт')]")
 	private WebElement login; // Адреса сервисных центров
 
+	@FindBy(id="search-field")
+	public WebElement searchfield; // Строка поиска
+	
+	@FindBy(xpath="//div[@class='item-info']")
+	private WebElement openproduct; //  Товар
+	
 	@Override
 	public void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}
+	
+	protected boolean isNecessaryToChangeParam(String param){
+		if(param.equals(" ")||param.equals("")){
+			return false;
+		}else{
+			return true;
+		}		
+	}
+	
+	// ожидание пока страница прогрузится и проверка соответствия номер заказа
+		public void getPage(){
+			driver.navigate().to(getBaseURL());
+			Log.info("***QA: "+getBaseURL());
+		}
+	
+	public void setSearchField() {
+		if(isNecessaryToChangeParam(NavigationBase.psolrarticle)){
+			searchfield.click();
+			searchfield.clear();
+			searchfield.sendKeys(NavigationBase.psolrarticle);
+		}
+		searchfield.sendKeys(Keys.ENTER);
+	}
+	
+	public void clickProduct() throws Exception {
+		try {
+			openproduct.click(); 
+			Log.info("Зашли в товар");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         } 
+	}	
 	
 	// жмаканье на кнопку "Телевизоры LED"
 	public void clickTV() throws Exception {
@@ -139,14 +180,15 @@ public class Page_Tehnosila extends PagesBase {
 			/*Action dragAndDrop = builder.moveToElement(allgoods).moveToElement(tvaudiovideo).moveToElement(tv)
 					.moveToElement(ledtv).click(ledtv).release(ledtv).build();*/
 			
-			Actions builder = new Actions(driver);
+		/*	Actions builder = new Actions(driver);
 			Action dragAndDrop = builder
 					.moveToElement(allgoods)
 					.moveToElement(tvaudiovideo)
 					.click(tvaudiovideo)
 					.release(tvaudiovideo)
 					.build();
-			dragAndDrop.perform();
+			dragAndDrop.perform();*/
+		
 			Log.info("tvaudiovideo");
 		} catch (Exception e) {
 			Log.info("Element Not Found");
