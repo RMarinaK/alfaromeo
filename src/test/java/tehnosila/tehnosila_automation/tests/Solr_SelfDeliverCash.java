@@ -45,7 +45,7 @@ public class Solr_SelfDeliverCash extends TestBase{
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
 		// авторизация
-	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
+		Log.info("***QA: Самовывоз оплата Наличными");
 	//	app.getLoginHelper().login(senderLogin,password); 
 //		Page_AreaMenu areamenu = MyPageFactory.getPage(Page_AreaMenu.class);
 	//	Assert.assertTrue(areamenu.isLogo()); // проверка наличия логотипчика

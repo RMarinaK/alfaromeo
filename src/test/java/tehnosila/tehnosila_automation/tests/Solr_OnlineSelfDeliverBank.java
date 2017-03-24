@@ -43,7 +43,7 @@ public class Solr_OnlineSelfDeliverBank extends TestBase{
 			String inn, String kpp, String nameCompany, String companyAddress, String companyAddressFact, String companyAccount,
 			String bik, String accountCorr, String bankName, String city) throws Exception{ //
 		// авторизация
-	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
+		Log.info("***QA: Самовывоз онлайн оплата Юридическое лицо");
 	//	app.getLoginHelper().login(senderLogin,password); 
 //		Page_AreaMenu areamenu = MyPageFactory.getPage(Page_AreaMenu.class);
 	//	Assert.assertTrue(areamenu.isLogo()); // проверка наличия логотипчика
