@@ -60,6 +60,7 @@ public class Solr_OnlineSelfDeliveryCardOnDelivery extends TestBase{
 		
 		pagetehnosila.setSearchField();
 		pagetehnosila.clickProduct();
+		pagecatalogtvivideotelevizorytelevizoryid.logItemprop();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
 		pagecart.clickButtonOrdering();

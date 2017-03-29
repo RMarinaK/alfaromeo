@@ -7,7 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 
+import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 public class Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
@@ -20,11 +22,25 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
 	
 	@FindBy(id="popup-button-to-cart")
 	private WebElement popupbuttontocart; // Кнопка "Перейти в корзину"
+
+	@FindBy(xpath="//strong[@itemprop='sku']")
+	private WebElement itemprop; // Айдишник товара
 	
 	@Override
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}
+	
+	
+	// вытягивание номера заказа
+	public String getItemprop(){
+		return itemprop.getText();
+	}
+		
+	//	проверка отображения типа оплаты 
+	public void logItemprop(){
+		Log.info("***QA: Артикул товара"+ getItemprop());   
+	}	
 	
 	// жмаканье на "Купить"
 	public void clickButtonBuy() throws Exception {
