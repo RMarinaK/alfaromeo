@@ -17,7 +17,9 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL();
 	
-	@FindBy(xpath="//a[@class='button yellow-flat pressable to-cart flocktory-add-to-cart cart gtm-process-add-to-cart flix_cart_click_check']")
+	//@FindBy(xpath="//a[@class='button yellow-flat pressable to-cart flocktory-add-to-cart cart gtm-process-add-to-cart flix_cart_click_check']")
+	@FindBy(xpath = "//a[contains(text(),'                        Купить                    ')]")
+	//*[@id="generic-area"]/div/div[1]/div[3]/a[2]
 	private WebElement buttonbuy; // Кнопка "Купить"
 	
 	@FindBy(id="popup-button-to-cart")
@@ -37,8 +39,9 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
 		return itemprop.getText();
 	}
 		
-	//	проверка отображения типа оплаты 
+	//	вытягивание Артикула товара
 	public void logItemprop(){
+		app.getNavigationHelper().waitVisible(itemprop,10);
 		Log.info("***QA: Артикул товара "+ getItemprop());   
 	}	
 	
@@ -57,6 +60,7 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
 	// жмаканье на "Перейти в корзину"
 	public void clickPopupButtonToCart() throws Exception {
 	//	try {
+			app.getNavigationHelper().waitVisible(popupbuttontocart,10);
 			popupbuttontocart.click(); 
 			Log.info("жмаканье на Перейти в корзину");
 		/*}

@@ -236,6 +236,7 @@ public class Page_Order extends PagesBase{
 	// Онлайн Банковской картой
 	public void clickROnlineCardOnDelivery(String paymentName) throws Exception {
 		//try {
+			app.getNavigationHelper().waitVisible(ronlainecardondelivery,10);
 			ronlainecardondelivery.click(); 
 			NavigationBase.prcardondelivery = paymentName;
 			Log.info("жмаканье на Онлайн Банковской картой");
@@ -367,6 +368,7 @@ public class Page_Order extends PagesBase{
 	// жмаканье на "Завершить оформление"
 	public void clickButtonSubmitOrder() throws Exception {
 	//	try {
+			app.getNavigationHelper().waitVisible(buttonsubmitorder,10);
 			buttonsubmitorder.click(); 
 			Log.info("жмаканье на Завершить оформление");
 			//commonmetods.refreshPage();

@@ -59,6 +59,7 @@ public class Page_Cart extends PagesBase{
 	// жмаканье на "Офорить заказ"
 	public void clickButtonOrdering() throws Exception {
 	//	try {
+			app.getNavigationHelper().waitVisible(buttonordering,10);
 			buttonordering.click(); 
 			Log.info("жмаканье на Офорить заказ");
 		/*}

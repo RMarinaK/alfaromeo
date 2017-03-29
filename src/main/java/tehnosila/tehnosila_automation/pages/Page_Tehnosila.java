@@ -154,6 +154,7 @@ public class Page_Tehnosila extends PagesBase {
 	
 	public void clickProduct() throws Exception {
 		//try {
+			app.getNavigationHelper().waitVisible(openproduct,10);
 			openproduct.click(); 
 			Log.info("Зашли в товар");
 		/*}
