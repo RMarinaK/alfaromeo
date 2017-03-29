@@ -180,6 +180,7 @@ public class WebDriverHelper {
  		 * or elements if they are not immediately available. The default setting is 0.
  		 * Once set, the implicit wait is set for the life of the WebDriver object instance.*/
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    driver.manage().deleteAllCookies();
 	    driver.get("http://"+baseUrl);
 
 	//    (new WebDriverWait(driver, 1))
