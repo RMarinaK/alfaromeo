@@ -182,81 +182,81 @@ public class Page_Order extends PagesBase{
 	
 	// жмаканье первый пункт самовывоза
 	public void clickFirstPoint() throws Exception {
-		try {
+	//	try {
 			firstpoint.click(); 
 			Log.info("жмаканье на первый пункт самовывоза");
 			buttonselect.click();
 			Log.info("жмаканье на Выбрать");
-		}
+		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
-         }    
+         }*/    
 	}	
 	
 	// Наличными
 	public void clickRCash(String paymentName) throws Exception {
-		try {
+	//	try {
 			rcash.click();
 			NavigationBase.prcash = paymentName;
 			Log.info("жмаканье на Наличными");
-		}
+		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
-         }  
+         }*/  
 	}	
 	
 	// Банковской картой
 	public void clickRCardOnDelivery(String paymentName) throws Exception {
-		try {
+	//	try {
 			rcardondelivery.click(); 
 			NavigationBase.prcardondelivery = paymentName;
 			Log.info("жмаканье на Банковской картой");
-		}
+		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
-         }  
+         }*/  
 	}	
 	
 	// Рассрочка или кредит в магазине
 	public void clickRCreditInStore(String paymentName) throws Exception {
-		try {
+	//	try {
 			rcreditinstore.click(); 
 			NavigationBase.prcardondelivery = paymentName;
 			Log.info("жмаканье на Рассрочка или кредит в магазине");
-		}
+		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
-         }  
+         }*/  
 	}	
 	
 	// Онлайн Банковской картой
 	public void clickROnlineCardOnDelivery(String paymentName) throws Exception {
-		try {
+		//try {
 			ronlainecardondelivery.click(); 
 			NavigationBase.prcardondelivery = paymentName;
 			Log.info("жмаканье на Онлайн Банковской картой");
-		}
+		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
-         }  
+         }*/  
 	}
 	
 	// По счету (для юр. лиц)
 	public void clickRBank(String paymentName) throws Exception {
-		try {
+		//try {
 			rbank.click();
 			NavigationBase.prbank = paymentName;
 			Log.info("жмаканье на По счету (для юр. лиц)");
-		}
+		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
-         }  
+         }*/  
 	}	
 	
 	// Ввод ИНН
@@ -366,7 +366,7 @@ public class Page_Order extends PagesBase{
 
 	// жмаканье на "Завершить оформление"
 	public void clickButtonSubmitOrder() throws Exception {
-		try {
+	//	try {
 			buttonsubmitorder.click(); 
 			Log.info("жмаканье на Завершить оформление");
 			//commonmetods.refreshPage();
@@ -374,11 +374,11 @@ public class Page_Order extends PagesBase{
 		//	Log.info("Номер заказа " + message.getText());
 	//		WebElement webElement = driver.findElement(By.id("test_order-number"));
 		//	webElement.getText();
-		}
+		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
-         }    
+         }*/    
 	}	
    
        

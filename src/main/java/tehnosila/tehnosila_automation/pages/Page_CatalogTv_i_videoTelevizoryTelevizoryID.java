@@ -44,26 +44,26 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
 	
 	// жмаканье на "Купить"
 	public void clickButtonBuy() throws Exception {
-		try {
+//		try {
 			buttonbuy.click(); 
 			Log.info("жмаканье на Купить");
-		}
+	/*	}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
-         }    
+         }*/    
 	}	 
 		
 	// жмаканье на "Перейти в корзину"
 	public void clickPopupButtonToCart() throws Exception {
-		try {
+	//	try {
 			popupbuttontocart.click(); 
 			Log.info("жмаканье на Перейти в корзину");
-		}
+		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
-         }    
+         }*/    
 	}	 
 	
 }

@@ -34,14 +34,14 @@ public class Page_Cart extends PagesBase{
 	
 	// жмаканье на "Курьерская доставка"
 	public void clickRCourierDelivery() throws Exception {
-		try {
+	//	try {
 			rcourierdelivery.click(); 
 			Log.info("жмаканье на Курьерская доставка");
-		}
+		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
-         }    
+         }*/    
 	}	
 	
 	// Ожидание лоэдера
@@ -58,13 +58,13 @@ public class Page_Cart extends PagesBase{
 	
 	// жмаканье на "Офорить заказ"
 	public void clickButtonOrdering() throws Exception {
-		try {
+	//	try {
 			buttonordering.click(); 
 			Log.info("жмаканье на Офорить заказ");
-		}
+		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
-         }    
+         }*/    
 	}	 
 }
