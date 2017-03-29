@@ -182,11 +182,16 @@ public class Page_Order extends PagesBase{
 	
 	// жмаканье первый пункт самовывоза
 	public void clickFirstPoint() throws Exception {
-	//	try {
+	//	try {  	@FindBy(xpath="//div[@id='listPoints']/ul/li[@class='as-tab__shops-cell as-tab__shops-cell_date']/button")
+		//private WebElement buttonselect; // Кнопка "Выбрать"
 			firstpoint.click(); 
 			Log.info("жмаканье на первый пункт самовывоза");
-			buttonselect.click();
-			Log.info("жмаканье на Выбрать");
+			if (driver.findElement(By.xpath("//div[@id='listPoints']/ul/li[@class='as-tab__shops-cell as-tab__shops-cell_date']/button")).isDisplayed()) {
+				buttonselect.click();
+				Log.info("жмаканье на Выбрать");
+			}
+
+			
 		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
