@@ -39,7 +39,7 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
 		
 	//	проверка отображения типа оплаты 
 	public void logItemprop(){
-		Log.info("***QA: Артикул товара"+ getItemprop());   
+		Log.info("***QA: Артикул товара "+ getItemprop());   
 	}	
 	
 	// жмаканье на "Купить"

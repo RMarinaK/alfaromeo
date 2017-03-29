@@ -153,14 +153,14 @@ public class Page_Tehnosila extends PagesBase {
 	}
 	
 	public void clickProduct() throws Exception {
-		try {
+		//try {
 			openproduct.click(); 
 			Log.info("Зашли в товар");
-		}
+		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
-         } 
+         }*/ 
 	}	
 	
 	// жмаканье на кнопку "Телевизоры LED"
