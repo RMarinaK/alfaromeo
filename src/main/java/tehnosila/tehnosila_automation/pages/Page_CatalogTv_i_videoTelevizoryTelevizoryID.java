@@ -48,6 +48,7 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
 	// жмаканье на "Купить"
 	public void clickButtonBuy() throws Exception {
 //		try {
+			app.getNavigationHelper().waitVisible(buttonbuy,10);
 			buttonbuy.click(); 
 			Log.info("жмаканье на Купить");
 	/*	}

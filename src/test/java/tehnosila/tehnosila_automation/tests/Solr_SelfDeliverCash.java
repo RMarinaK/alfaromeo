@@ -82,6 +82,7 @@ public class Solr_SelfDeliverCash extends TestBase{
 		sysgetorders.assertOrders();
 		sysgetorders.assertPaymentName(paymentNameGO);
 		sysgetorders.assertDeliveryName(deliveryName);
+		pagetehnosila.delCookies();
 	}
 	
 }

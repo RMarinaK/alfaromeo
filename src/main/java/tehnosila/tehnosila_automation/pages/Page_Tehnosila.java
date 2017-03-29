@@ -518,4 +518,12 @@ public class Page_Tehnosila extends PagesBase {
 			ScreenShot.takeScreenShot();
 		}
 	}
+	
+	
+	//клик по Войти на сайт
+		public void delCookies() throws Exception {
+			driver.manage().deleteAllCookies(); 
+		}
+	
+	
 }
