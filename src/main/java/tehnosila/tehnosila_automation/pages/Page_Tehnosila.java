@@ -154,9 +154,15 @@ public class Page_Tehnosila extends PagesBase {
 	
 	public void clickProduct() throws Exception {
 		//try {
-			app.getNavigationHelper().waitVisible(openproduct,10);
+		if (driver.findElement(By.xpath("//div[@class='item-info']")).isDisplayed()) {
+			openproduct.click();
+			Log.info("жмаканье на Выбрать");
+		}
+
+		
+			/*app.getNavigationHelper().waitVisible(openproduct,10);
 			openproduct.click(); 
-			Log.info("Зашли в товар");
+			Log.info("Зашли в товар");*/
 		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
