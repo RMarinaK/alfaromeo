@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Доставка оплата Юридическое лицо
+// Доставка онлайн оплата Юридическое лицо
 public class Solr_OnlineCourierBank extends TestBase{
 		
 	private static Logger Log = LoggerFactory.getLogger(Solr_OnlineCourierBank.class);
@@ -62,8 +62,8 @@ public class Solr_OnlineCourierBank extends TestBase{
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		
-		pagetehnosila.setSearchField();
-		pagetehnosila.clickProduct();
+	//	pagetehnosila.setSearchField();
+	//	pagetehnosila.clickProduct();
 		pagecatalogtvivideotelevizorytelevizoryid.logItemprop();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();

@@ -65,8 +65,8 @@ public class Solr_SelfDeliverCash extends TestBase{
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		
-		pagetehnosila.setSearchField();
-		pagetehnosila.clickProduct();
+	//	pagetehnosila.setSearchField();
+	//	pagetehnosila.clickProduct();
 		pagecatalogtvivideotelevizorytelevizoryid.logItemprop();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();

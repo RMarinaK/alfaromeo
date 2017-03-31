@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Доставка оплата банковской картой
+// Доставка онлайн оплата банковской картой
 public class Solr_OnlineCourierCardOnDelivery extends TestBase{
 		
 	private static Logger Log = LoggerFactory.getLogger(Solr_OnlineCourierCardOnDelivery.class);
@@ -60,8 +60,8 @@ public class Solr_OnlineCourierCardOnDelivery extends TestBase{
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		
-		pagetehnosila.setSearchField();
-		pagetehnosila.clickProduct();
+	//	pagetehnosila.setSearchField();
+	//	pagetehnosila.clickProduct();
 		pagecatalogtvivideotelevizorytelevizoryid.logItemprop();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();

@@ -139,7 +139,7 @@ public class Page_Tehnosila extends PagesBase {
 	
 	// ожидание пока страница прогрузится и проверка соответствия номер заказа
 		public void getPage(){
-			driver.navigate().to(getBaseURL());
+			driver.navigate().to(getBaseURL()+"item?code=" + NavigationBase.psolrarticle);
 			Log.info("***QA: "+getBaseURL());
 		}
 	
@@ -153,21 +153,16 @@ public class Page_Tehnosila extends PagesBase {
 	}
 	
 	public void clickProduct() throws Exception {
-		//try {
-		if (driver.findElement(By.xpath("//div[@class='item-info']")).isDisplayed()) {
-			openproduct.click();
-			Log.info("жмаканье на Выбрать");
-		}
-
+		try {
 		
-			/*app.getNavigationHelper().waitVisible(openproduct,10);
+			app.getNavigationHelper().waitVisible(openproduct,10);
 			openproduct.click(); 
-			Log.info("Зашли в товар");*/
-		/*}
+			Log.info("Зашли в товар");
+		}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
-         }*/ 
+         } 
 	}	
 	
 	// жмаканье на кнопку "Телевизоры LED"
