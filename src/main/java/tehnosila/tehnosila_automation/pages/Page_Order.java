@@ -238,6 +238,26 @@ public class Page_Order extends PagesBase{
          }*/  
 	}	
 	
+	
+	// Онлайн Банковской картой
+		public void assertROnlineCardOnDelivery(String paymentName){
+			//try {
+			if(ronlainecardondelivery.getAttribute("class").equals("radiobox active"))
+				Log.info("radiobox " + paymentName +" active");
+		    else 
+		    	Log.info("radiobox " + paymentName +" unactive");
+
+			/*	app.getNavigationHelper().waitVisible(ronlainecardondelivery,10);
+				ronlainecardondelivery.click(); 
+				NavigationBase.prcardondelivery = paymentName;
+				Log.info("жмаканье на Онлайн Банковской картой");*/
+			/*}
+		    catch(Exception e) {      
+		    	Log.info("Element Not Found");     
+	            ScreenShot.takeScreenShot();       
+	         }*/  
+		}
+	
 	// Онлайн Банковской картой
 	public void clickROnlineCardOnDelivery(String paymentName) throws Exception {
 		//try {
@@ -370,6 +390,7 @@ public class Page_Order extends PagesBase{
 //	private String getOrders = super.getBaseURL()+"#/sys/getOrders?gID="+getNumber();	
 	// ожидание пока отработает прелоэдер
 
+	
 	// жмаканье на "Завершить оформление"
 	public void clickButtonSubmitOrder() throws Exception {
 	//	try {

@@ -24,36 +24,36 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Самовывоз оплата в кредит
-public class Solr_SelfDeliveryCreditInStore extends TestBase{
+// Доставка онлайн оплата банковской картой
+public class Solr_OnlineCourierCardOnDelivery_17assortment extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Solr_SelfDeliveryCreditInStore.class);
+	private static Logger Log = LoggerFactory.getLogger(Solr_OnlineCourierCardOnDelivery_17assortment.class);
 
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"SelfDeliveryCreditInStore.xls",
-                "SelfDeliveryCreditInStore", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"OnlineCourierCardOnDelivery.xls",
+                "OnlineCourierCardOnDelivery", "Data");
         return(retObjArr);
     }
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
+	public void loginTest(String fio, String phone, String email,  String street, String house, String paymentName, String deliveryName) throws Exception{ //3
 		// авторизация
-		Log.info("***QA: Самовывоз оплата в кредит");
+		Log.info("***QA: Доставка онлайн оплата банковской картой");
 	//	app.getLoginHelper().login(senderLogin,password); 
 //		Page_AreaMenu areamenu = MyPageFactory.getPage(Page_AreaMenu.class);
 	//	Assert.assertTrue(areamenu.isLogo()); // проверка наличия логотипчика
 		
-		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrand
-				+ NavigationBase.psolrpriceValue + NavigationBase.psolrand + NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
+		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_17 + NavigationBase.psolrand
+				+ NavigationBase.psolrpriceValue + NavigationBase.psolrand + NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
 		//"http://10.9.1.226:8983/solr/master_technosila_Product_default/select?q=assortmentLevelValues_int%3A%2211%22+AND+pickupAvailabilityType_1_string%3A%22AVAILABLE%22&wt=json&indent=true&fl=code_string"
 	//	app.getNavigationHelper().getPage("http://10.9.1.155:8983/solr/master_technosila_Product_default/select?q=assortmentLevelValues_int%3A%2211%22+AND+pickupAvailabilityType_1_string%3A%22AVAILABLE%22&wt=json&indent=true&fl=code_string");
 		app.getNavigationHelper().assertPRE();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
-	//	Page_CatalogTv_i_videoTelevizoryTelevizory pagecatalogtvivideotelevizorytelevizory = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizory.class);
+//		Page_CatalogTv_i_videoTelevizoryTelevizory pagecatalogtvivideotelevizorytelevizory = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizory.class);
 		Page_CatalogTv_i_videoTelevizoryTelevizoryID pagecatalogtvivideotelevizorytelevizoryid = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizoryID.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
@@ -65,17 +65,21 @@ public class Solr_SelfDeliveryCreditInStore extends TestBase{
 		pagecatalogtvivideotelevizorytelevizoryid.logItemprop();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
+		pagecart.clickRCourierDelivery();
+		pagecart.waitCartLoadingLayer();
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
-		pageorder.clickFirstPoint();
-		pageorder.clickRCreditInStore(paymentName);
+		pageorder.setMetro();
+		pageorder.setOrderFormOrderAddressStreet(street);
+		pageorder.setOrderFormOrderAddressHouse(house);
+		pageorder.assertROnlineCardOnDelivery(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
-		sysgetorders.assertPaymentName(paymentNameGO);
+		sysgetorders.assertPaymentName(paymentName);
 		sysgetorders.assertDeliveryName(deliveryName);
 		pagetehnosila.delCookies();
 	}
