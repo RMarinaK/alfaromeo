@@ -8,7 +8,7 @@
     	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	 	<logback.version>1.0.1</logback.version>
-		<project.test.baseurl>tehnosila.ru/</project.test.baseurl>
+		<project.test.baseurl>${globalbaseurl}</project.test.baseurl>
   </properties>
   
 	
@@ -317,7 +317,7 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub>http://localhost:4445/wd/hub</grid2.hub>
-        <site.url>tehnosila.ru/</site.url>
+        <site.url>admin:yficfqn@www.beta.tehnosila.ru/</site.url>
         <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
