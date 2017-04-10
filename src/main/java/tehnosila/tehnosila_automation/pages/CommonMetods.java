@@ -5,6 +5,7 @@ import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
@@ -94,9 +95,15 @@ public class CommonMetods extends Page_AreaMenu {
 		return header.getText();
 	}
 	
+	public void scrollPage() {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight," + "document.body.scrollHeight,document.documentElement.clientHeight));");
+	}
+	
 	// проверка отображения Title
 	public void assertTitle(String title) throws Exception {
 		try {
+			Log.info("***QA: Title "+ getTitle());
 			Assert.assertEquals(title, getTitle()); // проверка отображения Title
 			Log.info("***QA: Title "+ getTitle());
 		}

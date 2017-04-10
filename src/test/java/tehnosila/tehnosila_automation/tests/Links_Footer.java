@@ -34,71 +34,85 @@ public class Links_Footer extends TestBase{
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		Page_HelpFeedback pagehelpfeedback = MyPageFactory.getPage(Page_HelpFeedback.class);
 		// О компании Техносила
+		commonmetods.scrollPage();
 		pagetehnosila.clickAboutTC();
 		commonmetods.assertTitle(infoabout);
 		commonmetods.assertHeader(infoabout);
 		commonmetods.clickLogo();
 		//Новости компании
+		commonmetods.scrollPage();
 		pagetehnosila.clickNewsTC();
 		commonmetods.assertTitle(newsinfo);
 		commonmetods.assertHeader(newsinfo);
 		commonmetods.clickLogo();
 		// Вакансии
+		commonmetods.scrollPage();
 		pagetehnosila.clickCareer();
 		commonmetods.assertTitle(infocareer);
 		commonmetods.assertHeader(infocareer);
 		commonmetods.clickLogo();
-		//Пресс-релизы	
+		//Пресс-релизы
+		commonmetods.scrollPage();
 		pagetehnosila.clickPress();
 		commonmetods.assertTitle(infopress);
 		commonmetods.assertHeader(infopress);
 		commonmetods.clickLogo();
 		//Контактная информация
+		commonmetods.scrollPage();
 		pagetehnosila.clickContacts();
 		commonmetods.assertTitle(infocontacts);
 		commonmetods.assertHeader(infocontacts);
 		commonmetods.clickLogo();	
 		// Адреса магазинов
+		commonmetods.scrollPage();
 		pagetehnosila.clickStores();
 		commonmetods.assertTitle(infostores);
 		commonmetods.assertHeader(infostores);
 		commonmetods.clickLogo();
 		// Арендодателям
+		commonmetods.scrollPage();
 		pagetehnosila.clickLease();
 		commonmetods.assertTitle(infolease);
 		commonmetods.assertHeader(infolease);
 		commonmetods.clickLogo();
 		// Юридическая информация
+		commonmetods.scrollPage();
 		pagetehnosila.clickLegal();
 		commonmetods.assertTitle(infolegal);
 		commonmetods.assertHeader(infolegal);
 		commonmetods.clickLogo();
 		//Как сделать заказ на сайте
+		commonmetods.scrollPage();
 		pagetehnosila.clickHowToBuy();
 		commonmetods.assertTitle(webshophowtobuy);
 		commonmetods.assertHeader(webshophowtobuy);
 		commonmetods.clickLogo();
 		// Оплата
+		commonmetods.scrollPage();
 		pagetehnosila.clickPayment();
 		commonmetods.assertTitle(webshoppayment);
 		commonmetods.assertHeader(webshoppayment);
 		commonmetods.clickLogo();
 		// Доставка
+		commonmetods.scrollPage();
 		pagetehnosila.clickDelivery();
 		commonmetods.assertTitle(webshopdelivery);
 		commonmetods.assertHeader(webshopdelivery);
 		commonmetods.clickLogo();
 		// Получение в магазине
+		commonmetods.scrollPage();
 		pagetehnosila.clickPickup();
 		commonmetods.assertTitle(webshoppickup);
 		commonmetods.assertHeader(webshoppickup);
 		commonmetods.clickLogo();
 		// Возврат и обмен
+		commonmetods.scrollPage();
 		pagetehnosila.clickExchange();
 		commonmetods.assertTitle(webshopexchange);
 		commonmetods.assertHeader(webshopexchange);
 		commonmetods.clickLogo();
 		// Правила работы
+		commonmetods.scrollPage();
 		pagetehnosila.clickGuide();
 		commonmetods.assertTitle(webshopguide);
 		commonmetods.assertHeader(webshopguide);
@@ -111,30 +125,36 @@ public class Links_Footer extends TestBase{
 		//---------------
 		
 		//Покупка в кредит
+		commonmetods.scrollPage();
 		pagetehnosila.clickPurchaseOnCredit();
-	/*	commonmetods.assertTitle(purchaseOnCredit);
-		commonmetods.assertHeader(purchaseOnCredit);*/
+		commonmetods.assertTitle(purchaseOnCredit);
+		commonmetods.assertHeader(purchaseOnCredit);
 		commonmetods.clickLogo();
 		//Бонусная программа - нужна доработка
+	/*	commonmetods.scrollPage();
 		pagetehnosila.clickBonusProgramm();	
 		commonmetods.assertTitle(bonusProgramm);
-		pagetehnosila.tryToOpen();
+		pagetehnosila.tryToOpen();*/
 		//Настройка и установка
+		commonmetods.scrollPage();
 		pagetehnosila.clickSetupAndInstallation();
 		commonmetods.assertTitle(setupAndInstallation);
 		commonmetods.assertHeader(setupAndInstallation);
 		commonmetods.clickLogo();
 		//Подарочные карты
-	/*	pagetehnosila.clickGiftCards();
+	/*	commonmetods.scrollPage();
+		pagetehnosila.clickGiftCards();
 		commonmetods.assertTitle(giftCards);
 		commonmetods.assertHeader(giftCards);
 		commonmetods.clickLogo();*/
 		//Сервис плюс
+		commonmetods.scrollPage();
 		pagetehnosila.clickServicePlus();
 		commonmetods.assertTitle(servicePlus);
 		commonmetods.assertHeader(servicePlus);
 		commonmetods.clickLogo();
 		//Страхование техники
+		commonmetods.scrollPage();
 		pagetehnosila.clickInsuranceTechniques();
 		commonmetods.assertTitle(insuranceTechniques);
 		commonmetods.assertHeader(insuranceTechniques);
@@ -145,11 +165,13 @@ public class Links_Footer extends TestBase{
 		commonmetods.assertHeader(tehnotrendProgram);
 		commonmetods.clickLogo();*/
 		//Гарантийное обслуживание
+		commonmetods.scrollPage();
 		pagetehnosila.clickWarrantyService();
 		commonmetods.assertTitle(warrantyService);
 		commonmetods.assertHeader(warrantyService);
 		commonmetods.clickLogo();
 		//Адреса сервисных центров
+		commonmetods.scrollPage();
 		pagetehnosila.clickServiceCenterLocations();
 		String tittleServiceCenterLocations = "Cервисные центры"; //Говнохардкод, т.к. какая-то беда с кодировкой/раскладкой, при чтении из LinksFooter.xls
 		commonmetods.assertTitle(tittleServiceCenterLocations);
@@ -157,6 +179,7 @@ public class Links_Footer extends TestBase{
 		commonmetods.clickLogo();
 		
 		// Обратная связь
+		commonmetods.scrollPage();
 		pagetehnosila.clickFeedback();
 		commonmetods.assertTitle(helpfeedback);
 		commonmetods.assertHeader(helpfeedback);

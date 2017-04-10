@@ -48,7 +48,7 @@ public abstract class PagesBase {
 		return app.getWebDriverHelper().getBaseURL();
 	}
 	
-	public String getBaseURLnotHttp(){
+ 	public String getBaseURLnotHttp(){
 		return app.getWebDriverHelper().getBaseURLnotHttp();
 	}
 	

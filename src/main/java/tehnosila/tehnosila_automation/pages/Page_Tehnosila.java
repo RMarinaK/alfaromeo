@@ -8,6 +8,7 @@ import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -28,7 +29,10 @@ public class Page_Tehnosila extends PagesBase {
 
 	@FindBy(id = "all-goods")
 	public WebElement allgoods; // Каталог товаров
-
+	
+	@FindBy(id = "footer-links")
+	public WebElement footerlinks; // Каталог товаров
+	
 	@FindBy(xpath = "//div[@id='main-categories']/div/ul/li/a[contains(text(),'Телевизоры, аудио, видео')]")//
 	private WebElement tvaudiovideo; // Телевизоры, аудио, видео
 
@@ -204,6 +208,7 @@ public class Page_Tehnosila extends PagesBase {
 	// жмаканье на ссылку "О компании Техносила"
 	public void clickAboutTC() throws Exception {
 		try {
+			//driver.findElement(By.linkText("О компании Техносила")).click();
 			aboutTC.click();
 			Log.info("О компании Техносила");
 			ScreenShot.takeScreenShot();
@@ -216,6 +221,7 @@ public class Page_Tehnosila extends PagesBase {
 	// жмаканье на ссылку "Новости компании"
 	public void clickNewsTC() throws Exception {
 		try {
+		//	driver.findElement(By.linkText("Новости компании")).click();
 			newsTC.click();
 			Log.info("Новости компании");
 			ScreenShot.takeScreenShot();
