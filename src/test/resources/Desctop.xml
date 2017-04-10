@@ -3,8 +3,7 @@
 <suite name="Tests" verbose="5" data-provider-thread-count="1">
 	<test name="Interchange">
 		<parameter name="application.properties" value="src/main/resources/application.properties"/>
-		<classes>
-			<class name="tehnosila.tehnosila_automation.tests.Links_Footer"/>
+		<classes>			
 			<class name="tehnosila.tehnosila_automation.tests.Solr_SelfDeliverCash"/>
 			<class name="tehnosila.tehnosila_automation.tests.Solr_SelfDeliveryCardOnDelivery"/>
 			<class name="tehnosila.tehnosila_automation.tests.Solr_SelfDeliveryCreditInStore"/>
