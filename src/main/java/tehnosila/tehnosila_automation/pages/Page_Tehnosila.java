@@ -507,10 +507,10 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			authorization.click();
 			Log.info("Меню Кабинет");
-			ScreenShot.takeScreenShot();
+		//	ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
-			ScreenShot.takeScreenShot();
+		//	ScreenShot.takeScreenShot();
 		}
 	}
 	
@@ -519,10 +519,10 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			login.click();
 			Log.info("Войти на сайт");
-			ScreenShot.takeScreenShot();
+		//	ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
-			ScreenShot.takeScreenShot();
+		//	ScreenShot.takeScreenShot();
 		}
 	}
 	
