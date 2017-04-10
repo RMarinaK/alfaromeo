@@ -36,8 +36,8 @@ public class Links_Footer extends TestBase{
 		// О компании Техносила
 		commonmetods.scrollPage();
 		pagetehnosila.clickAboutTC();
-		//commonmetods.assertTitle(infoabout);
-		//commonmetods.assertHeader(infoabout);
+		commonmetods.assertTitle(infoabout);
+		commonmetods.assertHeader(infoabout);
 		commonmetods.clickLogo();
 		//Новости компании
 		commonmetods.scrollPage();
