@@ -15,6 +15,7 @@
 			<class name="tehnosila.tehnosila_automation.tests.Solr_OnlineSelfDeliverBank"/>
 			<class name="tehnosila.tehnosila_automation.tests.Solr_OnlineSelfDeliveryCardOnDelivery"/>
 			<class name="tehnosila.tehnosila_automation.tests.Solr_OnlineCourierCardOnDelivery_17assortment"/>
+			<class name="tehnosila.tehnosila_automation.tests.Links_Footer"/>
 			<class name="tehnosila.tehnosila_automation.tests.Authorization"/>
 			<class name="tehnosila.tehnosila_automation.tests.Solr_SelfDeliverCash"/>
 			<class name="tehnosila.tehnosila_automation.tests.Solr_SelfDeliveryCardOnDelivery"/>
