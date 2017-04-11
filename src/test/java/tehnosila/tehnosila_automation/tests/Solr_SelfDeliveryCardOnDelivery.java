@@ -46,7 +46,7 @@ public class Solr_SelfDeliveryCardOnDelivery extends TestBase{
 //		Page_AreaMenu areamenu = MyPageFactory.getPage(Page_AreaMenu.class);
 	//	Assert.assertTrue(areamenu.isLogo()); // проверка наличия логотипчика
 		
-		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrpriceValue + NavigationBase.psolrand 
+		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
 				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
 		//"http://10.9.1.226:8983/solr/master_technosila_Product_default/select?q=assortmentLevelValues_int%3A%2211%22+AND+pickupAvailabilityType_1_string%3A%22AVAILABLE%22&wt=json&indent=true&fl=code_string"
 	//	app.getNavigationHelper().getPage("http://10.9.1.155:8983/solr/master_technosila_Product_default/select?q=assortmentLevelValues_int%3A%2211%22+AND+pickupAvailabilityType_1_string%3A%22AVAILABLE%22&wt=json&indent=true&fl=code_string");

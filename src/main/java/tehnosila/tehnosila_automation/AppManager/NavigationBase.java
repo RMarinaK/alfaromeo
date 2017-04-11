@@ -33,7 +33,8 @@ public class NavigationBase {
 	public static String psolrpickupAvailabilityTyp = "pickupAvailabilityType_1_string%3A%22AVAILABLE%22";
 	public static String psolrdeliveryAvailabilityTyp = "deliveryAvailabilityType_1_string%3A%22AVAILABLE%22";
 	public static String psolrtail = "&wt=json&indent=true&fl=code_string";
-	public static String psolrpriceValue = "priceValue_1_rub_double%3A%5B*+TO+"+1000+"%5D";
+	public static String psolrpriceValue_0_1000 = "priceValue_1_rub_double%3A%5B*+TO+"+1000+"%5D";
+	public static String psolrpriceValue_3000_3500 = "priceValue_1_rub_double%3A%5B"+3000+"+TO+"+3500+"%5D";
 	
 	
 }
