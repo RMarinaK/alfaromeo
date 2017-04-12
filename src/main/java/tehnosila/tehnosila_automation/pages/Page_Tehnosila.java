@@ -211,10 +211,10 @@ public class Page_Tehnosila extends PagesBase {
 			//driver.findElement(By.linkText("О компании Техносила")).click();
 			aboutTC.click();
 			Log.info("О компании Техносила");
-			ScreenShot.takeScreenShot();
+	//		ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
-			ScreenShot.takeScreenShot();
+	//		ScreenShot.takeScreenShot();
 		}
 	}
 
