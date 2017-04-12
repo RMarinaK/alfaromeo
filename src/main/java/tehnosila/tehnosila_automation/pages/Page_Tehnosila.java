@@ -128,6 +128,9 @@ public class Page_Tehnosila extends PagesBase {
 	@FindBy(xpath="//div[@class='item-info']")
 	private WebElement openproduct; //  Товар
 	
+	@FindBy(xpath = "//a[contains(text(),'Акции')]")
+	private WebElement actions; //  Акции
+
 	@Override
 	public void tryToOpen() {
 		driver.get(this.URL_MATCH);
@@ -501,10 +504,15 @@ public class Page_Tehnosila extends PagesBase {
 	}
 	
 	
-	//клик по Войти на сайт
-		public void delCookies() throws Exception {
-			driver.manage().deleteAllCookies(); 
-		}
+	//чистка кук
+	public void delCookies(){
+		driver.manage().deleteAllCookies(); 
+	}
+		
+	//переход в Акции
+	public void clickActions() {
+		actions.click(); 
+	}	
 	
 	
 }
