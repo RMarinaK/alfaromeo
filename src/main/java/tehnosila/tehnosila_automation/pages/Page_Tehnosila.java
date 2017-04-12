@@ -211,7 +211,6 @@ public class Page_Tehnosila extends PagesBase {
 			//driver.findElement(By.linkText("О компании Техносила")).click();
 			aboutTC.click();
 			Log.info("О компании Техносила");
-	//		ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 	//		ScreenShot.takeScreenShot();
@@ -224,7 +223,6 @@ public class Page_Tehnosila extends PagesBase {
 		//	driver.findElement(By.linkText("Новости компании")).click();
 			newsTC.click();
 			Log.info("Новости компании");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -236,7 +234,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			career.click();
 			Log.info("Вакансии");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -248,7 +245,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			press.click();
 			Log.info("Пресс-релизы");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -260,7 +256,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			contacts.click();
 			Log.info("Контактная информация");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -272,7 +267,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			stores.click();
 			Log.info("Адреса магазинов");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -284,7 +278,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			lease.click();
 			Log.info("Арендодателям");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -296,7 +289,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			legal.click();
 			Log.info("Юридическая информация");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -308,7 +300,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			howtobuy.click();
 			Log.info("Как сделать заказ на сайте");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -320,7 +311,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			payment.click();
 			Log.info("Оплата");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -332,7 +322,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			delivery.click();
 			Log.info("Доставка");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -344,7 +333,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			pickup.click();
 			Log.info("Получение в магазине");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -356,7 +344,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			exchange.click();
 			Log.info("Возврат и обмен");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -368,7 +355,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			guide.click();
 			Log.info("Правила работы");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -381,7 +367,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			feedback.click();
 			Log.info("Обратная связь");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -396,7 +381,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			purchaseOnCredit.click();
 			Log.info("Покупка в кредит");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -408,7 +392,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			bonusProgramm.click();
 			Log.info("Бонусная программа");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -420,7 +403,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			setupAndInstallation.click();
 			Log.info("Настройка и установка");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -432,7 +414,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			giftCards.click();
 			Log.info("Подарочные карты");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -444,7 +425,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			servicePlus.click();
 			Log.info("Сервис плюс");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -456,7 +436,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			insuranceTechniques.click();
 			Log.info("Страхование техники");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -468,7 +447,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			tehnotrendProgram.click();
 			Log.info("Программа Технотренд");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -480,7 +458,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			warrantyService.click();
 			Log.info("Гарантийное обслуживание");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -492,7 +469,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			serviceCenterLocations.click();
 			Log.info("Адреса сервисных центров");
-			ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -507,7 +483,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			authorization.click();
 			Log.info("Меню Кабинет");
-		//	ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 		//	ScreenShot.takeScreenShot();
@@ -519,7 +494,6 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			login.click();
 			Log.info("Войти на сайт");
-		//	ScreenShot.takeScreenShot();
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 		//	ScreenShot.takeScreenShot();
