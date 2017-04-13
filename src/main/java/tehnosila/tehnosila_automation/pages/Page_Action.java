@@ -16,11 +16,11 @@ import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 public class Page_Action extends PagesBase{
 	private static Logger Log = LoggerFactory.getLogger(Page_Action.class);
 	//DSE: url to check page
-	protected String URL_MATCH = super.getBaseURL()+"#/cart";
+	protected String URL_MATCH = super.getBaseURL()+"#/action";
 	
 
 	@FindBy(xpath="//a[@href='/action/rassrochka']/img")
-	private WebElement actionrassrochka; // Радиобаттон "Курьерская доставка"
+	private WebElement actionrassrochka; // Картинка рассрочки
 	
 	@Override
 	void tryToOpen() {
