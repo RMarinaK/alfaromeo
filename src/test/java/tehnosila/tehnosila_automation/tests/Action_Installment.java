@@ -11,6 +11,7 @@ import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Action;
 import tehnosila.tehnosila_automation.pages.Page_ActionRassrochka;
 import tehnosila.tehnosila_automation.pages.Page_Cart;
+import tehnosila.tehnosila_automation.pages.Page_Catalog;
 import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizory;
 import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizoryID;
 import tehnosila.tehnosila_automation.pages.Page_Order;
@@ -49,7 +50,7 @@ public class Action_Installment extends TestBase{
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
-		Page_CatalogTv_i_videoTelevizoryTelevizory pagecatalogtvivideotelevizorytelevizory = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizory.class);
+		Page_Catalog pagecatalog = MyPageFactory.getPage(Page_Catalog.class);
 		Page_CatalogTv_i_videoTelevizoryTelevizoryID pagecatalogtvivideotelevizorytelevizoryid = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizoryID.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
@@ -59,7 +60,7 @@ public class Action_Installment extends TestBase{
 		pagetehnosila.clickActions();
 		pageaction.clickActionRassrochka();
 		commonmetods.clickActionRassrochkaCatalog();
-		pagecatalogtvivideotelevizorytelevizory.clickOpenSelfDeliveryDescription();
+		pagecatalog.clickOpenSelfDeliveryDescription();
 		pagecatalogtvivideotelevizorytelevizoryid.logItemprop();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
