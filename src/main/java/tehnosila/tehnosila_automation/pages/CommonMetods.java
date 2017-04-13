@@ -44,6 +44,9 @@ public class CommonMetods extends Page_AreaMenu {
 	@FindBy(xpath = "//h1") 
 	private WebElement header; // заголовок на страницах
 	
+	@FindBy(xpath="//a[@class='button show-all-items go-to-catalog']")
+	private WebElement actioncatalog; // Кнопка Перейти к покупкам
+	
     // жмаканье на ссылку "ссылке" в информационном сообщении
     public void clickLinkText() {
     	linkText.click();  	
@@ -124,4 +127,10 @@ public class CommonMetods extends Page_AreaMenu {
             ScreenShot.takeScreenShot();       
          }    
 	}
+	
+	// жмаканье на "Перейти к покупкам"
+	public void clickActionRassrochkaCatalog() throws Exception {
+		actioncatalog.click(); 
+		Log.info("жмаканье на Перейти к покупкам");
+ 	}
 }

@@ -19,21 +19,11 @@ public class Page_ActionRassrochka extends PagesBase{
 	protected String URL_MATCH = super.getBaseURL()+"#/action/rassrochka";
 	
 
-	@FindBy(xpath="//a[@class='button show-all-items go-to-catalog']")
-	private WebElement actionrassrochkacatalog; // Кнопка Перейти к покупкам
+
 	
 	@Override
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}
-	
-	// жмаканье на "Перейти к покупкам"
-	public void clickActionRassrochkaCatalog() throws Exception {
-	//	try {
-		actionrassrochkacatalog.click(); 
-		Log.info("жмаканье на Перейти к покупкам");
-  
-	}	
-	
 	
 }
