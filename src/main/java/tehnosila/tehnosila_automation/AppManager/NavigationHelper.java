@@ -260,21 +260,15 @@ public class NavigationHelper extends NavigationBase{
 	}
 	
 	public String getPcode(){ 
-		return driver.findElement(By.xpath("//div[@id='tab-promoWord']/span/span[2]")).getText();
+		return driver.findElement(By.xpath("//div[@id='promoword-banner']/span")).getText();
 	}
-
 
 	public void getCode() throws Exception {
-		Log.info("***QA: Message "+  getPcode());
 		String stringpre = getPcode();
-	//	Log.info("***QA: Message "+ stringpre);
-	int start = stringpre.indexOf("\"");
 		psolrarticle = "";
-		if (start > 0) {
-		String productpart = stringpre.substring(start + 1);
-		psolrarticle = productpart.substring(0, productpart.indexOf("\""));
-	}
-	Log.info("***QA: Message "+ psolrarticle);
+		String productpart = stringpre.substring(0);
+		psolrarticle = productpart.substring(0, productpart.indexOf("%"));
+		Log.info("***QA: Message2 "+ psolrarticle);
 }
 	
 	
