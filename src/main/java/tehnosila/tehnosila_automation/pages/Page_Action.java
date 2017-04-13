@@ -22,6 +22,9 @@ public class Page_Action extends PagesBase{
 	@FindBy(xpath="//a[@href='/action/rassrochka']/img")
 	private WebElement actionrassrochka; // Картинка рассрочки
 	
+	@FindBy(xpath="//a[@href='/action/discount_world']/img")
+	private WebElement actionsavemoney; // Картинка рассрочки
+	
 	@Override
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
@@ -35,5 +38,12 @@ public class Page_Action extends PagesBase{
   
 	}	
 	
+	// жмаканье на "Акция Экономить - просто!"
+	public void clickActionSaveMoney() throws Exception {
+	//	try {
+		actionsavemoney.click(); 
+		Log.info("жмаканье на Экономить - просто!");
+  
+	}	
 	
 }

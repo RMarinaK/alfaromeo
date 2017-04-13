@@ -259,6 +259,23 @@ public class NavigationHelper extends NavigationBase{
 		Log.info("***QA: Message "+ psolrarticle);
 	}
 	
+	public String getPcode(){ 
+		return driver.findElement(By.xpath("//div[@id='tab-promoWord']/span/span[2]")).getText();
+	}
+
+
+	public void getCode() throws Exception {
+		Log.info("***QA: Message "+  getPcode());
+		String stringpre = getPcode();
+	//	Log.info("***QA: Message "+ stringpre);
+	int start = stringpre.indexOf("\"");
+		psolrarticle = "";
+		if (start > 0) {
+		String productpart = stringpre.substring(start + 1);
+		psolrarticle = productpart.substring(0, productpart.indexOf("\""));
+	}
+	Log.info("***QA: Message "+ psolrarticle);
+}
 	
 	
 }

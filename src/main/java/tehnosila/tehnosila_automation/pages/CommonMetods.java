@@ -57,7 +57,8 @@ public class CommonMetods extends Page_AreaMenu {
 	public String getTitleClient(){
 		return title.getText();
 	}
-	
+	//*[@id="promoword-banner"]/span
+	//*[@id="tab-promoWord"]/span/text()
 	// вытягивание заголовка фильтра страницы
 	public String getTitleFilterClient(){
 		return titlefilter.getText();
