@@ -59,6 +59,7 @@ public class Action_Installment extends TestBase{
 		
 		pagetehnosila.clickActions();
 		pageaction.clickActionRassrochka();
+		commonmetods.scrollPage();
 		commonmetods.clickActionRassrochkaCatalog();
 		pagecatalog.clickOpenSelfDeliveryDescription();
 		pagecatalogtvivideotelevizorytelevizoryid.logItemprop();
