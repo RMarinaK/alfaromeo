@@ -264,7 +264,7 @@ public class NavigationHelper extends NavigationBase{
 	}
 
 	public void getCode() throws Exception {
-		String stringpre = getPcode();
+		String stringpre = "ПРОМО" + getPcode();
 		psolrarticle = "";
 		String productpart = stringpre.substring(0);
 		psolrarticle = productpart.substring(0, productpart.indexOf("%"));

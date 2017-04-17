@@ -27,6 +27,21 @@ public class Page_Cart extends PagesBase{
 	@FindBy(id="loading-layer")
 	private WebElement loadinglayer; // 
 	
+	
+	@FindBy(xpath="//a[@class='title']")
+	private WebElement promocodefield; // Поле "Код купона" для клика
+	
+	@FindBy(xpath="//input[@id='Cart_promoCode']")
+	private WebElement cartpromocode; // Поле "Код купона"
+	
+	protected boolean isNecessaryToChangeParam(String param){
+		if(param.equals(" ")||param.equals("")){
+			return false;
+		}else{
+			return true;
+		}
+	}   
+	
 	@Override
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
@@ -43,6 +58,12 @@ public class Page_Cart extends PagesBase{
             ScreenShot.takeScreenShot();       
          }*/    
 	}	
+	
+	public void clickPromoCodeField() throws Exception {
+		//	try {
+				promocodefield.click(); 
+				Log.info("жмаканье на У меня есть код купона на скидку");
+	}
 	
 	// Ожидание лоэдера
 	public void waitCartLoadingLayer() throws Exception {
@@ -67,5 +88,13 @@ public class Page_Cart extends PagesBase{
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
          }*/    
-	}	 
+	}	
+	// Вставить купон
+	public void setСartPromoСode(String string) {
+		if(isNecessaryToChangeParam(string)){
+			cartpromocode.click();
+			cartpromocode.clear();
+			cartpromocode.sendKeys(string);
+		}
+	}
 }

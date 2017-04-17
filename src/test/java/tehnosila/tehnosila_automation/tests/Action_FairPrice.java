@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tehnosila.tehnosila_automation.tests;
 
 import java.io.File;
@@ -27,9 +24,9 @@ import org.testng.annotations.Test;
 
 
 // Доставка оплата Наличными
-public class Action_SaveMoney extends TestBase{
+public class Action_FairPrice extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Action_SaveMoney.class);
+	private static Logger Log = LoggerFactory.getLogger(Action_FairPrice.class);
 
 	
 	@DataProvider(name = "DP1")
@@ -56,14 +53,14 @@ public class Action_SaveMoney extends TestBase{
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		
 		pagetehnosila.clickActions();
-		pageaction.clickActionSaveMoney();
+		pageaction.clickActionFairPrice();
+		commonmetods.scrolling();
+		commonmetods.clickActionCatalogItem();
+		commonmetods.clickCatalogItemInCategory();
 		pagecatalog.clickOpenSelfDeliveryDescription();
-		app.getNavigationHelper().getCode();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
 		pagecart.waitCartLoadingLayer();
-		pagecart.clickPromoCodeField();
-		pagecart.setСartPromoСode(NavigationHelper.psolrarticle);
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);

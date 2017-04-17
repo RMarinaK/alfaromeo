@@ -6,7 +6,6 @@ package tehnosila.tehnosila_automation.tests;
 import java.io.File;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
-import tehnosila.tehnosila_automation.AppManager.NavigationHelper;
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Action;
@@ -25,11 +24,14 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-
+/**
+ * @author MRasstrigina
+ *
+ */
 // Доставка оплата Наличными
-public class Action_SaveMoney extends TestBase{
+public class Action_SuperThree extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Action_SaveMoney.class);
+	private static Logger Log = LoggerFactory.getLogger(Action_SuperThree.class);
 
 	
 	@DataProvider(name = "DP1")
@@ -56,14 +58,13 @@ public class Action_SaveMoney extends TestBase{
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		
 		pagetehnosila.clickActions();
-		pageaction.clickActionSaveMoney();
+		pageaction.clickActionSuperThree();
+		commonmetods.clickActionRassrochkaCatalog();
 		pagecatalog.clickOpenSelfDeliveryDescription();
-		app.getNavigationHelper().getCode();
+		pagecatalogtvivideotelevizorytelevizoryid.logItemprop();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
 		pagecart.waitCartLoadingLayer();
-		pagecart.clickPromoCodeField();
-		pagecart.setСartPromoСode(NavigationHelper.psolrarticle);
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
