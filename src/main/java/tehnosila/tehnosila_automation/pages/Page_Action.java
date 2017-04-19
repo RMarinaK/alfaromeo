@@ -18,12 +18,11 @@ public class Page_Action extends PagesBase{
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL()+"#/action";
 	
-
 	@FindBy(xpath="//a[@href='/action/rassrochka']/img")
 	private WebElement actionrassrochka; // Картинка рассрочки
 	
 	@FindBy(xpath="//a[@href='/action/discount_world']/img")
-	private WebElement actionsavemoney; // Картинка рассрочки
+	private WebElement actionsavemoney; // Картинка экономить просто
 	
 	@FindBy(xpath="//a[@href='/action/sale_5']/img")
 	private WebElement actionsale5; // Картинка скидка 5% при онлайн-оплате

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tehnosila.tehnosila_automation.tests;
 
 import java.io.File;
@@ -28,7 +25,8 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Доставка оплата Наличными
+
+// Тест акции "Рассрочка"
 public class Action_Installment extends TestBase{
 		
 	private static Logger Log = LoggerFactory.getLogger(Action_Installment.class);
@@ -41,10 +39,9 @@ public class Action_Installment extends TestBase{
         return(retObjArr);
     }
 	
-	
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
-		// авторизация
+		
 		Log.info("***QA: Акция Рассрочка");
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);

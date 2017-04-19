@@ -22,8 +22,12 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+/**
+ * @author DZhukov
+ *
+ */
 
-// Доставка оплата Наличными
+// Тест акции "Скидка 5% при онлайн-оплате"
 public class Action_Sale5 extends TestBase{
 		
 	private static Logger Log = LoggerFactory.getLogger(Action_Sale5.class);
@@ -36,11 +40,10 @@ public class Action_Sale5 extends TestBase{
         return(retObjArr);
     }
 	
-	
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
-		// авторизация
-		Log.info("***QA: Акция Рассрочка");
+	
+		Log.info("***QA: Акция Скидка 5% при онлайн-оплате");
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);

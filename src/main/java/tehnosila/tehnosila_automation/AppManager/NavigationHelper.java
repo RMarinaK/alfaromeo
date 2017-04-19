@@ -259,6 +259,7 @@ public class NavigationHelper extends NavigationBase{
 		Log.info("***QA: Message "+ psolrarticle);
 	}
 	
+	// вытягивание промокода из шильдика товара
 	public String getPcode(){ 
 		return driver.findElement(By.xpath("//div[@id='promoword-banner']/span")).getText();
 	}

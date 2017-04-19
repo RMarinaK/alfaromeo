@@ -110,6 +110,7 @@ public class CommonMetods extends Page_AreaMenu {
 		js.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight," + "document.body.scrollHeight,document.documentElement.clientHeight));");
 	}
 	
+	// скрол страницы вниз (не изменять кол-во пикселей)
 	public void scrolling() {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,700)","");
