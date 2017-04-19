@@ -18,19 +18,27 @@ public class Page_Action extends PagesBase{
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL()+"#/action";
 	
-
 	@FindBy(xpath="//a[@href='/action/rassrochka']/img")
 	private WebElement actionrassrochka; // Картинка рассрочки
 	
 	@FindBy(xpath="//a[@href='/action/discount_world']/img")
-	private WebElement actionsavemoney; // Картинка рассрочки
+	private WebElement actionsavemoney; // Картинка экономить просто
+	
+	@FindBy(xpath="//a[@href='/action/sale_5']/img")
+	private WebElement actionsale5; // Картинка скидка 5% при онлайн-оплате
+	
+	@FindBy(xpath="//a[@href='/action/chestnye_ceny']/img")
+	private WebElement actionfairprice; // Картинка честные цены
+	
+	@FindBy(xpath="//a[@href='/action/supertroyka']/img")
+	private WebElement actionsuperthree; // Картинка супертройки
 	
 	@Override
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}
 	
-	// жмаканье на "Курьерская доставка"
+	// жмаканье на "Рассрочку"
 	public void clickActionRassrochka() throws Exception {
 	//	try {
 		actionrassrochka.click(); 
@@ -40,10 +48,29 @@ public class Page_Action extends PagesBase{
 	
 	// жмаканье на "Акция Экономить - просто!"
 	public void clickActionSaveMoney() throws Exception {
-	//	try {
 		actionsavemoney.click(); 
 		Log.info("жмаканье на Экономить - просто!");
   
 	}	
 	
+	// жмаканье на "Акция Скидка 5% при онлайн-оплате"
+	public void clickActionSale5() throws Exception {
+		actionsale5.click(); 
+		Log.info("жмаканье на Скидка 5% при онлайн-оплате");
+  
+	}	
+	
+	// жмаканье на "Акция Честные цены"
+	public void clickActionFairPrice() throws Exception {
+		actionfairprice.click(); 
+		Log.info("жмаканье на Честные цены");
+  
+	}	
+	
+	// жмаканье на "Акция супертройка"
+	public void clickActionSuperThree() throws Exception {
+		actionsuperthree.click(); 
+		Log.info("жмаканье на Супертрйоку");
+  
+	}	
 }

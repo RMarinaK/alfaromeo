@@ -259,12 +259,13 @@ public class NavigationHelper extends NavigationBase{
 		Log.info("***QA: Message "+ psolrarticle);
 	}
 	
+	// вытягивание промокода из шильдика товара
 	public String getPcode(){ 
 		return driver.findElement(By.xpath("//div[@id='promoword-banner']/span")).getText();
 	}
 
 	public void getCode() throws Exception {
-		String stringpre = getPcode();
+		String stringpre = "ПРОМО" + getPcode();
 		psolrarticle = "";
 		String productpart = stringpre.substring(0);
 		psolrarticle = productpart.substring(0, productpart.indexOf("%"));

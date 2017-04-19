@@ -22,14 +22,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
- * @author MRasstrigina
+ * @author DZhukov
  *
  */
 
-// Тест акции "Рассрочка"
-public class Action_Installment extends TestBase{
+// Тест Акции "Супертройка"
+public class Action_SuperThree extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Action_Installment.class);
+	private static Logger Log = LoggerFactory.getLogger(Action_SuperThree.class);
 
 	
 	@DataProvider(name = "DP1")
@@ -41,8 +41,8 @@ public class Action_Installment extends TestBase{
 	
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
-		
-		Log.info("***QA: Акция Рассрочка");
+	
+		Log.info("***QA: Акция Супертройка");
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
@@ -55,29 +55,25 @@ public class Action_Installment extends TestBase{
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		
 		pagetehnosila.clickActions();
-		pageaction.clickActionRassrochka();
+		pageaction.clickActionSuperThree();
 		commonmetods.scrollPage();
 		commonmetods.clickActionRassrochkaCatalog();
 		pagecatalog.clickOpenSelfDeliveryDescription();
 		pagecatalogtvivideotelevizorytelevizoryid.logItemprop();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
-		pagecart.clickRCourierDelivery();
 		pagecart.waitCartLoadingLayer();
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
-		pageorder.setMetro();
-		pageorder.setOrderFormOrderAddressStreet(street);
-		pageorder.setOrderFormOrderAddressHouse(house);
+		pageorder.clickFirstPoint();
 		pageorder.clickRCash(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
 		sysgetorders.assertPaymentName(paymentNameGO);
-		sysgetorders.assertDeliveryName(deliveryName);
 		pagetehnosila.delCookies();
 	}
 	

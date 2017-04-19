@@ -47,6 +47,12 @@ public class CommonMetods extends Page_AreaMenu {
 	@FindBy(xpath="//a[@class='button show-all-items']")
 	private WebElement actioncatalog; // Кнопка Перейти к покупкам
 	
+	@FindBy(xpath="//div[@class='item'][2]")
+	private WebElement clickactioncatalogitem; // Выбор второго блока товаров в акции честные цены
+	
+	@FindBy(xpath="//a[@class='item first-in-row']")
+	private WebElement clickcatalogitemincategory; // Выбор первого блока товаров в категории
+	
     // жмаканье на ссылку "ссылке" в информационном сообщении
     public void clickLinkText() {
     	linkText.click();  	
@@ -104,6 +110,12 @@ public class CommonMetods extends Page_AreaMenu {
 		js.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight," + "document.body.scrollHeight,document.documentElement.clientHeight));");
 	}
 	
+	// скрол страницы вниз (не изменять кол-во пикселей)
+	public void scrolling() {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,700)","");
+	}
+	
 	// проверка отображения Title
 	public void assertTitle(String title) throws Exception {
 		try {
@@ -139,7 +151,29 @@ public class CommonMetods extends Page_AreaMenu {
 	    	Log.info("Element Not Found");     
             ScreenShot.takeScreenShot();       
          }  
-		
+	}
 	
- 	}
+	// жмаканье на второй блок товаров в акции честные цены
+	public void clickActionCatalogItem() throws Exception{
+		try {
+			clickactioncatalogitem.click(); 
+			Log.info("жмаканье на второй блок товаров в акции честные цены");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }  
+	}
+	
+	// жмаканье на первый блок товаров в категории 
+	public void clickCatalogItemInCategory() throws Exception{
+		try {
+			clickcatalogitemincategory.click(); 
+			Log.info("жмаканье на первый блок товаров в категории");
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }  
+	}
 }

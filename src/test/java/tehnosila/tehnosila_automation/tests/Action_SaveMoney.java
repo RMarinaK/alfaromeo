@@ -1,11 +1,9 @@
-/**
- * 
- */
 package tehnosila.tehnosila_automation.tests;
 
 import java.io.File;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
+import tehnosila.tehnosila_automation.AppManager.NavigationHelper;
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Action;
@@ -24,8 +22,12 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+/**
+ * @author DZhukov
+ *
+ */
 
-// Доставка оплата Наличными
+// Тест акции "Экономить - просто!"
 public class Action_SaveMoney extends TestBase{
 		
 	private static Logger Log = LoggerFactory.getLogger(Action_SaveMoney.class);
@@ -38,11 +40,10 @@ public class Action_SaveMoney extends TestBase{
         return(retObjArr);
     }
 	
-	
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
-		// авторизация
-		Log.info("***QA: Акция Рассрочка");
+	
+		Log.info("***QA: Акция Экономить - просто!");
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
@@ -56,28 +57,24 @@ public class Action_SaveMoney extends TestBase{
 		
 		pagetehnosila.clickActions();
 		pageaction.clickActionSaveMoney();
-	/*	commonmetods.clickActionRassrochkaCatalog(); */
 		pagecatalog.clickOpenSelfDeliveryDescription();
-	/*	pagecatalogtvivideotelevizorytelevizoryid.logItemprop();
-		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
-		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();  */
 		app.getNavigationHelper().getCode();
-	/*	pagecart.clickRCourierDelivery();  */
+		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
+		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
 		pagecart.waitCartLoadingLayer();
+		pagecart.clickPromoCodeField();
+		pagecart.setСartPromoСode(NavigationHelper.psolrarticle);
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
-		pageorder.setMetro();
-		pageorder.setOrderFormOrderAddressStreet(street);
-		pageorder.setOrderFormOrderAddressHouse(house);
+		pageorder.clickFirstPoint();
 		pageorder.clickRCash(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
 		sysgetorders.assertPaymentName(paymentNameGO);
-		sysgetorders.assertDeliveryName(deliveryName);
 		pagetehnosila.delCookies();
 	}
 	
