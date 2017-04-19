@@ -17,8 +17,6 @@ import tehnosila.tehnosila_automation.pages.Mobile_Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -28,7 +26,7 @@ import org.testng.annotations.Test;
  */
 public class Smoke_Mobile extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Smoke_Mobile.class);
+//	private static Logger Log = LoggerFactory.getLogger(Smoke_Mobile.class);
 
 	
 	@DataProvider(name = "DP1")

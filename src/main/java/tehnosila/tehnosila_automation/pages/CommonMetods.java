@@ -1,6 +1,5 @@
 package tehnosila.tehnosila_automation.pages;
 
-import tehnosila.tehnosila_automation.AppManager.NavigationHelper;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
 

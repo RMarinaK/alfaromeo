@@ -3,19 +3,13 @@ package tehnosila.tehnosila_automation.pages;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import tehnosila.tehnosila_automation.AppManager.ApplicationManager;
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 /**
  * @author MRasstrigina

@@ -15,8 +15,6 @@ import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -27,7 +25,7 @@ import org.testng.annotations.Test;
 // Самовывоз оплата Юридическое лицо
 public class OnlineSelfDeliverBank extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(OnlineSelfDeliverBank.class);
+//	private static Logger Log = LoggerFactory.getLogger(OnlineSelfDeliverBank.class);
 
 	
 	@DataProvider(name = "DP1")

@@ -1,12 +1,11 @@
 package tehnosila.tehnosila_automation.pages;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 /**
  * @author MRasstrigina

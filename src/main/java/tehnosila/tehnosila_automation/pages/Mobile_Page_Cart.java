@@ -2,8 +2,7 @@ package tehnosila.tehnosila_automation.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 /**
  * @author MRasstrigina
@@ -11,7 +10,7 @@ import org.slf4j.LoggerFactory;
  */
 
 public class Mobile_Page_Cart extends PagesBase{
-	private static Logger Log = LoggerFactory.getLogger(Mobile_Page_Cart.class);
+//	private static Logger Log = LoggerFactory.getLogger(Mobile_Page_Cart.class);
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL()+"#/cart";
 	

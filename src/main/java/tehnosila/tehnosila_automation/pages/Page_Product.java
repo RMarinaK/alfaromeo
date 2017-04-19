@@ -8,8 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
-	private static Logger Log = LoggerFactory.getLogger(Page_CatalogTv_i_videoTelevizoryTelevizory.class);
+public class Page_Product extends PagesBase{
+	private static Logger Log = LoggerFactory.getLogger(Page_Product.class);
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL();
 	

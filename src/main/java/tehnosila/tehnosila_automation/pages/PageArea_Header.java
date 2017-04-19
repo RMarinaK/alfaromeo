@@ -8,8 +8,6 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author RasstriginaMK
@@ -17,7 +15,7 @@ import org.slf4j.LoggerFactory;
  */
 public class PageArea_Header extends PagesBase {
 
-	private static Logger Log = LoggerFactory.getLogger(PageArea_Header.class);
+//	private static Logger Log = LoggerFactory.getLogger(PageArea_Header.class);
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL();
 	

@@ -1,5 +1,5 @@
 package tehnosila.tehnosila_automation.pages;
-import org.openqa.selenium.By;
+
 /**
  * @author RasstriginaMK
  *

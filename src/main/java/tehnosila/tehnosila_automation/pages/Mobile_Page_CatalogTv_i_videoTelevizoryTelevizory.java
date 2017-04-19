@@ -5,11 +5,9 @@ package tehnosila.tehnosila_automation.pages;
  */
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class Mobile_Page_CatalogTv_i_videoTelevizoryTelevizory extends PagesBase{
-	private static Logger Log = LoggerFactory.getLogger(Mobile_Page_CatalogTv_i_videoTelevizoryTelevizory.class);
+//	private static Logger Log = LoggerFactory.getLogger(Mobile_Page_CatalogTv_i_videoTelevizoryTelevizory.class);
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL()+"#/catalog/tv_i_video/televizory/televizory";
 	

@@ -2,18 +2,14 @@ package tehnosila.tehnosila_automation.tests;
 
 import java.io.File;
 
-import tehnosila.tehnosila_automation.AppManager.NavigationBase;
-import tehnosila.tehnosila_automation.AppManager.NavigationHelper;
-import tehnosila.tehnosila_automation.pages.CommonMetods;
+
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Action;
-import tehnosila.tehnosila_automation.pages.Page_ActionRassrochka;
 import tehnosila.tehnosila_automation.pages.Page_Cart;
 import tehnosila.tehnosila_automation.pages.Page_Catalog;
-import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizory;
-import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizoryID;
 import tehnosila.tehnosila_automation.pages.Page_Order;
 import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
+import tehnosila.tehnosila_automation.pages.Page_Product;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
 
@@ -47,9 +43,8 @@ public class Action_Sale5 extends TestBase{
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
-		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		Page_Catalog pagecatalog = MyPageFactory.getPage(Page_Catalog.class);
-		Page_CatalogTv_i_videoTelevizoryTelevizoryID pagecatalogtvivideotelevizorytelevizoryid = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizoryID.class);
+		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
@@ -58,8 +53,8 @@ public class Action_Sale5 extends TestBase{
 		pagetehnosila.clickActions();
 		pageaction.clickActionSale5();
 		pagecatalog.clickOpenSelfDeliveryDescription();
-		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
-		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
+		pageproduct.clickButtonBuy();
+		pageproduct.clickPopupButtonToCart();
 		pagecart.waitCartLoadingLayer();
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);

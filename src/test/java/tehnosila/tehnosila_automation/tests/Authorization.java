@@ -4,22 +4,11 @@
 package tehnosila.tehnosila_automation.tests;
 
 import java.io.File;
-import java.io.IOException;
 
-import org.testng.Assert;
-
-import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
-import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
-import tehnosila.tehnosila_automation.pages.Page_Cart;
-import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizory;
-import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizoryID;
-import tehnosila.tehnosila_automation.pages.Page_Order;
 import tehnosila.tehnosila_automation.pages.Page_PassportLogin;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -29,7 +18,7 @@ import org.testng.annotations.Test;
  */
 public class Authorization extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Authorization.class);
+	//private static Logger Log = LoggerFactory.getLogger(Authorization.class);
 
 	
 	@DataProvider(name = "DP1")

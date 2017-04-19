@@ -3,28 +3,20 @@
  */
 package tehnosila.tehnosila_automation.tests;
 
-import java.awt.AWTException;
-import java.io.File;
-import java.io.IOException;
 
-import org.testng.Assert;
+import java.io.File;
+
 
 import tehnosila.tehnosila_automation.pages.CommonMetods;
-import tehnosila.tehnosila_automation.pages.Mobile_Page_Cart;
-import tehnosila.tehnosila_automation.pages.Mobile_Page_CatalogTv_i_videoTelevizoryTelevizory;
-import tehnosila.tehnosila_automation.pages.Mobile_Page_CatalogTv_i_videoTelevizoryTelevizoryID;
-import tehnosila.tehnosila_automation.pages.Mobile_Page_Order;
-import tehnosila.tehnosila_automation.pages.Mobile_Page_Tehnosila;
+
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
-import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
+
 import tehnosila.tehnosila_automation.pages.Term_Page_Cart;
 import tehnosila.tehnosila_automation.pages.Term_Page_CatalogTv_i_videoTelevizoryTelevizory;
 import tehnosila.tehnosila_automation.pages.Term_Page_CatalogTv_i_videoTelevizoryTelevizoryID;
 import tehnosila.tehnosila_automation.pages.Term_Page_Order;
 import tehnosila.tehnosila_automation.pages.Term_Page_Tehnosila;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -34,7 +26,7 @@ import org.testng.annotations.Test;
  */
 public class Smoke_Terminal extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Smoke_Terminal.class);
+//	private static Logger Log = LoggerFactory.getLogger(Smoke_Terminal.class);
 
 	
 	@DataProvider(name = "DP1")

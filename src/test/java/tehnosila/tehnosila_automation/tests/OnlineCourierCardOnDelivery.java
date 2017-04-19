@@ -15,8 +15,6 @@ import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -27,7 +25,7 @@ import org.testng.annotations.Test;
 // Доставка оплата банковской картой
 public class OnlineCourierCardOnDelivery extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(OnlineCourierCardOnDelivery.class);
+//	private static Logger Log = LoggerFactory.getLogger(OnlineCourierCardOnDelivery.class);
 
 	
 	@DataProvider(name = "DP1")
