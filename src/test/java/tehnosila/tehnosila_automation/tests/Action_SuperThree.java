@@ -56,6 +56,7 @@ public class Action_SuperThree extends TestBase{
 		
 		pagetehnosila.clickActions();
 		pageaction.clickActionSuperThree();
+		commonmetods.scrollPage();
 		commonmetods.clickActionRassrochkaCatalog();
 		pagecatalog.clickOpenSelfDeliveryDescription();
 		pagecatalogtvivideotelevizorytelevizoryid.logItemprop();
