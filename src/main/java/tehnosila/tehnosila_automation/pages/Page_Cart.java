@@ -18,7 +18,7 @@ public class Page_Cart extends PagesBase{
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL()+"#/cart";
 	
-	@FindBy(id="ordering")
+	@FindBy(xpath="//div[@id='button-buy-in-order']/a[@id='ordering']")
 	private WebElement buttonordering; // Кнопка "Оформить заказ"
 	
 	@FindBy(xpath="//input[@id='courier']/../span")
