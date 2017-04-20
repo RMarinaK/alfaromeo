@@ -184,14 +184,14 @@ public class Links_Footer extends TestBase{
 		commonmetods.assertTitle(helpfeedback);
 		commonmetods.assertHeader(helpfeedback);
 		// Отправка feedback
-		pagehelpfeedback.setName(inputname);
+		/*pagehelpfeedback.setName(inputname);
 		pagehelpfeedback.setEmail(inputemail);
 		pagehelpfeedback.setPhone(inputphone);
 		pagehelpfeedback.setCity(inputcity);
 		pagehelpfeedback.setMessage(textareamessage);
 		pagehelpfeedback.clickButtonSend();
 		pagehelpfeedback.assertMessage(message);
-		commonmetods.clickLogo();
+		commonmetods.clickLogo();*/
 	
 	}
 	
