@@ -45,7 +45,8 @@ public class Solr_SelfDeliverCash extends TestBase{
 
 		Log.info("***QA: Самовывоз оплата Наличными");
 	
-		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
+		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_1 +
+				NavigationBase.psolrand + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
 				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
 		app.getNavigationHelper().assertPRE();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
