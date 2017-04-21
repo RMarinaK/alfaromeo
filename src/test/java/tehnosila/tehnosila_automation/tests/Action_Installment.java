@@ -32,13 +32,13 @@ public class Action_Installment extends TestBase{
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"CourierCash.xls",
-                "CourierCash", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"SelfDeliveryCreditInStore.xls",
+                "SelfDeliveryCreditInStore", "Data");
         return(retObjArr);
     }
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
+	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
 		
 		Log.info("***QA: Акция Рассрочка");
 		
@@ -60,16 +60,12 @@ public class Action_Installment extends TestBase{
 		pageproduct.logItemprop();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
-		pagecart.clickRCourierDelivery();
-		pagecart.waitCartLoadingLayer();
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
-		pageorder.setMetro();
-		pageorder.setOrderFormOrderAddressStreet(street);
-		pageorder.setOrderFormOrderAddressHouse(house);
-		pageorder.clickRCash(paymentName);
+		pageorder.clickFirstPoint();
+		pageorder.clickRCreditInStore(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();

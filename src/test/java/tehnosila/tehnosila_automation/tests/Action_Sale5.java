@@ -31,13 +31,13 @@ public class Action_Sale5 extends TestBase{
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"CourierCash.xls",
-                "CourierCash", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"OnlineSelfDeliveryCardOnDelivery.xls",
+                "OnlinSelfDeliveryCardOnDelivery", "Data");
         return(retObjArr);
     }
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
+	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{ //3
 	
 		Log.info("***QA: Акция Скидка 5% при онлайн-оплате");
 		
@@ -61,13 +61,16 @@ public class Action_Sale5 extends TestBase{
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
-		pageorder.clickRCash(paymentName);
+		pageorder.clickROnlineCardOnDelivery(paymentName);
+		app.getNavigationHelper().getDiscount();
+		app.getNavigationHelper().getDiscountPrcent();
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
-		sysgetorders.assertPaymentName(paymentNameGO);
-		pagetehnosila.delCookies();    
+		sysgetorders.assertPaymentName(paymentName);
+		sysgetorders.assertDeliveryName(deliveryName);
+		pagetehnosila.delCookies();  
 	}
 	
 }

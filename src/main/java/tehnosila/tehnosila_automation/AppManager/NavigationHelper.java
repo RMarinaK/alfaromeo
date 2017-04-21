@@ -52,6 +52,7 @@ public class NavigationHelper extends NavigationBase{
 			return false;
 		}
 	}
+	//*[@id="checkout-total-wrapper"]/div/div/ul[3]/li[2]
 
 	public boolean waitInvisible(By located, int timeoutSeconds){
 		try {
@@ -263,13 +264,42 @@ public class NavigationHelper extends NavigationBase{
 		return driver.findElement(By.xpath("//div[@id='promoword-banner']/span")).getText();
 	}
 
-	public void getCode() throws Exception {
+	public void getCode() {
 		String stringpre = "ПРОМО" + getPcode();
 		psolrarticle = "";
 		String productpart = stringpre.substring(0);
 		psolrarticle = productpart.substring(0, productpart.indexOf("%"));
-		Log.info("***QA: Message2 "+ psolrarticle);
-}
+		Log.info("***QA: Message "+ psolrarticle);
+	}
 	
+
+	// "//*[@id='checkout-total-wrapper']/div/div/ul[2]/li[2]/child::node()" работает но не элемент, а текст
+	// вытягивание 5% скидки товара
+	public String getDiscountPrc() { 
+		return driver.findElement(By.xpath("//*[@id='checkout-total-wrapper']/div/div/ul[2]/li[2]/node()")).getAttribute("value");
+	}
 	
+	public void getDiscountPrcent() {
+		String discountprc = getDiscountPrc();
+		Log.info("***QA: TEXT " + discountprc);
+	}
+
+	// вытягивание цены товара и расчет 5% от цены товара
+	public String getPrice(){ 
+		return driver.findElement(By.xpath("//li[@id='cart-total-price']")).getText();
+	}
+	
+	public void getDiscount() {
+		String price = getPrice();
+		String grouprice = price.replaceAll(" ", "");
+		String onlyprice = grouprice.substring(0, grouprice.indexOf('Р'));
+		float floatprice = Float.parseFloat(onlyprice); 
+		Log.info("***QA: Message " + floatprice);
+		float floatpriceprc = (floatprice/100);
+		Log.info("***QA: Message " + floatpriceprc);
+		float discount = floatpriceprc*5;
+		Log.info("***QA: Message " + discount);
+		float discountresult = (float)Math.ceil(discount); 
+		Log.info("***QA: Message 5% from the price = " + discountresult);
+	}
 }
