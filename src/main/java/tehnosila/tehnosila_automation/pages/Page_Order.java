@@ -5,8 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
+import tehnosila.tehnosila_automation.AppManager.NavigationHelper;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 /**
@@ -147,19 +149,29 @@ public class Page_Order extends PagesBase{
 		}
 	}
 	
+	@FindBy(id="OrderForm_orderAddress_city")
+	private WebElement orderformorderaddresscity; // Поле "Населенный пункт"
+	
 	// Выбор метро
 	public void setMetro() throws Exception {
-	if (moscow.isDisplayed()) {
-		try {
-			metrostation.click(); 
-			Log.info("жмаканье на выпадашку выбора меню");
-			firstmetrostation.click();
-			Log.info("жмаканье на первое по списку метро");
-		}
-	    catch(Exception e) {      
-	    	Log.info("Element Not Found");     
-            ScreenShot.takeScreenShot();       
-         }    }
+		if (moscow.isDisplayed()) {
+			try {
+				metrostation.click(); 
+				Log.info("жмаканье на выпадашку выбора меню");
+				firstmetrostation.click();
+				Log.info("жмаканье на первое по списку метро");
+			}
+			catch(Exception e) {      
+				Log.info("Element Not Found");     
+				ScreenShot.takeScreenShot();       
+			}    
+		}/* else {
+		
+				orderformorderaddresscity.click();
+				orderformorderaddresscity.clear();
+				orderformorderaddresscity.sendKeys("г. Санкт-Петербург");
+			
+		}*/
 	}	
 	
 	
@@ -408,9 +420,57 @@ public class Page_Order extends PagesBase{
             ScreenShot.takeScreenShot();       
          }*/    
 	}	
-   
-       
-
-            
+	// вытягивание скидки из поля "Скидка:"
+	public String getDiscountPSize() { 
+		return driver.findElement(By.xpath("//ul[@class='checkout-total__item checkout-total__item_discount']/li[@class='checkout-total__value']")).getText();
+	}
+	
+	// обрезание скидки из поля "Скидка:"
+	public void DiscountSize() {
+		String stringpre = getDiscountPSize();
+		NavigationBase.psale = "";
+		String sale = stringpre.substring(0);
+		NavigationBase.psale  = sale.substring(0, sale.indexOf(" Р."));
+	}
+		
+	// вытягивание цены товара и расчет 5% от цены товара
+	public String getPrice(){ 
+		return driver.findElement(By.xpath("//li[@id='cart-total-price']")).getText();
+	}
+	
+	// расчёт скидки для проверки с отображаемой на сайте 
+	public void getDiscount() {
+		String price = getPrice();
+		NavigationBase.psalesize = 5;
+		Log.info("***QA: Цена товара "+ price);
+		String grouprice = price.replaceAll(" ", "");
+		String onlyprice = grouprice.substring(0, grouprice.indexOf('Р'));
+		float floatprice = Float.parseFloat(onlyprice); 
+		float floatpriceprc = (floatprice/100);
+		float discount = floatpriceprc*NavigationBase.psalesize;
+		NavigationBase.pdiscountresult = (int)Math.ceil(discount); 
+	}
+	
+	// сравнение скидки рассчитанной и взятой со страницы
+	public void assertDiscount() {
+		app.getNavigationHelper().waitVisible(driver.findElement(By.xpath("//li[contains(text(),'Скидка:')]")), 10);
+		DiscountSize();
+		getDiscount();
+		int psale = Integer.valueOf(NavigationBase.psale);
+		try {
+			Assert.assertEquals(psale, NavigationBase.pdiscountresult); 
+			Log.info("***QA: Скидон "+ NavigationBase.psale);
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+      //     ScreenShot.takeScreenShot();       
+        }      
+	}  
+	
+	// Поиск элемента <p class="description-red">Скидка 5 % </p>
+	public void findDiscountSize() {
+		driver.findElement(By.xpath("//p[contains(text(),'Скидка 5 %')]"));
+		Log.info("***QA: Текст Скидка 5 %");
+	}
 	
 }

@@ -52,6 +52,7 @@ public class NavigationHelper extends NavigationBase{
 			return false;
 		}
 	}
+	//*[@id="checkout-total-wrapper"]/div/div/ul[3]/li[2]
 
 	public boolean waitInvisible(By located, int timeoutSeconds){
 		try {
@@ -263,13 +264,15 @@ public class NavigationHelper extends NavigationBase{
 		return driver.findElement(By.xpath("//div[@id='promoword-banner']/span")).getText();
 	}
 
-	public void getCode() throws Exception {
+	public void getCode() {
 		String stringpre = "ПРОМО" + getPcode();
 		psolrarticle = "";
 		String productpart = stringpre.substring(0);
 		psolrarticle = productpart.substring(0, productpart.indexOf("%"));
-		Log.info("***QA: Message2 "+ psolrarticle);
-}
+		Log.info("***QA: Message "+ psolrarticle);
+	}
 	
+
+
 	
 }
