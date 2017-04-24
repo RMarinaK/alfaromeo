@@ -3,7 +3,7 @@ package tehnosila.tehnosila_automation.tests;
 import java.io.File;
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
-import tehnosila.tehnosila_automation.pages.Page_HelpFeedback;
+//import tehnosila.tehnosila_automation.pages.Page_HelpFeedback;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -32,7 +32,7 @@ public class Links_Footer extends TestBase{
 			String inputcity, String textareamessage, String message) throws Exception{ 
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
-		Page_HelpFeedback pagehelpfeedback = MyPageFactory.getPage(Page_HelpFeedback.class);
+	//	Page_HelpFeedback pagehelpfeedback = MyPageFactory.getPage(Page_HelpFeedback.class);
 		// О компании Техносила
 		commonmetods.scrollPage();
 		pagetehnosila.clickAboutTC();

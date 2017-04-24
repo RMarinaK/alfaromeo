@@ -61,9 +61,9 @@ public class Action_Sale5 extends TestBase{
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
+		pageorder.findDiscountSize();
 		pageorder.clickROnlineCardOnDelivery(paymentName);
-		app.getNavigationHelper().getDiscount();
-		app.getNavigationHelper().getDiscountPrcent();
+		pageorder.assertDiscount();
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
