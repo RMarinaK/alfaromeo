@@ -5,6 +5,7 @@ import java.io.File;
 import tehnosila.tehnosila_automation.AppManager.NavigationHelper;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Action;
+import tehnosila.tehnosila_automation.pages.Page_Actions;
 import tehnosila.tehnosila_automation.pages.Page_Cart;
 import tehnosila.tehnosila_automation.pages.Page_Catalog;
 import tehnosila.tehnosila_automation.pages.Page_Order;
@@ -42,18 +43,19 @@ public class Action_SaveMoney extends TestBase{
 		Log.info("***QA: Акция Экономить - просто!");
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
-		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
+		Page_Actions pageactions = MyPageFactory.getPage(Page_Actions.class);
 		Page_Catalog pagecatalog = MyPageFactory.getPage(Page_Catalog.class);
 		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
+		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
 		
 		pagetehnosila.clickActions();
-		pageaction.clickActionSaveMoney();
+		pageactions.clickActionSaveMoney();
 		pagecatalog.clickOpenSelfDeliveryDescription();
-		app.getNavigationHelper().getCode();
+		pageaction.getCode();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
 		pagecart.waitCartLoadingLayer();

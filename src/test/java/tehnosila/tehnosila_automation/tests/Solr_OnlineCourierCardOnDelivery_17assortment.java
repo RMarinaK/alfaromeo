@@ -40,11 +40,11 @@ public class Solr_OnlineCourierCardOnDelivery_17assortment extends TestBase{
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email,  String street, String house, String paymentName, String deliveryName) throws Exception{ 
 
-		Log.info("***QA: Доставка онлайн оплата банковской картой");
+		Log.info("***QA: Доставка онлайн оплата банковской картой Solr_OnlineCourierCardOnDelivery_17assortment");
 		
 		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_17 + NavigationBase.psolrand
 				+ NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand + NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
-		app.getNavigationHelper().assertPRE();
+		app.getNavigationHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
 		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);

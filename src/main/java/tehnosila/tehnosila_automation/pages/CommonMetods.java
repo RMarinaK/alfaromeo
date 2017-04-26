@@ -43,16 +43,8 @@ public class CommonMetods extends Page_AreaMenu {
 	@FindBy(xpath = "//h1") 
 	private WebElement header; // заголовок на страницах
 	
-	@FindBy(xpath="//a[@class='button show-all-items']")
-	private WebElement actioncatalog; // Кнопка Перейти к покупкам
 	
-	@FindBy(xpath="//div[@class='item'][2]")
-	private WebElement clickactioncatalogitem; // Выбор второго блока товаров в акции честные цены
-	
-	@FindBy(xpath="//a[@class='item first-in-row']")
-	private WebElement clickcatalogitemincategory; // Выбор первого блока товаров в категории
-	
-    // жмаканье на ссылку "ссылке" в информационном сообщении
+	// жмаканье на ссылку "ссылке" в информационном сообщении
     public void clickLinkText() {
     	linkText.click();  	
     //	app.getNavigationHelper().waitInvisible(By.xpath("//div[@class='loading']"), 10);
@@ -62,8 +54,7 @@ public class CommonMetods extends Page_AreaMenu {
 	public String getTitleClient(){
 		return title.getText();
 	}
-	//*[@id="promoword-banner"]/span
-	//*[@id="tab-promoWord"]/span/text()
+
 	// вытягивание заголовка фильтра страницы
 	public String getTitleFilterClient(){
 		return titlefilter.getText();
@@ -139,40 +130,22 @@ public class CommonMetods extends Page_AreaMenu {
             ScreenShot.takeScreenShot();       
          }    
 	}
-	
-	// жмаканье на "Перейти к покупкам"
-	public void clickActionRassrochkaCatalog() throws Exception{
+
+	// вытаскивание pactionurl
+/*	public void getActionURL(){
+	//	NavigationBase.pheader = getHeader();
+	//	Log.info("***QA: nameaction " +getHeader());
 		try {
-			actioncatalog.click(); 
-			Log.info("жмаканье на Перейти к покупкам");
+			String currenturl = driver.getCurrentUrl();
+			int s = 0;
+			for (int x=1; x< currenturl.indexOf("action/"); x++){
+				s = x++;}
+			Log.info("***QA: s "+ s);
+			NavigationBase.pactionurl = currenturl.substring(s + 1);
+			Log.info("***QA: pactionurl "+ NavigationBase.pactionurl);
 		}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
-            ScreenShot.takeScreenShot();       
          }  
-	}
-	
-	// жмаканье на второй блок товаров в акции честные цены
-	public void clickActionCatalogItem() throws Exception{
-		try {
-			clickactioncatalogitem.click(); 
-			Log.info("жмаканье на второй блок товаров в акции честные цены");
-		}
-	    catch(Exception e) {      
-	    	Log.info("Element Not Found");     
-            ScreenShot.takeScreenShot();       
-         }  
-	}
-	
-	// жмаканье на первый блок товаров в категории 
-	public void clickCatalogItemInCategory() throws Exception{
-		try {
-			clickcatalogitemincategory.click(); 
-			Log.info("жмаканье на первый блок товаров в категории");
-		}
-	    catch(Exception e) {      
-	    	Log.info("Element Not Found");     
-            ScreenShot.takeScreenShot();       
-         }  
-	}
+	}*/	
 }

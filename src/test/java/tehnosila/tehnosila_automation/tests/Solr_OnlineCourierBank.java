@@ -42,12 +42,12 @@ public class Solr_OnlineCourierBank extends TestBase{
 			String inn, String kpp, String nameCompany, String companyAddress, String companyAddressFact, String companyAccount,
 			String bik, String accountCorr, String bankName, String city) throws Exception{ 
 
-		Log.info("***QA: Доставка онлайн оплата Юридическое лицо");
+		Log.info("***QA: Доставка онлайн оплата Юридическое лицо Solr_OnlineCourierBank");
 
 		
 		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_11 + NavigationBase.psolrand + 
 				NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand + NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
-		app.getNavigationHelper().assertPRE();
+		app.getNavigationHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
 		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);

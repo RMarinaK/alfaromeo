@@ -5,6 +5,7 @@ import java.io.File;
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Action;
+import tehnosila.tehnosila_automation.pages.Page_Actions;
 import tehnosila.tehnosila_automation.pages.Page_Cart;
 import tehnosila.tehnosila_automation.pages.Page_Catalog;
 import tehnosila.tehnosila_automation.pages.Page_Order;
@@ -42,7 +43,7 @@ public class Action_FairPrice extends TestBase{
 		Log.info("***QA: Акция Честные цены");
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
-		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
+		Page_Actions pageactions = MyPageFactory.getPage(Page_Actions.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		Page_Catalog pagecatalog = MyPageFactory.getPage(Page_Catalog.class);
 		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);
@@ -50,12 +51,13 @@ public class Action_FairPrice extends TestBase{
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
+		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
 		
 		pagetehnosila.clickActions();
-		pageaction.clickActionFairPrice();
+		pageactions.clickActionFairPrice();
 		commonmetods.scrolling();
-		commonmetods.clickActionCatalogItem();
-		commonmetods.clickCatalogItemInCategory();
+		pageaction.clickActionCatalogItem();
+		pageaction.clickCatalogItemInCategory();
 		pagecatalog.clickOpenSelfDeliveryDescription();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();

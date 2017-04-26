@@ -241,38 +241,34 @@ public class NavigationHelper extends NavigationBase{
 		//driver.switchTo().window(URL);
 		driver.navigate().to(URL);
 	}
-
+	
+	// вытягивание текста из тега pre
 	public String getPre(){ 
-			return driver.findElement(By.xpath("//pre")).getText();
-		}
+		return driver.findElement(By.xpath("//pre")).getText();
+	}	
 	
-	
-	public void assertPRE() throws Exception {
+	// вытягивание артикула товара из solr
+	public void getCodeString() {
 		String stringpre = getPre();
 	//	Log.info("***QA: Message "+ stringpre);
 		int start = stringpre.indexOf("\"code_string\":\"");
-		psolrarticle = "";
+		NavigationBase.psolrarticle = "";
 		if (start > 0) {
 			String productpart = stringpre.substring(start + 15);
-			psolrarticle = productpart.substring(0, productpart.indexOf("\"}"));
+			NavigationBase.psolrarticle = productpart.substring(0, productpart.indexOf("\"}"));
 		}
-		Log.info("***QA: Message "+ psolrarticle);
+		Log.info("***QA: Message "+ NavigationBase.psolrarticle);
 	}
 	
-	// вытягивание промокода из шильдика товара
-	public String getPcode(){ 
-		return driver.findElement(By.xpath("//div[@id='promoword-banner']/span")).getText();
-	}
-
-	public void getCode() {
-		String stringpre = "ПРОМО" + getPcode();
-		psolrarticle = "";
-		String productpart = stringpre.substring(0);
-		psolrarticle = productpart.substring(0, productpart.indexOf("%"));
-		Log.info("***QA: Message "+ psolrarticle);
-	}
-	
-
-
-	
+	// вытягивание количество товаров из апи
+	public void getTotalNumber() {
+		String stringpre = getPre();
+		int start = stringpre.indexOf("totalResults\" : ");
+		ptotatlnumber = "";
+		if (start > 0) {
+			String productpart = stringpre.substring(start + 16);
+			ptotatlnumber = productpart.substring(0, productpart.indexOf("}")-3);
+		}
+		Log.info("***QA: ptotatlnumber '"+ ptotatlnumber +"'");
+	}	
 }

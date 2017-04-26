@@ -2,9 +2,12 @@ package tehnosila.tehnosila_automation.tests;
 
 import java.io.File;
 
-
+import tehnosila.tehnosila_automation.AppManager.NavigationBase;
+import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
+import tehnosila.tehnosila_automation.pages.Nameplates;
 import tehnosila.tehnosila_automation.pages.Page_Action;
+import tehnosila.tehnosila_automation.pages.Page_Actions;
 import tehnosila.tehnosila_automation.pages.Page_Cart;
 import tehnosila.tehnosila_automation.pages.Page_Catalog;
 import tehnosila.tehnosila_automation.pages.Page_Order;
@@ -36,23 +39,41 @@ public class Action_Sale5 extends TestBase{
         return(retObjArr);
     }
 	
-	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{ //3
+	String actionnameplates = "Скидка 5% при онлайн-оплате";
 	
-		Log.info("***QA: Акция Скидка 5% при онлайн-оплате");
+	@Test (dataProvider = "DP1")
+	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{
+	
+		Log.info("***QA: Акция Скидка " + actionnameplates);
 		
+		app.getNavigationHelper().getURL(NavigationBase.papiparserpath + NavigationBase.pactionsale5url + NavigationBase.papiend);
+		app.getNavigationHelper().getTotalNumber();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
-		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
+		pagetehnosila.getPageBase();
+		Page_Actions pageactions = MyPageFactory.getPage(Page_Actions.class);
 		Page_Catalog pagecatalog = MyPageFactory.getPage(Page_Catalog.class);
 		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
+		Nameplates nameplates = MyPageFactory.getPage(Nameplates.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
+		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
+		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
 		
 		pagetehnosila.clickActions();
-		pageaction.clickActionSale5();
+		pageactions.clickActionSale5();
+		nameplates.checkAction();
+		nameplates.checkAdditionalPromo(actionnameplates);
+		commonmetods.scrollPage();
+		pageaction.clickActionCatalog();
+		pageaction.getTotalNubmer();
+		pageaction.assertTotalNumber();
+		nameplates.checkAction();
+		nameplates.checkAdditionalPromo(actionnameplates);
 		pagecatalog.clickOpenSelfDeliveryDescription();
+		nameplates.checkAction();
+		nameplates.checkAdditionalPromo(actionnameplates);
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
 		pagecart.waitCartLoadingLayer();

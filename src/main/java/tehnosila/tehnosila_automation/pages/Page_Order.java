@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
-import tehnosila.tehnosila_automation.AppManager.NavigationHelper;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 /**

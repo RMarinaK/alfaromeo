@@ -40,11 +40,11 @@ public class Solr_OnlineSelfDeliveryCardOnDelivery extends TestBase{
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{ 
 
-		Log.info("***QA: Самовывоз онлайн оплата банковской картой");
+		Log.info("***QA: Самовывоз онлайн оплата банковской картой Solr_OnlineSelfDeliveryCardOnDelivery");
 
 		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_11 + NavigationBase.psolrand  + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
 				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
-		app.getNavigationHelper().assertPRE();
+		app.getNavigationHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
 		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);

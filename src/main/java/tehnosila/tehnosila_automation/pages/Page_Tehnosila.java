@@ -144,6 +144,12 @@ public class Page_Tehnosila extends PagesBase {
 			Log.info("***QA: "+getBaseURL());
 		}
 	
+		// ожидание пока страница прогрузится и проверка соответствия номер заказа
+		public void getPageBase(){
+			driver.navigate().to(getBaseURL());
+			Log.info("***QA: "+getBaseURL());
+		}
+		
 	public void setSearchField() {
 		if(isNecessaryToChangeParam(NavigationBase.psolrarticle)){
 			searchfield.click();
