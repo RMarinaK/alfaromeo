@@ -179,10 +179,10 @@ public class Links_Footer extends TestBase{
 		commonmetods.clickLogo();
 		
 		// Обратная связь
-		commonmetods.scrollPage();
+		/*commonmetods.scrollPage();
 		pagetehnosila.clickFeedback();
 		commonmetods.assertTitle(helpfeedback);
-		commonmetods.assertHeader(helpfeedback);
+		commonmetods.assertHeader(helpfeedback);*/
 		// Отправка feedback
 		/*pagehelpfeedback.setName(inputname);
 		pagehelpfeedback.setEmail(inputemail);
