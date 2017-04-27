@@ -23,8 +23,8 @@ public class Nameplates extends PagesBase{
 	@FindBy(xpath="//div[@class='new-sticker action-sticker helper open-down open-right open-click close-other white custom']/span[contains(text(),'Акция')]/..")
 	private WebElement actionsuperthree; // Шильдик Акция
 	
-//	@FindBy(xpath="//div[@class='additional-promo ']/a[contains(text(),'Скидка 5% при онлайн-оплате')]")
-//	private WebElement additionalpromo; // Ссылка 
+	@FindBy(xpath="//span[@class='promoword-discount']")
+	private WebElement promoworddiscount; // Шильдик N%
 	
 //	private String sale5 = "Скидка 5% при онлайн-оплате";
 	
@@ -58,7 +58,17 @@ public class Nameplates extends PagesBase{
 	    }
 	}
 	
-	
+	// проверка наличия шильдика Акция
+	public void checkPromowordDiscount() {
+		try {
+			promoworddiscount.click();
+			Log.info("***QA: Шильдик N% есть");
+		}
+		catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+      //     ScreenShot.takeScreenShot();       
+	    }
+ 	}	
 	
 	
 	

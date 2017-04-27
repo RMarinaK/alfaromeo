@@ -44,11 +44,17 @@ public class Page_Action extends PagesBase{
 	}
 
 	public void getCode() {
-		String stringpre = "ПРОМО" + getPCode();
+	//	Log.info("***QA: Message "+ getPCode());
+	//	NavigationBase.pcode = Integer.valueOf(getPCode());
+		//String stringpre = "ПРОМО" + getPCode();
+		String stringpre = getPCode();
 		NavigationBase.psolrarticle = "";
 		String productpart = stringpre.substring(0);
 		NavigationBase.psolrarticle = productpart.substring(0, productpart.indexOf("%"));
+		NavigationBase.pcode = Integer.valueOf(NavigationBase.psolrarticle);
+		NavigationBase.psolrarticle = "ПРОМО" + NavigationBase.psolrarticle;
 		Log.info("***QA: Message "+ NavigationBase.psolrarticle);
+		Log.info("***QA: Message "+ NavigationBase.pcode);
 	}
 	
 	// жмаканье на "Перейти к покупкам"

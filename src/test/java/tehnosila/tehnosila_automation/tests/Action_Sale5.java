@@ -40,7 +40,7 @@ public class Action_Sale5 extends TestBase{
     }
 	
 	String actionnameplates = "Скидка 5% при онлайн-оплате";
-	
+	int salesize = 5;
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{
 	
@@ -84,7 +84,7 @@ public class Action_Sale5 extends TestBase{
 		pageorder.clickFirstPoint();
 		pageorder.findDiscountSize();
 		pageorder.clickROnlineCardOnDelivery(paymentName);
-		pageorder.assertDiscount();
+		pageorder.assertDiscount(salesize);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();

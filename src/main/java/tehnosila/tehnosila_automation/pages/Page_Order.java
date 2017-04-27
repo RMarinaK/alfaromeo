@@ -438,23 +438,23 @@ public class Page_Order extends PagesBase{
 	}
 	
 	// расчёт скидки для проверки с отображаемой на сайте 
-	public void getDiscount() {
+	public void getDiscount(int salesize) {
 		String price = getPrice();
-		NavigationBase.psalesize = 5;
+	//	NavigationBase.psalesize = 5;
 		Log.info("***QA: Цена товара "+ price);
 		String grouprice = price.replaceAll(" ", "");
 		String onlyprice = grouprice.substring(0, grouprice.indexOf('Р'));
 		float floatprice = Float.parseFloat(onlyprice); 
 		float floatpriceprc = (floatprice/100);
-		float discount = floatpriceprc*NavigationBase.psalesize;
+		float discount = floatpriceprc*salesize;
 		NavigationBase.pdiscountresult = (int)Math.ceil(discount); 
 	}
 	
 	// сравнение скидки рассчитанной и взятой со страницы
-	public void assertDiscount() {
+	public void assertDiscount(int salesize) {
 		app.getNavigationHelper().waitVisible(driver.findElement(By.xpath("//li[contains(text(),'Скидка:')]")), 10);
 		DiscountSize();
-		getDiscount();
+		getDiscount(salesize);
 		int psale = Integer.valueOf(NavigationBase.psale);
 		try {
 			Assert.assertEquals(psale, NavigationBase.pdiscountresult); 

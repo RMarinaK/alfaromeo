@@ -44,8 +44,10 @@ public class NavigationBase {
 	public static String papiparserpath = "http://hybris.tehnosila.ru/api/v2/ts/1/catalogs/parsePath?path=";
 	public static String papiend = "&query=&currentPage=0&pageSize=32&fields=FULL";
 	public static String pactionsale5url = "action/sale_5";
+	public static String pactiondiscount_worldurl = "action/discount_world";
 	public static String ptotatlnumber;
 	public static String ptotalnumbersite;
+	public static int pcode;
 	
 	
 	

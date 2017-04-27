@@ -34,6 +34,9 @@ public class Page_Cart extends PagesBase{
 	@FindBy(xpath="//input[@id='Cart_promoCode']")
 	private WebElement cartpromocode; // Поле "Код купона"
 	
+	@FindBy(xpath="//a[@class='apply_bonus_btn button white-flat submit']")
+	private WebElement applybonusbtn; // Кнопка Применить
+	
 	protected boolean isNecessaryToChangeParam(String param){
 		if(param.equals(" ")||param.equals("")){
 			return false;
@@ -79,15 +82,9 @@ public class Page_Cart extends PagesBase{
 	
 	// жмаканье на "Офорить заказ"
 	public void clickButtonOrdering() throws Exception {
-	//	try {
 			app.getNavigationHelper().waitVisible(buttonordering,10);
 			buttonordering.click(); 
 			Log.info("жмаканье на Офорить заказ");
-		/*}
-	    catch(Exception e) {      
-	    	Log.info("Element Not Found");     
-            ScreenShot.takeScreenShot();       
-         }*/    
 	}	
 	// Вставить купон
 	public void setСartPromoСode(String string) {
@@ -97,4 +94,10 @@ public class Page_Cart extends PagesBase{
 			cartpromocode.sendKeys(string);
 		}
 	}
+
+	public void clickButtonApplyBonus() {
+
+		applybonusbtn.click(); 
+		Log.info("жмаканье на Применить");
+   	}	
 }

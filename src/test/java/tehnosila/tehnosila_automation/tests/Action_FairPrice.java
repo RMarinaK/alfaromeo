@@ -39,8 +39,8 @@ public class Action_FairPrice extends TestBase{
 	
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
-	
-		Log.info("***QA: Акция Честные цены");
+		String chestnye_ceny = "ЧЕСТНЫЕ ЦЕНЫ";
+		Log.info("***QA: Акция " + chestnye_ceny);
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		Page_Actions pageactions = MyPageFactory.getPage(Page_Actions.class);
