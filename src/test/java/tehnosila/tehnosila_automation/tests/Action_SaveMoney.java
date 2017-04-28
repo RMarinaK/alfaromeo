@@ -63,8 +63,6 @@ public class Action_SaveMoney extends TestBase{
 		pagetehnosila.clickActions();
 		pageactions.clickActionSaveMoney();
 		app.getNavigationHelper().refreshPage();
-		commonmetods.scrollPage();
-		nameplates.checkPromowordDiscount();
 		pagetehnosila.getPageActionCatalog();	
 		pageaction.getTotalNubmer();
 		pageaction.assertTotalNumber();
