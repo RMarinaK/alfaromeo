@@ -130,7 +130,7 @@ public class Page_Tehnosila extends PagesBase {
 		driver.get(this.URL_MATCH);
 	}
 	
-	protected boolean isNecessaryToChangeParam(String param){
+	protected boolean isNecessaryToChangeParam(String param) {
 		if(param.equals(" ")||param.equals("")){
 			return false;
 		}else{
@@ -139,16 +139,23 @@ public class Page_Tehnosila extends PagesBase {
 	}
 	
 	// ожидание пока страница прогрузится и проверка соответствия номер заказа
-		public void getPage(){
-			driver.navigate().to(getBaseURL()+"item?code=" + NavigationBase.psolrarticle);
-			Log.info("***QA: "+getBaseURL());
-		}
+	public void getPage() {
+		driver.navigate().to(getBaseURL()+"item?code=" + NavigationBase.psolrarticle);
+		Log.info("***QA: "+getBaseURL());
+	}
 	
-		// ожидание пока страница прогрузится и проверка соответствия номер заказа
-		public void getPageBase(){
-			driver.navigate().to(getBaseURL());
-			Log.info("***QA: "+getBaseURL());
-		}
+	// ожидание пока главная страница прогрузится 
+	public void getPageBase() {
+		driver.navigate().to(getBaseURL());
+		Log.info("***QA: "+getBaseURL());
+	}
+	
+	// ожидание пока страница прогрузится 
+	public void getPageActionCatalog() {
+		String currenturl = driver.getCurrentUrl();
+		driver.navigate().to(currenturl + "/catalog");
+		Log.info("***QA: "+getBaseURL());
+	}
 		
 	public void setSearchField() {
 		if(isNecessaryToChangeParam(NavigationBase.psolrarticle)){

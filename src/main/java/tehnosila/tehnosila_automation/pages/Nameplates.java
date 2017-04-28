@@ -61,6 +61,7 @@ public class Nameplates extends PagesBase{
 	// проверка наличия шильдика Акция
 	public void checkPromowordDiscount() {
 		try {
+			app.getNavigationHelper().waitVisible(promoworddiscount, 10);
 			promoworddiscount.click();
 			Log.info("***QA: Шильдик N% есть");
 		}

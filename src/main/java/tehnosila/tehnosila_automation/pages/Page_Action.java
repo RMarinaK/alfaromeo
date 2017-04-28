@@ -1,6 +1,9 @@
 package tehnosila.tehnosila_automation.pages;
 
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -54,7 +57,6 @@ public class Page_Action extends PagesBase{
 		NavigationBase.pcode = Integer.valueOf(NavigationBase.psolrarticle);
 		NavigationBase.psolrarticle = "ПРОМО" + NavigationBase.psolrarticle;
 		Log.info("***QA: Message "+ NavigationBase.psolrarticle);
-		Log.info("***QA: Message "+ NavigationBase.pcode);
 	}
 	
 	// жмаканье на "Перейти к покупкам"
@@ -95,19 +97,15 @@ public class Page_Action extends PagesBase{
 	
 	// получение количество товаров с сайта
 	public void getTotalNubmer(){
-		String stringpre = itemsperpageview.getText();
-		NavigationBase.ptotalnumbersite = "";
-		String productpart = stringpre.substring(0);
-		NavigationBase.ptotalnumbersite = productpart.substring(8, productpart.indexOf(" товаров в наличии"));
-		Log.info("***QA: ptotalnumbersite "+ NavigationBase.ptotalnumbersite);
-	/*	String stringpre = itemsperpageview.getText();
-		int start = stringpre.indexOf("Найдено");
-		NavigationBase.ptotalnumbersite = "";
-		if (start > 0) {
-			String productpart = stringpre.substring(start +1);
-			NavigationBase.ptotalnumbersite  = productpart.substring(0, productpart.indexOf("товаров в наличии"));
+		Pattern pattern = Pattern.compile("\\d+");
+		String word = itemsperpageview.getText(); // мой пример строки
+		Matcher matcher = pattern.matcher(word);
+		int start = 0;
+		while (matcher.find(start)) {
+			NavigationBase.ptotalnumbersite = word.substring(matcher.start(), matcher.end());
+			Log.info("***QA: ptotalnumbersite "+ NavigationBase.ptotalnumbersite);
+			start = matcher.end();
 		}
-		Log.info("***QA: ptotatlnumber "+ NavigationBase.ptotalnumbersite );*/
 	}
 
 	// проверка попадания количества товаров с сайта в диапазон (totalnumber-totalnumber*0.05; totalnumber+totalnumber+0.05)
@@ -116,8 +114,10 @@ public class Page_Action extends PagesBase{
 		int totatlnumber = Integer.valueOf(NavigationBase.ptotatlnumber);
 		int mintotatlnumber = (int)Math.ceil(totatlnumber - totatlnumber*0.05);
 		int maxtotatlnumber = (int)Math.ceil(totatlnumber + totatlnumber*0.05);
-		if (totatlnumbersite > mintotatlnumber || totatlnumbersite < maxtotatlnumber) {
+		if (totatlnumbersite > mintotatlnumber && totatlnumbersite < maxtotatlnumber) {
 			Log.info("***QA: " + mintotatlnumber + "<" + totatlnumbersite + "<" + maxtotatlnumber);
+		} else {
+			Log.info("***QA: Кол-во товаров с сайта не соотвествует кол-ву товаров с апи");
 		}
 	}
 }

@@ -62,10 +62,9 @@ public class Page_Cart extends PagesBase{
          }*/    
 	}	
 	
-	public void clickPromoCodeField() throws Exception {
-		//	try {
-				promocodefield.click(); 
-				Log.info("жмаканье на У меня есть код купона на скидку");
+	public void clickPromoCodeField() {
+		promocodefield.click(); 
+		Log.info("жмаканье на У меня есть код купона на скидку");
 	}
 	
 	// Ожидание лоэдера
@@ -81,7 +80,7 @@ public class Page_Cart extends PagesBase{
 	}	
 	
 	// жмаканье на "Офорить заказ"
-	public void clickButtonOrdering() throws Exception {
+	public void clickButtonOrdering() {
 			app.getNavigationHelper().waitVisible(buttonordering,10);
 			buttonordering.click(); 
 			Log.info("жмаканье на Офорить заказ");
