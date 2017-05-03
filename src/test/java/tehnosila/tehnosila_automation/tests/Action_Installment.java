@@ -5,6 +5,7 @@ import java.io.File;
 
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
+import tehnosila.tehnosila_automation.pages.Nameplates;
 import tehnosila.tehnosila_automation.pages.Page_Action;
 import tehnosila.tehnosila_automation.pages.Page_Actions;
 import tehnosila.tehnosila_automation.pages.Page_Cart;
@@ -45,6 +46,7 @@ public class Action_Installment extends TestBase{
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		Page_Actions pageactions = MyPageFactory.getPage(Page_Actions.class);
+		Nameplates nameplates = MyPageFactory.getPage(Nameplates.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		Page_Catalog pagecatalog = MyPageFactory.getPage(Page_Catalog.class);
 		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);
@@ -58,7 +60,9 @@ public class Action_Installment extends TestBase{
 		pageactions.clickActionRassrochka();
 		commonmetods.scrollPage();
 		pageaction.clickActionCatalog();
+		app.getNavigationHelper().refreshPage();
 		pagecatalog.clickOpenSelfDeliveryDescription();
+		nameplates.checkActionSticker();
 		pageproduct.logItemprop();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();

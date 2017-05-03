@@ -34,29 +34,30 @@ public class Page_Action extends PagesBase{
 	private WebElement clickcatalogitemincategory; // Выбор первого блока товаров в категории
 	
 	@FindBy(xpath = "//span[@class='items-per-page-view']") 
-	private WebElement itemsperpageview; // Найдено N товаров в наличии 
+	private WebElement itemsperpageview; // Найдено N товаров в наличии
+	
+	@FindBy(xpath = "//div[@id='promoword-banner']/span")
+	private WebElement getpcode; // Промокод из шильдика 
+	
+	@FindBy(xpath = "//*[@id='popup-action-buy-cheaper']/div/div[2]/div/div/div[2]/div/span")
+	private WebElement getcheaperprice; // Ценник в попапе Нашли этот товар дешевле?
 	
 	@Override
 	void tryToOpen() {
 //		driver.get(this.URL_MATCH);
 	}
 	
-	// вытягивание промокода из шильдика товара
-	public String getPCode(){ 
-		return driver.findElement(By.xpath("//div[@id='promoword-banner']/span")).getText();
-	}
-
+	// Получение промокода из шильдика
 	public void getCode() {
-	//	Log.info("***QA: Message "+ getPCode());
-	//	NavigationBase.pcode = Integer.valueOf(getPCode());
-		//String stringpre = "ПРОМО" + getPCode();
-		String stringpre = getPCode();
-		NavigationBase.psolrarticle = "";
-		String productpart = stringpre.substring(0);
-		NavigationBase.psolrarticle = productpart.substring(0, productpart.indexOf("%"));
-		NavigationBase.pcode = Integer.valueOf(NavigationBase.psolrarticle);
-		NavigationBase.psolrarticle = "ПРОМО" + NavigationBase.psolrarticle;
-		Log.info("***QA: Message "+ NavigationBase.psolrarticle);
+		Pattern pattern = Pattern.compile("\\d+");
+		String stringpre = getpcode.getText();
+		Matcher matcher = pattern.matcher(stringpre);
+		int start = 0;
+		while (matcher.find(start)) {
+			NavigationBase.promocode = "ПРОМО" + stringpre.substring(matcher.start(), matcher.end());
+			Log.info("***QA: promocode "+ NavigationBase.promocode);
+			start = matcher.end();
+		}
 	}
 	
 	// жмаканье на "Перейти к покупкам"
@@ -118,6 +119,20 @@ public class Page_Action extends PagesBase{
 			Log.info("***QA: " + mintotatlnumber + "<" + totatlnumbersite + "<" + maxtotatlnumber);
 		} else {
 			Log.info("***QA: Кол-во товаров с сайта не соотвествует кол-ву товаров с апи");
+		}
+	}
+	
+	// Получение цены из попапа Нашли этот товар дешевле?
+	public void getСheaperPrice() {
+		Pattern pattern = Pattern.compile("\\d+");
+		String stringprice = getcheaperprice.getText();
+		stringprice = stringprice.replaceAll(" ", "");
+		Matcher matcher = pattern.matcher(stringprice);
+		int start = 0;
+		while (matcher.find(start)) {
+			NavigationBase.cheaperprice = stringprice.substring(matcher.start(), matcher.end());
+			Log.info("***QA: cheaper price "+ NavigationBase.cheaperprice);
+			start = matcher.end();
 		}
 	}
 }

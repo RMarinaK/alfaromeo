@@ -76,7 +76,7 @@ public class Action_SaveMoney extends TestBase{
 		pageproduct.clickPopupButtonToCart();
 		pagecart.waitCartLoadingLayer();
 		pagecart.clickPromoCodeField();
-		pagecart.setСartPromoСode(NavigationHelper.psolrarticle);
+		pagecart.setСartPromoСode(NavigationHelper.promocode);
 		pagecart.clickButtonApplyBonus();		
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);

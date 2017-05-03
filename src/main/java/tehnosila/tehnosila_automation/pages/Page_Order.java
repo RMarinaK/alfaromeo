@@ -1,5 +1,8 @@
 package tehnosila.tehnosila_automation.pages;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -105,6 +108,9 @@ public class Page_Order extends PagesBase{
 	
 	@FindBy(id="OrderForm_orderContact_companyCity")
 	private WebElement orderformordercontactcompanycity; // Поле "Город"
+	
+	@FindBy(xpath="//ul[@class='checkout-total__item checkout-total__item_discount']/li[@class='checkout-total__value']")
+	private WebElement getdiscountpsize;	// 
 	
 	protected boolean isNecessaryToChangeParam(String param){
 		if(param.equals(" ")||param.equals("")){
@@ -419,18 +425,30 @@ public class Page_Order extends PagesBase{
             ScreenShot.takeScreenShot();       
          }*/    
 	}	
-	// вытягивание скидки из поля "Скидка:"
+/*	// вытягивание скидки из поля "Скидка:"
 	public String getDiscountPSize() { 
 		return driver.findElement(By.xpath("//ul[@class='checkout-total__item checkout-total__item_discount']/li[@class='checkout-total__value']")).getText();
-	}
+	} закоментировано до првоерки!!! */
 	
 	// обрезание скидки из поля "Скидка:"
-	public void DiscountSize() {
+	// получение количество товаров с сайта
+	public void DiscountSize(){
+		Pattern pattern = Pattern.compile("\\d+");
+		String stringpre = getdiscountpsize.getText(); // мой пример строки
+		Matcher matcher = pattern.matcher(stringpre);
+		int start = 0;
+		while (matcher.find(start)) {
+			NavigationBase.psale = stringpre.substring(matcher.start(), matcher.end());
+			Log.info("***QA: ptotalnumbersite "+ NavigationBase.psale);
+			start = matcher.end();
+		}
+	}
+/*	public void DiscountSize() {
 		String stringpre = getDiscountPSize();
 		NavigationBase.psale = "";
 		String sale = stringpre.substring(0);
 		NavigationBase.psale  = sale.substring(0, sale.indexOf(" Р."));
-	}
+	}    // тута закоментировано до првоерки!!! */
 		
 	// вытягивание цены товара и расчет 5% от цены товара
 	public String getPrice(){ 
