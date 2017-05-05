@@ -42,7 +42,7 @@ public class Solr_OnlineCourierCardOnDelivery extends TestBase{
 
 		Log.info("***QA: Доставка онлайн оплата банковской картой Solr_OnlineCourierCardOnDelivery");
 			
-		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_11 + NavigationBase.psolrand + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
+		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_17 + NavigationBase.psolrand + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
 				+ NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
 		app.getNavigationHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);

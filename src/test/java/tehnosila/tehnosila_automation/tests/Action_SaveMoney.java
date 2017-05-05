@@ -58,7 +58,7 @@ public class Action_SaveMoney extends TestBase{
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
 		Nameplates nameplates = MyPageFactory.getPage(Nameplates.class);
-		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
+	//	CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		
 		pagetehnosila.clickActions();
 		pageactions.clickActionSaveMoney();
@@ -84,12 +84,12 @@ public class Action_SaveMoney extends TestBase{
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.assertDiscount(NavigationBase.pcode);	
 		pageorder.clickFirstPoint();
-		pageorder.clickRCash(paymentName);
+	//	pageorder.clickRCash(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
-		sysgetorders.assertPaymentName(paymentNameGO);
+	//	sysgetorders.assertPaymentName(paymentNameGO);
 		pagetehnosila.delCookies();
 	}
 	
