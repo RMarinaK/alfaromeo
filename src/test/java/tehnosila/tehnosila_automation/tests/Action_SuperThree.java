@@ -55,8 +55,10 @@ public class Action_SuperThree extends TestBase{
 		
 		pagetehnosila.clickActions();
 		pageactions.clickActionSuperThree();
+		app.getNavigationHelper().refreshPage();
 		commonmetods.scrollPage();
 		pageaction.clickActionCatalog();
+		app.getNavigationHelper().refreshPage();
 		pagecatalog.clickOpenSelfDeliveryDescription();
 		pageproduct.logItemprop();
 		pageproduct.clickButtonBuy();
