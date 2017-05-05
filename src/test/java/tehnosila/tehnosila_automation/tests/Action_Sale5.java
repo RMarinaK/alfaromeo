@@ -83,13 +83,13 @@ public class Action_Sale5 extends TestBase{
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
 		pageorder.findDiscountSize();
-		pageorder.clickROnlineCardOnDelivery(paymentName);
+	//	pageorder.clickROnlineCardOnDelivery(paymentName);
 		pageorder.assertDiscount(salesize);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
-		sysgetorders.assertPaymentName(paymentName);
+	//	sysgetorders.assertPaymentName(paymentName);
 		sysgetorders.assertDeliveryName(deliveryName);
 		pagetehnosila.delCookies();  
 	}

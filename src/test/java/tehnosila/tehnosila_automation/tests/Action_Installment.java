@@ -67,12 +67,12 @@ public class Action_Installment extends TestBase{
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
-		pageorder.clickRCreditInStore(paymentName);
+	//	pageorder.clickRCreditInStore(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
-		sysgetorders.assertPaymentName(paymentNameGO);
+	//	sysgetorders.assertPaymentName(paymentNameGO);
 		sysgetorders.assertDeliveryName(deliveryName);
 		pagetehnosila.delCookies();
 	}

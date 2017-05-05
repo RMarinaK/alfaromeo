@@ -67,12 +67,12 @@ public class Action_SuperThree extends TestBase{
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
-		pageorder.clickRCash(paymentName);
+	//	pageorder.clickRCash(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
-		sysgetorders.assertPaymentName(paymentNameGO);
+	//	sysgetorders.assertPaymentName(paymentNameGO);
 		pagetehnosila.delCookies();
 	}
 	
