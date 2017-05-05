@@ -44,7 +44,7 @@ public class Page_Product extends PagesBase{
 	// жмаканье на "Купить"
 	public void clickButtonBuy() throws Exception {
 //		try {
-			app.getNavigationHelper().waitVisible(buttonbuy,10);
+		//	app.getNavigationHelper().waitVisible(buttonbuy,10);
 			buttonbuy.click(); 
 			Log.info("жмаканье на Купить");
 	/*	}
