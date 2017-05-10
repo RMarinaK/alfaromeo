@@ -4,7 +4,7 @@ import java.io.File;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.NavigationHelper;
-import tehnosila.tehnosila_automation.pages.CommonMetods;
+//import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Nameplates;
 import tehnosila.tehnosila_automation.pages.Page_Action;
