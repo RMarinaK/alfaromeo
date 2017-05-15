@@ -52,8 +52,11 @@ public class Page_Action extends PagesBase{
 		Pattern pattern = Pattern.compile("\\d+");
 		String stringpre = getpcode.getText();
 		Matcher matcher = pattern.matcher(stringpre);
+
 		int start = 0;
 		while (matcher.find(start)) {
+			String erw = stringpre.substring(matcher.start(), matcher.end());
+			NavigationBase.pcode = Integer.valueOf(erw);
 			NavigationBase.promocode = "ПРОМО" + stringpre.substring(matcher.start(), matcher.end());
 			Log.info("***QA: promocode "+ NavigationBase.promocode);
 			start = matcher.end();

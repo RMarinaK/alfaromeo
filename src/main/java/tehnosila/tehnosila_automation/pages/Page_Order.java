@@ -458,14 +458,13 @@ public class Page_Order extends PagesBase{
 	// расчёт скидки для проверки с отображаемой на сайте 
 	public void getDiscount(int salesize) {
 		String price = getPrice();
-	//	NavigationBase.psalesize = 5;
-		Log.info("***QA: Цена товара "+ price);
 		String grouprice = price.replaceAll(" ", "");
 		String onlyprice = grouprice.substring(0, grouprice.indexOf('Р'));
 		float floatprice = Float.parseFloat(onlyprice); 
 		float floatpriceprc = (floatprice/100);
 		float discount = floatpriceprc*salesize;
 		NavigationBase.pdiscountresult = (int)Math.ceil(discount); 
+		Log.info("***QA: Скидон "+ NavigationBase.pdiscountresult);
 	}
 	
 	// сравнение скидки рассчитанной и взятой со страницы
