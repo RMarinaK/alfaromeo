@@ -63,6 +63,7 @@ public class Action_Sale5 extends TestBase{
 		
 		pagetehnosila.clickActions();
 		pageactions.clickActionSale5();
+		app.getNavigationHelper().refreshPage();
 		nameplates.checkAction();
 		nameplates.checkAdditionalPromo(actionnameplates);
 		commonmetods.scrollPage();

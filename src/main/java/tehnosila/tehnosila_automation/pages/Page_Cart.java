@@ -62,6 +62,7 @@ public class Page_Cart extends PagesBase{
          }*/    
 	}	
 	
+	// жмаканье на "У меня есть код купона на скидку"
 	public void clickPromoCodeField() {
 		promocodefield.click(); 
 		Log.info("жмаканье на У меня есть код купона на скидку");

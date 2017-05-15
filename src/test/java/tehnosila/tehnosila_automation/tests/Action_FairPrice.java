@@ -2,6 +2,8 @@ package tehnosila.tehnosila_automation.tests;
 
 import java.io.File;
 
+import tehnosila.tehnosila_automation.AppManager.NavigationBase;
+import tehnosila.tehnosila_automation.AppManager.NavigationHelper;
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Action;
@@ -40,6 +42,7 @@ public class Action_FairPrice extends TestBase{
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
 		String chestnye_ceny = "ЧЕСТНЫЕ ЦЕНЫ";
+		String cheaperlink = "http://www.eldorado.ru/cat/detail/71215852/";
 		Log.info("***QA: Акция " + chestnye_ceny);
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
@@ -56,12 +59,24 @@ public class Action_FairPrice extends TestBase{
 		pagetehnosila.clickActions();
 		pageactions.clickActionFairPrice();
 		commonmetods.scrolling();
+		app.getNavigationHelper().refreshPage();
 		pageaction.clickActionCatalogItem();
 		pageaction.clickCatalogItemInCategory();
 		pagecatalog.clickOpenSelfDeliveryDescription();
+		pageproduct.clickButtonBuyCheaper();
+		pageaction.getСheaperPrice();
+		pageproduct.setActonBuyCheaperFio(fio);
+		pageproduct.setActonBuyCheaperPhone(phone);
+		pageproduct.setActonBuyCheaperEmail(email);
+		pageproduct.setActonBuyCheaperLink(cheaperlink);
+		pageproduct.setActonBuyCheaperPrice(NavigationHelper.cheaperprice);
+		pageproduct.clickButtonSubmit();
+		pageproduct.clickButtonClose();
+		app.getNavigationHelper().refreshPage();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
 		pagecart.waitCartLoadingLayer();
+		pagecart.clickPromoCodeField();
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);

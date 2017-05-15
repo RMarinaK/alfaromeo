@@ -47,6 +47,8 @@ public class NavigationBase {
 	public static String pactiondiscount_worldurl = "action/discount_world";
 	public static String ptotatlnumber;
 	public static String ptotalnumbersite;
+	public static String promocode;
+	public static String cheaperprice;
 	public static int pcode;
 	
 	
