@@ -460,9 +460,12 @@ public class Page_Order extends PagesBase{
 		String price = getPrice();
 		String grouprice = price.replaceAll(" ", "");
 		String onlyprice = grouprice.substring(0, grouprice.indexOf('Р'));
-		float floatprice = Float.parseFloat(onlyprice); 
+		float floatprice = Float.parseFloat(onlyprice);
+		Log.info("***QA: floatprice "+ floatprice);
 		float floatpriceprc = (floatprice/100);
+		Log.info("***QA: floatpriceprc "+ floatpriceprc);
 		float discount = floatpriceprc*salesize;
+		Log.info("***QA: discount "+ discount);
 		NavigationBase.pdiscountresult = (int)Math.ceil(discount); 
 		Log.info("***QA: Скидон "+ NavigationBase.pdiscountresult);
 	}
@@ -473,6 +476,8 @@ public class Page_Order extends PagesBase{
 		DiscountSize();
 		getDiscount(salesize);
 		int psale = Integer.valueOf(NavigationBase.psale);
+		Log.info("***QA: psale "+ NavigationBase.psale);
+		Log.info("***QA: pdiscountresult "+ NavigationBase.pdiscountresult);
 		try {
 			Assert.assertEquals(psale, NavigationBase.pdiscountresult); 
 			Log.info("***QA: Скидон "+ NavigationBase.psale);
