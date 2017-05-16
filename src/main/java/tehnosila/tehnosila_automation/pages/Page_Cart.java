@@ -37,6 +37,15 @@ public class Page_Cart extends PagesBase{
 	@FindBy(xpath="//a[@class='apply_bonus_btn button white-flat submit']")
 	private WebElement applybonusbtn; // Кнопка Применить
 	
+	@FindBy(xpath="//a[@class='plus pressable gtm-process-add-to-cart']")
+	private WebElement buttonplus; // Кнопка плюс, увеличение кол-ва товара
+	
+	@FindBy(xpath="//a[@class='minus pressable gtm-process-remove-from-cart']")
+	private WebElement buttonminus; // Кнопка минус, уменьшение кол-ва товара
+	
+	@FindBy(xpath="//a[contains(@href,'http://www.tehnosila.ru/cart/removeItems')]")
+	private WebElement buttondelete;
+	
 	protected boolean isNecessaryToChangeParam(String param){
 		if(param.equals(" ")||param.equals("")){
 			return false;
@@ -100,4 +109,25 @@ public class Page_Cart extends PagesBase{
 		applybonusbtn.click(); 
 		Log.info("жмаканье на Применить");
    	}	
+	
+	// жмаканье на "плюс" увеличение кол-ва товара
+	public void clickButtonPlus() {
+			app.getNavigationHelper().waitVisible(buttonordering,10);
+			buttonplus.click(); 
+			Log.info("жмаканье на плюс");
+	}
+	
+	// жмаканье на "минус" уменьшение кол-ва товара
+	public void clickButtonMinus() {
+		app.getNavigationHelper().waitVisible(buttonordering,10);
+		buttonminus.click(); 
+		Log.info("жмаканье на минус");
+	}
+	
+	// жмаканье на Удалить
+	public void clickButtonDelete() {
+		app.getNavigationHelper().waitVisible(buttonordering,10);
+		buttondelete.click(); 
+		Log.info("жмаканье на удалить");
+	}
 }
