@@ -431,7 +431,6 @@ public class Page_Order extends PagesBase{
 	} закоментировано до првоерки!!! */
 	
 	// обрезание скидки из поля "Скидка:"
-	// получение количество товаров с сайта
 	public void DiscountSize(){
 		Pattern pattern = Pattern.compile("\\d+");
 		String stringdiscountpsize = getdiscountpsize.getText(); // мой пример строки
