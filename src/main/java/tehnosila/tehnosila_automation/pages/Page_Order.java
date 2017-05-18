@@ -434,13 +434,15 @@ public class Page_Order extends PagesBase{
 	// получение количество товаров с сайта
 	public void DiscountSize(){
 		Pattern pattern = Pattern.compile("\\d+");
-		String stringpre = getdiscountpsize.getText(); // мой пример строки
-		Matcher matcher = pattern.matcher(stringpre);
+		String stringdiscountpsize = getdiscountpsize.getText(); // мой пример строки
+		Matcher matcher = pattern.matcher(stringdiscountpsize);
 		int start = 0;
+		StringBuilder builderpsale = new StringBuilder();
 		while (matcher.find(start)) {
-			NavigationBase.psale = stringpre.substring(matcher.start(), matcher.end());
-			Log.info("***QA: ptotalnumbersite "+ NavigationBase.psale);
+			String substringdiscountpsize = stringdiscountpsize.substring(matcher.start(), matcher.end());
 			start = matcher.end();
+			NavigationBase.psale = builderpsale.append(substringdiscountpsize).toString();
+			Log.info("***QA: psale "+ NavigationBase.psale);
 		}
 	}
 /*	public void DiscountSize() {
@@ -476,7 +478,6 @@ public class Page_Order extends PagesBase{
 		DiscountSize();
 		getDiscount(salesize);
 		int psale = Integer.valueOf(NavigationBase.psale);
-		Log.info("***QA: psale "+ NavigationBase.psale);
 		Log.info("***QA: pdiscountresult "+ NavigationBase.pdiscountresult);
 		try {
 			Assert.assertEquals(psale, NavigationBase.pdiscountresult); 
