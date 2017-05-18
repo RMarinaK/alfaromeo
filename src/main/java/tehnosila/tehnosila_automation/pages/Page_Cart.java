@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 /**
- * @author MRasstrigina
+ * @author MRasstrigina test
  *
  */
 
