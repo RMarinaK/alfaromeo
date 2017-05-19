@@ -61,6 +61,7 @@ public class Action_SaveMoney extends TestBase{
 	//	CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		
 		pagetehnosila.clickActions();
+		app.getNavigationHelper().refreshPage();
 		pageactions.clickActionSaveMoney();
 		app.getNavigationHelper().refreshPage();
 		pagetehnosila.getPageActionCatalog();	
@@ -77,7 +78,8 @@ public class Action_SaveMoney extends TestBase{
 		pagecart.waitCartLoadingLayer();
 		pagecart.clickPromoCodeField();
 		pagecart.setСartPromoСode(NavigationHelper.promocode);
-		pagecart.clickButtonApplyBonus();		
+		pagecart.clickButtonApplyBonus();
+	//	app.getNavigationHelper().refreshPage();
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);

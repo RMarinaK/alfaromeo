@@ -19,9 +19,10 @@ public class Page_Cart extends PagesBase{
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL()+"#/cart";
 	
-	@FindBy(xpath="//div[@id='button-buy-in-order']/a[@id='ordering']")
+//	@FindBy(xpath="//div[@id='button-buy-in-order']/a[@id='ordering']")  [contains(text(),'Оформить заказ')]
+	@FindBy(xpath="//div[@id='button-buy-in-order']/a")
 	private WebElement buttonordering; // Кнопка "Оформить заказ"
-	
+
 	@FindBy(xpath="//input[@id='courier']/../span")
 	private WebElement rcourierdelivery; // Радиобаттон "Курьерская доставка"
 	
@@ -101,7 +102,7 @@ public class Page_Cart extends PagesBase{
 	
 	// жмаканье на "Офорить заказ"
 	public void clickButtonOrdering() {
-			app.getNavigationHelper().waitVisible(buttonordering,10);
+	//		app.getNavigationHelper().waitVisible(buttonordering,10);
 			buttonordering.click(); 
 			Log.info("жмаканье на Офорить заказ");
 	}	
