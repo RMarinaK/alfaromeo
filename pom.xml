@@ -8,7 +8,7 @@
     	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	 	<logback.version>1.0.1</logback.version>
-		<project.test.baseurl>tehnosila.ru/</project.test.baseurl>
+		<project.test.baseurl>${url}</project.test.baseurl>
   </properties>
   
 	

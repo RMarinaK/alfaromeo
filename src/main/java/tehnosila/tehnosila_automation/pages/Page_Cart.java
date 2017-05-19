@@ -1,24 +1,15 @@
 package tehnosila.tehnosila_automation.pages;
 
-import java.util.NoSuchElementException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.server.handler.FindElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.Assert;
 
-import com.thoughtworks.selenium.webdriven.commands.GetAttribute;
-
-import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 /**
- * @author MRasstrigina
+ * @author MRasstrigina test
  *
  */
 
@@ -45,21 +36,6 @@ public class Page_Cart extends PagesBase{
 	
 	@FindBy(xpath="//a[@class='apply_bonus_btn button white-flat submit']")
 	private WebElement applybonusbtn; // Кнопка Применить
-	
-	@FindBy(xpath="//a[@class='plus pressable gtm-process-add-to-cart']")
-	private WebElement buttonplus; // Кнопка плюс, увеличение кол-ва товара
-	
-	@FindBy(xpath="//a[@class='minus pressable gtm-process-remove-from-cart']")
-	private WebElement buttonminus; // Кнопка минус, уменьшение кол-ва товара
-	
-	@FindBy(xpath="//a[contains(@href,'http://www.tehnosila.ru/cart/removeItems')]")
-	private WebElement buttondelete; // Кнопка удалить, удаляет товар из корзины
-	
-	@FindBy(xpath="//input[@class='stub text']")
-	private WebElement quantityitem; // Количество товара
-	
-//	@FindBy(xpath="//*[@id='cart-contents']/div[4]/a")
-//	private WebElement emptycart;
 	
 	protected boolean isNecessaryToChangeParam(String param){
 		if(param.equals(" ")||param.equals("")){
@@ -124,55 +100,4 @@ public class Page_Cart extends PagesBase{
 		applybonusbtn.click(); 
 		Log.info("жмаканье на Применить");
    	}	
-	
-	// жмаканье на "плюс" увеличение кол-ва товара
-	public void clickButtonPlus() {
-		String qi = quantityitem.getAttribute("value");
-		buttonplus.click();
-		Log.info("жмаканье на плюс");
-		String qis = quantityitem.getAttribute("value");
-		int a = Integer.parseInt(qi);
-		int summ = a+1;
-		int b = Integer.parseInt(qis);
-		if (summ == b) Log.info("Количество товара равно " + qis); else Log.info("Не равно");
-	}
-	
-	// жмаканье на "минус" уменьшение кол-ва товара
-	public void clickButtonMinus() {
-		String qi = quantityitem.getAttribute("value");
-		buttonminus.click(); 
-		Log.info("жмаканье на минус");
-		String qis = quantityitem.getAttribute("value");
-		int a = Integer.parseInt(qi);
-		int summ = a-1;
-		int b = Integer.parseInt(qis);
-		if (summ == b) Log.info("Количество товара равно " + qis); else Log.info("Не равно");
-	}
-	
-	// жмаканье на Удалить
-	public void clickButtonDelete() {
-		buttondelete.click();
-		Log.info("жмаканье на удалить");
-	}	
-	
-	/*		if( driver.findElement(By.xpath("//*[@id='cart-contents']/div[4]")).isDisplayed()){
-			Log.info("Корзина пуста");
-			} else{
-			Log.info("Корзина не пуста");
-			}  
-																									// Варианты проверки корзины, пока не удалять
-			try {
-			driver.findElement(By.xpath("//*[@id='cart-contents']/div[4]")).isDisplayed();
-			Log.info("Корзина пуста");
-			} catch (Exception e){
-				Log.info("Корзина не пуста");
-		} 
-	} */
-	// Assert.assertTrue(driver.findElement(By.xpath("//*[@id='cart-contents']/div[4]")).isDisplayed(),"Корзина не пуста");
-	
-	// Проверка пустой корзины
-	public void emptycart() {
-		Assert.assertTrue(driver.findElement(By.xpath("//*[@id='cart-contents']/div[4]")).isDisplayed(),"Корзина не пуста");
-		Log.info("Корзина пуста");
-	} 
 }
