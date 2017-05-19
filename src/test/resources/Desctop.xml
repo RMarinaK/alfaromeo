@@ -25,7 +25,6 @@
 			<class name="tehnosila.tehnosila_automation.tests.Solr_OnlineSelfDeliverBank"/>
 			<class name="tehnosila.tehnosila_automation.tests.Solr_OnlineSelfDeliveryCardOnDelivery"/>
 			<class name="tehnosila.tehnosila_automation.tests.Solr_OnlineCourierCardOnDelivery_17assortment"/>
-			<class name="tehnosila.tehnosila_automation.tests.Change_Goods"/>
 		</classes>
 	</test>  
 </suite>
