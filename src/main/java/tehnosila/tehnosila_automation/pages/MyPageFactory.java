@@ -37,6 +37,7 @@ public class MyPageFactory {
         page.handleAlertIfExists();
         page.handlePopUpIfExists();
         //page.handleOnPageIfExists();
+        
         Log.info("***QA: We are on the {} page", driver.getCurrentUrl());
         return page;
     }
