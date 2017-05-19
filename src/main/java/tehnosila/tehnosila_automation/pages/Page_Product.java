@@ -14,7 +14,7 @@ public class Page_Product extends PagesBase{
 	protected String URL_MATCH = super.getBaseURL();
 	
 	//@FindBy(xpath="//a[@class='button yellow-flat pressable to-cart flocktory-add-to-cart cart gtm-process-add-to-cart flix_cart_click_check']")
-	@FindBy(xpath = "//a[contains(text(),'                        Купить                    ')]")
+	@FindBy(xpath = "//a[contains(text(),'Купить')]")
 	//*[@id="generic-area"]/div/div[1]/div[3]/a[2]
 	private WebElement buttonbuy; // Кнопка "Купить"
 	
