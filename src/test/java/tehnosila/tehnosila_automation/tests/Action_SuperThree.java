@@ -52,28 +52,37 @@ public class Action_SuperThree extends TestBase{
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
-		
+		commonmetods.getHTTPResponseCode();
 		pagetehnosila.clickActions();
+		app.getNavigationHelper().refreshPage();
+		commonmetods.getHTTPResponseCode();
 		pageactions.clickActionSuperThree();
 		app.getNavigationHelper().refreshPage();
+		commonmetods.getHTTPResponseCode();
 		commonmetods.scrollPage();
 		pageaction.clickActionCatalog();
 		app.getNavigationHelper().refreshPage();
+		commonmetods.getHTTPResponseCode();
 		pagecatalog.clickOpenSelfDeliveryDescription();
+		commonmetods.getHTTPResponseCode();
 		pageproduct.logItemprop();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
+		commonmetods.getHTTPResponseCode();
 		pagecart.waitCartLoadingLayer();
 		pagecart.clickButtonOrdering();
+		commonmetods.getHTTPResponseCode();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
 	//	pageorder.clickRCash(paymentName);
 		pageorder.clickButtonSubmitOrder();
+		commonmetods.getHTTPResponseCode();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
+		commonmetods.getHTTPResponseCode();
 	//	sysgetorders.assertPaymentName(paymentNameGO);
 		pagetehnosila.delCookies();
 	}

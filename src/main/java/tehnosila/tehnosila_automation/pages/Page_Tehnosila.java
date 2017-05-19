@@ -3,8 +3,15 @@ package tehnosila.tehnosila_automation.pages;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.WebResponse;
+
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -151,7 +158,7 @@ public class Page_Tehnosila extends PagesBase {
 	}
 	
 	// ожидание пока страница прогрузится 
-	public void getPageActionCatalog() {
+	public void getPageActionCatalog(){
 		String currenturl = driver.getCurrentUrl();
 		driver.navigate().to(currenturl + "/catalog");
 		Log.info("***QA: "+getBaseURL());
@@ -168,7 +175,6 @@ public class Page_Tehnosila extends PagesBase {
 	
 	public void clickProduct() throws Exception {
 		try {
-		
 			app.getNavigationHelper().waitVisible(openproduct,10);
 			openproduct.click(); 
 			Log.info("Зашли в товар");
@@ -517,8 +523,8 @@ public class Page_Tehnosila extends PagesBase {
 	}
 		
 	//переход в Акции
-	public void clickActions() {
-		actions.click(); 
+	public void clickActions(){
+		actions.click(); 		
 	}	
 	
 	

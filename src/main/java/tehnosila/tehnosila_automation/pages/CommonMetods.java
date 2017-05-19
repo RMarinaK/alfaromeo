@@ -3,6 +3,10 @@ package tehnosila.tehnosila_automation.pages;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -148,4 +152,17 @@ public class CommonMetods extends Page_AreaMenu {
 	    	Log.info("Element Not Found");     
          }  
 	}*/	
+	
+	// Получение HTTP response code
+	public void getHTTPResponseCode() throws IOException {
+		String currenturl = driver.getCurrentUrl();
+		URL url = new URL(currenturl);
+		Log.info("***QA: текущая страница: " + currenturl);
+		HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+		connection.setRequestMethod("GET");
+		connection.connect();
+		int code = connection.getResponseCode();
+	    Log.info("***QA: HTTP response code " + code);
+	}
+	
 }

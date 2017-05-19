@@ -6,6 +6,7 @@ package tehnosila.tehnosila_automation.tests;
 import java.io.File;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
+import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Cart;
 import tehnosila.tehnosila_automation.pages.Page_Order;
@@ -44,9 +45,12 @@ public class Solr_OnlineSelfDeliveryCardOnDelivery extends TestBase{
 
 		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_17 + NavigationBase.psolrand  + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
 				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
+		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
+		commonmetods.getHTTPResponseCode();
 		app.getNavigationHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
+		commonmetods.getHTTPResponseCode();
 		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
@@ -56,16 +60,20 @@ public class Solr_OnlineSelfDeliveryCardOnDelivery extends TestBase{
 		pageproduct.logItemprop();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
+		commonmetods.getHTTPResponseCode();
 		pagecart.clickButtonOrdering();
+		commonmetods.getHTTPResponseCode();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
 		pageorder.clickROnlineCardOnDelivery(paymentName);
 		pageorder.clickButtonSubmitOrder();
+		commonmetods.getHTTPResponseCode();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
+		commonmetods.getHTTPResponseCode();
 		sysgetorders.assertPaymentName(paymentName);
 		sysgetorders.assertDeliveryName(deliveryName);
 		pagetehnosila.delCookies();

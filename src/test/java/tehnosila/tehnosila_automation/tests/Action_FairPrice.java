@@ -55,14 +55,20 @@ public class Action_FairPrice extends TestBase{
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
-		
+		commonmetods.getHTTPResponseCode();
 		pagetehnosila.clickActions();
-		pageactions.clickActionFairPrice();
-		commonmetods.scrolling();
+		commonmetods.getHTTPResponseCode();
 		app.getNavigationHelper().refreshPage();
+		pageactions.clickActionFairPrice();
+		commonmetods.getHTTPResponseCode();
+		app.getNavigationHelper().refreshPage();
+		commonmetods.scrolling();
 		pageaction.clickActionCatalogItem();
+		commonmetods.getHTTPResponseCode();
 		pageaction.clickCatalogItemInCategory();
+		commonmetods.getHTTPResponseCode();
 		pagecatalog.clickOpenSelfDeliveryDescription();
+		commonmetods.getHTTPResponseCode();
 		pageproduct.clickButtonBuyCheaper();
 		pageaction.getСheaperPrice();
 		pageproduct.setActonBuyCheaperFio(fio);
@@ -76,17 +82,21 @@ public class Action_FairPrice extends TestBase{
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
 		pagecart.waitCartLoadingLayer();
+		commonmetods.getHTTPResponseCode();
 		pagecart.clickPromoCodeField();
 		pagecart.clickButtonOrdering();
+		commonmetods.getHTTPResponseCode();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
 	//	pageorder.clickRCash(paymentName);
 		pageorder.clickButtonSubmitOrder();
+		commonmetods.getHTTPResponseCode();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
+		commonmetods.getHTTPResponseCode();
 	//	sysgetorders.assertPaymentName(paymentNameGO);
 		pagetehnosila.delCookies();
 	}
