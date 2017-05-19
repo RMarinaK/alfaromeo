@@ -26,6 +26,7 @@ public class Change_Goods extends TestBase{
 		pagetehnosila.clickTVVA();
 		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
 		pagetehnosila.clickTV();
+		app.getNavigationHelper().refreshPage();
 		pagecatalogtvivideotelevizorytelevizory.clickOpenCourierDescription();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();

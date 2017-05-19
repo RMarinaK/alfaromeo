@@ -170,9 +170,13 @@ public class Page_Cart extends PagesBase{
 	} */
 	// Assert.assertTrue(driver.findElement(By.xpath("//*[@id='cart-contents']/div[4]")).isDisplayed(),"Корзина не пуста");
 	
+	
+	@FindBy(xpath="//div[contains(text(),'Ваша корзина пуста')]")
+	private WebElement rt; // Радиобаттон "Курьерская доставка"
+	
 	// Проверка пустой корзины
+	
 	public void emptycart() {
-		Assert.assertTrue(driver.findElement(By.xpath("//*[@id='cart-contents']/div[4]")).isDisplayed(),"Корзина не пуста");
-		Log.info("Корзина пуста");
+		app.getNavigationHelper().waitVisible(rt,10);
 	} 
 }
