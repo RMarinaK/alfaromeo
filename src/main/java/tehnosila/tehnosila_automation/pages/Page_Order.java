@@ -431,16 +431,17 @@ public class Page_Order extends PagesBase{
 	} закоментировано до првоерки!!! */
 	
 	// обрезание скидки из поля "Скидка:"
-	// получение количество товаров с сайта
 	public void DiscountSize(){
 		Pattern pattern = Pattern.compile("\\d+");
-		String stringpre = getdiscountpsize.getText(); // мой пример строки
-		Matcher matcher = pattern.matcher(stringpre);
+		String stringdiscountpsize = getdiscountpsize.getText(); // мой пример строки
+		Matcher matcher = pattern.matcher(stringdiscountpsize);
 		int start = 0;
+		StringBuilder builderpsale = new StringBuilder();
 		while (matcher.find(start)) {
-			NavigationBase.psale = stringpre.substring(matcher.start(), matcher.end());
-			Log.info("***QA: ptotalnumbersite "+ NavigationBase.psale);
+			String substringdiscountpsize = stringdiscountpsize.substring(matcher.start(), matcher.end());
 			start = matcher.end();
+			NavigationBase.psale = builderpsale.append(substringdiscountpsize).toString();
+			Log.info("***QA: psale "+ NavigationBase.psale);
 		}
 	}
 /*	public void DiscountSize() {
@@ -460,9 +461,12 @@ public class Page_Order extends PagesBase{
 		String price = getPrice();
 		String grouprice = price.replaceAll(" ", "");
 		String onlyprice = grouprice.substring(0, grouprice.indexOf('Р'));
-		float floatprice = Float.parseFloat(onlyprice); 
+		float floatprice = Float.parseFloat(onlyprice);
+		Log.info("***QA: floatprice "+ floatprice);
 		float floatpriceprc = (floatprice/100);
+		Log.info("***QA: floatpriceprc "+ floatpriceprc);
 		float discount = floatpriceprc*salesize;
+		Log.info("***QA: discount "+ discount);
 		NavigationBase.pdiscountresult = (int)Math.ceil(discount); 
 		Log.info("***QA: Скидон "+ NavigationBase.pdiscountresult);
 	}
@@ -473,6 +477,7 @@ public class Page_Order extends PagesBase{
 		DiscountSize();
 		getDiscount(salesize);
 		int psale = Integer.valueOf(NavigationBase.psale);
+		Log.info("***QA: pdiscountresult "+ NavigationBase.pdiscountresult);
 		try {
 			Assert.assertEquals(psale, NavigationBase.pdiscountresult); 
 			Log.info("***QA: Скидон "+ NavigationBase.psale);
