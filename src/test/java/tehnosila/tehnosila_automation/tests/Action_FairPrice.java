@@ -56,7 +56,7 @@ public class Action_FairPrice extends TestBase{
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
 		commonmetods.getHTTPResponseCode();
-		pagetehnosila.clickActions();
+	//	pagetehnosila.clickActions();
 		commonmetods.getHTTPResponseCode();
 		app.getNavigationHelper().refreshPage();
 		pageactions.clickActionFairPrice();
