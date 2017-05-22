@@ -123,32 +123,44 @@ public class Page_Cart extends PagesBase{
 	
 	// жмаканье на "плюс" увеличение кол-ва товара
 	public void clickButtonPlus() {
-		String qi = quantityitem.getAttribute("value");
-		buttonplus.click();
-		Log.info("жмаканье на плюс");
-		String qis = quantityitem.getAttribute("value");
-		int a = Integer.parseInt(qi);
-		int summ = a+1;
-		int b = Integer.parseInt(qis);
-		if (summ == b) Log.info("Количество товара равно " + qis); else Log.info("Не равно");
+		try {
+			String qi = quantityitem.getAttribute("value");
+			buttonplus.click();
+			Log.info("жмаканье на плюс");
+			String qis = quantityitem.getAttribute("value");
+			int a = Integer.parseInt(qi);
+			int summ = a+1;
+			int b = Integer.parseInt(qis);
+			if (summ == b) Log.info("Количество товара равно " + qis); else Log.info("Не равно");
+		} catch (Exception e){
+			Log.info("Не жмакнулось на плюс");
+		} 	
 	}
 	
 	// жмаканье на "минус" уменьшение кол-ва товара
 	public void clickButtonMinus() {
-		String qi = quantityitem.getAttribute("value");
-		buttonminus.click(); 
-		Log.info("жмаканье на минус");
-		String qis = quantityitem.getAttribute("value");
-		int a = Integer.parseInt(qi);
-		int summ = a-1;
-		int b = Integer.parseInt(qis);
-		if (summ == b) Log.info("Количество товара равно " + qis); else Log.info("Не равно");
+		try {
+			String qi = quantityitem.getAttribute("value");
+			buttonminus.click(); 
+			Log.info("жмаканье на минус");
+			String qis = quantityitem.getAttribute("value");
+			int a = Integer.parseInt(qi);
+			int summ = a-1;
+			int b = Integer.parseInt(qis);
+			if (summ == b) Log.info("Количество товара равно " + qis); else Log.info("Не равно");
+		} catch (Exception e){
+			Log.info("Не жмакнулось на минус");
+		} 
 	}
 	
 	// жмаканье на Удалить
 	public void clickButtonDelete() {
-		buttondelete.click();
-		Log.info("жмаканье на удалить");
+		try {
+			buttondelete.click();
+			Log.info("жмаканье на удалить");
+		} catch (Exception e){
+			Log.info("Не жмакнулось на Удалить");
+		} 
 	}	
 	
 	/*		if( driver.findElement(By.xpath("//*[@id='cart-contents']/div[4]")).isDisplayed()){

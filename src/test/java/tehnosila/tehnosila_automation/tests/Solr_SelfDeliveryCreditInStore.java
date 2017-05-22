@@ -69,6 +69,7 @@ public class Solr_SelfDeliveryCreditInStore extends TestBase{
 		pageorder.clickRCreditInStore(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		commonmetods.getHTTPResponseCode();
+		app.getNavigationHelper().refreshPage();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();

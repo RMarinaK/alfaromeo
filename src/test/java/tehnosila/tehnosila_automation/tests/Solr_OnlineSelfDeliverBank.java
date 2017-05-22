@@ -82,6 +82,7 @@ public class Solr_OnlineSelfDeliverBank extends TestBase{
 		pageorder.setOrderFormOrderContactCompanyCity(city);
 		pageorder.clickButtonSubmitOrder();
 		commonmetods.getHTTPResponseCode();
+		app.getNavigationHelper().refreshPage();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();

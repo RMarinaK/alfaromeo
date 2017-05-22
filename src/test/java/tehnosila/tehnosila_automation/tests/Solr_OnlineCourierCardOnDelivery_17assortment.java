@@ -74,6 +74,7 @@ public class Solr_OnlineCourierCardOnDelivery_17assortment extends TestBase{
 		pageorder.assertROnlineCardOnDelivery(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		commonmetods.getHTTPResponseCode();
+		app.getNavigationHelper().refreshPage();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();

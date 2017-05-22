@@ -75,6 +75,7 @@ public class Solr_CourierCash extends TestBase{
 		pageorder.clickRCash(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		commonmetods.getHTTPResponseCode();
+		app.getNavigationHelper().refreshPage();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();

@@ -82,6 +82,7 @@ public class Action_Installment extends TestBase{
 	//	pageorder.clickRCreditInStore(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		commonmetods.getHTTPResponseCode();
+		app.getNavigationHelper().refreshPage();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
