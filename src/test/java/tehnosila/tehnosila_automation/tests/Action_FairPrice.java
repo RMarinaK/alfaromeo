@@ -98,7 +98,6 @@ public class Action_FairPrice extends TestBase{
 		sysgetorders.assertOrders();
 		commonmetods.getHTTPResponseCode();
 	//	sysgetorders.assertPaymentName(paymentNameGO);
-		pagetehnosila.delCookies();
 	}
 	
 }

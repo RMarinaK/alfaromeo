@@ -84,7 +84,6 @@ public class Action_SuperThree extends TestBase{
 		sysgetorders.assertOrders();
 		commonmetods.getHTTPResponseCode();
 	//	sysgetorders.assertPaymentName(paymentNameGO);
-		pagetehnosila.delCookies();
 	}
 	
 }

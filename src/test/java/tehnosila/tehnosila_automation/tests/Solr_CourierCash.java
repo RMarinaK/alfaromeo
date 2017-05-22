@@ -81,7 +81,6 @@ public class Solr_CourierCash extends TestBase{
 		commonmetods.getHTTPResponseCode();
 		sysgetorders.assertPaymentName(paymentNameGO);
 		sysgetorders.assertDeliveryName(deliveryName);
-		pagetehnosila.delCookies();
 	}
 	
 }

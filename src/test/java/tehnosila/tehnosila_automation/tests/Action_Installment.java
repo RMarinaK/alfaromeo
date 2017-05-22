@@ -88,7 +88,6 @@ public class Action_Installment extends TestBase{
 		commonmetods.getHTTPResponseCode();
 	//	sysgetorders.assertPaymentName(paymentNameGO);
 		sysgetorders.assertDeliveryName(deliveryName);
-		pagetehnosila.delCookies();
 	}
 	
 }

@@ -75,7 +75,6 @@ public class Solr_SelfDeliveryCreditInStore extends TestBase{
 		commonmetods.getHTTPResponseCode();
 		sysgetorders.assertPaymentName(paymentNameGO);
 		sysgetorders.assertDeliveryName(deliveryName);
-		pagetehnosila.delCookies();
 	}
 	
 }

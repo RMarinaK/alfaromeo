@@ -44,7 +44,6 @@ public class Authorization extends TestBase{
 		pagepasswordlogin.setEmail(email);
 		pagepasswordlogin.setPassword(password);
 		pagepasswordlogin.clickButtonEnter();
-
 	}
 	
 }

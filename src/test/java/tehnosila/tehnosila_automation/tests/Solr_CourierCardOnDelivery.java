@@ -81,7 +81,6 @@ public class Solr_CourierCardOnDelivery extends TestBase{
 		commonmetods.getHTTPResponseCode();
 		sysgetorders.assertPaymentName(paymentName);
 		sysgetorders.assertDeliveryName(deliveryName);
-		pagetehnosila.delCookies();
 	}
 	
 }

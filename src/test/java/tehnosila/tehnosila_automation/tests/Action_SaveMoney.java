@@ -104,7 +104,6 @@ public class Action_SaveMoney extends TestBase{
 		sysgetorders.assertOrders();
 		commonmetods.getHTTPResponseCode();
 	//	sysgetorders.assertPaymentName(paymentNameGO);
-		pagetehnosila.delCookies();
 	}
 	
 }
