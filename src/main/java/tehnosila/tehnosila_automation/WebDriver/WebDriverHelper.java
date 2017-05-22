@@ -5,12 +5,16 @@ package tehnosila.tehnosila_automation.WebDriver;
 
 import static org.junit.Assert.fail;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -25,6 +29,11 @@ import tehnosila.tehnosila_automation.AppManager.ApplicationManager;
 import tehnosila.tehnosila_automation.util.Browser;
 import tehnosila.tehnosila_automation.util.PropertyLoader;
 
+import java.util.StringTokenizer;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @author RasstriginaMK
  *
@@ -37,12 +46,14 @@ public class WebDriverHelper {
 	protected Browser browser;
 	protected String gridHubUrl;
 	protected String baseUrl;
+	protected String cookies;
 	
 	public WebDriverHelper(ApplicationManager appManager){
 		this.appManager = appManager;
 
 			baseUrl = PropertyLoader.loadProperty("site.url");
 			gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
+			cookies = PropertyLoader.loadProperty("cookies");
 
 			browser = new Browser();
 			browser.setName(PropertyLoader.loadProperty("browser.name"));
@@ -173,8 +184,44 @@ public class WebDriverHelper {
  		 * or elements if they are not immediately available. The default setting is 0.
  		 * Once set, the implicit wait is set for the life of the WebDriver object instance.*/
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	    driver.manage().deleteAllCookies();
 	    driver.get("http://"+baseUrl);
+	    driver.manage().deleteAllCookies();
+	    try{			
+	        File file = new File("src/main/resources/Cookies.data");							
+	        FileReader fileReader = new FileReader(file);							
+			BufferedReader Buffreader = new BufferedReader(fileReader);							
+	        String strline;			
+	        while((strline=Buffreader.readLine())!=null){	
+	        StringTokenizer token = new StringTokenizer(strline, ";");		
+	        while(token.hasMoreTokens()){					
+	        String name = token.nextToken();					
+	        String value = token.nextToken();					
+	     //   String domain = token.nextToken();					
+	   //     String path = token.nextToken();					
+	 /*       Date expiry = null;					
+	        		
+	        String val;			
+	        if(!(val=token.nextToken()).equals("null"))
+			{		
+	        	expiry = new Date(val);					
+	        }		
+	        Boolean isSecure = new Boolean(token.nextToken()).								
+	        booleanValue();		*/
+	        Cookie ck = new Cookie(name,value);	
+	        System.out.println("***QA: Cookies: " + name + ";" + value);
+	        driver.manage().addCookie(ck); // This will add the stored cookie to your current session					
+	        }		
+	        }		
+	        }catch(Exception ex){					
+	        ex.printStackTrace();			
+	        }		
+	   
+	    
+	/*    driver.get("http://"+baseUrl);
+	    driver.manage().deleteAllCookies();
+	    Cookie cookie = new Cookie("558hyblist54V22", "1");   
+	     driver.manage().addCookie(cookie);*/
+
 
 	//    (new WebDriverWait(driver, 1))
     //    .until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("easyXDM_flocktory_default7546_provider"));

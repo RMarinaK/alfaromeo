@@ -160,6 +160,7 @@ public class CommonMetods extends Page_AreaMenu {
 		Log.info("***QA: текущая страница: " + currenturl);
 		HttpURLConnection connection = (HttpURLConnection)url.openConnection();
 		connection.setRequestMethod("GET");
+		connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36");
 		connection.connect();
 		int code = connection.getResponseCode();
 	    Log.info("***QA: HTTP response code " + code);
