@@ -31,9 +31,6 @@ import tehnosila.tehnosila_automation.util.PropertyLoader;
 
 import java.util.StringTokenizer;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * @author RasstriginaMK
  *
@@ -46,14 +43,14 @@ public class WebDriverHelper {
 	protected Browser browser;
 	protected String gridHubUrl;
 	protected String baseUrl;
-	protected String cookies;
+	protected String cookiesdata;
 	
 	public WebDriverHelper(ApplicationManager appManager){
 		this.appManager = appManager;
 
 			baseUrl = PropertyLoader.loadProperty("site.url");
 			gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
-			cookies = PropertyLoader.loadProperty("cookies");
+			cookiesdata = "src/main/resources/Cookies.data";
 
 			browser = new Browser();
 			browser.setName(PropertyLoader.loadProperty("browser.name"));
@@ -187,7 +184,7 @@ public class WebDriverHelper {
 	    driver.get("http://"+baseUrl);
 	    driver.manage().deleteAllCookies();
 	    try{			
-	        File file = new File("src/main/resources/Cookies.data");							
+	        File file = new File(cookiesdata);							
 	        FileReader fileReader = new FileReader(file);							
 			BufferedReader Buffreader = new BufferedReader(fileReader);							
 	        String strline;			

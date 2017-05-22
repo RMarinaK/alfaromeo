@@ -9,7 +9,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	 	<logback.version>1.0.1</logback.version>
 		<project.test.baseurl>${url}</project.test.baseurl>
-		<project.test.cookies>src/test/resources/${cookies}.data</project.test.cookies>
   </properties>
   
 	
@@ -207,7 +206,6 @@
         <user.password></user.password>
         <grid2.hub></grid2.hub>
         <site.url>${project.test.baseurl}</site.url>
-        <cookies>src/test/resources/${cookies}.data</cookies>
         <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
@@ -308,7 +306,7 @@
           <version>2.17</version>
           <configuration>
             <suiteXmlFiles>
-              <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>tehnosila
+              <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
             </suiteXmlFiles>
           </configuration>
         </plugin>
