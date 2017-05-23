@@ -186,6 +186,7 @@ public class WebDriverHelper {
 	    try{			
 	        File file = new File(cookiesdata);							
 	        FileReader fileReader = new FileReader(file);							
+			@SuppressWarnings("resource")
 			BufferedReader Buffreader = new BufferedReader(fileReader);							
 	        String strline;			
 	        while((strline=Buffreader.readLine())!=null){	
