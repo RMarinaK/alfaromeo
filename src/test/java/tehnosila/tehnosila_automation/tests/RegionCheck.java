@@ -16,8 +16,13 @@ import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class RegionCheck extends TestBase{
 	
+	private static Logger Log = LoggerFactory.getLogger(RegionCheck.class);
+
 	// З А П У С К А Е М   Т Е С Т
 	@Test
 	public void regionTest() throws Exception{
@@ -48,30 +53,27 @@ public class RegionCheck extends TestBase{
 		        	   }
 		            }
 		        
-		        pagetehnosila.clickCityPopup();
+		        pagetehnosila.clickCityPopup(0);
 
 		        //Подсчитываем количество городов в попапе и создаём массив с количеством городов по столбцам 
 		        int[] count = new int[4];
-		        int acCount = NavigationBase.acCount;
-		        acCount = 0;
-		        for(int i1 = 0; i1 < count.length; i1++){
-		        	if (i1 == 0) {
-		        		count[i1] = pagetehnosila.bigCityCount();
+		        int acCount = 0;
+		        for(int j = 0; j < count.length; j++){
+		        	if (j == 0) {
+		        		count[j] = pagetehnosila.bigCityCount();
 		        	} else {
-			        	count[i1] = pagetehnosila.otherCityCount(i1);
+			        	count[j] = pagetehnosila.otherCityCount(j);
 			        }
-		        	acCount = acCount + count[i1];
+		        	acCount = acCount + count[j];
 		        }
-		       		        
-		       if(acCount == NavigationBase.arrSize){
-		        	System.out.println("Количество городов в xml и попапе совпадает = " + acCount);
-		        	} else {
-		        		System.out.println("Количество городов НЕ совпадает! В xml: " + NavigationBase.arrSize + ", в попапе:  " + acCount);
-		        	}
+		       
+		       //Сравнение кол-ва городов на сайте и в xml
+		       commonmetods.CityCountCheck(acCount, NavigationBase.arrSize); 
 
 		        String[] citySite = new String[NavigationBase.arrSize];
 		        String[] domainSite = new String[NavigationBase.arrSize];
 		        
+		        //Проход по таблице с городами в попапе и запись данных (название, домен) в массивы
 		        int m = 0;
 		        int a = 1;
 		        int b = 1;
@@ -82,32 +84,35 @@ public class RegionCheck extends TestBase{
 				        pagetehnosila.clickNewCity(a,b,c);
 				        citySite[m] = NavigationBase.currCity;
 				        domainSite[m] = NavigationBase.currDomain;
-				        pagetehnosila.clickCityPopup();
+				        pagetehnosila.clickCityPopup(1);
 				        m++;
 				    }
 		        }
 		       
+		       //Проверка наличия городов из попапа в массиве городов из xml
 		       int l, h;
 		       for (int y = 0; y < NavigationBase.arrSize; y++){
 		        	for (l = 0; l < NavigationBase.arrSize; l++){
 		        		if(cityXML[y].equals(citySite[l])){
-		        			System.out.println("Город " + cityXML[y] + " есть на сайте.");
+		        		Log.info("Город " + cityXML[y] + " есть на сайте.");
 		        			break;
 		        		} 
 		        	}
 		        	if (l == NavigationBase.arrSize) {
-	        			System.out.println("Ошибка! Города " + cityXML[y] + " нет на сайте!");
+		        		Log.info("Ошибка! Города " + cityXML[y] + " нет на сайте!");
 	        		}
 		        }
+		       
+		     //Проверка наличия городов из попапа в массиве городов из xml
 		       for (int y = 0; y < NavigationBase.arrSize; y++){
 		        	for (h = 0; h < NavigationBase.arrSize; h++){
 		        		if(domainXML[y].equals(domainSite[h])){
-		        			System.out.println("Домены города " + cityXML[y] + " совпадают: " + domainXML[y]);
+		        			Log.info("Домены города " + cityXML[y] + " совпадают: " + domainXML[y]);
 		        			break;
 		        		} 
 		        	}
 		        	if (h == NavigationBase.arrSize) {
-	        			System.out.println("Ошибка! Домены города " + cityXML[y] + " отличаются!");
+		        		Log.info("Ошибка! Домены города " + cityXML[y] + " отличаются!");
 	        		}
 		        }	        
 

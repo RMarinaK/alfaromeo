@@ -265,5 +265,15 @@ public class CommonMetods extends Page_AreaMenu {
 		    	    Log.info("Read XML-file DOM error");   
 		        }
 
-			}	
+			}
+			
+			public void CityCountCheck (int x, int y){
+			       if(x == y){
+			    	   	Log.info("Количество городов в xml и попапе совпадает = " + x);
+			        	} else {
+			        		Log.info("Количество городов НЕ совпадает! В xml: " + y + ", в попапе:  " + x);
+			        	}
+
+				
+			}
 }
