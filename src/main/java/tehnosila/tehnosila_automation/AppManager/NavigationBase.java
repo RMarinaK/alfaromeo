@@ -51,6 +51,11 @@ public class NavigationBase {
 	public static String cheaperprice;
 	public static int pcode;
 	
-	
+	public static String currCity;
+	public static String currDomain;
+	public static int currCityCount;
+	public static int counter;
+	public static int arrSize;
+	public static int acCount;	
 	
 }
