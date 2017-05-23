@@ -206,6 +206,7 @@
         <user.password></user.password>
         <grid2.hub></grid2.hub>
         <site.url>${project.test.baseurl}</site.url>
+        <cookies>src/main/resources/${Cookies}.data</cookies>
         <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
@@ -318,6 +319,7 @@
         <user.password></user.password>
         <grid2.hub>http://localhost:4445/wd/hub</grid2.hub>
         <site.url>tehnosila.ru/</site.url>
+        <cookies>src/main/resources/Cookies.data</cookies>
         <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>

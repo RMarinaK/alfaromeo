@@ -50,7 +50,7 @@ public class WebDriverHelper {
 
 			baseUrl = PropertyLoader.loadProperty("site.url");
 			gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
-			cookiesdata = "src/main/resources/Cookies.data";
+			cookiesdata = PropertyLoader.loadProperty("cookies");//"src/main/resources/Cookies.data";
 
 			browser = new Browser();
 			browser.setName(PropertyLoader.loadProperty("browser.name"));
