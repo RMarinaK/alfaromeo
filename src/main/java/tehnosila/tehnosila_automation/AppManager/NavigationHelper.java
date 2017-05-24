@@ -3,6 +3,8 @@ package tehnosila.tehnosila_automation.AppManager;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -271,4 +273,30 @@ public class NavigationHelper extends NavigationBase{
 		}
 		Log.info("***QA: ptotatlnumber '"+ ptotatlnumber +"'");
 	}	
+	
+	// вытягивание количество товаров из апи technosilaProductCatalog/Online
+	public void getTotalNumberCatalogOnline() {
+		String stringpre = getPre();
+		int start1 = stringpre.indexOf("totalNumber\" :");
+		ptotatlnumber = "";
+		if (start1 > 0) {
+			String productpart = stringpre.substring(start1);
+		//	Log.info("***QA: productpart '"+ productpart +"'");
+			ptotatlnumber = productpart.substring(0, productpart.indexOf("}"));		
+		}
+		Log.info("***QA: ptotatlnumber '"+ ptotatlnumber +"'");
+	
+		Pattern pattern = Pattern.compile("\\d+");
+		String stringdiscountpsize = ptotatlnumber; // мой пример строки
+		Matcher matcher = pattern.matcher(stringdiscountpsize);
+		int start = 0;
+		StringBuilder builderpsale = new StringBuilder();
+		while (matcher.find(start)) {
+			String substringdiscountpsize = stringdiscountpsize.substring(matcher.start(), matcher.end());
+			start = matcher.end();
+			NavigationBase.ptotalnumber =builderpsale.append(substringdiscountpsize).toString();
+			Log.info("***QA: totalNumber "+ NavigationBase.ptotalnumber);
+		}
+	}	
+	
 }
