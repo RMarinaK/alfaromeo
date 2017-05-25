@@ -57,5 +57,7 @@ public class NavigationBase {
 	public static int counter;
 	public static int arrSize;
 	public static int acCount;	
-	
+		
+	public static String[] cityXML = new String[NavigationBase.arrSize];
+	public static String[] domainXML = new String[NavigationBase.arrSize];
 }

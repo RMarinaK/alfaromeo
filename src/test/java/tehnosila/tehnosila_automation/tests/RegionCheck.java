@@ -5,56 +5,45 @@
 
 package tehnosila.tehnosila_automation.tests;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
-
+import java.io.File;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
-
+import tehnosila.tehnosila_automation.pages.WorkWithArr;
+import tehnosila.tehnosila_automation.pages.WorkWithSFTP;
+import tehnosila.tehnosila_automation.pages.WorkWithXML;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 public class RegionCheck extends TestBase{
 	
 	private static Logger Log = LoggerFactory.getLogger(RegionCheck.class);
-
-	// З А П У С К А Е М   Т Е С Т
-	@Test
-	public void regionTest() throws Exception{
-
-		try { 
-			 	
-	        	Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
-	        	CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
+	
+	@DataProvider(name = "DP1")
+    public Object[][] createData1() throws Exception{
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"RegionCheck"+File.separator+"RegionCheck.xls",
+                "RegionCheck", "Data");
+        return(retObjArr);
+    }
+	
+	@Test (dataProvider = "DP1")
+	public void regionTest(String ftpAdr, String port, String user, String password, String FullPathToPutFile, String FilenameOnFTP, String PathToCreateFile) throws Exception{			 	
+		
+		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
+	    CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
+	    WorkWithSFTP workwithsftp = MyPageFactory.getPage(WorkWithSFTP.class);
+	    WorkWithXML workwithxml = MyPageFactory.getPage(WorkWithXML.class);
+	    WorkWithArr workwitharr = MyPageFactory.getPage(WorkWithArr.class);
 	        	
-				//Скачиваем xml-файл с SFTP, создаем txt-файл для записи, извлекаем названия и домены активных городов и записываем в txt-файл
-	        	commonmetods.SFTPDownloadFile();
-	        	commonmetods.createFile();
-	        	commonmetods.ReadXMLFileDOM();
-		    
-		    	//Извлекаем данные из txt-файла и записываем их в массив
-		        FileInputStream fstream = new FileInputStream("/repo/tests/src/test/resources/DDT/RegionCheck/city_list.txt");
-		        BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-		        String strLine;
-		        int i = 0;
-		        String[] cityXML = new String[NavigationBase.arrSize];
-		        String[] domainXML = new String[NavigationBase.arrSize];
-		        while ((strLine = br.readLine()) != null){
-		        	if (strLine.trim().length() != 0){
-		        	   String[] cutStr = strLine.split(",");
-					   cityXML[i] = cutStr[0];
-					   domainXML[i] = cutStr[1];
-		        	   i++;
-		        	   }
-		            }
-		        br.close();
-		        
-		        pagetehnosila.clickCityPopup(0);
+	    workwithsftp.DownloadFileFromFTP(ftpAdr, port, user, password, FullPathToPutFile, FilenameOnFTP);
+	    workwithxml.createFile(PathToCreateFile);
+	    workwithxml.ReadXMLFileDOM(PathToCreateFile, FullPathToPutFile);
+	    workwitharr.getDataFromTxt(PathToCreateFile);
+	    pagetehnosila.clickCityPopup(0);
 
 		        //Подсчитываем количество городов в попапе и создаём массив с количеством городов по столбцам 
 		        int[] count = new int[4];
@@ -94,32 +83,26 @@ public class RegionCheck extends TestBase{
 		       int l, h;
 		       for (int y = 0; y < NavigationBase.arrSize; y++){
 		        	for (l = 0; l < NavigationBase.arrSize; l++){
-		        		if(cityXML[y].equals(citySite[l])){
-		        		Log.info("Город " + cityXML[y] + " есть на сайте.");
+		        		if(NavigationBase.cityXML[y].equals(citySite[l])){
+		        		Log.info("Город " + NavigationBase.cityXML[y] + " есть на сайте.");
 		        			break;
 		        		} 
 		        	}
 		        	if (l == NavigationBase.arrSize) {
-		        		Log.info("Ошибка! Города " + cityXML[y] + " нет на сайте!");
+		        		Log.info("Ошибка! Города " + NavigationBase.cityXML[y] + " нет на сайте!");
 	        		}
 		        }
 		       
 		     //Проверка наличия городов из попапа в массиве городов из xml
 		       for (int y = 0; y < NavigationBase.arrSize; y++){
 		        	for (h = 0; h < NavigationBase.arrSize; h++){
-		        		if(domainXML[y].equals(domainSite[h])){
-		        			Log.info("Домены города " + cityXML[y] + " совпадают: " + domainXML[y]);
+		        		if(NavigationBase.domainXML[y].equals(domainSite[h])){
+		        			Log.info("Домены города " + NavigationBase.cityXML[y] + " совпадают: " + NavigationBase.domainXML[y]);
 		        			break;
 		        		} 
 		        	}
 		        	if (h == NavigationBase.arrSize) {
-		        		Log.info("Ошибка! Домены города " + cityXML[y] + " отличаются!");
+		        		Log.info("Ошибка! Домены города " + NavigationBase.cityXML[y] + " отличаются!");
 	        		}
 		        }	        
-
-		}catch (Exception e) {
-			e.getMessage();
-			} 
-	}
-	
-}
+}}

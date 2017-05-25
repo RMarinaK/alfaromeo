@@ -1,18 +1,11 @@
 package tehnosila.tehnosila_automation.pages;
 
-import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
 
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -21,18 +14,6 @@ import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-
-import com.jcraft.jsch.Channel;
-import com.jcraft.jsch.ChannelSftp;
-import com.jcraft.jsch.JSch;
-import com.jcraft.jsch.JSchException;
-import com.jcraft.jsch.Session;
-import com.jcraft.jsch.SftpException;
 
 /**
  * @author MRasstrigina
@@ -185,95 +166,16 @@ public class CommonMetods extends Page_AreaMenu {
 	    Log.info("***QA: HTTP response code " + code);
 	}
 	
-	// ----------------------------------------------------------------------------------------------------------------------------
-	//Проверка смены города	@author EDanilova
-	// Скачиваем с sftp файл region_shop_data.xml
-		public void SFTPDownloadFile() {
-	        JSch jsch = new JSch();
-	        Session session = null;
+// ----------------------------------------------------------------------------------------------------------------------------
 
-	        String host = "10.9.1.209";
-	        int port = 22;
-	        String login = "programmers";
-	        String password = "yjdsqgfhjkmghjuhfvvbcnjd";
-	        String downloadFolder = "/srv/test/exchange_test7/region_shop_data.xml";
-	        String uploadFolder = "/src/test/resources/DDT/RegionCheck/region_shop_data.xml";
-	        try {
-	            session = jsch.getSession(login, host, port);
-	            session.setConfig("StrictHostKeyChecking", "no");
-	            session.setPassword(password);
-	            session.connect();
-
-	            Channel channel = session.openChannel("sftp");
-	            channel.connect();
-	            ChannelSftp sftpChannel = (ChannelSftp) channel;
-	            sftpChannel.get(downloadFolder, uploadFolder);
-	            sftpChannel.exit();
-	            session.disconnect();
-	        } catch (JSchException e) {
-	            e.printStackTrace();
-	        } catch (SftpException e) {
-	            e.printStackTrace();
-	        }
-		}
-		
-		// Создаем файл, куда будет записывать извлекаемые из xml города и доменные имена
-			public void createFile(){
-			    try(FileWriter fw = new FileWriter("/repo/tests/src/test/resources/DDT/RegionCheck/city_list.txt")) {
-			        fw.close();
-			    } catch (IOException e) {
-			        System.err.println(e.getMessage());
-			    }
+	//Сравнение кол-ва городов на сайте и в xml	  @author EDanilova
+	public void CityCountCheck (int x, int y){
+		if(x == y){
+			Log.info("Количество городов в xml и попапе совпадает = " + x);
+			} else {
+				Log.info("Количество городов НЕ совпадает! В xml: " + y + ", в попапе:  " + x);
 			}
-			
-			// Извлекаем данные из xml и записываем их в файл
-			public void ReadXMLFileDOM() {
-		        try {
-		        	
-		        	PrintWriter pw = new PrintWriter("/repo/tests/src/test/resources/DDT/RegionCheck/city_list.txt");
-
-		            // Создается построитель документа
-		            DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		            
-		            // Создается дерево DOM документа из файла
-		            Document document = documentBuilder.parse("/repo/tests/src/test/resources/DDT/RegionCheck/region_shop_data.xml");
-		            
-		            // Выполнять нормализацию не обязательно, но рекомендуется
-		            document.getDocumentElement().normalize();
-		            
-		            // Получаем все узлы с именем "Region"
-		            NodeList region = document.getElementsByTagName("Region");
-
-		            for (int i = 0; i < region.getLength(); i++) {
-		                Node node = region.item(i);
-		                
-		                if (Node.ELEMENT_NODE == node.getNodeType()) {
-		                    Element element = (Element) node;
-		                    String visibility = element.getElementsByTagName("Invisible").item(0).getTextContent();
-		                    
-		                    if (visibility.equals("No")){
-		                	   pw.println((element.getElementsByTagName("Name").item(0).getTextContent()) + "," + (element.getElementsByTagName("Domain").item(0).getTextContent()));
-		                	   NavigationBase.arrSize++;
-		                    }
-		                }
-		          } 
-		          pw.close();
-		            
-		        } catch (ParserConfigurationException | SAXException | IOException ex) {
-		    	    Log.info("Read XML-file DOM error");   
-		        }
-
-			}
-			
-			public void CityCountCheck (int x, int y){
-			       if(x == y){
-			    	   	Log.info("Количество городов в xml и попапе совпадает = " + x);
-			        	} else {
-			        		Log.info("Количество городов НЕ совпадает! В xml: " + y + ", в попапе:  " + x);
-			        	}
-
-				
-			}
+	}
 			
 		
 }

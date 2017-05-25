@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Data Date="20170412110430">
+<Data Date="20170525140933">
 	<Regions>
 		<Region>
 			<ID>234</ID>
@@ -552,16 +552,6 @@
 			<Invisible>No</Invisible>
 		</Region>
 		<Region>
-			<ID>44</ID>
-			<SapID>6618</SapID>
-			<Name>Новокузнецк</Name>
-			<Kladr>4200001200000</Kladr>
-			<Prefix>NVKZ</Prefix>
-			<Domain>novokuznetsk</Domain>
-			<Priority>80</Priority>
-			<Invisible>Yes</Invisible>
-		</Region>
-		<Region>
 			<ID>176</ID>
 			<SapID>6550</SapID>
 			<Name>Люберцы</Name>
@@ -859,6 +849,12 @@
 			<cost_limit_cash>25000</cost_limit_cash>
 			<cost_limit_cart>25000</cost_limit_cart>
 		</Owner>
+		<Owner>
+			<ID>7</ID>
+			<Name>Эльдорадо</Name>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Owner>
 	</Owners>
 	<Shops>
 		<Shop>
@@ -1044,7 +1040,7 @@
 			<RegionID>12</RegionID>
 			<Type>Розничный магазин</Type>
 			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
-			<HowToGet>на маршрутке №131, 30Б до остановки "Серебряный город", также до ТЦ ходит бесплатный транспорт. Магазин расположен на цокольном этаже, заходить в ТЦ удобнее со стороны набережной либо через центральный вход, затем пройти прямо и спуститься вниз по экскалатору.</HowToGet>
+			<HowToGet>на маршрутке №131, 30Б до остановки "Серебряный город", также до ТЦ ходит бесплатный транспорт. Магазин расположен на цокольном этаже, заходить в ТЦ удобнее со стороны набережной либо через центральный вход, затем пройти прямо и спуститься вниз по эскалатору.</HowToGet>
 			<Distance>294</Distance>
 			<DeliveryDays>1</DeliveryDays>
 			<DirectorEmail>director30882@tehnosila.ru</DirectorEmail>
@@ -1634,7 +1630,7 @@
 			<RegionID>12</RegionID>
 			<Type>Розничный магазин</Type>
 			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
-			<HowToGet>магазин расположен в первой галерее торгового центра, с левой стороны от центрального входе, расположенного рядом с остановкой общественного транспорта.</HowToGet>
+			<HowToGet>магазин расположен в первой галерее торгового центра, с левой стороны от центрального входа, расположенного рядом с остановкой общественного транспорта.</HowToGet>
 			<Distance>294</Distance>
 			<DeliveryDays>1</DeliveryDays>
 			<DirectorEmail>director3382@tehnosila.ru</DirectorEmail>
@@ -1696,25 +1692,6 @@
 			<DeliveryDays>3</DeliveryDays>
 			<DirectorEmail>director3431@tehnosila.ru</DirectorEmail>
 			<SwitchedOff>No</SwitchedOff>
-			<DimentionsLimit>0</DimentionsLimit>
-		</Shop>
-		<Shop>
-			<ID>0441</ID>
-			<SapID>3441</SapID>
-			<Name>ТЦ "Заря"</Name>
-			<OwnerID>1</OwnerID>
-			<Address>654029, Новокузнецк, Вокзальная ул., д.10А</Address>
-			<CoordX>53.745323</CoordX>
-			<CoordY>87.109005</CoordY>
-			<Metro/>
-			<RegionID>44</RegionID>
-			<Type>Розничный магазин</Type>
-			<WorkingMode>Понедельник – Воскресенье с 10:00 до 20:00</WorkingMode>
-			<HowToGet/>
-			<Distance>3700</Distance>
-			<DeliveryDays>9</DeliveryDays>
-			<DirectorEmail/>
-			<SwitchedOff>Yes</SwitchedOff>
 			<DimentionsLimit>0</DimentionsLimit>
 		</Shop>
 		<Shop>
@@ -1845,7 +1822,7 @@
 			<WorkingMode>Воскресенье - четверг с 10.00 до 22.00
 Пятница - суббота с 10.00 до 23.00
 </WorkingMode>
-			<HowToGet>Магазин находится на третьем этаже торгового центра, в атриуме "Берлин". Удобнее всего входить в ТЦ через вход № 5 и затем подняться на эскалаторе.</HowToGet>
+			<HowToGet>Магазин находится на третьем этаже торгового центра, в атриуме "Берлин". Удобнее всего войти в ТЦ через вход № 5 и затем подняться на эскалаторе.</HowToGet>
 			<Distance/>
 			<DeliveryDays/>
 			<DirectorEmail>director3461@tehnosila.ru</DirectorEmail>
@@ -1977,7 +1954,7 @@
 			<Metro/>
 			<RegionID>22</RegionID>
 			<Type>Розничный магазин</Type>
-			<WorkingMode>Понедельник - воскресенье c 10.00 до 21.00</WorkingMode>
+			<WorkingMode>Понедельник - воскресенье c 10.00 до 22.00</WorkingMode>
 			<HowToGet>на троллейбусе № 1, на автобусах № 1, 18, 44, 52, 50, 55, 60. Магазин расположен на 1 этаже в самом конце торговой галереи.</HowToGet>
 			<Distance>450</Distance>
 			<DeliveryDays>1</DeliveryDays>
@@ -2019,7 +1996,7 @@
 			<HowToGet>Магазин расположен на площади перед авто- и железнодорожными вокзалами. Добраться до магазина можно на трамвае № 5, троллейбусе № 2, маршрутках  №1, 2, 4, 5, 10, 12, 24, 25, 27, 28, 30, 36, 52, 106, 114, 118, 128, 177, 202, 223, 227</HowToGet>
 			<Distance>176</Distance>
 			<DeliveryDays>1</DeliveryDays>
-			<DirectorEmail>director@net036.sv.ru</DirectorEmail>
+			<DirectorEmail>director3506@tehnosila.ru</DirectorEmail>
 			<SwitchedOff>No</SwitchedOff>
 			<DimentionsLimit>0</DimentionsLimit>
 		</Shop>
@@ -2799,7 +2776,7 @@
 			<Distance>783</Distance>
 			<DeliveryDays>2</DeliveryDays>
 			<DirectorEmail>director3667@tehnosila.ru</DirectorEmail>
-			<SwitchedOff>No</SwitchedOff>
+			<SwitchedOff>Yes</SwitchedOff>
 			<DimentionsLimit>0</DimentionsLimit>
 		</Shop>
 		<Shop>
@@ -2875,7 +2852,7 @@
 			<Distance>783</Distance>
 			<DeliveryDays>2</DeliveryDays>
 			<DirectorEmail>director3670@tehnosila.ru</DirectorEmail>
-			<SwitchedOff>No</SwitchedOff>
+			<SwitchedOff>Yes</SwitchedOff>
 			<DimentionsLimit>0</DimentionsLimit>
 		</Shop>
 		<Shop>
@@ -3719,7 +3696,7 @@
 			<SapID>2782</SapID>
 			<Name>Склад "Чехов" - Склад основного товара</Name>
 			<OwnerID>1</OwnerID>
-			<Address>142326, Московская область, Чеховский район, с.Баранцевское, пром. зона "Новоселки", вл. 11</Address>
+			<Address>142326, Московская обл, Чеховский район, с. Новосёлки, влад . 11, стр 5, блок 2</Address>
 			<CoordX/>
 			<CoordY/>
 			<Metro/>
@@ -4147,6 +4124,44 @@
 			<HowToGet/>
 			<Distance>1840</Distance>
 			<DeliveryDays>4</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>2295</ID>
+			<SapID>2295</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>Склад</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>2309</ID>
+			<SapID>2309</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>Склад</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
 			<DirectorEmail/>
 			<SwitchedOff>Yes</SwitchedOff>
 			<DimentionsLimit>0</DimentionsLimit>
@@ -6354,31 +6369,6 @@
 			<cost_limit_cart>149999</cost_limit_cart>
 		</Point>
 		<Point>
-			<ID>PIK-04687</ID>
-			<Name>Постамат: ТРК Вояж</Name>
-			<OwnerID>4</OwnerID>
-			<Address>Санкт-Петербург, Энгельса пр-кт, д. 124, к. 1, лит А</Address>
-			<CoordX>60.039022</CoordX>
-			<CoordY>30.323495</CoordY>
-			<Metro/>
-			<RegionID>2</RegionID>
-			<Type>ПВЗ</Type>
-			<WorkingMode>Пн,Вт,Ср,Чт,Пт,Сб,Вс: с 10:00 до 21:00</WorkingMode>
-			<Cash>1</Cash>
-			<Card>1</Card>
-			<DeliveryDays>3</DeliveryDays>
-			<WeightMin>0</WeightMin>
-			<WeightMax>15</WeightMax>
-			<DimentionsLimit>1.4</DimentionsLimit>
-			<MaxSKU>1</MaxSKU>
-			<WidthMax>0.55</WidthMax>
-			<HeightMax>0.55</HeightMax>
-			<DepthMax>0.3</DepthMax>
-			<OuterCode>7801-001</OuterCode>
-			<cost_limit_cash>149999</cost_limit_cash>
-			<cost_limit_cart>149999</cost_limit_cart>
-		</Point>
-		<Point>
 			<ID>PIK-04703</ID>
 			<Name>Постамат: ТЦ Променад</Name>
 			<OwnerID>4</OwnerID>
@@ -7579,31 +7569,6 @@
 			<cost_limit_cart>0</cost_limit_cart>
 		</Point>
 		<Point>
-			<ID>СДК-00242</ID>
-			<Name>На 25-го Октября</Name>
-			<OwnerID>3</OwnerID>
-			<Address>Гатчина, ПР-Т 25 ОКТЯБРЯ, д.10</Address>
-			<CoordX>59.5685</CoordX>
-			<CoordY>30.1214</CoordY>
-			<Metro/>
-			<RegionID>201</RegionID>
-			<Type>ПВЗ</Type>
-			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 10:00 до 18:00;Сб: с 12:00 до 15:00</WorkingMode>
-			<Cash>1</Cash>
-			<Card>0</Card>
-			<DeliveryDays>4</DeliveryDays>
-			<WeightMin>0</WeightMin>
-			<WeightMax>30</WeightMax>
-			<DimentionsLimit>2</DimentionsLimit>
-			<MaxSKU>1</MaxSKU>
-			<WidthMax>0</WidthMax>
-			<HeightMax>0</HeightMax>
-			<DepthMax>0</DepthMax>
-			<OuterCode>GTN1</OuterCode>
-			<cost_limit_cash>0</cost_limit_cash>
-			<cost_limit_cart>0</cost_limit_cart>
-		</Point>
-		<Point>
 			<ID>СДК-00431</ID>
 			<Name>На Сенной</Name>
 			<OwnerID>3</OwnerID>
@@ -7850,31 +7815,6 @@
 			<HeightMax>0.55</HeightMax>
 			<DepthMax>0.3</DepthMax>
 			<OuterCode>5001-006</OuterCode>
-			<cost_limit_cash>149999</cost_limit_cash>
-			<cost_limit_cart>149999</cost_limit_cart>
-		</Point>
-		<Point>
-			<ID>PIK-04850</ID>
-			<Name>Постамат: ТРК ОКА</Name>
-			<OwnerID>4</OwnerID>
-			<Address>Колпино, Октябрьская ул., д. 8</Address>
-			<CoordX>59.738869</CoordX>
-			<CoordY>30.623096</CoordY>
-			<Metro/>
-			<RegionID>178</RegionID>
-			<Type>ПВЗ</Type>
-			<WorkingMode>Пн,Вт,Ср,Чт,Пт,Сб,Вс: с 10:00 до 22:00</WorkingMode>
-			<Cash>1</Cash>
-			<Card>1</Card>
-			<DeliveryDays>3</DeliveryDays>
-			<WeightMin>0</WeightMin>
-			<WeightMax>15</WeightMax>
-			<DimentionsLimit>1.4</DimentionsLimit>
-			<MaxSKU>1</MaxSKU>
-			<WidthMax>0.55</WidthMax>
-			<HeightMax>0.55</HeightMax>
-			<DepthMax>0.3</DepthMax>
-			<OuterCode>4701-001</OuterCode>
 			<cost_limit_cash>149999</cost_limit_cash>
 			<cost_limit_cart>149999</cost_limit_cart>
 		</Point>
@@ -9763,7 +9703,7 @@
 			<CoordX>55.672761</CoordX>
 			<CoordY>37.277876</CoordY>
 			<Metro/>
-			<RegionID/>
+			<RegionID>1</RegionID>
 			<Type>ПВЗ</Type>
 			<WorkingMode>Пн,Вт,Ср,Чт,Пт,Сб,Вс: с 10:00 до 21:00</WorkingMode>
 			<Cash>1</Cash>
@@ -9788,7 +9728,7 @@
 			<CoordX>55.92252</CoordX>
 			<CoordY>37.832052</CoordY>
 			<Metro/>
-			<RegionID/>
+			<RegionID>10</RegionID>
 			<Type>ПВЗ</Type>
 			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 10:00 до 20:00;Сб,Вс: с 10:00 до 19:00</WorkingMode>
 			<Cash>1</Cash>
@@ -10013,7 +9953,7 @@
 			<CoordX>55.892402</CoordX>
 			<CoordY>37.434404</CoordY>
 			<Metro/>
-			<RegionID/>
+			<RegionID>1</RegionID>
 			<Type>ПВЗ</Type>
 			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 11:00 до 15:00;Пн,Вт,Ср,Чт,Пт: с 16:00 до 19:30</WorkingMode>
 			<Cash>1</Cash>
@@ -10138,7 +10078,7 @@
 			<CoordX>55.887806</CoordX>
 			<CoordY>37.429753</CoordY>
 			<Metro/>
-			<RegionID/>
+			<RegionID>1</RegionID>
 			<Type>ПВЗ</Type>
 			<WorkingMode>Пн,Вт,Ср,Чт,Пт,Сб,Вс: с 9:00 до 21:00</WorkingMode>
 			<Cash>1</Cash>
@@ -10463,7 +10403,7 @@
 			<CoordX>55.923589</CoordX>
 			<CoordY>37.843292</CoordY>
 			<Metro/>
-			<RegionID/>
+			<RegionID>10</RegionID>
 			<Type>ПВЗ</Type>
 			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 19:00;Сб: с 10:00 до 17:00</WorkingMode>
 			<Cash>1</Cash>
@@ -10488,7 +10428,7 @@
 			<CoordX>55.996802</CoordX>
 			<CoordY>37.862345</CoordY>
 			<Metro/>
-			<RegionID/>
+			<RegionID>1</RegionID>
 			<Type>ПВЗ</Type>
 			<WorkingMode>Пн,Вт,Ср,Чт,Пт,Сб,Вс: с 9:00 до 22:00</WorkingMode>
 			<Cash>1</Cash>
@@ -11377,6 +11317,31 @@
 			<HeightMax>0</HeightMax>
 			<DepthMax>0</DepthMax>
 			<OuterCode>MSK47</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>Е96-0016</ID>
+			<Name>Монтажников, 30а</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Екатеринбург,Монтажников</Address>
+			<CoordX>56.896357</CoordX>
+			<CoordY>60.515961</CoordY>
+			<Metro/>
+			<RegionID>7</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт с 09:00 до 20:00 Сб,Вск: с 09:00 до 18:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>1093</OuterCode>
 			<cost_limit_cash>0</cost_limit_cash>
 			<cost_limit_cart>0</cost_limit_cart>
 		</Point>

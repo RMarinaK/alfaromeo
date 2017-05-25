@@ -38,5 +38,6 @@
 	<classpathentry kind="lib" path="D:/eclipse/plugins/xml-apis-1.0.b2.jar"/>
 	<classpathentry kind="lib" path="D:/eclipse/plugins/jsch-0.1.54.jar"/>
 	<classpathentry kind="lib" path="D:/eclipse/plugins/jsoup-1.10.2.jar"/>
+	<classpathentry kind="lib" path="D:/eclipse/plugins/apache-commons-net.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
