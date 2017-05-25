@@ -52,6 +52,7 @@ public class RegionCheck extends TestBase{
 		        	   i++;
 		        	   }
 		            }
+		        br.close();
 		        
 		        pagetehnosila.clickCityPopup(0);
 

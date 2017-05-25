@@ -111,7 +111,7 @@ public class Page_Order extends PagesBase{
 	
 	@FindBy(xpath="//ul[@class='checkout-total__item checkout-total__item_discount']/li[@class='checkout-total__value']")
 	private WebElement getdiscountpsize;	// 
-	
+		
 	protected boolean isNecessaryToChangeParam(String param){
 		if(param.equals(" ")||param.equals("")){
 			return false;
@@ -493,5 +493,7 @@ public class Page_Order extends PagesBase{
 		driver.findElement(By.xpath("//p[contains(text(),'Скидка 5 %')]"));
 		Log.info("***QA: Текст Скидка 5 %");
 	}
+	
+
 	
 }

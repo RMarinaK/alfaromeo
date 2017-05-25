@@ -3,14 +3,12 @@ package tehnosila.tehnosila_automation.pages;
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
-import tehnosila.tehnosila_automation.tests.RegionCheck;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.logging.Level;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -276,4 +274,6 @@ public class CommonMetods extends Page_AreaMenu {
 
 				
 			}
+			
+		
 }

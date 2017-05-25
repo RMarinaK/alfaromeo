@@ -160,4 +160,6 @@ public class Page_Product extends PagesBase{
 			buttonclose.click(); 
 			Log.info("жмаканье на Закрыть");   
 	}
+	
+
 }
