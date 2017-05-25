@@ -112,6 +112,21 @@ public class Page_Order extends PagesBase{
 	@FindBy(xpath="//ul[@class='checkout-total__item checkout-total__item_discount']/li[@class='checkout-total__value']")
 	private WebElement getdiscountpsize;	// 
 	
+	@FindBy(xpath = "//span[@class = 'take-bonus']") //Поле с количеством начисляемых бонусов в оформлении заказа
+	private WebElement bonusAccrueOffer;
+
+	@FindBy(id = "set-card") //Кнопка "Ввести номер карты"
+	private WebElement setCard;	
+	
+	@FindBy(id = "cardNumber") //Поле для номера привязываемой карты
+	private WebElement cardNumber;
+	
+	@FindBy(id = "applyCard") //Кнопка Применить
+	private WebElement applyCard;
+	
+	@FindBy(xpath = "//span[@class = 'give-card']") //Номер привязанной карты
+	private WebElement giveCard;
+	
 	protected boolean isNecessaryToChangeParam(String param){
 		if(param.equals(" ")||param.equals("")){
 			return false;
@@ -493,5 +508,60 @@ public class Page_Order extends PagesBase{
 		driver.findElement(By.xpath("//p[contains(text(),'Скидка 5 %')]"));
 		Log.info("***QA: Текст Скидка 5 %");
 	}
+	
+//--------------------------------------------------------------------------------------------------
+// Проверка количества начисляемых бонусов
+	
+	//обрезание полученной строки @author EDanilova
+	public void bonusSteal(int f){
+			String resivedStr = bonusAccrueOffer.getText();
+			String[] cutStr = resivedStr.split (" ");
+			String resultCutStr = cutStr[0];
+			Log.info("***QA: Количество начисляемых бонусов = "+ resultCutStr);
+			if (f == 0){
+				NavigationBase.bonusAccOffer0 = Integer.parseInt(resultCutStr);
+			}else {
+				NavigationBase.bonusAccOffer1 = Integer.parseInt(resultCutStr);
+			}
+	}	
+	
+	//Клик по "Ввести номер карты"
+	public void clickButtonSetCard() throws Exception{
+		try {
+			setCard.click();
+			Log.info("клик по Ввести номер карты");
+		}
+		catch(Exception e) {      
+			Log.info("Element Not Found");     
+			ScreenShot.takeScreenShot();       
+		} 
+	}
+	
+	public void setOrderFromOrderContactCard(String string) {
+		//if(isNecessaryToChangeParam(string)){
+			cardNumber.click();
+			cardNumber.clear();
+			cardNumber.sendKeys(string);
+		//}
+	}
+
+	public void clickButtonApplyCard() throws Exception{
+		try {
+			applyCard.click();
+			Log.info("клик по Применить");
+		}
+		catch(Exception e) {      
+			Log.info("Element Not Found");     
+			ScreenShot.takeScreenShot();       
+		} 
+	}	
+	
+	public void getGiveCardNumber(){
+		String resivedStr =  giveCard.getText();
+		//String[] cutStr = resivedStr.split ("-");
+		//String cardNum = cutStr[0] + cutStr[1] + cutStr[2];
+		Log.info("***QA: Номер привязанной карты = " + resivedStr);
+		//NavigationBase.bonusCard = cardNum;
+	}		
 	
 }
