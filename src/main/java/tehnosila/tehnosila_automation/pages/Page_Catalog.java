@@ -68,10 +68,14 @@ public class Page_Catalog extends PagesBase{
             ScreenShot.takeScreenShot();       
          } 
 	}
+	
+	@FindBy(xpath="//div[@class='list']/a[4]/div[@class='count']")//
+	private WebElement count1; // Количество товаров
 
 	// Формирование ArrayList из кол-ва товаров по верхнеуровневым каталогам и подсчет суммы кол-ва товаров
 	public void AllProducts() {
 		List<WebElement> items = driver.findElements(By.xpath("//div[@class='count']"));
+		Log.info("***QA: count1 " + count1.getText());
 		for(WebElement count: items)
 		{	
 			String countstr = count.getText();
