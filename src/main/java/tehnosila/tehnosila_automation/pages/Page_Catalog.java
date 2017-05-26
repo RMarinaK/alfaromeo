@@ -77,6 +77,7 @@ public class Page_Catalog extends PagesBase{
 			String countstr = count.getText();
 		//	int countint = Integer.valueOf(countstr);
 			numbers.add(countstr);
+			Log.info("***QA: Массив numbers " + count);
 		}
 		Log.info("***QA: Массив numbers " + numbers);
 		
