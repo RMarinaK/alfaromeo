@@ -46,8 +46,7 @@ public class CommonMetods extends Page_AreaMenu {
 	
 	@FindBy(xpath = "//h1") 
 	private WebElement header; // заголовок на страницах
-	
-	
+		
 	// жмаканье на ссылку "ссылке" в информационном сообщении
     public void clickLinkText() {
     	linkText.click();  	
@@ -165,17 +164,5 @@ public class CommonMetods extends Page_AreaMenu {
 		int code = connection.getResponseCode();
 	    Log.info("***QA: HTTP response code " + code);
 	}
-	
-// ----------------------------------------------------------------------------------------------------------------------------
 
-	//Сравнение кол-ва городов на сайте и в xml	  @author EDanilova
-	public void CityCountCheck (int x, int y){
-		if(x == y){
-			Log.info("Количество городов в xml и попапе совпадает = " + x);
-			} else {
-				Log.info("Количество городов НЕ совпадает! В xml: " + y + ", в попапе:  " + x);
-			}
-	}
-			
-		
 }

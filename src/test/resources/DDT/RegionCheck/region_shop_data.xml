@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Data Date="20170525140933">
+<Data Date="20170526140932">
 	<Regions>
 		<Region>
 			<ID>234</ID>
@@ -566,7 +566,7 @@
 			<SapID>6645</SapID>
 			<Name>Барнаул</Name>
 			<Kladr>2200000000000</Kladr>
-			<Prefix>BRN</Prefix>
+			<Prefix>BARN</Prefix>
 			<Domain>barnaul</Domain>
 			<Priority>80</Priority>
 			<Invisible>No</Invisible>
@@ -746,7 +746,7 @@
 			<SapID>6714</SapID>
 			<Name>Тихвин</Name>
 			<Kladr>4701700100000</Kladr>
-			<Prefix>KRS</Prefix>
+			<Prefix>TIHV</Prefix>
 			<Domain>tihvin</Domain>
 			<Priority>99</Priority>
 			<Invisible>No</Invisible>

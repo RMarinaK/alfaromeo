@@ -53,11 +53,12 @@ public class NavigationBase {
 	
 	public static String currCity;
 	public static String currDomain;
-	public static int currCityCount;
-	public static int counter;
+	public static int[] count;
 	public static int arrSize;
 	public static int acCount;	
 		
-	public static String[] cityXML = new String[NavigationBase.arrSize];
-	public static String[] domainXML = new String[NavigationBase.arrSize];
+	public static String[] cityXML;
+	public static String[] domainXML;
+	public static String[] citySite;
+	public static String[] domainSite;
 }

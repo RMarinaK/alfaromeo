@@ -25,7 +25,6 @@ import org.xml.sax.SAXException;
  *
  */
 
-// Класс общих методов
 public class WorkWithXML extends Page_AreaMenu {
 	private static Logger Log = LoggerFactory.getLogger(CommonMetods.class);
 

@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -535,60 +534,14 @@ public class Page_Tehnosila extends PagesBase {
 		try {
 			if (i == 0){
 				cityPopap.click();
-				Log.info("Клик по выбрать другой город");
+				Log.info("***QA: Клик по выбрать другой город");
 			} else {
 				currentRegion.click();
-				Log.info("Клик по выбранному городу");
+				Log.info("***QA: Клик по выбранному городу");
 			}
 		} catch (Exception e) {
 			Log.info("Element Not Found");
-		//	ScreenShot.takeScreenShot();
 		}
 	}	
 
-	//подсчитываем кол-во больших городов в попапе
-	public int bigCityCount() {
-		int bcCount = driver.findElement(By.xpath("//td[@class='big-cities']/ul")).findElements(By.tagName("li")).size(); 
-		return (bcCount);
-	}
-	
-	//подсчитываем кол-во прочих городов в попапе
-	public int otherCityCount(int i) {
-		int ocCount = driver.findElement(By.xpath("//div[@class='region-lists']/table/tbody/tr[2]/td[2]/ul[" + i + "]")).findElements(By.tagName("li")).size();
-		return (ocCount);
-	}
-	
-	//обрезание полученного url @author EDanilova
-	public String cutingUrl(String resivedUrl){
-			String[] cutURL = resivedUrl.split ("\\.");
-			cutURL = cutURL[0].split("//");
-			String resultCutStr = cutURL[cutURL.length-1];
-			Log.info("Домен города: "+ resultCutStr);
-			return resultCutStr;
-	}	
-	
-	//выбор нового города в попапе и клик по нему + запись названия города и домена в глобальные переменные
-	public void clickNewCity(int i, int j, int k) throws Exception {
-		try {
-			WebElement findCity = driver.findElement(By.xpath("//div[@class='region-lists']/table/tbody/tr[2]/td[" + i + "]/ul[" + j + "]/li[" + k + "]/a"));
-			
-			//выдёргиваем из кода название города и его домен
-			String city = findCity.getText();
-			String cityURL = findCity.getAttribute("href");
-			
-			//логи
-			Log.info("Выбрали новый город: " + city);
-			Log.info("URL города: " + cityURL);
-			
-			//передаём полученные значения в глобальные переменные
-			NavigationBase.currCity = city;
-			NavigationBase.currDomain = cutingUrl(cityURL);
-			
-			findCity.click();
-			
-		} catch (Exception e) {
-			Log.info("(!) Element Not Found (!)");
-			ScreenShot.takeScreenShot();
-		}
-	}	
 }
