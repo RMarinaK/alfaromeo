@@ -229,7 +229,7 @@ public class Page_Cart extends PagesBase{
 	
 	// Метод жмаканья по корзинке аксессуаров в попапе
 	public void clickAccessoriesButtonCart() {
-		if (app.getNavigationHelper().waitVisible(minibuttoncart, 1)) {
+		if (minibuttoncart.isDisplayed()) {
 			clickMiniButtonCart();
 		} else {
 			clickOtherMiniButtonCart();
