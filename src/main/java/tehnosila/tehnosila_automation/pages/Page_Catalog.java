@@ -31,7 +31,7 @@ public class Page_Catalog extends PagesBase{
 	@FindBy(xpath="//div[@class='count']")//
 	private WebElement count; // Количество товаров
 
-	private List<String> numbers = new ArrayList<>(); // массив кол-ва товаров по категориям
+	private List<Integer> numbers = new ArrayList<>(); // массив кол-ва товаров по категориям
 	private static int presult;
 	
 	private List<String> subcategories = new ArrayList<>(); // массив подкатегорий в catalog
@@ -70,8 +70,8 @@ public class Page_Catalog extends PagesBase{
 		for(WebElement count: items)
 		{	
 			String countstr = count.getText();
-		//	int countint = Integer.valueOf(countstr);
-			numbers.add(countstr);
+			int countint = Integer.valueOf(countstr);
+			numbers.add(countint);
 		}
 		Log.info("***QA: Массив numbers " + numbers);
 	}
@@ -79,15 +79,24 @@ public class Page_Catalog extends PagesBase{
 	// Суммирование всех товаров
 	public void summAllProducts() {
 		AllProducts();
-		String[] myArray = {}; // конвертируем ArrayList в массив
-		myArray = numbers.toArray(new String[numbers.size()]);
-		//myArray = ArrayUtils.toPrimitive(numbers.toArray(new Integer[numbers.size()]));
+		presult = 0;
+		for (int i = 0; i < numbers.size(); i++)
+		 {
+		 Integer x = numbers.get(i);
+		 presult = presult + x;
+		 
+		}
+		
+		Log.info("***QA: summAllProducts " + presult);
+		
+	/*	int[] myArray = {}; // конвертируем ArrayList в массив
+		myArray = ArrayUtils.toPrimitive(numbers.toArray(new Integer[numbers.size()]));
 		presult = 0;
 		for(int i = 0; i < myArray.length; i ++){
 			int countint = Integer.valueOf(myArray[i]);
 			presult = presult + countint;
 		}
-		Log.info("***QA: summAllProducts " + presult);
+		Log.info("***QA: summAllProducts " + presult);*/
 	}
 	
 	// сравнение общего кол-ва товаров
