@@ -25,7 +25,9 @@ public class Check_Catalog extends TestBase{
 		app.getGetDataHelper().getTotalNumberCatalogOnline();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		Page_Catalog pagecatalog = MyPageFactory.getPage(Page_Catalog.class);
+		app.getNavigationHelper().refreshPage();
 		pagetehnosila.getPageCatalog();
+		app.getNavigationHelper().refreshPage();
 		pagecatalog.AllSubcategories();
 		pagecatalog.summAllProducts();
 		pagecatalog.checkPtotatlnumber();

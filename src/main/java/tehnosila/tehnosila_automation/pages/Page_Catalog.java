@@ -77,7 +77,7 @@ public class Page_Catalog extends PagesBase{
 	// Формирование ArrayList из кол-ва товаров по верхнеуровневым каталогам и подсчет суммы кол-ва товаров
 	public void AllProducts() {
 		List<WebElement> items = driver.findElements(By.xpath("//div[@class='count']"));
-		Log.info("***QA: count1 " + count1.getText());
+	//	Log.info("***QA: count1 " + count1.getText());
 		for(WebElement count: items)
 		{	
 			String countstr = count.getText();
