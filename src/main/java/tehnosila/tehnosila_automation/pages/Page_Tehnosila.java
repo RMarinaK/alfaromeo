@@ -146,7 +146,7 @@ public class Page_Tehnosila extends PagesBase {
 	
 	// ожидание пока страница прогрузится и проверка соответствия номер заказа
 	public void getPageCatalog() {
-		driver.navigate().to(getBaseURL()+"catalog");
+		driver.navigate().to(getBaseURL()+"/catalog");
 		Log.info("***QA: "+getBaseURL());
 	}
 	
