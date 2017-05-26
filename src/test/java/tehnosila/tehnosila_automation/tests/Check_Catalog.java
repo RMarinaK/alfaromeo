@@ -28,10 +28,10 @@ public class Check_Catalog extends TestBase{
 		app.getNavigationHelper().refreshPage();
 		pagetehnosila.getPageCatalog();
 		app.getNavigationHelper().refreshPage();
-		pagecatalog.AllSubcategories();
-		pagecatalog.summAllProducts();
+	//	pagecatalog.AllSubcategories();
+	//	pagecatalog.summAllProducts();
 		pagecatalog.checkPtotatlnumber();
-		pagecatalog.checkPresult();
+	//	pagecatalog.checkPresult();
 		
 		
 	//	pagecatalog.assertCount();
