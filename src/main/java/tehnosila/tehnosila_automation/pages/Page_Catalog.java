@@ -79,8 +79,9 @@ public class Page_Catalog extends PagesBase{
 	// Суммирование всех товаров
 	public void summAllProducts() {
 		AllProducts();
-		int[] myArray = {}; // конвертируем ArrayList в массив
-		myArray = ArrayUtils.toPrimitive(numbers.toArray(new Integer[numbers.size()]));
+		String[] myArray = {}; // конвертируем ArrayList в массив
+		myArray = numbers.toArray(new String[numbers.size()]);
+		//myArray = ArrayUtils.toPrimitive(numbers.toArray(new Integer[numbers.size()]));
 		presult = 0;
 		for(int i = 0; i < myArray.length; i ++){
 			int countint = Integer.valueOf(myArray[i]);
