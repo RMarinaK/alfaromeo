@@ -31,7 +31,7 @@ public class Page_Catalog extends PagesBase{
 	@FindBy(xpath="//div[@class='count']")//
 	private WebElement count; // Количество товаров
 
-	private List<Integer> numbers = new ArrayList<>(); // массив кол-ва товаров по категориям
+	private List<String> numbers = new ArrayList<>(); // массив кол-ва товаров по категориям
 	private static int presult;
 	
 	private List<String> subcategories = new ArrayList<>(); // массив подкатегорий в catalog
@@ -70,8 +70,8 @@ public class Page_Catalog extends PagesBase{
 		for(WebElement count: items)
 		{	
 			String countstr = count.getText();
-			int countint = Integer.valueOf(countstr);
-			numbers.add(countint);
+		//	int countint = Integer.valueOf(countstr);
+			numbers.add(countstr);
 		}
 		Log.info("***QA: Массив numbers " + numbers);
 	}
