@@ -2,11 +2,17 @@ package tehnosila.tehnosila_automation.pages;
 
 
 
+import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 /**
@@ -15,6 +21,7 @@ import tehnosila.tehnosila_automation.AppManager.ScreenShot;
  */
 
 public class Page_Cart extends PagesBase{
+	private static final boolean FindElement = false;
 	private static Logger Log = LoggerFactory.getLogger(Page_Cart.class);
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL()+"#/cart";
@@ -27,8 +34,7 @@ public class Page_Cart extends PagesBase{
 	private WebElement rcourierdelivery; // Радиобаттон "Курьерская доставка"
 	
 	@FindBy(id="loading-layer")
-	private WebElement loadinglayer; // 
-	
+	private WebElement loadinglayer; // Лоэдер
 	
 	@FindBy(xpath="//a[@class='title']")
 	private WebElement promocodefield; // Поле "Код купона" для клика
@@ -45,18 +51,45 @@ public class Page_Cart extends PagesBase{
 	@FindBy(xpath="//a[@class='minus pressable gtm-process-remove-from-cart']")
 	private WebElement buttonminus; // Кнопка минус, уменьшение кол-ва товара
 	
-	@FindBy(xpath="//a[contains(@href,'http://www.tehnosila.ru/cart/removeItems')]")
+	@FindBy(xpath="//div[1]/div[1]/div[3]/div/a[@class='option remove gtm-process-remove-from-cart']")
 	private WebElement buttondelete; // Кнопка удалить, удаляет товар из корзины
 	
 	@FindBy(xpath="//input[@class='stub text']")
 	private WebElement quantityitem; // Количество товара
 	
 	@FindBy(xpath="//div[contains(text(),'Ваша корзина пуста')]")
-	private WebElement emptycart; // Радиобаттон "Курьерская доставка"
+	private WebElement emptycart; // Блок с текстом "Ваша корзина пуста"
 	
-//	@FindBy(xpath="//*[@id='cart-contents']/div[4]/a")
-//	private WebElement emptycart;
+	@FindBy(xpath="//a[@class='open-accessories-popup button white-flat']")
+	private WebElement accessories; // Кнопка "Подобрать аксессуары"
 	
+	@FindBy(xpath="//div[1]/div/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div/div/div/div/span/a/span[@class='icon-n order']")
+	private WebElement minibuttoncart; // Иконка корзины аксессуаров
+	
+	@FindBy(xpath="//div[1]/div/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div/div/div/div/span/a/span[@class='icon-n cart']")
+	private WebElement otherminibuttoncart;
+	
+	@FindBy(xpath="//div[1]/div[1]/div[3]/div[2]/div[1][@class='totals-price']")
+	private WebElement itemprice; // Цена первого товара
+	
+	@FindBy(xpath="//div[1]/div[1]/div[3]/div[2]/div[1][@class='totals-price']/div[2]")
+	private WebElement newitemprice; // Новая цена товара первого товара
+	
+	@FindBy(xpath="//div[2]/div[1]/div[3]/div[2]/div[1][@class='totals-price']")
+	private WebElement seconditemprice; // Цена второго товара твоара
+	
+	@FindBy(xpath="//div[2]/div[1]/div[3]/div[2]/div[1][@class='totals-price']/div[2]")
+	private WebElement newseconditemprice; // Новая цена второго товара
+	
+	@FindBy(xpath="//*[@id='cart-total-price']")
+	private WebElement carttotalprice; // Сумма всей корзины
+	
+	@FindBy(xpath="//div[@class='service-row'][1]/span[1]")
+	private WebElement servicecheckbox; // Чекбокс услуги
+	
+	@FindBy(xpath="//a[@class='open-services-list']")
+	private WebElement serviceprice; // Цена выбранных услуг
+			
 	protected boolean isNecessaryToChangeParam(String param){
 		if(param.equals(" ")||param.equals("")){
 			return false;
@@ -106,6 +139,7 @@ public class Page_Cart extends PagesBase{
 			buttonordering.click(); 
 			Log.info("жмаканье на Офорить заказ");
 	}	
+	
 	// Вставить купон
 	public void setСartPromoСode(String string) {
 		if(isNecessaryToChangeParam(string)){
@@ -116,7 +150,6 @@ public class Page_Cart extends PagesBase{
 	}
 
 	public void clickButtonApplyBonus() {
-
 		applybonusbtn.click(); 
 		Log.info("жмаканье на Применить");
    	}	
@@ -156,6 +189,7 @@ public class Page_Cart extends PagesBase{
 	// жмаканье на Удалить
 	public void clickButtonDelete() {
 		try {
+			TimeUnit.SECONDS.sleep(2);
 			buttondelete.click();
 			Log.info("жмаканье на удалить");
 		} catch (Exception e){
@@ -163,26 +197,206 @@ public class Page_Cart extends PagesBase{
 		} 
 	}	
 	
-	/*		if( driver.findElement(By.xpath("//*[@id='cart-contents']/div[4]")).isDisplayed()){
-			Log.info("Корзина пуста");
-			} else{
-			Log.info("Корзина не пуста");
-			}  
-																									// Варианты проверки корзины, пока не удалять
-			try {
-			driver.findElement(By.xpath("//*[@id='cart-contents']/div[4]")).isDisplayed();
-			Log.info("Корзина пуста");
-			} catch (Exception e){
-				Log.info("Корзина не пуста");
-		} 
-	} */
-	// Assert.assertTrue(driver.findElement(By.xpath("//*[@id='cart-contents']/div[4]")).isDisplayed(),"Корзина не пуста");
+	// жмаканье на Подобрать аксессуары
+	public void clickButtonAccessories() {
+		try {
+			accessories.click();
+			Log.info("жмаканье на Подобрать аксессуары");
+		} catch (Exception e){
+			Log.info("Не жмакнулось на Подобрать аксессуары");
+		}
+	}
 	
-
+	// жмаканье на иконку корзины аксессуаров с api
+	public void clickMiniButtonCart() {
+		try {
+			minibuttoncart.click();
+			Log.info("жмаканье на иконку корзины аксессуаров");
+		} catch (Exception e) {
+			Log.info("не жмаканулось на иконку корзины аксессуаров");
+		}
+	}
+	
+	// жмаканье на иконку корзины аксессуаров без api
+	public void clickOtherMiniButtonCart() {
+		try {
+			otherminibuttoncart.click();
+			Log.info("жмаканье на иконку корзины аксессуаров");
+		} catch (Exception e) {
+			Log.info("не жмаканулось на иконку корзины аксессуаров");
+		}
+	}
+	
+	// Метод жмаканья по корзинке аксессуаров в попапе
+	public void clickAccessoriesButtonCart() {
+		if (app.getNavigationHelper().waitVisible(minibuttoncart, 1)) {
+			clickMiniButtonCart();
+		} else {
+			clickOtherMiniButtonCart();
+		}
+	}
+	
+	// Поулчение новой цены первого товара 
+	public void newGetItemPrice() {
+		if (app.getNavigationHelper().waitVisible(newitemprice,5)); {
+			Pattern pattern = Pattern.compile("\\d+");
+			String iprice = newitemprice.getText();
+			Matcher matcher = pattern.matcher(iprice);
+			int start = 0;
+			StringBuilder builderitemprice = new StringBuilder();
+			while (matcher.find(start)) {
+				String substringiprice = iprice.substring(matcher.start(), matcher.end());
+				start = matcher.end();
+				NavigationBase.iprice = builderitemprice.append(substringiprice).toString();
+				Log.info("***QA: iprice "+ NavigationBase.iprice);
+			}
+		}
+	}
+	
+	// Поулчение цены первого товара
+	public void getItemPrice() {
+		if (app.getNavigationHelper().waitVisible(itemprice,5)); {
+			Pattern pattern = Pattern.compile("\\d+");
+			String viprice = itemprice.getText();
+			Matcher matcher = pattern.matcher(viprice);
+			int start = 0;
+			StringBuilder builderitemprice = new StringBuilder();
+			while (matcher.find(start)) {
+				String substringiprice = viprice.substring(matcher.start(), matcher.end());
+				start = matcher.end();
+				NavigationBase.iprice = builderitemprice.append(substringiprice).toString();
+				Log.info("***QA: iprice "+ NavigationBase.iprice);
+			}
+		}
+	}
+	
+	// Метод получение цены первого товара
+	public void itemPrice() {
+		if (app.getNavigationHelper().waitPresense(By.xpath("//div[1]/div[1]/div[3]/div[2]/div[1][@class='totals-price']/div[2]"), 3)) {
+			newGetItemPrice();
+		} else {
+			getItemPrice();
+		}
+	}
+	
+	// Поулчение новой цены второго товара 
+	public void secondNewGetItemPrice() {
+		if (app.getNavigationHelper().waitVisible(newseconditemprice,5)); {
+			Pattern pattern = Pattern.compile("\\d+");
+			String sniprice = newseconditemprice.getText();
+			Matcher matcher = pattern.matcher(sniprice);
+			int start = 0;
+			StringBuilder buildersnitemprice = new StringBuilder();
+			while (matcher.find(start)) {
+				String substringsniprice = sniprice.substring(matcher.start(), matcher.end());
+				start = matcher.end();
+				NavigationBase.siprice = buildersnitemprice.append(substringsniprice).toString();
+				Log.info("***QA: siprice "+ NavigationBase.siprice);
+			}
+		}
+	}
+	
+	// Поулчение цены второго товара 
+	public void secondGetItemPrice() {
+		if (app.getNavigationHelper().waitVisible(seconditemprice,5));
+		Log.info("***QA: старая цена есть ");{
+			Pattern pattern = Pattern.compile("\\d+");
+			String siprice = seconditemprice.getText();
+			Matcher matcher = pattern.matcher(siprice);
+			int start = 0;
+			StringBuilder buildersitemprice = new StringBuilder();
+			while (matcher.find(start)) {
+				String substringsiprice = siprice.substring(matcher.start(), matcher.end());
+				start = matcher.end();
+				NavigationBase.siprice = buildersitemprice.append(substringsiprice).toString();
+				Log.info("***QA: siprice "+ NavigationBase.siprice);
+			}
+		}
+	}
+	
+	// Метод получение цены второго товара
+	public void secondItemPrice() {
+		if (app.getNavigationHelper().waitPresense(By.xpath("//div[2]/div[1]/div[3]/div[2]/div[1][@class='totals-price']/div[2]"), 3)) {
+			secondNewGetItemPrice();
+		} else {
+			secondGetItemPrice();
+		}
+	}
+	
+	// Стоимость корзины
+	public void getCartPrice() {
+		Pattern patterns = Pattern.compile("\\d+");
+		String ctprice = carttotalprice.getText();
+		Matcher matcher = patterns.matcher(ctprice);
+		int start = 0;
+		StringBuilder buildersitemprice = new StringBuilder();
+		while (matcher.find(start)) {
+			String substringctprice = ctprice.substring(matcher.start(), matcher.end());
+			start = matcher.end();
+			NavigationBase.ctprice = buildersitemprice.append(substringctprice).toString();
+			Log.info("***QA: ctprice "+ NavigationBase.ctprice);
+		}
+	}
+		
+	// првоерка цены корзины с суммой цен товаров
+	public void assertCart() {
+		int tp = Integer.parseInt(NavigationBase.ctprice);
+		int fi = Integer.parseInt(NavigationBase.iprice);
+		int si = Integer.parseInt(NavigationBase.siprice);
+		int summitem = fi + si;
+		if (summitem == tp) Log.info("Стоимость корзины равна сумме стоимости товаров " + summitem); else Log.info("Стоимость корзины не равна сумме стоимости товаров");
+	}
 	
 	// Проверка пустой корзины
-	
 	public void emptycart() {
-		app.getNavigationHelper().waitVisible(emptycart,10);
+		try{
+			app.getNavigationHelper().waitVisible(emptycart,10);
+			Log.info("корзина пуста");
+		} catch (Exception e) {
+			Log.info("корзина не пуста пуста");
+		}
 	} 
+	
+	// Жмаканье на чекбокс услуги
+	public void clickServiceCheckBox() {
+		try{
+			servicecheckbox.click();
+			Log.info("жмаканье на чекбокс услуги");
+		} catch(Exception e) {
+			Log.info("не жмакнулся чекбокс услуги");
+		}
+	}
+	
+	// Вытягивание цены услуги
+	public void getServicePrice() {
+			Pattern pattern = Pattern.compile("\\d+");
+			String serprice = serviceprice.getText();
+			serprice = serprice.replaceAll(" ", "");
+			Matcher matcher = pattern.matcher(serprice);
+			int start = 45;
+			while (matcher.find(start)) {
+			       String value = serprice.substring(matcher.start(), matcher.end());
+			       int result = Integer.parseInt(value);
+			       NavigationBase.serviceprice = result;
+			       Log.info("Цена услуги " + NavigationBase.serviceprice);
+			       start = matcher.end();
+		}
+	}
+	
+	// Расчет цены товара + услуги
+	public void getItemPlusServicePrice() {
+		int item = Integer.parseInt(NavigationBase.iprice);
+		int service = NavigationBase.serviceprice;
+		int sum = item + service;
+		NavigationBase.serviceplusitemprice = sum;
+		 Log.info("Цена товара + услуги " + NavigationBase.serviceplusitemprice);
+	}
+	
+	// првоерка цены корзины с суммой цены товара + услуги
+	public void assertCartItemPlusService() {
+		int spi = NavigationBase.serviceprice;
+		int cp = Integer.parseInt(NavigationBase.ctprice);
+		int sum = spi + cp;
+		if (sum == NavigationBase.serviceplusitemprice) Log.info("Стоимость корзины равна сумме стоимости товара + услуги " + sum); else Log.info("Стоимость корзины не равна сумме стоимости товара + услуги");
+	}
 }
