@@ -1,6 +1,7 @@
 package tehnosila.tehnosila_automation.pages;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.openqa.selenium.By;
@@ -13,6 +14,8 @@ import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
+
+import com.google.common.collect.Lists;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
@@ -83,14 +86,18 @@ public class Page_Catalog extends PagesBase{
 	public void summAllProducts() {
 		AllProducts();
 		presult = 0;
+	
+		
 		for(String number : numbers) {
-			numberList.add(Integer.parseInt(number));    
+			int intnumber = Integer.parseInt(number);
+			Log.info("***QA: intnumber " + intnumber);
+			numberList.add(intnumber);    
 			}
 		Log.info("***QA: numberList " + numberList);
 		for (int i = 0; i < numberList.size(); i++)
 		 {
 		 Integer x =  numberList.get(i);
-	//	 Log.info("***QA: x " + x);
+		 Log.info("***QA: x " + x);
 		 presult = presult + x;
 		 
 		}
