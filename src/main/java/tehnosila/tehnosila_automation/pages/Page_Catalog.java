@@ -2,6 +2,8 @@ package tehnosila.tehnosila_automation.pages;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.openqa.selenium.By;
@@ -146,8 +148,27 @@ public class Page_Catalog extends PagesBase{
 			String countstr = count.getText();
 		//	int countint = Integer.valueOf(countstr);
 		//	numbers.add(countint);
-			subcategories.add(countstr);
-			qw.click();
+			
+		//	qw.click();
+			
+			
+			
+			Pattern pattern = Pattern.compile("\\d+");
+			String stringdiscountpsize = countstr; // мой пример строки
+			Matcher matcher = pattern.matcher(stringdiscountpsize);
+			int start = 0;
+			StringBuilder builderpsale = new StringBuilder();
+			while (matcher.find(start)) {
+				String substringdiscountpsize = stringdiscountpsize.substring(matcher.start(), matcher.end());
+				start = matcher.end();
+				countstr =builderpsale.append(substringdiscountpsize).toString();
+				Log.info("***QA: countstr "+ countstr);
+				subcategories.add(countstr);
+			}
+			
+			
+			
+			
 		}
 		Log.info("***QA: Массив subcategories" + subcategories);
 	}
