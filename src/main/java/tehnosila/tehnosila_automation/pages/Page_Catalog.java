@@ -91,13 +91,15 @@ public class Page_Catalog extends PagesBase{
 		for(String number : numbers) {
 			int intnumber = Integer.parseInt(number);
 			Log.info("***QA: intnumber " + intnumber);
-			numberList.add(intnumber);    
+			numberList.add(intnumber); 
+			presult = presult + intnumber;
 			}
-		Log.info("***QA: numberList " + numberList);
+		Log.info("***QA: summAllProducts " + presult);
+	//	Log.info("***QA: numberList " + numberList);
 		for (int i = 0; i < numberList.size(); i++)
 		 {
 		 Integer x =  numberList.get(i);
-		 Log.info("***QA: x " + x);
+	//	 Log.info("***QA: x " + x);
 		 presult = presult + x;
 		 
 		}
