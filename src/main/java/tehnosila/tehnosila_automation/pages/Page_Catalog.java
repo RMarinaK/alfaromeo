@@ -36,6 +36,8 @@ public class Page_Catalog extends PagesBase{
 	
 	private List<String> subcategories = new ArrayList<>(); // массив подкатегорий в catalog
 	
+	private List<Integer> numberList = new ArrayList<>();
+	
 	@Override
 	void tryToOpen() {
 	//	driver.get(this.URL_MATCH);
@@ -74,15 +76,21 @@ public class Page_Catalog extends PagesBase{
 			numbers.add(countstr);
 		}
 		Log.info("***QA: Массив numbers " + numbers);
+		
 	}
 	
 	// Суммирование всех товаров
 	public void summAllProducts() {
 		AllProducts();
 		presult = 0;
-		for (int i = 0; i < numbers.size(); i++)
+		for(String number : numbers) {
+			numberList.add(Integer.parseInt(number));    
+			}
+		Log.info("***QA: numberList " + numberList);
+		for (int i = 0; i < numberList.size(); i++)
 		 {
-		 Integer x =  Integer.valueOf(numbers.get(i));
+		 Integer x =  numberList.get(i);
+	//	 Log.info("***QA: x " + x);
 		 presult = presult + x;
 		 
 		}
