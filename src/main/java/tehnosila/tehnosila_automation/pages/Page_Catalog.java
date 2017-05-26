@@ -31,6 +31,10 @@ public class Page_Catalog extends PagesBase{
 	@FindBy(xpath="//div[@class='count']")//
 	private WebElement count; // Количество товаров
 
+	private List<Integer> numbers = new ArrayList<>(); // массив кол-ва товаров по категориям
+	private static int presult;
+	
+	private List<String> subcategories = new ArrayList<>(); // массив подкатегорий в catalog
 	
 	@Override
 	void tryToOpen() {
@@ -59,40 +63,83 @@ public class Page_Catalog extends PagesBase{
             ScreenShot.takeScreenShot();       
          } 
 	}
-	
+
 	// Формирование ArrayList из кол-ва товаров по верхнеуровневым каталогам и подсчет суммы кол-ва товаров
 	public void AllProducts() {
 		List<WebElement> items = driver.findElements(By.xpath("//div[@class='count']"));
-		List<Integer> numbers = new ArrayList<>();
 		for(WebElement count: items)
 		{	
 			String countstr = count.getText();
 			int countint = Integer.valueOf(countstr);
 			numbers.add(countint);
 		}
-		Log.info(" " + numbers);
-
+		Log.info("***QA: Массив numbers " + numbers);
+	}
+	
+	// Суммирование всех товаров
+	public void summAllProducts() {
+		AllProducts();
 		int[] myArray = {}; // конвертируем ArrayList в массив
 		myArray = ArrayUtils.toPrimitive(numbers.toArray(new Integer[numbers.size()]));
-
-		NavigationBase.presult = 0;
+		presult = 0;
 		for(int i = 0; i < myArray.length; i ++){
 			int countint = Integer.valueOf(myArray[i]);
-			NavigationBase.presult = NavigationBase.presult + countint;
+			presult = presult + countint;
 		}
-		Log.info("presult " + NavigationBase.presult);
+		Log.info("***QA: summAllProducts " + presult);
 	}
 	
 	// сравнение общего кол-ва товаров
-		public void assertCount() {
-			try {
-				Assert.assertEquals(NavigationBase.presult, NavigationBase.ptotalnumber); 
-				Log.info("***QA: Общее кол-во товаров "+ NavigationBase.ptotalnumber);
-			}
-		    catch(Exception e) {      
-		    	Log.info("Element Not Found");     
-	      //     ScreenShot.takeScreenShot();       
-	        }      
-		}  
+	public void assertCount() {
+		try {
+			Assert.assertEquals(presult, NavigationBase.ptotatlnumber); 
+			Log.info("***QA: Общее кол-во товаров "+ NavigationBase.ptotatlnumber);
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+	     //     ScreenShot.takeScreenShot();       
+	    }      
+	}  
+	
+	@FindBy(xpath="//div[@class='subcategories']/div[@class='list']/a")//
+	private WebElement qw; // Количество товаров
+	
+	// проход по каждому подкаталогу catalogа
+	public void AllSubcategories() {
+		List<WebElement> items = driver.findElements(By.xpath("//div[@class='subcategories']/div[@class='list']/a"));
+		for(WebElement count: items)
+		{	
+			
+			String countstr = count.getText();
+		//	int countint = Integer.valueOf(countstr);
+		//	numbers.add(countint);
+			subcategories.add(countstr);
+			qw.click();
+		}
+		Log.info("***QA: Массив subcategories" + subcategories);
+	}
+	
+	// Если количество товаров из апи ptotatlnumber < 40 0000, выводить ошибку
+	public void checkPtotatlnumber() {		
+		try {
+			int checkptotatlnumber = Integer.valueOf(NavigationBase.ptotatlnumber);
+			if (checkptotatlnumber < 40000) {
+				throw new NullPointerException("Общее кол-во товаров в API " + NavigationBase.ptotatlnumber + " < 40 000");
+			} 
+		}
+	    catch(NullPointerException e) {     
+	    	 throw e; 
+	    }      
+	}  
+	
+	// Если количество товаров из апи presult < 40 0000, выводить ошибку
+	public void checkPresult() {		
+		try {
+			if (presult < 40000) { throw new NullPointerException("Общее кол-во товаров на сайте " + presult + " < 40 000");} 
+		}
+	    catch(NullPointerException e) {     
+	    	 throw e;     
+	    }      
+	}  
 	
 }

@@ -50,10 +50,8 @@ public class NavigationBase {
 	public static String promocode;
 	public static String cheaperprice;
 	public static int pcode;
-	public static String papicatalog = "http://hybris.tehnosila.ru/api/v2/ts/1/catalogs/technosilaProductCatalog/Online";
-	public static int presult;
-	public static int ptotalNumber;
-	public static String ptotalnumber;
+	public static String papicatalog = "http://hybris.tehnosila.ru/api/v2/ts/1/catalogs/parsePath?path=/catalog"; 
+			// "http://hybris.tehnosila.ru/api/v2/ts/1/catalogs/technosilaProductCatalog/Online";
 	
 	
 	

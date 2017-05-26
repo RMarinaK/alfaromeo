@@ -47,7 +47,7 @@ public class Solr_OnlineCourierCardOnDelivery_17assortment extends TestBase{
 				+ NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand + NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		commonmetods.getHTTPResponseCode();
-		app.getNavigationHelper().getCodeString();
+		app.getGetDataHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
 		commonmetods.getHTTPResponseCode();

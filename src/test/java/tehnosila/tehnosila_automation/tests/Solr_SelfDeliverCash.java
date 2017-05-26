@@ -51,7 +51,7 @@ public class Solr_SelfDeliverCash extends TestBase{
 				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		commonmetods.getHTTPResponseCode();
-		app.getNavigationHelper().getCodeString();
+		app.getGetDataHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
 		commonmetods.getHTTPResponseCode();

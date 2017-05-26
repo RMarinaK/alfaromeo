@@ -1,4 +1,8 @@
 package tehnosila.tehnosila_automation.tests;
+/**
+ * @author MRasstrigina
+ *
+ */
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 
@@ -18,12 +22,16 @@ public class Check_Catalog extends TestBase{
 	@Test
 	public void loginTest() throws Exception{
 		app.getNavigationHelper().getURL(NavigationBase.papicatalog);
-		app.getNavigationHelper().getTotalNumberCatalogOnline();
+		app.getGetDataHelper().getTotalNumberCatalogOnline();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		Page_Catalog pagecatalog = MyPageFactory.getPage(Page_Catalog.class);
 		pagetehnosila.getPageCatalog();
-		pagecatalog.AllProducts();
-		pagecatalog.assertCount();
-
+		pagecatalog.summAllProducts();
+		pagecatalog.checkPtotatlnumber();
+		pagecatalog.checkPresult();
+		
+		
+	//	pagecatalog.assertCount();
+	//	pagecatalog.AllSubcategories();
 	}
 }
