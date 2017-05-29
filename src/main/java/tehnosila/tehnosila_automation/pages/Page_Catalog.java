@@ -77,15 +77,27 @@ public class Page_Catalog extends PagesBase{
 
 	// Формирование ArrayList из кол-ва товаров по верхнеуровневым каталогам и подсчет суммы кол-ва товаров
 	public void AllProducts() {
+		
+	/*	WebElement element = driver.findElement(By.xpath("//div[@class='count']"));
+		JavascriptExecutor executor2 = (JavascriptExecutor)driver;
+		executor2.executeScript("$('.count').first().text();");
+	    Log.info("***QA: executor2 " + executor2.executeScript("$('.count').first().text();"));
+		*/
 		List<WebElement> items = driver.findElements(By.xpath("//div[@class='count']"));
 	//	Log.info("***QA: count1 " + count1.getText());
 		for(WebElement count: items)
 		{	
-			String countstr = count.getText();
+			String countstr = count.getAttribute("innerHTML");
 		//	int countint = Integer.valueOf(countstr);
 			numbers.add(countstr);
 			Log.info("***QA: Массив numbers " + countstr);
-
+			
+		/*	JavascriptExecutor executor1 = (JavascriptExecutor)driver;
+		    executor1.executeScript("return $('.subcategories .list .item .count').each(function () "
+					+ "{ var countNum = $(this).text();  console.log(countNum); });");
+		//	((JavascriptExecutor)driver).executeScript("return $('.subcategories .list .item .count').each(function () "
+			//		+ "{ var countNum = $(this).text();  console.log(countNum); });");
+		    Log.info("***QA: executor1 " + executor1);*/
 		}
 		Log.info("***QA: Массив numbers " + numbers);
 		
