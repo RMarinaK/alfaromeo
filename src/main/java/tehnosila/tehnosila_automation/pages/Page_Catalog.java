@@ -77,27 +77,12 @@ public class Page_Catalog extends PagesBase{
 
 	// Формирование ArrayList из кол-ва товаров по верхнеуровневым каталогам и подсчет суммы кол-ва товаров
 	public void AllProducts() {
-		
-	/*	WebElement element = driver.findElement(By.xpath("//div[@class='count']"));
-		JavascriptExecutor executor2 = (JavascriptExecutor)driver;
-		executor2.executeScript("$('.count').first().text();");
-	    Log.info("***QA: executor2 " + executor2.executeScript("$('.count').first().text();"));
-		*/
 		List<WebElement> items = driver.findElements(By.xpath("//div[@class='count']"));
-	//	Log.info("***QA: count1 " + count1.getText());
 		for(WebElement count: items)
 		{	
 			String countstr = count.getAttribute("innerHTML");
 		//	int countint = Integer.valueOf(countstr);
 			numbers.add(countstr);
-			Log.info("***QA: Массив numbers " + countstr);
-			
-		/*	JavascriptExecutor executor1 = (JavascriptExecutor)driver;
-		    executor1.executeScript("return $('.subcategories .list .item .count').each(function () "
-					+ "{ var countNum = $(this).text();  console.log(countNum); });");
-		//	((JavascriptExecutor)driver).executeScript("return $('.subcategories .list .item .count').each(function () "
-			//		+ "{ var countNum = $(this).text();  console.log(countNum); });");
-		    Log.info("***QA: executor1 " + executor1);*/
 		}
 		Log.info("***QA: Массив numbers " + numbers);
 		
@@ -107,8 +92,6 @@ public class Page_Catalog extends PagesBase{
 	public void summAllProducts() {
 		AllProducts();
 		presult = 0;
-	
-		
 		for(String number : numbers) {
 			int intnumber = Integer.parseInt(number);
 			Log.info("***QA: intnumber " + intnumber);
@@ -116,16 +99,13 @@ public class Page_Catalog extends PagesBase{
 			presult = presult + intnumber;
 			}
 		Log.info("***QA: summAllProducts " + presult);
-	//	Log.info("***QA: numberList " + numberList);
-		for (int i = 0; i < numberList.size(); i++)
+	/*	for (int i = 0; i < numberList.size(); i++)
 		 {
 		 Integer x =  numberList.get(i);
-	//	 Log.info("***QA: x " + x);
 		 presult = presult + x;
 		 
 		}
-		
-		Log.info("***QA: summAllProducts " + presult);
+		Log.info("***QA: summAllProducts " + presult);*/
 		
 	/*	int[] myArray = {}; // конвертируем ArrayList в массив
 		myArray = ArrayUtils.toPrimitive(numbers.toArray(new Integer[numbers.size()]));
