@@ -124,6 +124,9 @@ public class Page_Order extends PagesBase{
 	@FindBy(id = "applyCard") //Кнопка Применить
 	private WebElement applyCard;
 	
+	@FindBy(id = "just-all") //Кнопка Применить
+	private WebElement justAll;
+	
 	@FindBy(xpath = "//span[@class = 'give-card']") //Номер привязанной карты
 	private WebElement giveCard;
 	
@@ -510,18 +513,19 @@ public class Page_Order extends PagesBase{
 	}
 	
 //--------------------------------------------------------------------------------------------------
-// Проверка количества начисляемых бонусов
+// Проверка количества начисляемых бонусов     @author EDanilova
 	
-	//обрезание полученной строки @author EDanilova
-	public void bonusSteal(int f){
-			String resivedStr = bonusAccrueOffer.getText();
-			String[] cutStr = resivedStr.split (" ");
-			String resultCutStr = cutStr[0];
-			Log.info("***QA: Количество начисляемых бонусов = "+ resultCutStr);
+	//Получение количества бонусов к начислению
+	public void bonusSteal(int f) throws Exception{	
+			String resivedStr = bonusAccrueOffer.getAttribute("innerHTML");
 			if (f == 0){
+				String[] cutStr = resivedStr.split (" ");
+				String resultCutStr = cutStr[0];
+				Log.info("***QA: Количество начисляемых бонусов ДО привязки карты: " + resultCutStr);
 				NavigationBase.bonusAccOffer0 = Integer.parseInt(resultCutStr);
 			}else {
-				NavigationBase.bonusAccOffer1 = Integer.parseInt(resultCutStr);
+				Log.info("***QA: Количество начисляемых бонусов ПОСЛЕ привязки карты: " + resivedStr);
+				NavigationBase.bonusAccOffer1 = Integer.parseInt(resivedStr);
 			}
 	}	
 	
@@ -529,7 +533,7 @@ public class Page_Order extends PagesBase{
 	public void clickButtonSetCard() throws Exception{
 		try {
 			setCard.click();
-			Log.info("клик по Ввести номер карты");
+			Log.info("***QA: клик по Ввести номер карты");
 		}
 		catch(Exception e) {      
 			Log.info("Element Not Found");     
@@ -537,18 +541,18 @@ public class Page_Order extends PagesBase{
 		} 
 	}
 	
+	//Заполнение поля номер бонусной карты
 	public void setOrderFromOrderContactCard(String string) {
-		//if(isNecessaryToChangeParam(string)){
 			cardNumber.click();
 			cardNumber.clear();
 			cardNumber.sendKeys(string);
-		//}
 	}
-
+	
+	//Клик по "Применить" после ввода номера бонусной карты
 	public void clickButtonApplyCard() throws Exception{
 		try {
 			applyCard.click();
-			Log.info("клик по Применить");
+			Log.info("***QA: клик по Применить");
 		}
 		catch(Exception e) {      
 			Log.info("Element Not Found");     
@@ -556,12 +560,21 @@ public class Page_Order extends PagesBase{
 		} 
 	}	
 	
-	public void getGiveCardNumber(){
+	//Получение номера привязанной бонусной карты
+	public void getGiveCardNumber() throws Exception{
+		Thread.sleep(2000);	
 		String resivedStr =  giveCard.getText();
-		//String[] cutStr = resivedStr.split ("-");
-		//String cardNum = cutStr[0] + cutStr[1] + cutStr[2];
-		Log.info("***QA: Номер привязанной карты = " + resivedStr);
-		//NavigationBase.bonusCard = cardNum;
+		String[] cutStr = resivedStr.split ("-");
+		String[] cutStr2 = new String[2];
+		String cardNum;
+		boolean isContain = cutStr[2].contains(" ");
+		if(isContain == true){
+			cutStr2 = cutStr[2].split (" ");
+			cardNum = cutStr[0] + cutStr[1] + cutStr2[0] + cutStr2[1];
+		} else
+		cardNum = cutStr[0] + cutStr[1] + cutStr[2];
+		Log.info("***QA: Номер привязанной карты: " + cardNum);
+		NavigationBase.bonusCard = cardNum.trim();
 	}		
 	
 }

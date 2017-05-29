@@ -165,12 +165,12 @@ public class Page_Product extends PagesBase{
 			Log.info("жмаканье на Закрыть");   
 	}
 	
-	//обрезание полученной строки @author EDanilova
+	//Получение количества бонусов к начислению   @author EDanilova
 	public void bonusSteal(){
 			String resivedStr = bonusAccrueCard.getText();
 			String[] cutStr = resivedStr.split (" ");
 			String resultCutStr = cutStr[1];
-			Log.info("***QA: Количество начисляемых бонусов = "+ resultCutStr);
+			Log.info("***QA: Количество начисляемых бонусов в карточке товара: "+ resultCutStr);
 			NavigationBase.bonusAccCard = Integer.parseInt(resultCutStr);
 	}
 }

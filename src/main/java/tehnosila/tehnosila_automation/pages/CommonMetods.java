@@ -167,8 +167,8 @@ public class CommonMetods extends Page_AreaMenu {
 	}
 	
 	// ----------------------------------------------------------------------------------------------------------------------------
-	//Проверка количества начисляемых бонусов @author EDanilova	
-
+	
+	//Проверка количества начисляемых бонусов   @author EDanilova	
 	public void bonusAmountCheck(int i, int j) throws Exception{
 		try {
 			Assert.assertEquals(i, j); // проверка отображения Header
@@ -179,7 +179,8 @@ public class CommonMetods extends Page_AreaMenu {
 			ScreenShot.takeScreenShot();       
 		}  				
 	}
-				
+	
+	//Проверка номера привязанной бонусной карты   @author EDanilova				
 	public void bonusCardCheck(String i, String j) throws Exception{
 		try {
 			Assert.assertEquals(i, j); // проверка отображения Header

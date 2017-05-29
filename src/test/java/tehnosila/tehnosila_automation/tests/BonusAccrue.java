@@ -39,7 +39,7 @@ public class BonusAccrue extends TestBase{
 	}
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName, String cardNumber) throws Exception{
+	public void BonusTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName, String cardNumber) throws Exception{
 
 		Log.info("***QA: Самовывоз оплата Наличными Solr_SelfDeliverCash");
 	
@@ -55,11 +55,11 @@ public class BonusAccrue extends TestBase{
 		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
-		//Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
-		//Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
+		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
+		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 
 		pageproduct.logItemprop();
-		pageproduct.bonusSteal(); //считываем кол-во начисляемых бонусов с карточки товара
+		pageproduct.bonusSteal();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
 		commonmetods.getHTTPResponseCode();
@@ -70,16 +70,16 @@ public class BonusAccrue extends TestBase{
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
 		pageorder.clickRCash(paymentName);
-		pageorder.bonusSteal(0); //считываем кол-во начисляемых бонусов с оформления заказа
-		commonmetods.bonusAmountCheck(NavigationBase.bonusAccCard, NavigationBase.bonusAccOffer0); //проверяем кол-во бонусов на карточке и в оформлении
+		pageorder.bonusSteal(0);
+		commonmetods.bonusAmountCheck(NavigationBase.bonusAccCard, NavigationBase.bonusAccOffer0); 
 		pageorder.clickButtonSetCard();
 		pageorder.setOrderFromOrderContactCard(cardNumber);
-		pageorder.clickButtonApplyCard();
+		pageorder.clickButtonApplyCard();	
 		pageorder.getGiveCardNumber();
-		commonmetods.bonusCardCheck(cardNumber, NavigationBase.bonusCard);
+		commonmetods.bonusCardCheck(NavigationBase.bonusCard, cardNumber);
 		pageorder.bonusSteal(1);
 		commonmetods.bonusAmountCheck(NavigationBase.bonusAccOffer0, NavigationBase.bonusAccOffer1);
-		pageorder.clickButtonSubmitOrder();/*
+		pageorder.clickButtonSubmitOrder();
 		commonmetods.getHTTPResponseCode();
 		app.getNavigationHelper().refreshPage();
 		pageordersuccess.assertTitle();
@@ -88,7 +88,6 @@ public class BonusAccrue extends TestBase{
 		commonmetods.getHTTPResponseCode();
 		sysgetorders.assertPaymentName(paymentNameGO);
 		sysgetorders.assertDeliveryName(deliveryName);
-		 */
 	}
 	
 }
