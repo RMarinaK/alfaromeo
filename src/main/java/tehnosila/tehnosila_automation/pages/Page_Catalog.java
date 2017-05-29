@@ -94,11 +94,10 @@ public class Page_Catalog extends PagesBase{
 		presult = 0;
 		for(String number : numbers) {
 			int intnumber = Integer.parseInt(number);
-			Log.info("***QA: intnumber " + intnumber);
 			numberList.add(intnumber); 
 			presult = presult + intnumber;
-			}
-		Log.info("***QA: summAllProducts " + presult);
+		}
+		Log.info("***QA: summAllProducts in catalog " + presult);
 	/*	for (int i = 0; i < numberList.size(); i++)
 		 {
 		 Integer x =  numberList.get(i);
@@ -129,29 +128,16 @@ public class Page_Catalog extends PagesBase{
 	    }      
 	}  
 	
-	@FindBy(xpath="//div[@class='subcategories']/div[@class='list']/a")//
-	private WebElement qw; // Количество товаров
-	
 	// проход по каждому подкаталогу catalogа
 	public void AllSubcategories() {
-		
-		 JavascriptExecutor executor = (JavascriptExecutor)driver;
-		    executor.executeScript("return arguments[0].innerText;", count);
-		Log.info("***QA: countstr1 "+ executor);
-		
+
 		List<WebElement> items = driver.findElements(By.xpath("//div[@class='subcategories']/div[@class='list']/a"));
-		for(WebElement count1: items)
+		for(WebElement count: items)
 		{	
-			
-			//String countstr = count.getText();
+			String countstr = count.getAttribute("innerHTML");
 		//	int countint = Integer.valueOf(countstr);
-		//	numbers.add(countint);
-			
-		//	qw.click();
-			 JavascriptExecutor executor1 = (JavascriptExecutor)driver;
-			    executor1.executeScript("arguments[0].text;", count);
-			Log.info("***QA: countstr "+ executor);
-			
+			numbers.add(countstr);
+	
 		/*	Pattern pattern = Pattern.compile("\\d+");
 			String stringdiscountpsize = countstr; // мой пример строки
 			Matcher matcher = pattern.matcher(stringdiscountpsize);
@@ -163,11 +149,7 @@ public class Page_Catalog extends PagesBase{
 				countstr =builderpsale.append(substringdiscountpsize).toString();
 				Log.info("***QA: countstr "+ countstr);
 				subcategories.add(countstr);
-			}*/
-			
-			
-			
-			
+			}*/	
 		}
 		Log.info("***QA: Массив subcategories" + subcategories);
 	}
@@ -176,9 +158,24 @@ public class Page_Catalog extends PagesBase{
 	public void checkPtotatlnumber() {		
 		try {
 			int checkptotatlnumber = Integer.valueOf(NavigationBase.ptotatlnumber);
-			if (checkptotatlnumber < 40000) {
-				throw new NullPointerException("Общее кол-во товаров в API " + NavigationBase.ptotatlnumber + " < 40 000");
-			} 
+			int checkpresult = Integer.valueOf(presult);
+			if (checkptotatlnumber < 39000 || checkpresult < 40000) {
+				throw new NullPointerException("Общее кол-во товаров по API <39000 или кол-во товаров в каталоге < 40 000");
+			} else {
+				try {
+					double percentageofaverage = ((checkptotatlnumber + checkpresult)/2)*0.05;
+					int intpercentageofaverage = (int)Math.ceil(percentageofaverage);
+					Log.info("***QA: intpercentageofaverage " + intpercentageofaverage);
+					int difference = Math.abs(checkpresult-checkptotatlnumber);
+					Log.info("***QA: difference " + difference);
+					if (difference > intpercentageofaverage) {
+						throw new NullPointerException("Разница кол-ва товаров в каталоге и в API < 5%");
+					}
+				}
+				catch(NullPointerException e) {     
+			    	 throw e; 
+			    }      
+			}
 		}
 	    catch(NullPointerException e) {     
 	    	 throw e; 
