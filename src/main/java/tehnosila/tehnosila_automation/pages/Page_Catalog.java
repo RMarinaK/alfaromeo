@@ -160,16 +160,16 @@ public class Page_Catalog extends PagesBase{
 			int checkptotatlnumber = Integer.valueOf(NavigationBase.ptotatlnumber);
 			int checkpresult = Integer.valueOf(presult);
 			if (checkptotatlnumber < 39000 || checkpresult < 40000) {
-				throw new NullPointerException("Общее кол-во товаров по API <39000 или кол-во товаров в каталоге < 40 000");
+				throw new NullPointerException("Общее кол-во товаров по API <39 000 или кол-во товаров в каталоге < 40 000");
 			} else {
 				try {
-					double percentageofaverage = ((checkptotatlnumber + checkpresult)/2)*0.05;
+					double percentageofaverage = ((checkptotatlnumber + checkpresult)/2)*0.1;
 					int intpercentageofaverage = (int)Math.ceil(percentageofaverage);
-					Log.info("***QA: intpercentageofaverage " + intpercentageofaverage);
+					Log.info("***QA: percentage of average " + intpercentageofaverage);
 					int difference = Math.abs(checkpresult-checkptotatlnumber);
 					Log.info("***QA: difference " + difference);
 					if (difference > intpercentageofaverage) {
-						throw new NullPointerException("Разница кол-ва товаров в каталоге и в API < 5%");
+						throw new NullPointerException("Разница кол-ва товаров в каталоге и в API < 10%");
 					}
 				}
 				catch(NullPointerException e) {     
