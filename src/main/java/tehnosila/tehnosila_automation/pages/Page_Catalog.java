@@ -7,6 +7,7 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 /**
  * @author RasstriginaMK
  *
@@ -141,17 +142,23 @@ public class Page_Catalog extends PagesBase{
 	
 	// проход по каждому подкаталогу catalogа
 	public void AllSubcategories() {
+		
+		 JavascriptExecutor executor = (JavascriptExecutor)driver;
+		    executor.executeScript("return arguments[0].innerText;", count);
+		Log.info("***QA: countstr1 "+ executor);
+		
 		List<WebElement> items = driver.findElements(By.xpath("//div[@class='subcategories']/div[@class='list']/a"));
-		for(WebElement count: items)
+		for(WebElement count1: items)
 		{	
 			
-			String countstr = count.getText();
+			//String countstr = count.getText();
 		//	int countint = Integer.valueOf(countstr);
 		//	numbers.add(countint);
 			
 		//	qw.click();
-			
-			Log.info("***QA: countstr "+ countstr);
+			 JavascriptExecutor executor1 = (JavascriptExecutor)driver;
+			    executor1.executeScript("arguments[0].text;", count);
+			Log.info("***QA: countstr "+ executor);
 			
 		/*	Pattern pattern = Pattern.compile("\\d+");
 			String stringdiscountpsize = countstr; // мой пример строки
