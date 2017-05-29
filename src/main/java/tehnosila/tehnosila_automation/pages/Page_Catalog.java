@@ -151,9 +151,9 @@ public class Page_Catalog extends PagesBase{
 			
 		//	qw.click();
 			
+			Log.info("***QA: countstr "+ countstr);
 			
-			
-			Pattern pattern = Pattern.compile("\\d+");
+		/*	Pattern pattern = Pattern.compile("\\d+");
 			String stringdiscountpsize = countstr; // мой пример строки
 			Matcher matcher = pattern.matcher(stringdiscountpsize);
 			int start = 0;
@@ -164,7 +164,7 @@ public class Page_Catalog extends PagesBase{
 				countstr =builderpsale.append(substringdiscountpsize).toString();
 				Log.info("***QA: countstr "+ countstr);
 				subcategories.add(countstr);
-			}
+			}*/
 			
 			
 			
