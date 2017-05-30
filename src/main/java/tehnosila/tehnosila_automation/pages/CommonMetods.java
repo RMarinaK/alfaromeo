@@ -166,6 +166,11 @@ public class CommonMetods extends Page_AreaMenu {
 	    Log.info("***QA: HTTP response code " + code);
 	}
 	
+	// 
+	public void getCookieSession() {
+		 Log.info("***QA: session " + driver.manage().getCookieNamed("session"));
+		
+	}	
 	// ----------------------------------------------------------------------------------------------------------------------------
 	
 	//Проверка количества начисляемых бонусов   @author EDanilova	
