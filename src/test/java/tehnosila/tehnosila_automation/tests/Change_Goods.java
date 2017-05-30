@@ -1,6 +1,5 @@
 package tehnosila.tehnosila_automation.tests;
 
-import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 
 /**
  * @author DZhukov

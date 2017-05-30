@@ -1,11 +1,9 @@
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Actions;
 
 import java.io.File;
 
-
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
-import tehnosila.tehnosila_automation.pages.Nameplates;
 import tehnosila.tehnosila_automation.pages.Page_Action;
 import tehnosila.tehnosila_automation.pages.Page_Actions;
 import tehnosila.tehnosila_automation.pages.Page_Cart;
@@ -15,6 +13,7 @@ import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
 import tehnosila.tehnosila_automation.pages.Page_Product;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,31 +21,30 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
- * @author MRasstrigina
+ * @author DZhukov
  *
  */
 
-// Тест акции "Рассрочка"
-public class Action_Installment extends TestBase{
+// Тест Акции "Супертройка"
+public class Action_SuperThree extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Action_Installment.class);
+	private static Logger Log = LoggerFactory.getLogger(Action_SuperThree.class);
 
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"SelfDeliveryCreditInStore.xls",
-                "SelfDeliveryCreditInStore", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"CourierCash.xls",
+                "CourierCash", "Data");
         return(retObjArr);
     }
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
-		
-		Log.info("***QA: Акция Рассрочка");
+	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
+	
+		Log.info("***QA: Акция Супертройка");
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		Page_Actions pageactions = MyPageFactory.getPage(Page_Actions.class);
-		Nameplates nameplates = MyPageFactory.getPage(Nameplates.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		Page_Catalog pagecatalog = MyPageFactory.getPage(Page_Catalog.class);
 		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);
@@ -57,29 +55,29 @@ public class Action_Installment extends TestBase{
 		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
 		commonmetods.getHTTPResponseCode();
 		pagetehnosila.clickActions();
-		commonmetods.getHTTPResponseCode();
 		app.getNavigationHelper().refreshPage();
-		pageactions.clickActionRassrochka();
 		commonmetods.getHTTPResponseCode();
+		pageactions.clickActionSuperThree();
 		app.getNavigationHelper().refreshPage();
+		commonmetods.getHTTPResponseCode();
 		commonmetods.scrollPage();
 		pageaction.clickActionCatalog();
 		app.getNavigationHelper().refreshPage();
 		commonmetods.getHTTPResponseCode();
 		pagecatalog.clickOpenSelfDeliveryDescription();
 		commonmetods.getHTTPResponseCode();
-		nameplates.checkActionSticker();
 		pageproduct.logItemprop();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
 		commonmetods.getHTTPResponseCode();
+		pagecart.waitCartLoadingLayer();
 		pagecart.clickButtonOrdering();
 		commonmetods.getHTTPResponseCode();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
-	//	pageorder.clickRCreditInStore(paymentName);
+	//	pageorder.clickRCash(paymentName);
 		commonmetods.getCookieSession();
 		pageorder.clickButtonSubmitOrder();
 		commonmetods.getCookieSession();
@@ -91,7 +89,6 @@ public class Action_Installment extends TestBase{
 		sysgetorders.assertOrders();
 		commonmetods.getHTTPResponseCode();
 	//	sysgetorders.assertPaymentName(paymentNameGO);
-		sysgetorders.assertDeliveryName(deliveryName);
 	}
 	
 }
