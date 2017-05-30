@@ -104,8 +104,8 @@ public class Page_Catalog extends PagesBase{
 		try {
 			int checkptotatlnumber = Integer.valueOf(NavigationBase.ptotatlnumber);
 			int checkpresult = Integer.valueOf(presult);
-			if (checkptotatlnumber < 39000 || checkpresult < 40000) {
-				throw new NullPointerException("Общее кол-во товаров по API <39 000 или кол-во товаров в каталоге < 40 000");
+			if (checkptotatlnumber < 25000 || checkpresult < 25000) {
+				throw new NullPointerException("Общее кол-во товаров по API <25 000 или кол-во товаров в каталоге < 25 000");
 			} else {
 				try {
 					double percentageofaverage = ((checkptotatlnumber + checkpresult)/2)*0.1;
