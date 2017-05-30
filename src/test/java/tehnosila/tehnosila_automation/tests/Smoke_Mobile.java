@@ -37,7 +37,7 @@ public class Smoke_Mobile extends TestBase{
     }
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email) throws IOException, InterruptedException{ //3
+	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws IOException, InterruptedException{ //3
 		// авторизация
 	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
 	//	app.getLoginHelper().login(senderLogin,password); 
