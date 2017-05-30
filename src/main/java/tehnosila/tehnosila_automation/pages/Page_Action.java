@@ -29,7 +29,8 @@ public class Page_Action extends PagesBase{
 	@FindBy(xpath="//div[@class='item'][2]")
 	private WebElement clickactioncatalogitem; // Выбор второго блока товаров в акции честные цены
 	
-	@FindBy(xpath="//a[@class='item first-in-row']")
+	//@FindBy(xpath="//a[@class='item first-in-row']")
+	@FindBy(xpath="//a[@class='item last-line first-in-row']")
 	private WebElement clickcatalogitemincategory; // Выбор первого блока товаров в категории
 	
 	@FindBy(xpath = "//span[@class='items-per-page-view']") 
