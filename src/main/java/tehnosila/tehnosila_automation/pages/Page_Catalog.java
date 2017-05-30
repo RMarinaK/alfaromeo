@@ -1,4 +1,13 @@
 package tehnosila.tehnosila_automation.pages;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.apache.commons.lang.ArrayUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 /**
  * @author RasstriginaMK
  *
@@ -7,7 +16,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 
+import com.google.common.collect.Lists;
+
+import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 public class Page_Catalog extends PagesBase{
@@ -21,7 +34,15 @@ public class Page_Catalog extends PagesBase{
 	@FindBy(xpath="//a[@id='open-courier-description']/../../../../..")//a[@id='open-courier-description']
 	private WebElement opencourierdescription; // Первый товар  с доставкой
 	
+	@FindBy(xpath="//div[@class='count']")//
+	private WebElement count; // Количество товаров
 
+	//private List<String> numbersSubcategories = new ArrayList<>(); // массив кол-ва товаров по категориям
+	private static int presult;
+	
+	private List<String> subcategories = new ArrayList<>(); // массив подкатегорий в catalog
+	
+	private List<Integer> numberList = new ArrayList<>();
 	
 	@Override
 	void tryToOpen() {
@@ -50,5 +71,95 @@ public class Page_Catalog extends PagesBase{
             ScreenShot.takeScreenShot();       
          } 
 	}
+	
+	@FindBy(xpath="//div[@class='list']/a[4]/div[@class='count']")//
+	private WebElement count1; // Количество товаров
 
+	// Формирование ArrayList из кол-ва товаров по верхнеуровневым каталогам
+	public void AllProducts(List<String> list) {
+		List<WebElement> itemsCount = driver.findElements(By.xpath("//div[@class='count']"));
+		for(WebElement count: itemsCount)
+		{	
+			String countstr = count.getAttribute("innerHTML");
+			list.add(countstr);
+		}
+		Log.info("***QA: Массив numbers " + list);
+		
+	}
+	
+	// Суммирование всех товаров из массива numbers
+	public void summAllProducts(List<String> list) {
+		AllProducts(list);
+		presult = 0;
+		for(String number : list) {
+			int intnumber = Integer.parseInt(number);
+			numberList.add(intnumber); 
+			presult = presult + intnumber;
+		}
+		Log.info("***QA: summAllProducts in catalog " + presult);
+	}
+		
+	// Общее кол-во товаров по API <39 000 или кол-во товаров в каталоге < 40 000 или Разница кол-ва товаров в каталоге и в API < 10%
+	public void checkPtotatlnumber() {		
+		try {
+			int checkptotatlnumber = Integer.valueOf(NavigationBase.ptotatlnumber);
+			int checkpresult = Integer.valueOf(presult);
+			if (checkptotatlnumber < 25000 || checkpresult < 25000) {
+				throw new NullPointerException("Общее кол-во товаров по API <25 000 или кол-во товаров в каталоге < 25 000");
+			} else {
+				try {
+					double percentageofaverage = ((checkptotatlnumber + checkpresult)/2)*0.1;
+					int intpercentageofaverage = (int)Math.ceil(percentageofaverage);
+					Log.info("***QA: percentage of average " + intpercentageofaverage);
+					int difference = Math.abs(checkpresult-checkptotatlnumber);
+					Log.info("***QA: difference " + difference);
+					if (difference > intpercentageofaverage) {
+						throw new NullPointerException("Разница кол-ва товаров в каталоге и в API < 10%");
+					}
+				}
+				catch(NullPointerException e) {     
+			    	 throw e; 
+			    }      
+			}
+		}
+	    catch(NullPointerException e) {     
+	    	 throw e; 
+	    }      
+	}  
+	
+	@FindBy(xpath = "//h1") 
+	private WebElement header; // заголовок на страницах
+	
+	//Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
+	// проход по каждому подкаталогу catalogа и формирование массива subcategories
+	public void AllSubcategories(List<String> list) {
+		/*List<WebElement> itemsHtef = driver.findElements(By.xpath("//div[@class='subcategories']/div[@class='list']/a"));
+		for(WebElement hrefItems: itemsHtef)
+		{	
+			String hrefstr = hrefItems.getAttribute("href");
+			subcategories.add(hrefstr);
+			Log.info("***QA: Массив subcategories" + hrefstr);
+		}*/
+		List<WebElement> itemsHtef = driver.findElements(By.xpath("//div[@class='subcategories']/div[@class='list']/a"));
+		for (int i =1; i<itemsHtef.size()+1; i++) {
+			WebElement we = driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]"));
+			
+			Log.info("массивчик " + we.getAttribute("href"));
+			we.click();
+			Log.info("title " + header.getText());
+			summAllProducts(list);
+			
+			driver.navigate().back();
+			/*	driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]")).click();
+				Log.info(" " + driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]")).getText());
+				summAllProducts(list);
+				driver.navigate().back();*/
+			    
+			  }
+		
+	}
+
+	
+	
+	
 }

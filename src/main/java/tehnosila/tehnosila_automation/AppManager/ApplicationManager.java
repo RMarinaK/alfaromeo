@@ -19,7 +19,7 @@ public class ApplicationManager{
 	private static ApplicationManager singleton;
 	private WebDriverHelper webDriverHelper;
 	private NavigationHelper navigationHelper;
-	private SmokeHelper smokeHelper;
+	private GetDataHelper getDataHelper;
 	private LoginHelper loginHelper;
 	
 	private Properties props;
@@ -58,11 +58,11 @@ public class ApplicationManager{
 		return props.getProperty(key,defaultValue);
 	}
 
-	public SmokeHelper getSmokeHelper() {
-		if (smokeHelper == null) {
-			smokeHelper = new SmokeHelper(this);
+	public GetDataHelper getGetDataHelper() {
+		if (getDataHelper == null) {
+			getDataHelper = new GetDataHelper(this);
 		}
-		return smokeHelper;	}
+		return getDataHelper;	}
 	
 	public LoginHelper getLoginHelper(){
 		if (loginHelper == null) {
