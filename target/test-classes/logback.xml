@@ -26,7 +26,7 @@
 
     <appender name="FILE"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<!--<encoding>UTF-8</encoding>-->
+		<encoding>UTF-8</encoding>
 	    <File>logback/tehnosila_automation.log</File>
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
 			<fileNamePattern>tehnosila_automation.%i.log.zip</fileNamePattern>
@@ -43,7 +43,7 @@
     </appender>
     
  	<appender name="ReportNG" class="tehnosila.tehnosila_automation.AppManager.ReportNGAppender">
-    <!-- <encoding>UTF-8</encoding> -->
+    <encoding>UTF-8</encoding>
     <encoder>
     	 <!--layout class="ch.qos.logback.classic.html.HTMLLayout"-->
 		 <pattern>%d{dd.MM.yyyy HH:mm:ss.SSS} %-5p %C{1}:%M:%L - %m%n</pattern>
