@@ -64,10 +64,14 @@ public class Smoke_Terminal extends TestBase{
 		// КОСТЫЛЬ
 		CommonMetods.RefreshTerm();
 		termpagecatalogtvivideotelevizorytelevizoryid.clickButtonToCart();
-
+        
 		termpagecart.clickButtonOrder();
-		termpageorder.clickButtonSubmitOrder();
-	//	termpageorder.closePrintWindow();
+		termpageorder.setPersonal();
+		termpageorder.setOrderFromOrderContactFio(fio);
+		termpageorder.setOrderFromOrderContactPhone(phone);
+		termpageorder.setOrderFromOrderContactEmail(email);
+		//termpageorder.clickButtonSubmitOrder();
+		//termpageorder.closePrintWindow();
 
 	}
 }

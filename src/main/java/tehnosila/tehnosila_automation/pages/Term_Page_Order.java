@@ -25,8 +25,24 @@ public class Term_Page_Order extends PagesBase{
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL()+"#/order";
 	
+	@FindBy(xpath="//button[@class='button button--grey button--small tap openPopup']")
+	private WebElement buttonsetpersonal;
+	
+	@FindBy(id = "OrderForm_orderContact_fio")
+	private WebElement orderfromordercontactfio;
+	
+	@FindBy(xpath = "//div[@name='OrderForm[orderContact][phone]']")
+	private WebElement orderfromordercontactphone;
+	
+	@FindBy(xpath = "//div[@name='OrderForm[orderContact][email]']")
+	private WebElement orderfromordercontactemail;
+	
+	@FindBy(xpath = "//label/span")
+	private WebElement confirm;
+	
 	@FindBy(xpath="//button[@class='button button--yellow button--bold button--full_width checkout__next tap']")
 	private WebElement buttonsubmitorder; // Кнопка "Завершить оформление"
+	
 	@FindBy(id="leave")
 	private WebElement buttonleave; // Кнопка "Завершить оформление"
 	
@@ -48,6 +64,41 @@ public class Term_Page_Order extends PagesBase{
 		app.getNavigationHelper().getPage(URL_MATCH);
 	}
 	
+	//клик по "Добавить"
+	public void setPersonal() throws Exception {
+		try {
+			buttonsetpersonal.click();
+		}
+		catch (TimeoutException ignore) {
+			Log.info("Element Not Found");     
+		    ScreenShot.takeScreenShot();   
+		}
+	}
+	
+	public void setOrderFromOrderContactFio(String string) {
+		if(isNecessaryToChangeParam(string)){
+			orderfromordercontactfio.click();
+			orderfromordercontactfio.clear();
+			orderfromordercontactfio.sendKeys(string);
+		}
+	}
+	
+	public void setOrderFromOrderContactPhone(String string) {
+		if(isNecessaryToChangeParam(string)){
+			orderfromordercontactphone.click();
+			orderfromordercontactphone.clear();
+			orderfromordercontactphone.sendKeys(string);
+		}
+	}
+	
+	public void setOrderFromOrderContactEmail(String string) {
+		if(isNecessaryToChangeParam(string)){
+			orderfromordercontactemail.click();
+			orderfromordercontactemail.clear();
+			orderfromordercontactemail.sendKeys(string);
+		}
+	}
+
 	// жмаканье на "Завершить оформление"
 	public void clickButtonSubmitOrder() throws Exception {
 		try {
