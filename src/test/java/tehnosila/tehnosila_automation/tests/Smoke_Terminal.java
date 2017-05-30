@@ -38,7 +38,7 @@ public class Smoke_Terminal extends TestBase{
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email) throws Exception{ //3
+	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{ //3
 		// авторизация
 	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
 	//	app.getLoginHelper().login(senderLogin,password); 
