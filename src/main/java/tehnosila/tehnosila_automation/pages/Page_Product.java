@@ -4,6 +4,7 @@ package tehnosila.tehnosila_automation.pages;
  *
  */
 import org.openqa.selenium.WebElement;
+import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,6 +48,9 @@ public class Page_Product extends PagesBase{
 	
 	@FindBy(xpath = "//*[@class='button yellow-flat close-button pressable']")
 	private WebElement buttonclose;
+
+	@FindBy(xpath = "//span[@class = 'user-bonus__value']") //Поле с количеством начисляемых бонусов в карточке товара
+	private WebElement bonusAccrueCard;
 	
 	protected boolean isNecessaryToChangeParam(String param){
 		if(param.equals(" ")||param.equals("")){
@@ -159,5 +163,14 @@ public class Page_Product extends PagesBase{
 			app.getNavigationHelper().waitVisible(buttonclose,10);
 			buttonclose.click(); 
 			Log.info("жмаканье на Закрыть");   
+	}
+	
+	//Получение количества бонусов к начислению   @author EDanilova
+	public void bonusSteal(){
+			String resivedStr = bonusAccrueCard.getText();
+			String[] cutStr = resivedStr.split (" ");
+			String resultCutStr = cutStr[1];
+			Log.info("***QA: Количество начисляемых бонусов в карточке товара: "+ resultCutStr);
+			NavigationBase.bonusAccCard = Integer.parseInt(resultCutStr);
 	}
 }
