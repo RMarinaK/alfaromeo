@@ -22,9 +22,9 @@ import org.testng.annotations.Test;
  *
  */
 // Самовывоз оплата Наличными
-public class BonusAccrue extends TestBase{
+public class Solr_BonusAccrue extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(SelfDeliverCash.class);
+	private static Logger Log = LoggerFactory.getLogger(Solr_BonusAccrue.class);
 
 	
 	@DataProvider(name = "DP1")
@@ -41,7 +41,7 @@ public class BonusAccrue extends TestBase{
 	@Test (dataProvider = "DP1")
 	public void BonusTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName, String cardNumber) throws Exception{
 
-		Log.info("***QA: Самовывоз оплата Наличными Solr_SelfDeliverCash");
+		Log.info("***QA: Самовывоз оплата Наличными Бонусы Solr_BonusAccrue");
 	
 		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_1 +
 				NavigationBase.psolrand + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
@@ -59,6 +59,7 @@ public class BonusAccrue extends TestBase{
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 
 		pageproduct.logItemprop();
+		app.getNavigationHelper().refreshPage();
 		pageproduct.bonusSteal();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
