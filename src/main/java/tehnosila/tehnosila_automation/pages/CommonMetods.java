@@ -168,6 +168,9 @@ public class CommonMetods extends Page_AreaMenu {
 	
 	// ----------------------------------------------------------------------------------------------------------------------------
 	
+	public void getCookieSession() {
+		 Log.info("***QA: session " + driver.manage().getCookieNamed("session"));
+	
 	//Проверка количества начисляемых бонусов   @author EDanilova	
 	public void bonusAmountCheck(int i, int j) throws Exception{
 		try {
