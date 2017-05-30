@@ -1,5 +1,7 @@
 package tehnosila.tehnosila_automation.tests;
 
+import tehnosila.tehnosila_automation.AppManager.NavigationBase;
+
 /**
  * @author DZhukov
  *
@@ -23,7 +25,9 @@ public class Change_Goods extends TestBase{
 		Page_CatalogTv_i_videoTelevizoryTelevizoryID pagecatalogtvivideotelevizorytelevizoryid = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizoryID.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		
-		pagetehnosila.clickTVVA();
+		
+		pagetehnosila.getPageCatalog();
+	//	pagetehnosila.clickTVVA();
 		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
 		pagetehnosila.clickTV();
 		app.getNavigationHelper().refreshPage();

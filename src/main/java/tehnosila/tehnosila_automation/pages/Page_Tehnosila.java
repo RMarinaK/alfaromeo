@@ -209,7 +209,7 @@ public class Page_Tehnosila extends PagesBase {
 					.release(tvaudiovideo)
 					.build();
 			dragAndDrop.perform();*/
-		
+			tv.click();
 			Log.info("tvaudiovideo");
 		} catch (Exception e) {
 			Log.info("Element Not Found");
