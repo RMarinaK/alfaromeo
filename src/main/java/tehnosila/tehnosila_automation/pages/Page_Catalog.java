@@ -37,7 +37,7 @@ public class Page_Catalog extends PagesBase{
 	@FindBy(xpath="//div[@class='count']")//
 	private WebElement count; // Количество товаров
 
-	private List<String> numbers = new ArrayList<>(); // массив кол-ва товаров по категориям
+	//private List<String> numbersSubcategories = new ArrayList<>(); // массив кол-ва товаров по категориям
 	private static int presult;
 	
 	private List<String> subcategories = new ArrayList<>(); // массив подкатегорий в catalog
@@ -75,86 +75,31 @@ public class Page_Catalog extends PagesBase{
 	@FindBy(xpath="//div[@class='list']/a[4]/div[@class='count']")//
 	private WebElement count1; // Количество товаров
 
-	// Формирование ArrayList из кол-ва товаров по верхнеуровневым каталогам и подсчет суммы кол-ва товаров
-	public void AllProducts() {
-		List<WebElement> items = driver.findElements(By.xpath("//div[@class='count']"));
-		for(WebElement count: items)
+	// Формирование ArrayList из кол-ва товаров по верхнеуровневым каталогам
+	public void AllProducts(List<String> list) {
+		List<WebElement> itemsCount = driver.findElements(By.xpath("//div[@class='count']"));
+		for(WebElement count: itemsCount)
 		{	
 			String countstr = count.getAttribute("innerHTML");
-		//	int countint = Integer.valueOf(countstr);
-			numbers.add(countstr);
+			list.add(countstr);
 		}
-		Log.info("***QA: Массив numbers " + numbers);
+		Log.info("***QA: Массив numbers " + list);
 		
 	}
 	
-	// Суммирование всех товаров
-	public void summAllProducts() {
-		AllProducts();
+	// Суммирование всех товаров из массива numbers
+	public void summAllProducts(List<String> list) {
+		AllProducts(list);
 		presult = 0;
-		for(String number : numbers) {
+		for(String number : list) {
 			int intnumber = Integer.parseInt(number);
 			numberList.add(intnumber); 
 			presult = presult + intnumber;
 		}
 		Log.info("***QA: summAllProducts in catalog " + presult);
-	/*	for (int i = 0; i < numberList.size(); i++)
-		 {
-		 Integer x =  numberList.get(i);
-		 presult = presult + x;
-		 
-		}
-		Log.info("***QA: summAllProducts " + presult);*/
+	}
 		
-	/*	int[] myArray = {}; // конвертируем ArrayList в массив
-		myArray = ArrayUtils.toPrimitive(numbers.toArray(new Integer[numbers.size()]));
-		presult = 0;
-		for(int i = 0; i < myArray.length; i ++){
-			int countint = Integer.valueOf(myArray[i]);
-			presult = presult + countint;
-		}
-		Log.info("***QA: summAllProducts " + presult);*/
-	}
-	
-	// сравнение общего кол-ва товаров
-	public void assertCount() {
-		try {
-			Assert.assertEquals(presult, NavigationBase.ptotatlnumber); 
-			Log.info("***QA: Общее кол-во товаров "+ NavigationBase.ptotatlnumber);
-		}
-	    catch(Exception e) {      
-	    	Log.info("Element Not Found");     
-	     //     ScreenShot.takeScreenShot();       
-	    }      
-	}  
-	
-	// проход по каждому подкаталогу catalogа
-	public void AllSubcategories() {
-
-		List<WebElement> items = driver.findElements(By.xpath("//div[@class='subcategories']/div[@class='list']/a"));
-		for(WebElement count: items)
-		{	
-			String countstr = count.getAttribute("innerHTML");
-		//	int countint = Integer.valueOf(countstr);
-			numbers.add(countstr);
-	
-		/*	Pattern pattern = Pattern.compile("\\d+");
-			String stringdiscountpsize = countstr; // мой пример строки
-			Matcher matcher = pattern.matcher(stringdiscountpsize);
-			int start = 0;
-			StringBuilder builderpsale = new StringBuilder();
-			while (matcher.find(start)) {
-				String substringdiscountpsize = stringdiscountpsize.substring(matcher.start(), matcher.end());
-				start = matcher.end();
-				countstr =builderpsale.append(substringdiscountpsize).toString();
-				Log.info("***QA: countstr "+ countstr);
-				subcategories.add(countstr);
-			}*/	
-		}
-		Log.info("***QA: Массив subcategories" + subcategories);
-	}
-	
-	// Если количество товаров из апи ptotatlnumber < 40 0000, выводить ошибку
+	// Общее кол-во товаров по API <39 000 или кол-во товаров в каталоге < 40 000 или Разница кол-ва товаров в каталоге и в API < 10%
 	public void checkPtotatlnumber() {		
 		try {
 			int checkptotatlnumber = Integer.valueOf(NavigationBase.ptotatlnumber);
@@ -182,15 +127,38 @@ public class Page_Catalog extends PagesBase{
 	    }      
 	}  
 	
-	// Если количество товаров из апи presult < 40 0000, выводить ошибку
-	public void checkPresult() {		
-		try {
-			if (presult < 40000) { throw new NullPointerException("Общее кол-во товаров на сайте " + presult + " < 40 000");} 
-		}
-	    catch(NullPointerException e) {     
-	    	 throw e;     
-	    }      
-	}  
+	@FindBy(xpath = "//h1") 
+	private WebElement header; // заголовок на страницах
+	
+	//Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
+	// проход по каждому подкаталогу catalogа и формирование массива subcategories
+	public void AllSubcategories(List<String> list) {
+		/*List<WebElement> itemsHtef = driver.findElements(By.xpath("//div[@class='subcategories']/div[@class='list']/a"));
+		for(WebElement hrefItems: itemsHtef)
+		{	
+			String hrefstr = hrefItems.getAttribute("href");
+			subcategories.add(hrefstr);
+			Log.info("***QA: Массив subcategories" + hrefstr);
+		}*/
+		List<WebElement> itemsHtef = driver.findElements(By.xpath("//div[@class='subcategories']/div[@class='list']/a"));
+		for (int i =1; i<itemsHtef.size()+1; i++) {
+			WebElement we = driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]"));
+			
+			Log.info("массивчик " + we.getAttribute("href"));
+			we.click();
+			Log.info("title " + header.getText());
+			summAllProducts(list);
+			
+			driver.navigate().back();
+			/*	driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]")).click();
+				Log.info(" " + driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]")).getText());
+				summAllProducts(list);
+				driver.navigate().back();*/
+			    
+			  }
+		
+	}
+
 	
 	
 	

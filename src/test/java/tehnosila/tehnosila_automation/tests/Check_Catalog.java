@@ -14,11 +14,16 @@ import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Catalog;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.testng.annotations.Test;
 
 // Тест изменения количества товаров в корзине, удаление товара из корзины
 public class Check_Catalog extends TestBase{
-		
+	public List<String> numbersSubcategories = new ArrayList<>(); // массив кол-ва товаров по категориям
+	public List<String> numbersSubSubcategories = new ArrayList<>(); // массив кол-ва товаров по подкатегориям
 	@Test
 	public void loginTest() throws Exception{
 		app.getNavigationHelper().getURL(NavigationBase.papicatalog);
@@ -28,13 +33,8 @@ public class Check_Catalog extends TestBase{
 		app.getNavigationHelper().refreshPage();
 		pagetehnosila.getPageCatalog();
 		app.getNavigationHelper().refreshPage();
-	//	pagecatalog.AllSubcategories();
-		pagecatalog.summAllProducts();
+		pagecatalog.summAllProducts(numbersSubcategories);
 		pagecatalog.checkPtotatlnumber();
-	//	pagecatalog.checkPresult();
-		
-		
-	//	pagecatalog.assertCount();
-	//	pagecatalog.AllSubcategories();
+		pagecatalog.AllSubcategories(numbersSubSubcategories);
 	}
 }
