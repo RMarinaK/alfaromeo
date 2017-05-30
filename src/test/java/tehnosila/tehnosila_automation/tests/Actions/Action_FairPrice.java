@@ -68,10 +68,13 @@ public class Action_FairPrice extends TestBase{
 		commonmetods.scrolling();
 		app.getNavigationHelper().refreshPage();
 		pageaction.clickActionCatalogItem();
+		app.getNavigationHelper().refreshPage();
 		commonmetods.getHTTPResponseCode();
-		pageaction.clickCatalogItemInCategory();
+		pagetehnosila.clickTV();
+		app.getNavigationHelper().refreshPage();
 		commonmetods.getHTTPResponseCode();
 		pagecatalog.clickOpenSelfDeliveryDescription();
+		app.getNavigationHelper().refreshPage();
 		commonmetods.getHTTPResponseCode();
 		pageproduct.clickButtonBuyCheaper();
 		pageaction.getСheaperPrice();
