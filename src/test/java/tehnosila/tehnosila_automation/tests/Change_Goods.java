@@ -23,7 +23,9 @@ public class Change_Goods extends TestBase{
 		Page_CatalogTv_i_videoTelevizoryTelevizoryID pagecatalogtvivideotelevizorytelevizoryid = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizoryID.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		
+
 		pagetehnosila.clickTVVA();
+		app.getNavigationHelper().refreshPage();
 		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
 		pagetehnosila.clickTV();
 		app.getNavigationHelper().refreshPage();

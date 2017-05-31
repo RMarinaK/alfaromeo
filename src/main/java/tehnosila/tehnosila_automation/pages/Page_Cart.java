@@ -88,7 +88,14 @@ public class Page_Cart extends PagesBase{
 	private WebElement servicecheckbox; // Чекбокс услуги
 	
 	@FindBy(xpath="//a[@class='open-services-list']")
-	private WebElement serviceprice; // Цена выбранных услуг
+	private WebElement servicepriceel; // Цена выбранных услуг
+	
+	private static String iprice;
+	private static String siprice;
+	private static String ctprice;
+	private static int serviceprice;
+	private static int serviceplusitemprice;
+	
 			
 	protected boolean isNecessaryToChangeParam(String param){
 		if(param.equals(" ")||param.equals("")){
@@ -240,16 +247,16 @@ public class Page_Cart extends PagesBase{
 	public void newGetItemPrice() {
 		if (app.getNavigationHelper().waitVisible(newitemprice,5)); {
 			Pattern pattern = Pattern.compile("\\d+");
-			String iprice = newitemprice.getText();
-			Matcher matcher = pattern.matcher(iprice);
+			String ipriceel = newitemprice.getText();
+			Matcher matcher = pattern.matcher(ipriceel);
 			int start = 0;
 			StringBuilder builderitemprice = new StringBuilder();
 			while (matcher.find(start)) {
-				String substringiprice = iprice.substring(matcher.start(), matcher.end());
+				String substringiprice = ipriceel.substring(matcher.start(), matcher.end());
 				start = matcher.end();
-				NavigationBase.iprice = builderitemprice.append(substringiprice).toString();
-				Log.info("***QA: iprice "+ NavigationBase.iprice);
+				iprice = builderitemprice.append(substringiprice).toString();
 			}
+			Log.info("***QA: Новая цена первого товара "+ iprice);
 		}
 	}
 	
@@ -264,9 +271,9 @@ public class Page_Cart extends PagesBase{
 			while (matcher.find(start)) {
 				String substringiprice = viprice.substring(matcher.start(), matcher.end());
 				start = matcher.end();
-				NavigationBase.iprice = builderitemprice.append(substringiprice).toString();
-				Log.info("***QA: iprice "+ NavigationBase.iprice);
+				iprice = builderitemprice.append(substringiprice).toString();
 			}
+			Log.info("***QA: Цена первого товара "+ iprice);
 		}
 	}
 	
@@ -290,9 +297,9 @@ public class Page_Cart extends PagesBase{
 			while (matcher.find(start)) {
 				String substringsniprice = sniprice.substring(matcher.start(), matcher.end());
 				start = matcher.end();
-				NavigationBase.siprice = buildersnitemprice.append(substringsniprice).toString();
-				Log.info("***QA: siprice "+ NavigationBase.siprice);
+				siprice = buildersnitemprice.append(substringsniprice).toString();
 			}
+			Log.info("***QA: Новая цена второго товара  "+ siprice);
 		}
 	}
 	
@@ -301,15 +308,15 @@ public class Page_Cart extends PagesBase{
 		if (app.getNavigationHelper().waitVisible(seconditemprice,5));
 		Log.info("***QA: старая цена есть ");{
 			Pattern pattern = Pattern.compile("\\d+");
-			String siprice = seconditemprice.getText();
-			Matcher matcher = pattern.matcher(siprice);
+			String sipriceel = seconditemprice.getText();
+			Matcher matcher = pattern.matcher(sipriceel);
 			int start = 0;
 			StringBuilder buildersitemprice = new StringBuilder();
 			while (matcher.find(start)) {
-				String substringsiprice = siprice.substring(matcher.start(), matcher.end());
+				String substringsiprice = sipriceel.substring(matcher.start(), matcher.end());
 				start = matcher.end();
-				NavigationBase.siprice = buildersitemprice.append(substringsiprice).toString();
-				Log.info("***QA: siprice "+ NavigationBase.siprice);
+				siprice = buildersitemprice.append(substringsiprice).toString();
+				Log.info("***QA: Цена второго товара "+ siprice);
 			}
 		}
 	}
@@ -326,23 +333,23 @@ public class Page_Cart extends PagesBase{
 	// Стоимость корзины
 	public void getCartPrice() {
 		Pattern patterns = Pattern.compile("\\d+");
-		String ctprice = carttotalprice.getText();
-		Matcher matcher = patterns.matcher(ctprice);
+		String ctpriceel = carttotalprice.getText();
+		Matcher matcher = patterns.matcher(ctpriceel);
 		int start = 0;
 		StringBuilder buildersitemprice = new StringBuilder();
 		while (matcher.find(start)) {
-			String substringctprice = ctprice.substring(matcher.start(), matcher.end());
+			String substringctprice = ctpriceel.substring(matcher.start(), matcher.end());
 			start = matcher.end();
-			NavigationBase.ctprice = buildersitemprice.append(substringctprice).toString();
-			Log.info("***QA: ctprice "+ NavigationBase.ctprice);
+			ctprice = buildersitemprice.append(substringctprice).toString();
 		}
+		Log.info("***QA: Стоимость корзины "+ ctprice);
 	}
 		
 	// првоерка цены корзины с суммой цен товаров
 	public void assertCart() {
-		int tp = Integer.parseInt(NavigationBase.ctprice);
-		int fi = Integer.parseInt(NavigationBase.iprice);
-		int si = Integer.parseInt(NavigationBase.siprice);
+		int tp = Integer.parseInt(ctprice);
+		int fi = Integer.parseInt(iprice);
+		int si = Integer.parseInt(siprice);
 		int summitem = fi + si;
 		if (summitem == tp) Log.info("Стоимость корзины равна сумме стоимости товаров " + summitem); else Log.info("Стоимость корзины не равна сумме стоимости товаров");
 	}
@@ -369,34 +376,34 @@ public class Page_Cart extends PagesBase{
 	
 	// Вытягивание цены услуги
 	public void getServicePrice() {
-			Pattern pattern = Pattern.compile("\\d+");
-			String serprice = serviceprice.getText();
-			serprice = serprice.replaceAll(" ", "");
-			Matcher matcher = pattern.matcher(serprice);
-			int start = 45;
-			while (matcher.find(start)) {
-			       String value = serprice.substring(matcher.start(), matcher.end());
-			       int result = Integer.parseInt(value);
-			       NavigationBase.serviceprice = result;
-			       Log.info("Цена услуги " + NavigationBase.serviceprice);
-			       start = matcher.end();
+		Pattern pattern = Pattern.compile("\\d+");
+		String serprice = servicepriceel.getText();
+		serprice = serprice.replaceAll(" ", "");
+		Matcher matcher = pattern.matcher(serprice);
+		int start = 45;
+		while (matcher.find(start)) {
+		       String value = serprice.substring(matcher.start(), matcher.end());
+		       int result = Integer.parseInt(value);
+		       serviceprice = result;
+		       start = matcher.end();
 		}
+		Log.info("Цена услуги " + serviceprice);
 	}
 	
 	// Расчет цены товара + услуги
 	public void getItemPlusServicePrice() {
-		int item = Integer.parseInt(NavigationBase.iprice);
-		int service = NavigationBase.serviceprice;
+		int item = Integer.parseInt(iprice);
+		int service = serviceprice;
 		int sum = item + service;
-		NavigationBase.serviceplusitemprice = sum;
-		 Log.info("Цена товара + услуги " + NavigationBase.serviceplusitemprice);
+		serviceplusitemprice = sum;
+		Log.info("Цена товара + услуги " + serviceplusitemprice);
 	}
 	
 	// првоерка цены корзины с суммой цены товара + услуги
 	public void assertCartItemPlusService() {
-		int spi = NavigationBase.serviceprice;
-		int cp = Integer.parseInt(NavigationBase.ctprice);
+		int spi = serviceprice;
+		int cp = Integer.parseInt(ctprice);
 		int sum = spi + cp;
-		if (sum == NavigationBase.serviceplusitemprice) Log.info("Стоимость корзины равна сумме стоимости товара + услуги " + sum); else Log.info("Стоимость корзины не равна сумме стоимости товара + услуги");
+		if (sum == serviceplusitemprice) Log.info("Стоимость корзины равна сумме стоимости товара + услуги " + sum); else Log.info("Стоимость корзины не равна сумме стоимости товара + услуги");
 	}
 }

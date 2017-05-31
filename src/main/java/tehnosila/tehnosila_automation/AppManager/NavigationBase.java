@@ -52,12 +52,5 @@ public class NavigationBase {
 	public static int pcode;
 	public static String papicatalog = "http://hybris.tehnosila.ru/api/v2/ts/1/catalogs/parsePath?path=/catalog"; 
 			// "http://hybris.tehnosila.ru/api/v2/ts/1/catalogs/technosilaProductCatalog/Online";
-	public static String iprice;
-	public static String siprice;
-	public static String ctprice;
-	public static int serviceprice;
-	public static int serviceplusitemprice;
-	
-	
-	
+
 }
