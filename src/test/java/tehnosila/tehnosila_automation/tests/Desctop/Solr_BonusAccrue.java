@@ -46,10 +46,10 @@ public class Solr_BonusAccrue extends TestBase{
 	
 		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_1 +
 				NavigationBase.psolrand + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
-				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
+				+ NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		commonmetods.getHTTPResponseCode();
-		app.getGetDataHelper().getTotalNumber();
+		app.getGetDataHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
 		commonmetods.getHTTPResponseCode();
