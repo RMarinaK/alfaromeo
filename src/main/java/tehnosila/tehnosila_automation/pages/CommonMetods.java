@@ -165,4 +165,37 @@ public class CommonMetods extends Page_AreaMenu {
 	    Log.info("***QA: HTTP response code " + code);
 	}
 
+	
+	// 
+	public void getCookieSession() {
+		 Log.info("***QA: session " + driver.manage().getCookieNamed("session"));
+		
+	}	
+	// ----------------------------------------------------------------------------------------------------------------------------
+	
+	//Проверка количества начисляемых бонусов   @author EDanilova	
+	public void bonusAmountCheck(int i, int j) throws Exception{
+		try {
+			Assert.assertEquals(i, j); // проверка отображения Header
+			Log.info("***QA: Количество начисляемых бонусов совпадает");
+		}
+		catch(Exception e) {      
+			Log.info("***QA: Ошибка! Количество начисляемых бонусов НЕ совпадает");     
+			ScreenShot.takeScreenShot();       
+		}  				
+	}
+	
+	//Проверка номера привязанной бонусной карты   @author EDanilova				
+	public void bonusCardCheck(String i, String j) throws Exception{
+		try {
+			Assert.assertEquals(i, j); // проверка отображения Header
+			Log.info("***QA: Номера бонусных карт совпадают");
+		}
+		catch(Exception e) {      
+			Log.info("***QA: Ошибка! Номера бонусных карт НЕ совпадают");     
+			ScreenShot.takeScreenShot();       
+		}  				
+	}
+	
+
 }

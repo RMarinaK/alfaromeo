@@ -37,6 +37,9 @@ public class Page_Tehnosila extends PagesBase {
 //	@FindBy(xpath = "//li[@data-submenu-id='category-198']/a[contains(text(),'LED телевизоры')]")
 	@FindBy(xpath = "//a[@class='item first-in-row']")
 	private WebElement ledtv; // LED телевизоры
+	
+		@FindBy(xpath = "//div[@class='list']/a")
+	private WebElement firstitem; // первая категория
 
 	@FindBy(xpath = "//a[contains(text(),'О компании Техносила')]")
 	private WebElement aboutTC; // О компании Техносила
@@ -150,6 +153,12 @@ public class Page_Tehnosila extends PagesBase {
 		Log.info("***QA: "+getBaseURL());
 	}
 	
+	// ожидание пока страница прогрузится и проверка соответствия номер заказа
+	public void getPageCatalog() {
+		driver.navigate().to(getBaseURL()+"catalog");
+		Log.info("***QA: "+ driver.getCurrentUrl());
+	}
+	
 	// ожидание пока главная страница прогрузится 
 	public void getPageBase() {
 		driver.navigate().to(getBaseURL());
@@ -184,10 +193,10 @@ public class Page_Tehnosila extends PagesBase {
          } 
 	}	
 	
-	// жмаканье на кнопку "Телевизоры LED"
+	// жмаканье на первую категорию
 	public void clickTV() throws Exception {
 		try {
-			ledtv.click();
+			firstitem.click();
 			Log.info("Телевизоры");
 		} catch (Exception e) {
 			Log.info("Element Not Found");
@@ -209,7 +218,7 @@ public class Page_Tehnosila extends PagesBase {
 					.release(tvaudiovideo)
 					.build();
 			dragAndDrop.perform();*/
-		
+			tv.click();
 			Log.info("tvaudiovideo");
 		} catch (Exception e) {
 			Log.info("Element Not Found");

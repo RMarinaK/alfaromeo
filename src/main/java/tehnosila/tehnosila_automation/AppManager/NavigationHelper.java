@@ -242,33 +242,10 @@ public class NavigationHelper extends NavigationBase{
 		driver.navigate().to(URL);
 	}
 	
-	// вытягивание текста из тега pre
-	public String getPre(){ 
-		return driver.findElement(By.xpath("//pre")).getText();
-	}	
-	
-	// вытягивание артикула товара из solr
-	public void getCodeString() {
-		String stringpre = getPre();
-	//	Log.info("***QA: Message "+ stringpre);
-		int start = stringpre.indexOf("\"code_string\":\"");
-		NavigationBase.psolrarticle = "";
-		if (start > 0) {
-			String productpart = stringpre.substring(start + 15);
-			NavigationBase.psolrarticle = productpart.substring(0, productpart.indexOf("\"}"));
-		}
-		Log.info("***QA: Message "+ NavigationBase.psolrarticle);
+	// читска кук
+	public void delCookies(){ 
+		driver.manage().deleteAllCookies();
 	}
 	
-	// вытягивание количество товаров из апи
-	public void getTotalNumber() {
-		String stringpre = getPre();
-		int start = stringpre.indexOf("totalResults\" : ");
-		ptotatlnumber = "";
-		if (start > 0) {
-			String productpart = stringpre.substring(start + 16);
-			ptotatlnumber = productpart.substring(0, productpart.indexOf("}")-3);
-		}
-		Log.info("***QA: ptotatlnumber '"+ ptotatlnumber +"'");
-	}	
+	
 }
