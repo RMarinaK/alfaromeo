@@ -35,7 +35,7 @@ public class Check_Catalog extends TestBase{
 		pagetehnosila.getPageCatalog();
 		app.getNavigationHelper().refreshPage();
 		pagecatalog.summAllProducts(numbersSubcategories);
-	//	pagecatalog.checkPtotatlnumber();
+		pagecatalog.checkPtotatlnumber();
 		pagecatalog.AllSubcategories(numbersSubSubcategories);
 	}
 }
