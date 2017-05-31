@@ -71,8 +71,10 @@ public class Smoke_Terminal extends TestBase{
 		termpageorder.setOrderFromOrderContactFio(fio);
 		termpageorder.setOrderFromOrderContactPhone(phone);
 		termpageorder.setOrderFromOrderContactEmail(email);
-		//termpageorder.clickButtonSubmitOrder();
-		//termpageorder.closePrintWindow();
+		termpageorder.clickCheckBox();
+		termpageorder.clickButtonSubmitPersonal();
+		termpageorder.clickButtonSubmitOrder();
+		termpageorder.closePrintWindow();
 
 	}
 }
