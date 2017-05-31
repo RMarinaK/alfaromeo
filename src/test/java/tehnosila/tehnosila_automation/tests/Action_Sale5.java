@@ -47,7 +47,7 @@ public class Action_Sale5 extends TestBase{
 		Log.info("***QA: Акция Скидка " + actionnameplates);
 		
 		app.getNavigationHelper().getURL(NavigationBase.papiparserpath + NavigationBase.pactionsale5url + NavigationBase.papiend);
-		app.getNavigationHelper().getTotalNumber();
+		app.getGetDataHelper().getTotalNumber();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPageBase();
 		Page_Actions pageactions = MyPageFactory.getPage(Page_Actions.class);
@@ -93,8 +93,12 @@ public class Action_Sale5 extends TestBase{
 		pageorder.findDiscountSize();
 		pageorder.clickROnlineCardOnDelivery(paymentName);
 		pageorder.assertDiscount(salesize);
+		commonmetods.getCookieSession();
 		pageorder.clickButtonSubmitOrder();
+		commonmetods.getCookieSession();
 		commonmetods.getHTTPResponseCode();
+		app.getNavigationHelper().refreshPage();
+		commonmetods.getCookieSession();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();

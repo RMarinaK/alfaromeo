@@ -319,7 +319,7 @@
         <user.password></user.password>
         <grid2.hub>http://localhost:4445/wd/hub</grid2.hub>
         <site.url>tehnosila.ru/</site.url>
-        <cookies>src/main/resources/Site.data</cookies>
+        <cookies>src/main/resources/Null.data</cookies>
         <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>

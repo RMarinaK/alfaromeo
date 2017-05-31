@@ -48,7 +48,7 @@ public class Solr_CourierCash extends TestBase{
 				+ NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		commonmetods.getHTTPResponseCode();
-		app.getNavigationHelper().getCodeString();
+		app.getGetDataHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
 		commonmetods.getHTTPResponseCode();
@@ -59,6 +59,7 @@ public class Solr_CourierCash extends TestBase{
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		
 		pageproduct.logItemprop();
+		app.getNavigationHelper().refreshPage();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
 		commonmetods.getHTTPResponseCode();
@@ -73,9 +74,12 @@ public class Solr_CourierCash extends TestBase{
 		pageorder.setOrderFormOrderAddressStreet(street);
 		pageorder.setOrderFormOrderAddressHouse(house);
 		pageorder.clickRCash(paymentName);
+		commonmetods.getCookieSession();
 		pageorder.clickButtonSubmitOrder();
+		commonmetods.getCookieSession();
 		commonmetods.getHTTPResponseCode();
 		app.getNavigationHelper().refreshPage();
+		commonmetods.getCookieSession();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();

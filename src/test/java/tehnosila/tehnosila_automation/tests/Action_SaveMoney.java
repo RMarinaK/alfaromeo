@@ -47,7 +47,7 @@ public class Action_SaveMoney extends TestBase{
 		Log.info("***QA: Акция " + discount_world);
 		
 		app.getNavigationHelper().getURL(NavigationBase.papiparserpath + NavigationBase.pactiondiscount_worldurl + NavigationBase.papiend);
-		app.getNavigationHelper().getTotalNumber();
+		app.getGetDataHelper().getTotalNumber();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPageBase();
 		Page_Actions pageactions = MyPageFactory.getPage(Page_Actions.class);
@@ -97,8 +97,12 @@ public class Action_SaveMoney extends TestBase{
 		pageorder.assertDiscount(NavigationBase.pcode);	
 		pageorder.clickFirstPoint();
 	//	pageorder.clickRCash(paymentName);
+		commonmetods.getCookieSession();
 		pageorder.clickButtonSubmitOrder();
+		commonmetods.getCookieSession();
 		commonmetods.getHTTPResponseCode();
+		app.getNavigationHelper().refreshPage();
+		commonmetods.getCookieSession();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();

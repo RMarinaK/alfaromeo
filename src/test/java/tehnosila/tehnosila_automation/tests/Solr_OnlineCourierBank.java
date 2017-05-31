@@ -50,7 +50,7 @@ public class Solr_OnlineCourierBank extends TestBase{
 				NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand + NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		commonmetods.getHTTPResponseCode();
-		app.getNavigationHelper().getCodeString();
+		app.getGetDataHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
 		commonmetods.getHTTPResponseCode();
@@ -61,6 +61,7 @@ public class Solr_OnlineCourierBank extends TestBase{
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		
 		pageproduct.logItemprop();
+		app.getNavigationHelper().refreshPage();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
 		commonmetods.getHTTPResponseCode();
@@ -85,9 +86,12 @@ public class Solr_OnlineCourierBank extends TestBase{
 		pageorder.setOrderFormOrderContactCompanyAccountCorr(accountCorr);
 		pageorder.setOrderFormOrderContactCompanyBankName(bankName);
 		pageorder.setOrderFormOrderContactCompanyCity(city);
+		commonmetods.getCookieSession();
 		pageorder.clickButtonSubmitOrder();
+		commonmetods.getCookieSession();
 		commonmetods.getHTTPResponseCode();
 		app.getNavigationHelper().refreshPage();
+		commonmetods.getCookieSession();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
