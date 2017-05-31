@@ -23,8 +23,11 @@ public class Mobile_Page_Order extends PagesBase{
 	@FindBy(id="OrderForm_orderContact_email")
 	private WebElement orderfromordercontactemail; // Поле "Электронная почта"
 		
-	@FindBy(xpath="//div[@id='list_tab']/div/div/div")
-	private WebElement radiobuttondelivery; // Первый пункт выдачи
+	@FindBy(xpath="//*[@id='submitOrderForm']/div[2]/button")
+	private WebElement radiobuttondelivery; // Пункты вывоза
+	
+	@FindBy(xpath="//div[1]/div[2]/div[6]/div[1]/a[@class='point-chooser-order']")
+	private WebElement clickfirstdeliverybutton;
 	
 	@FindBy(xpath="//button[@class='button-control buy-button buy-button--mod submitOrder']")
 	private WebElement buttonsubmitorder; // Кнопка "Завершить оформление"
@@ -72,13 +75,18 @@ public class Mobile_Page_Order extends PagesBase{
 		}
 	}
 	
-	// Выбор первого пункта вывоза
+	// Пункты вывоза
 	public void clickRadioButtonDelivery() {
 		radiobuttondelivery.click(); 
-	}	
+	}
 	
 	// жмаканье на "Завершить оформление"
 	public void clickButtonSubmitOrder() {
 		buttonsubmitorder.click(); 
-	}	
+	}
+	
+	// Выбор первого пункта самовывоза
+	public void clickFirstDeliveryButton() {
+		clickfirstdeliverybutton.click();
+	}
 }
