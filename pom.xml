@@ -259,6 +259,7 @@
         <user.password></user.password>
         <grid2.hub></grid2.hub>
         <site.url>${project.test.baseurl}</site.url>
+        <cookies>src/main/resources/${Cookies}.data</cookies>
         <browser.name>chromemobile</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
@@ -285,6 +286,7 @@
         <user.password></user.password>
         <grid2.hub></grid2.hub>
         <site.url>${project.test.baseurl}</site.url>
+        <cookies>src/main/resources/${Cookies}.data</cookies>
         <browser.name>chrometerminal</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
