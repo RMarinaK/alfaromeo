@@ -75,6 +75,7 @@ public class BonusAccrue extends TestBase{
 		pageorder.clickButtonSetCard();
 		pageorder.setOrderFromOrderContactCard(cardNumber);
 		pageorder.clickButtonApplyCard();	
+		pageorder.waitForInfoText();
 		pageorder.getGiveCardNumber();
 		commonmetods.bonusCardCheck(NavigationBase.bonusCard, cardNumber);
 		pageorder.bonusSteal(1);

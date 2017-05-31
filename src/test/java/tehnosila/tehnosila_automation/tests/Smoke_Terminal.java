@@ -66,7 +66,7 @@ public class Smoke_Terminal extends TestBase{
 		termpagecatalogtvivideotelevizorytelevizoryid.clickButtonToCart();
 
 		termpagecart.clickButtonOrder();
-		termpageorder.clickButtonSubmitOrder();
+	//	termpageorder.clickButtonSubmitOrder();
 	//	termpageorder.closePrintWindow();
 
 	}
