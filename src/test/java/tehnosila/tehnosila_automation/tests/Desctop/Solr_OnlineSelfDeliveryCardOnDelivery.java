@@ -82,6 +82,7 @@ public class Solr_OnlineSelfDeliveryCardOnDelivery extends TestBase{
 		commonmetods.getHTTPResponseCode();
 		sysgetorders.assertPaymentName(paymentName);
 		sysgetorders.assertDeliveryName(deliveryName);
+		app.getNavigationHelper().delCookies();
 	}
 	
 }
