@@ -1,0 +1,5349 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Data Date="20170531140933">
+	<Regions>
+		<Region>
+			<ID>234</ID>
+			<SapID>6550</SapID>
+			<Name>Города Али Экспресс PCL</Name>
+			<Kladr/>
+			<Prefix/>
+			<Domain/>
+			<Priority/>
+			<Invisible>Yes</Invisible>
+		</Region>
+		<Region>
+			<ID>235</ID>
+			<SapID>6550</SapID>
+			<Name>Города Али Экспресс CSM</Name>
+			<Kladr/>
+			<Prefix/>
+			<Domain/>
+			<Priority/>
+			<Invisible>Yes</Invisible>
+		</Region>
+		<Region>
+			<ID>236</ID>
+			<SapID>6581</SapID>
+			<Name>Архангельск</Name>
+			<Kladr>2900000000000</Kladr>
+			<Prefix>ARH</Prefix>
+			<Domain>arhangelsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>237</ID>
+			<SapID>6580</SapID>
+			<Name>Брянск</Name>
+			<Kladr>3200000000000</Kladr>
+			<Prefix>BRN</Prefix>
+			<Domain>brjansk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>238</ID>
+			<SapID>6726</SapID>
+			<Name>Улан-Удэ</Name>
+			<Kladr>0300000000000</Kladr>
+			<Prefix>ULAN</Prefix>
+			<Domain>ulan</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>239</ID>
+			<SapID>6724</SapID>
+			<Name>Чита</Name>
+			<Kladr>7500000000000</Kladr>
+			<Prefix>CHIT</Prefix>
+			<Domain>chita</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>240</ID>
+			<SapID>6725</SapID>
+			<Name>Якутск</Name>
+			<Kladr>1400000000000</Kladr>
+			<Prefix>JAK</Prefix>
+			<Domain>jakutsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>1</ID>
+			<SapID>6550</SapID>
+			<Name>Москва</Name>
+			<Kladr>7700000000000</Kladr>
+			<Prefix>MOS</Prefix>
+			<Domain>www</Domain>
+			<Priority>100</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>2</ID>
+			<SapID>6595</SapID>
+			<Name>Санкт-Петербург</Name>
+			<Kladr>7800000000000</Kladr>
+			<Prefix>SPB</Prefix>
+			<Domain>sankt-peterburg</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>23</ID>
+			<SapID>6196</SapID>
+			<Name>Воронеж</Name>
+			<Kladr>3600000000000</Kladr>
+			<Prefix>VRJ</Prefix>
+			<Domain>voronezh</Domain>
+			<Priority>98</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>7</ID>
+			<SapID>6335</SapID>
+			<Name>Екатеринбург</Name>
+			<Kladr>6600000000000</Kladr>
+			<Prefix>EKT</Prefix>
+			<Domain>ekaterinburg</Domain>
+			<Priority>97</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>18</ID>
+			<SapID>6642</SapID>
+			<Name>Ижевск</Name>
+			<Kladr>1800000000000</Kladr>
+			<Prefix>IZV</Prefix>
+			<Domain>izhevsk</Domain>
+			<Priority>96</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>27</ID>
+			<SapID>6192</SapID>
+			<Name>Казань</Name>
+			<Kladr>1600000000000</Kladr>
+			<Prefix>KAZ</Prefix>
+			<Domain>kazan</Domain>
+			<Priority>95</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>13</ID>
+			<SapID>6194</SapID>
+			<Name>Краснодар</Name>
+			<Kladr>2300000000000</Kladr>
+			<Prefix>KRD</Prefix>
+			<Domain>krasnodar</Domain>
+			<Priority>93</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>19</ID>
+			<SapID>6336</SapID>
+			<Name>Новосибирск</Name>
+			<Kladr>5400000000000</Kladr>
+			<Prefix>NVSB</Prefix>
+			<Domain>novosibirsk</Domain>
+			<Priority>92</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>26</ID>
+			<SapID>6256</SapID>
+			<Name>Пенза</Name>
+			<Kladr>5800000000000</Kladr>
+			<Prefix>PNZ</Prefix>
+			<Domain>penza</Domain>
+			<Priority>91</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>5</ID>
+			<SapID>6334</SapID>
+			<Name>Пермь</Name>
+			<Kladr>5900000000000</Kladr>
+			<Prefix>PRM</Prefix>
+			<Domain>perm</Domain>
+			<Priority>90</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>6</ID>
+			<SapID>6333</SapID>
+			<Name>Ростов-на-Дону</Name>
+			<Kladr>6100000000000</Kladr>
+			<Prefix>RND</Prefix>
+			<Domain>rostov-na-donu</Domain>
+			<Priority>89</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>3</ID>
+			<SapID>6330</SapID>
+			<Name>Самара</Name>
+			<Kladr>6300000000000</Kladr>
+			<Prefix>SAM</Prefix>
+			<Domain>samara</Domain>
+			<Priority>87</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>15</ID>
+			<SapID>6195</SapID>
+			<Name>Томск</Name>
+			<Kladr>7000000000000</Kladr>
+			<Prefix>TMK</Prefix>
+			<Domain>tomsk</Domain>
+			<Priority>86</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>20</ID>
+			<SapID>6253</SapID>
+			<Name>Тюмень</Name>
+			<Kladr>7200000000000</Kladr>
+			<Prefix>TUM</Prefix>
+			<Domain>tyumen</Domain>
+			<Priority>85</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>25</ID>
+			<SapID>6193</SapID>
+			<Name>Уфа</Name>
+			<Kladr>0200000000000</Kladr>
+			<Prefix>UFA</Prefix>
+			<Domain>ufa1</Domain>
+			<Priority>84</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>60</ID>
+			<SapID>6254</SapID>
+			<Name>Челябинск</Name>
+			<Kladr>7400000000000</Kladr>
+			<Prefix>CHL</Prefix>
+			<Domain>chelyabinsk</Domain>
+			<Priority>83</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>24</ID>
+			<SapID>6258</SapID>
+			<Name>Ярославль</Name>
+			<Kladr>7600000000000</Kladr>
+			<Prefix>YRL</Prefix>
+			<Domain>yaroslavl</Domain>
+			<Priority>82</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>32</ID>
+			<SapID>6613</SapID>
+			<Name>Набережные Челны</Name>
+			<Kladr>1600000200000</Kladr>
+			<Prefix>NCHL</Prefix>
+			<Domain>chelny</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>10</ID>
+			<SapID>6550</SapID>
+			<Name>Мытищи</Name>
+			<Kladr>5001900100000</Kladr>
+			<Prefix>MYT</Prefix>
+			<Domain>mytischi</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>12</ID>
+			<SapID>6606</SapID>
+			<Name>Иваново</Name>
+			<Kladr>3700000000000</Kladr>
+			<Prefix>IVA</Prefix>
+			<Domain>ivanovo</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>58</ID>
+			<SapID>6603</SapID>
+			<Name>Владимир</Name>
+			<Kladr>3300000000000</Kladr>
+			<Prefix>VLA</Prefix>
+			<Domain>vladimir</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>76</ID>
+			<SapID>6550</SapID>
+			<Name>Сергиев Посад</Name>
+			<Kladr>5003000500000</Kladr>
+			<Prefix>SRGP</Prefix>
+			<Domain>sergiev-posad</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>74</ID>
+			<SapID>6550</SapID>
+			<Name>Подольск</Name>
+			<Kladr>5000002400000</Kladr>
+			<Prefix>PDL</Prefix>
+			<Domain>podolsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>29</ID>
+			<SapID>6625</SapID>
+			<Name>Рязань</Name>
+			<Kladr>6200000000000</Kladr>
+			<Prefix>RJZN</Prefix>
+			<Domain>ryazan</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>175</ID>
+			<SapID>6550</SapID>
+			<Name>Серпухов</Name>
+			<Kladr>5000002800000</Kladr>
+			<Prefix>SERP</Prefix>
+			<Domain>serpuhov</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>169</ID>
+			<SapID>6599</SapID>
+			<Name>Оренбург</Name>
+			<Kladr>5600000000000</Kladr>
+			<Prefix>ORG</Prefix>
+			<Domain>orenburg</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>37</ID>
+			<SapID>6622</SapID>
+			<Name>Омск</Name>
+			<Kladr>5500000000000</Kladr>
+			<Prefix>OMSK</Prefix>
+			<Domain>omsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>9</ID>
+			<SapID>6634</SapID>
+			<Name>Тольятти</Name>
+			<Kladr>6300000700000</Kladr>
+			<Prefix>TOL</Prefix>
+			<Domain>tolyatti</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>46</ID>
+			<SapID>6605</SapID>
+			<Name>Горно-Алтайск</Name>
+			<Kladr>0400000000000</Kladr>
+			<Prefix>GRN</Prefix>
+			<Domain>gorno-altajsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>33</ID>
+			<SapID>6636</SapID>
+			<Name>Ульяновск</Name>
+			<Kladr>7300000000000</Kladr>
+			<Prefix>ULN</Prefix>
+			<Domain>ulyanovsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>14</ID>
+			<SapID>6640</SapID>
+			<Name>Волгоград</Name>
+			<Kladr>3400000000000</Kladr>
+			<Prefix>V34</Prefix>
+			<Domain>volgograd</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>35</ID>
+			<SapID>6601</SapID>
+			<Name>Белгород</Name>
+			<Kladr>3100000000000</Kladr>
+			<Prefix>BEL</Prefix>
+			<Domain>belgorod</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>16</ID>
+			<SapID>6609</SapID>
+			<Name>Курск</Name>
+			<Kladr>4600000000000</Kladr>
+			<Prefix>KUR</Prefix>
+			<Domain>kursk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>17</ID>
+			<SapID>6582</SapID>
+			<Name>Астрахань</Name>
+			<Kladr>3000000000000</Kladr>
+			<Prefix>AST</Prefix>
+			<Domain>astrahan</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>30</ID>
+			<SapID>6629</SapID>
+			<Name>Ставрополь</Name>
+			<Kladr>2600000000000</Kladr>
+			<Prefix>STAV</Prefix>
+			<Domain>stavropol</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>28</ID>
+			<SapID>6624</SapID>
+			<Name>Пятигорск</Name>
+			<Kladr>2600000700000</Kladr>
+			<Prefix>PYT</Prefix>
+			<Domain>pyatigorsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>22</ID>
+			<SapID>6631</SapID>
+			<Name>Тамбов</Name>
+			<Kladr>6800000000000</Kladr>
+			<Prefix>TMB</Prefix>
+			<Domain>tambov</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>34</ID>
+			<SapID>6611</SapID>
+			<Name>Липецк</Name>
+			<Kladr>4800000000000</Kladr>
+			<Prefix>LIP</Prefix>
+			<Domain>lipetsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>21</ID>
+			<SapID>6635</SapID>
+			<Name>Тула</Name>
+			<Kladr>7100000000000</Kladr>
+			<Prefix>TUL</Prefix>
+			<Domain>tula</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>31</ID>
+			<SapID>6638</SapID>
+			<Name>Калуга</Name>
+			<Kladr>4000000000000</Kladr>
+			<Prefix>KLG</Prefix>
+			<Domain>kaluga</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>57</ID>
+			<SapID>6628</SapID>
+			<Name>Смоленск</Name>
+			<Kladr>6700000000000</Kladr>
+			<Prefix>SML</Prefix>
+			<Domain>smolensk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>11</ID>
+			<SapID>6633</SapID>
+			<Name>Тверь</Name>
+			<Kladr>6900000000000</Kladr>
+			<Prefix>TVR</Prefix>
+			<Domain>tver</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>167</ID>
+			<SapID>6608</SapID>
+			<Name>Кострома</Name>
+			<Kladr>4400000000000</Kladr>
+			<Prefix>KST</Prefix>
+			<Domain>kostroma</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>53</ID>
+			<SapID>6621</SapID>
+			<Name>Ноябрьск</Name>
+			<Kladr>8900000000000</Kladr>
+			<Prefix>NOY</Prefix>
+			<Domain>noyabrsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>168</ID>
+			<SapID>6615</SapID>
+			<Name>Нижневартовск</Name>
+			<Kladr>8600001100000</Kladr>
+			<Prefix>NVAR</Prefix>
+			<Domain>nizhnevartovsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>79</ID>
+			<SapID>6616</SapID>
+			<Name>Магнитогорск</Name>
+			<Kladr>7400000900000</Kladr>
+			<Prefix>MAG</Prefix>
+			<Domain>magnitogorsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>72</ID>
+			<SapID>6604</SapID>
+			<Name>Воркута</Name>
+			<Kladr>1100000000000</Kladr>
+			<Prefix>VORK</Prefix>
+			<Domain>vorkuta</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>69</ID>
+			<SapID>6617</SapID>
+			<Name>Нижний Тагил</Name>
+			<Kladr>6600002300000</Kladr>
+			<Prefix>NTAG</Prefix>
+			<Domain>nizhniy-tagil</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>176</ID>
+			<SapID>6550</SapID>
+			<Name>Люберцы</Name>
+			<Kladr>5001700100000</Kladr>
+			<Prefix>LUB</Prefix>
+			<Domain>lyubertsy</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>177</ID>
+			<SapID>6645</SapID>
+			<Name>Барнаул</Name>
+			<Kladr>2200000000000</Kladr>
+			<Prefix>BARN</Prefix>
+			<Domain>barnaul</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>224</ID>
+			<SapID>6646</SapID>
+			<Name>Владивосток</Name>
+			<Kladr>2500000000000</Kladr>
+			<Prefix>VLK</Prefix>
+			<Domain>vladivostok</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>225</ID>
+			<SapID>6647</SapID>
+			<Name>Иркутск</Name>
+			<Kladr>3800000000000</Kladr>
+			<Prefix>IRK</Prefix>
+			<Domain>irkutsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>226</ID>
+			<SapID>6648</SapID>
+			<Name>Красноярск</Name>
+			<Kladr>2400000000000</Kladr>
+			<Prefix>KRK</Prefix>
+			<Domain>krasnojarsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>227</ID>
+			<SapID>6596</SapID>
+			<Name>Симферополь</Name>
+			<Kladr>9100000000000</Kladr>
+			<Prefix>SMF</Prefix>
+			<Domain>simferopol</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>228</ID>
+			<SapID>6597</SapID>
+			<Name>Сочи</Name>
+			<Kladr>2300000700000</Kladr>
+			<Prefix>SCH</Prefix>
+			<Domain>sochi</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>229</ID>
+			<SapID>6594</SapID>
+			<Name>Сургут</Name>
+			<Kladr>8600000000000</Kladr>
+			<Prefix>SUR</Prefix>
+			<Domain>surgut</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>230</ID>
+			<SapID>6592</SapID>
+			<Name>Хабаровск</Name>
+			<Kladr>2700000000000</Kladr>
+			<Prefix>HAB</Prefix>
+			<Domain>habarovsk</Domain>
+			<Priority>80</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>211</ID>
+			<SapID>6719</SapID>
+			<Name>Мурманск</Name>
+			<Kladr>5100000000000</Kladr>
+			<Prefix>MUR</Prefix>
+			<Domain>murmansk</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>213</ID>
+			<SapID>6718</SapID>
+			<Name>Великий Новгород</Name>
+			<Kladr>5300000000000</Kladr>
+			<Prefix>NOV</Prefix>
+			<Domain>novgorod</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>218</ID>
+			<SapID>6715</SapID>
+			<Name>Петрозаводск</Name>
+			<Kladr>1000000000000</Kladr>
+			<Prefix>PET</Prefix>
+			<Domain>petrozavodsk</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>219</ID>
+			<SapID>6722</SapID>
+			<Name>Псков</Name>
+			<Kladr>6000000000000</Kladr>
+			<Prefix>PSK</Prefix>
+			<Domain>pskov</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>178</ID>
+			<SapID>6595</SapID>
+			<Name>Колпино</Name>
+			<Kladr>7800000300000</Kladr>
+			<Prefix>KLP</Prefix>
+			<Domain>kolpino</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>179</ID>
+			<SapID>6595</SapID>
+			<Name>Пушкин</Name>
+			<Kladr>7800000900000</Kladr>
+			<Prefix>PSH</Prefix>
+			<Domain>pushkin</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>201</ID>
+			<SapID>6595</SapID>
+			<Name>Гатчина</Name>
+			<Kladr>4700700100000</Kladr>
+			<Prefix>GTC</Prefix>
+			<Domain>gatchina</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>202</ID>
+			<SapID>6595</SapID>
+			<Name>Всеволожск</Name>
+			<Kladr>4700500100000</Kladr>
+			<Prefix>VSEV</Prefix>
+			<Domain>vsev</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>203</ID>
+			<SapID>6717</SapID>
+			<Name>Выборг</Name>
+			<Kladr>4700600100000</Kladr>
+			<Prefix>VBG</Prefix>
+			<Domain>vyborg</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>204</ID>
+			<SapID>6721</SapID>
+			<Name>Кириши</Name>
+			<Kladr>4700900100000</Kladr>
+			<Prefix>KRS</Prefix>
+			<Domain>kirishi</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>205</ID>
+			<SapID>6714</SapID>
+			<Name>Тихвин</Name>
+			<Kladr>4701700100000</Kladr>
+			<Prefix>TIHV</Prefix>
+			<Domain>tihvin</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>80</ID>
+			<SapID>6637</SapID>
+			<Name>Чебоксары</Name>
+			<Kladr>2100000000000</Kladr>
+			<Prefix>CHB</Prefix>
+			<Domain>cheboksary</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>208</ID>
+			<SapID>6643</SapID>
+			<Name>Череповец</Name>
+			<Kladr>3500000200000</Kladr>
+			<Prefix>CH</Prefix>
+			<Domain>cherepovets</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>222</ID>
+			<SapID>6641</SapID>
+			<Name>Саратов</Name>
+			<Kladr>6400000000000</Kladr>
+			<Prefix>SAR</Prefix>
+			<Domain>saratov</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>223</ID>
+			<SapID>6639</SapID>
+			<Name>Нижний Новгород</Name>
+			<Kladr>5200000000000</Kladr>
+			<Prefix>NNOV</Prefix>
+			<Domain>nizhnij-novgorod</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>206</ID>
+			<SapID>6720</SapID>
+			<Name>Вологда</Name>
+			<Kladr>3500000000000</Kladr>
+			<Prefix>VLG</Prefix>
+			<Domain>vologda</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+		<Region>
+			<ID>207</ID>
+			<SapID>6595</SapID>
+			<Name>Кингисепп</Name>
+			<Kladr>4700800100000</Kladr>
+			<Prefix>KGS</Prefix>
+			<Domain>kingisepp</Domain>
+			<Priority>99</Priority>
+			<Invisible>No</Invisible>
+		</Region>
+	</Regions>
+	<Owners>
+		<Owner>
+			<ID>1</ID>
+			<Name>Техносила</Name>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Owner>
+		<Owner>
+			<ID>2</ID>
+			<Name>DPD</Name>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Owner>
+		<Owner>
+			<ID>3</ID>
+			<Name>СДЭК</Name>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Owner>
+		<Owner>
+			<ID>4</ID>
+			<Name>Pickpoint</Name>
+			<cost_limit_cash>149999</cost_limit_cash>
+			<cost_limit_cart>149999</cost_limit_cart>
+		</Owner>
+		<Owner>
+			<ID>5</ID>
+			<Name>Е96.RU</Name>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Owner>
+		<Owner>
+			<ID>6</ID>
+			<Name>Почта России</Name>
+			<cost_limit_cash>25000</cost_limit_cash>
+			<cost_limit_cart>25000</cost_limit_cart>
+		</Owner>
+		<Owner>
+			<ID>7</ID>
+			<Name>Эльдорадо</Name>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Owner>
+	</Owners>
+	<Shops>
+		<Shop>
+			<ID/>
+			<SapID/>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address>РФ, 107061, г. Москва, Преображенская площадь, дом 8, этаж 16 </Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>Склад</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0039</ID>
+			<SapID>3039</SapID>
+			<Name>ТЦ "Парк Хаус"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>443111, Самара, Московское ш., д.81А</Address>
+			<CoordX>53.233244</CoordX>
+			<CoordY>50.200585</CoordY>
+			<Metro/>
+			<RegionID>3</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>на любом общественном транспорте, который двигается по Московскому шоссе, до остановки "Телецентр" или "Завод Тарасова" или со стороны ул. 22 Партсъезда до остановки "ул. В. Фадеева". Торговый центр расположен на пересечении улицы 22 Партсъезда и Московского шоссе. Вход в магазин отдельный, со стороны ул. 22 Партсъезда, перед входом просторная парковка. </HowToGet>
+			<Distance>1056</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3039@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0048</ID>
+			<SapID>3048</SapID>
+			<Name>ТЦ "У Речного"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>125565, Москва, Фестивальная ул., д.13, корп.1</Address>
+			<CoordX>55.855612</CoordX>
+			<CoordY>37.476831</CoordY>
+			<Metro>Речной вокзал</Metro>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>На метро: станция "Речной вокзал", первый вагон из центра, затем налево; выйдя из стеклянных дверей, двигайтесь вдоль торгового центра и затем поверните налево. Магазин расположен на цокольном этаже ТЦ "У Речного", парковки возле торгового центра нет.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3048@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0066</ID>
+			<SapID>3066</SapID>
+			<Name>Бабушкинская</Name>
+			<OwnerID>1</OwnerID>
+			<Address>129281, Москва, Менжинского ул., д.38</Address>
+			<CoordX>55.870447</CoordX>
+			<CoordY>37.661559</CoordY>
+			<Metro>Бабушкинская</Metro>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>На метро: станция "Бабушкинская", первый вагон из центра, из стеклянных дверей налево, затем по ступенькам вверх, при выходе из перехода повернуть направо и двигаться вдоль магазинов примерно 300-400 метров.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3066@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0067</ID>
+			<SapID/>
+			<Name>Пункт выдачи "Волоколамская"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>125310, Москва, Новотушинский проезд, 6 корпус 1</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro>Волоколамская</Metro>
+			<RegionID>14</RegionID>
+			<Type/>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance>950</Distance>
+			<DeliveryDays>3</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0069</ID>
+			<SapID>3069</SapID>
+			<Name>Кантемировская</Name>
+			<OwnerID>1</OwnerID>
+			<Address>115477, Москва, Пролетарский пр-т, д.14/49, корп.3</Address>
+			<CoordX>55.636972</CoordX>
+			<CoordY>37.652798</CoordY>
+			<Metro>Кантемировская</Metro>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>На метро: станция "Кантемировская", последний вагон из центра, из стеклянных дверей налево, далее направо вверх по ступенькам, на улице повернуть налево вверх по лестнице, идти 100 метров прямо по левой стороне вдоль магазинов, расположенных на первом этаже жилого дома.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3069@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0075</ID>
+			<SapID>3075</SapID>
+			<Name>Молодежная</Name>
+			<OwnerID>1</OwnerID>
+			<Address>121552, Москва, Ярцевская ул., д.30</Address>
+			<CoordX>55.740037</CoordX>
+			<CoordY>37.415976</CoordY>
+			<Metro>Молодежная</Metro>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>на метро: станция "Молодежная", последний вагон из центра, после выхода из метро прямо, магазин будет по левой стороне.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3075@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0079</ID>
+			<SapID>3079</SapID>
+			<Name>Пункт выдачи "Волоколамская"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>125310, Москва, Новотушинский проезд, 6 корпус 1</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro>Волоколамская</Metro>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0080</ID>
+			<SapID>3080</SapID>
+			<Name>ТЦ "Гренада"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>140011, Люберцы, Новорязанское ш., д.7</Address>
+			<CoordX>55.669885</CoordX>
+			<CoordY>37.871292</CoordY>
+			<Metro>Котельники</Metro>
+			<RegionID>176</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>от станции метро Котельники (выход в сторону первого вагона из центра) нужно проехать одну остановку на любом автобусе или маршрутке в область по Новорязанскому шоссе до остановки ТЦ "Реал" или пройти пешком 7-10 мин. От станции метро Жулебино (южный выход) на маршрутках №51, 315, 1074, 72 до остановки ТЦ "Реал". От станции метро "Выхино" (второй вагон из центра, выход на правую сторону) на маршрутках №51, 1074, 72 до остановки ТЦ "Реал"</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3080@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0088</ID>
+			<SapID>3088</SapID>
+			<Name>ТЦ "Серебряный город"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>153037, Иваново, 8 Марта ул., д.32</Address>
+			<CoordX>57.005236</CoordX>
+			<CoordY>40.983721</CoordY>
+			<Metro/>
+			<RegionID>12</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>на маршрутке №131, 30Б до остановки "Серебряный город", также до ТЦ ходит бесплатный транспорт. Магазин расположен на цокольном этаже, заходить в ТЦ удобнее со стороны набережной либо через центральный вход, затем пройти прямо и спуститься вниз по эскалатору.</HowToGet>
+			<Distance>294</Distance>
+			<DeliveryDays>1</DeliveryDays>
+			<DirectorEmail>director30882@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0089</ID>
+			<SapID>3089</SapID>
+			<Name>ТЦ "Гвоздь-2"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>115487, Москва, Андропова пр-т, д.36</Address>
+			<CoordX>55.675745</CoordX>
+			<CoordY>37.662117</CoordY>
+			<Metro>Коломенская</Metro>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>Если вы едете на метро: станция "Коломенская", первый вагон из центра, из стеклянных дверей направо и далее выход из метро на левую сторону к ТЦ "Гвоздь-2". Также до магазина можно добраться любым наземным транспортом, который следует до остановки "Метро Коломенская". Если же вы двигаетесь на автомобиле по проспекту Андропова из центра, магазин будет по правую сторону. </HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>Director3089@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0186</ID>
+			<SapID>3186</SapID>
+			<Name>ТЦ  "Подсолнух"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>628600, Нижневартовск, Интернациональная ул., д.73</Address>
+			<CoordX>60.943847</CoordX>
+			<CoordY>76.634206</CoordY>
+			<Metro/>
+			<RegionID>168</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>3176</Distance>
+			<DeliveryDays>5</DeliveryDays>
+			<DirectorEmail>kurbatovara@net170.sv.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0189</ID>
+			<SapID>2189</SapID>
+			<Name>Склад "Домодедово" - Склад основного товара</Name>
+			<OwnerID>1</OwnerID>
+			<Address>142000, г. Домодедово мкр северный ул. Логистическая д. 1/5</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>Центральный склад</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0191</ID>
+			<SapID>3191</SapID>
+			<Name>ТРК "Атмосфера" </Name>
+			<OwnerID>1</OwnerID>
+			<Address>197227, Санкт-Петербург, Комендантская пл., д.1, лит. А</Address>
+			<CoordX>60.007468</CoordX>
+			<CoordY>30.259600</CoordY>
+			<Metro>Комендантский проспект</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>выход из метро "Комендантский проспект" прямо в торговый комплекс, магазин расположен на 3 этаже. </HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3191@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0195</ID>
+			<SapID>6195</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>15</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0198</ID>
+			<SapID>3198</SapID>
+			<Name>ТЦ "Мега Молл"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>428022, Чебоксары, ул. Калинина, д.105а</Address>
+			<CoordX>56.137561 </CoordX>
+			<CoordY>47.277885 </CoordY>
+			<Metro/>
+			<RegionID>80</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 09:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>610</Distance>
+			<DeliveryDays>1</DeliveryDays>
+			<DirectorEmail>director@net202.tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0220</ID>
+			<SapID>3220</SapID>
+			<Name>ТЦ "МЕГА"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>644074, Омск, Архитекторов б-р, д.35</Address>
+			<CoordX>54.971568</CoordX>
+			<CoordY>73.284763</CoordY>
+			<Metro/>
+			<RegionID>37</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>Двухэтажный магазин "Техносила" расположен справа от входа в "Ашан".</HowToGet>
+			<Distance>2673</Distance>
+			<DeliveryDays>7</DeliveryDays>
+			<DirectorEmail>director3220@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0240</ID>
+			<SapID>3240</SapID>
+			<Name>ТЦ "Казачья слобода"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>644024, Омск, Пушкина ул., д.59</Address>
+			<CoordX>54.977039</CoordX>
+			<CoordY>73.386809</CoordY>
+			<Metro/>
+			<RegionID>37</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>Магазин расположен перед входом на Казачий рынок, напротив Налоговой службы. Вход в магазин расположен с правого края ТЦ "Казачья слобода".</HowToGet>
+			<Distance>2673</Distance>
+			<DeliveryDays>7</DeliveryDays>
+			<DirectorEmail>director3240@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0242</ID>
+			<SapID>3242</SapID>
+			<Name>ТРЦ "Июнь"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>450054, Уфа, Комсомольская ул., д.112</Address>
+			<CoordX>54.756870</CoordX>
+			<CoordY>56.011261</CoordY>
+			<Metro/>
+			<RegionID>25</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>на автомобиле: со стороны улиц 50 лет СССР и Комсомольская, есть бесплатная парковка. На общественном транспорте: остановки "Ростовская", "Центр красоты", "Спортивная". Напротив ТРЦ установлен памятник "Самолет АН-24Б". Магазин расположен на 3 этаже торгового центра. </HowToGet>
+			<Distance>1328</Distance>
+			<DeliveryDays>4</DeliveryDays>
+			<DirectorEmail>director3242@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0244</ID>
+			<SapID>3244</SapID>
+			<Name>Петровско-Разумовская</Name>
+			<OwnerID>1</OwnerID>
+			<Address>127411, Москва, Лобненская ул., д.4А</Address>
+			<CoordX>55.889851</CoordX>
+			<CoordY>37.537585</CoordY>
+			<Metro>Петровско-Разумовская</Metro>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>На метро: от станции "Петровско-Разумовская" на автобусах № 665м, 406, 206 до остановки "Стадион", от остановки пройти 100 м до ТЦ "Зигзаг".</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3244@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0249</ID>
+			<SapID>3249</SapID>
+			<Name>ТРК "Голден Парк"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>630129, Новосибирск, Курчатова ул., д.1</Address>
+			<CoordX>55.104105</CoordX>
+			<CoordY>82.960679</CoordY>
+			<Metro/>
+			<RegionID>19</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>магазин расположен на 3 этаже торгового комплекса.</HowToGet>
+			<Distance>3341</Distance>
+			<DeliveryDays>7</DeliveryDays>
+			<DirectorEmail>director3249@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0260</ID>
+			<SapID>3260</SapID>
+			<Name>ТЦ "Авокадо"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>156016, Кострома, 3-й Давыдовский мкр., д.32</Address>
+			<CoordX>57.741158</CoordX>
+			<CoordY>41.004518</CoordY>
+			<Metro/>
+			<RegionID>167</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>магазин расположен на 2 этаже, над магазином "Лидер".</HowToGet>
+			<Distance>345</Distance>
+			<DeliveryDays>1</DeliveryDays>
+			<DirectorEmail>director3260@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0263</ID>
+			<SapID>8263</SapID>
+			<Name>Склад партнерского товара - Е96 Екатеринбург - 8263</Name>
+			<OwnerID>1</OwnerID>
+			<Address>142000, г. Домодедово мкр северный ул. Логистическая д. 1/5</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>7</RegionID>
+			<Type>Партнерский</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0264</ID>
+			<SapID>3264</SapID>
+			<Name>ТД "Ланкорд"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>628600, Нижневартовск, Мира ул., д.4П</Address>
+			<CoordX>60.943555</CoordX>
+			<CoordY>76.535522</CoordY>
+			<Metro/>
+			<RegionID>168</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>3176</Distance>
+			<DeliveryDays>7</DeliveryDays>
+			<DirectorEmail>alexandrovay@net182.sv.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0265</ID>
+			<SapID>8265</SapID>
+			<Name>Склад партнерского товара - Е96 Новосибирск - 8265</Name>
+			<OwnerID>1</OwnerID>
+			<Address>142000, г. Домодедово мкр северный ул. Логистическая д. 1/5</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>19</RegionID>
+			<Type>Партнерский</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0266</ID>
+			<SapID>8266</SapID>
+			<Name>Склад партнерского товара - Е96 Омск - 8266</Name>
+			<OwnerID>1</OwnerID>
+			<Address>142000, г. Домодедово мкр северный ул. Логистическая д. 1/5</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>37</RegionID>
+			<Type>Партнерский</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0267</ID>
+			<SapID>8267</SapID>
+			<Name>Склад партнерского товара - Е96 Челябинск - 8267</Name>
+			<OwnerID>1</OwnerID>
+			<Address>142000, г. Домодедово мкр северный ул. Логистическая д. 1/5</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>60</RegionID>
+			<Type>Партнерский</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0268</ID>
+			<SapID>8268</SapID>
+			<Name>Склад партнерского товара - Е96 Тюмень - 8268</Name>
+			<OwnerID>1</OwnerID>
+			<Address>142000, г. Домодедово мкр северный ул. Логистическая д. 1/5</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>20</RegionID>
+			<Type>Партнерский</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0270</ID>
+			<SapID>8270</SapID>
+			<Name>Склад партнерского товара - Е96 Уфа - 8270</Name>
+			<OwnerID>1</OwnerID>
+			<Address>142000, г. Домодедово мкр северный ул. Логистическая д. 1/5</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>25</RegionID>
+			<Type>Партнерский</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0271</ID>
+			<SapID>8271</SapID>
+			<Name>Склад партнерского товара - Е96 Пермь - 8271</Name>
+			<OwnerID>1</OwnerID>
+			<Address>142000, г. Домодедово мкр северный ул. Логистическая д. 1/5</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>5</RegionID>
+			<Type>Партнерский</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0276</ID>
+			<SapID>3276</SapID>
+			<Name>ТК "Ритейл Парк"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>440068, Пенза, Центральная ул., д.1</Address>
+			<CoordX>53.123755</CoordX>
+			<CoordY>45.019734</CoordY>
+			<Metro/>
+			<RegionID>26</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 09:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>750</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director@net186.sv.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0305</ID>
+			<SapID>3305</SapID>
+			<Name>ТЦ "Домодедовский"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>115582, Москва, Ореховый б-р, д.14, стр.3</Address>
+			<CoordX>55.609803</CoordX>
+			<CoordY>37.719761</CoordY>
+			<Metro>Домодедовская</Metro>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>на метро: станция "Домодедовская", первый вагон из центра, из стеклянных дверей направо и вверх по лестнице направо либо последний вагон из центра, из стеклянных дверей налево, по коридору еще раз налево, затем до конца и вверх по правой лестнице. Магазин расположен на нулевом (цокольном) этаже.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3305@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0323</ID>
+			<SapID>3323</SapID>
+			<Name>ТЦ "Мегаполис"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>115470, Москва, Андропова пр-т, д.8</Address>
+			<CoordX>55.695604</CoordX>
+			<CoordY>37.665454</CoordY>
+			<Metro>Технопарк</Metro>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>Магазин расположен на цокольном (-1) этаже. На метро: станция "Технопарк", последний вагон из центра, из стеклянных дверей налево и далее 100 метров пешком до ТРЦ "Мегаполис". На авто: при движении из центра съехать с ТТК на пр-т Андропова, через 1 км по правую сторону будет ТЦ "Мегаполис"; при движении из области по проспекту Андропова доехать до станции метро "Технопарк", через 500 м развернуться, и еще через 500 м справа будет ТЦ "Мегаполис".</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3323@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0329</ID>
+			<SapID>3329</SapID>
+			<Name>ТК "Аляска"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>629800, Ноябрьск, Советская ул., д.95-В</Address>
+			<CoordX>63.204854</CoordX>
+			<CoordY>75.469354</CoordY>
+			<Metro/>
+			<RegionID>53</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>3282</Distance>
+			<DeliveryDays>7</DeliveryDays>
+			<DirectorEmail>director@net145.sv.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0335</ID>
+			<SapID>6335</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>7</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0344</ID>
+			<SapID>3344</SapID>
+			<Name>Ново-Ленинградская ул.</Name>
+			<OwnerID>1</OwnerID>
+			<Address>214001, Смоленск, Ново-Ленинградская ул., д.11</Address>
+			<CoordX>54.794983</CoordX>
+			<CoordY>32.049519</CoordY>
+			<Metro/>
+			<RegionID>57</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на автобусах № 1, 9, 10, 12, 27, 30, 33, 34, 52, 54, 131, 148; на маршрутках № 4, 5, 6, 16, 29, 30Д, 41, 43, 47. Магазин расположен на Колхозной площади, напротив "Макдоналдса".</HowToGet>
+			<Distance>390</Distance>
+			<DeliveryDays>1</DeliveryDays>
+			<DirectorEmail>director3344@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0348</ID>
+			<SapID>3348</SapID>
+			<Name>ТЦ "Крейсер"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>600022, Владимир, Ленина пр-кт, д.46</Address>
+			<CoordX>56.118632</CoordX>
+			<CoordY>40.351879</CoordY>
+			<Metro/>
+			<RegionID>58</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 20:00</WorkingMode>
+			<HowToGet>на общественном транспорте нужно доехать до остановки "1001 мелочь", магазин находится на минус втором этаже торогового центра "Крейсер".</HowToGet>
+			<Distance>170</Distance>
+			<DeliveryDays>1</DeliveryDays>
+			<DirectorEmail>director3348@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0355</ID>
+			<SapID>3355</SapID>
+			<Name>ТЦ "Юго-Запад"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>394065, Воронеж, Патриотов проспект, д.3А</Address>
+			<CoordX>51.645694</CoordX>
+			<CoordY>39.133031</CoordY>
+			<Metro/>
+			<RegionID>23</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – пятница с 10:00 до 21:00
+Суббота - воскресенье с 09:00 до 21:00</WorkingMode>
+			<HowToGet>На маршрутках №76, 15, 54, 88, 88а, 80, 50, 15а, 18, 37, 47, магазин находится на 3 этаже ТЦ.</HowToGet>
+			<Distance>515</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3355@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0361</ID>
+			<SapID>3361</SapID>
+			<Name>ТЦ "Счастливая 7Я" </Name>
+			<OwnerID>1</OwnerID>
+			<Address>141300, Сергиев Посад, Вознесенская ул., д.32а</Address>
+			<CoordX>56.303861</CoordX>
+			<CoordY>38.133133</CoordY>
+			<Metro/>
+			<RegionID>76</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3361@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0363</ID>
+			<SapID>3363</SapID>
+			<Name>ТЦ "Максима"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>169900, Воркута, Пищевиков б-р, д.17Б</Address>
+			<CoordX>67.499428</CoordX>
+			<CoordY>64.068456</CoordY>
+			<Metro/>
+			<RegionID>72</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на автобусе до остановки "Швейная фабрика", магазин находится на 2 этаже торгового центра.</HowToGet>
+			<Distance>2298</Distance>
+			<DeliveryDays>21</DeliveryDays>
+			<DirectorEmail>director3363@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0382</ID>
+			<SapID>3382</SapID>
+			<Name>ТЦ "Евролэнд"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>153013, Иваново, Куконковых ул., д.141</Address>
+			<CoordX>56.965357</CoordX>
+			<CoordY>41.024684</CoordY>
+			<Metro/>
+			<RegionID>12</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>магазин расположен в первой галерее торгового центра, с левой стороны от центрального входа, расположенного рядом с остановкой общественного транспорта.</HowToGet>
+			<Distance>294</Distance>
+			<DeliveryDays>1</DeliveryDays>
+			<DirectorEmail>director3382@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0384</ID>
+			<SapID>3384</SapID>
+			<Name>ТЦ "Класс"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>142211, Серпухов, Московское ш., д.55</Address>
+			<CoordX>54.937769</CoordX>
+			<CoordY>37.405655</CoordY>
+			<Metro/>
+			<RegionID>175</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>на общественном транспорте: от станции Серпухов на автобусах № 9, 104, 17А, 12, на междугородних автобусах № 102, 43. На автомобиле: по Московскому или Северному шоссе в сторону выезда из города. Магазин находится на 2 этаже торгового центра.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3384@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0412</ID>
+			<SapID>3412</SapID>
+			<Name>ТЦ "Красный Кит"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>141006, Мытищи, Шараповский пр-д, вл.2</Address>
+			<CoordX>55.916530</CoordX>
+			<CoordY>37.759427</CoordY>
+			<Metro/>
+			<RegionID>10</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>торговый центр "Красный кит" расположен рядом с железнодорожной станцией, магазин находится на 2 этаже.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3412@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0431</ID>
+			<SapID>3431</SapID>
+			<Name>ТЦ "Медиаплаза"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>350075, Краснодар, Стасова-Сормовская, д.178-180/1 лит.Ш</Address>
+			<CoordX>45.024463</CoordX>
+			<CoordY>39.046942</CoordY>
+			<Metro/>
+			<RegionID>13</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>магазин расположен на 1 этаже ТЦ.</HowToGet>
+			<Distance>1401</Distance>
+			<DeliveryDays>3</DeliveryDays>
+			<DirectorEmail>director3431@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0442</ID>
+			<SapID>3442</SapID>
+			<Name>ТЦ "Семь Пятниц"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>614016, Пермь, Революции ул., д.60/1</Address>
+			<CoordX>58.003056</CoordX>
+			<CoordY>56.235635</CoordY>
+			<Metro/>
+			<RegionID>5</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на общественном транспорте до остановки "Автовокзал". Торговый центр расположен на пересечении улиц Революции и Куйбышева. Есть подземная парковка.</HowToGet>
+			<Distance>1455</Distance>
+			<DeliveryDays>4</DeliveryDays>
+			<DirectorEmail>director3442@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0446</ID>
+			<SapID>3446</SapID>
+			<Name>ТЦ "Суворовский"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>440008, Пенза, Суворова ул., д.144А</Address>
+			<CoordX>53.202575</CoordX>
+			<CoordY>44.997915</CoordY>
+			<Metro/>
+			<RegionID>26</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>торговый центр находится на пересечении улиц Суворова и Кулакова, в полутора километрах от ЖД-вокзала. Магазин расположен на 2 этаже ТЦ.</HowToGet>
+			<Distance>750</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3446@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0447</ID>
+			<SapID>3447</SapID>
+			<Name>ТЦ "Европа 10"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>305029, Курск, Карла Маркса ул., д.59</Address>
+			<CoordX>51.758145</CoordX>
+			<CoordY>36.188511</CoordY>
+			<Metro/>
+			<RegionID>16</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 9:30 до 21:00</WorkingMode>
+			<HowToGet>на общественном транспорте, идущем в район СХА и пр-т Дериглазова, остановка "ТЦ Европа-10".</HowToGet>
+			<Distance>513</Distance>
+			<DeliveryDays/>
+			<DirectorEmail>director3447@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0447</ID>
+			<SapID>3447</SapID>
+			<Name>ТЦ "Европа 10"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>305029, Курск, Карла Маркса ул., д.59</Address>
+			<CoordX>51.758145</CoordX>
+			<CoordY>36.188511</CoordY>
+			<Metro/>
+			<RegionID>16</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 9:30 до 21:00</WorkingMode>
+			<HowToGet>на общественном транспорте, идущем в район СХА и пр-т Дериглазова, остановка "ТЦ Европа-10".</HowToGet>
+			<Distance>513</Distance>
+			<DeliveryDays/>
+			<DirectorEmail>depdir@net046.sv.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0458</ID>
+			<SapID>3458</SapID>
+			<Name>ТЦ "Гудвин"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>625048, Тюмень, Максима Горького ул., д.70</Address>
+			<CoordX>57.148731</CoordX>
+			<CoordY>65.559872</CoordY>
+			<Metro/>
+			<RegionID>20</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>на общественном транспорте до остановок "Спорткомплекс", "Строймаш", "Шахматный клуб". Торговый центр находится на пересечении улиц М. Горького и Советская. Магазин расположен в левой части центра: от центрального входа прямо и затем направо.</HowToGet>
+			<Distance>2200</Distance>
+			<DeliveryDays>5</DeliveryDays>
+			<DirectorEmail>director3458@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0459</ID>
+			<SapID>3459</SapID>
+			<Name>Бибирево</Name>
+			<OwnerID>1</OwnerID>
+			<Address>127549, Москва, Бибиревская ул., д.10</Address>
+			<CoordX>55.881377</CoordX>
+			<CoordY>37.602164</CoordY>
+			<Metro>Бибирево</Metro>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>На метро: станция "Бибирево", последний вагон из  центра, из стеклянных дверей налево, далее первый выход налево, пройти 200 м прямо (мимо автозаправки BP). Магазин расположен на 2 этаже гипермаркета ТЦ "НАШ гипермаркет".</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3459@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0461</ID>
+			<SapID>3461</SapID>
+			<Name>ТРЦ "Европейский"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>121059, Москва, пл. Киевского вокзала, д.2</Address>
+			<CoordX>55.744632</CoordX>
+			<CoordY>37.566072</CoordY>
+			<Metro>Киевская</Metro>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Воскресенье - четверг с 10.00 до 22.00
+Пятница - суббота с 10.00 до 23.00
+</WorkingMode>
+			<HowToGet>Магазин находится на третьем этаже торгового центра, в атриуме "Берлин". Удобнее всего войти в ТЦ через вход № 5 и затем подняться на эскалаторе.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3461@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>1.8</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0479</ID>
+			<SapID>3479</SapID>
+			<Name>ТК "Измайловский гостиный двор"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>190005, Санкт-Петербург, 1-я Красноармейская ул., д.15</Address>
+			<CoordX>59.916279</CoordX>
+			<CoordY>30.309238</CoordY>
+			<Metro>Технологический Институт</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>от станции метро "Технологический институт" пешком 650 метров, от станции метро "Балтийская" - пешком 1,5 км. </HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3479@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0483</ID>
+			<SapID>3483</SapID>
+			<Name>Красноармейская ул.</Name>
+			<OwnerID>1</OwnerID>
+			<Address>344000, Ростов-на-Дону, Красноармейская ул., д.157</Address>
+			<CoordX>47.233251</CoordX>
+			<CoordY>39.735303</CoordY>
+			<Metro/>
+			<RegionID>6</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>магазин расположен на 1 этаже ТК</HowToGet>
+			<Distance/>
+			<DeliveryDays>7</DeliveryDays>
+			<DirectorEmail>Director3483@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0483</ID>
+			<SapID>3483</SapID>
+			<Name>Красноармейская ул.</Name>
+			<OwnerID>1</OwnerID>
+			<Address>344000, Ростов-на-Дону, Красноармейская ул., д.157</Address>
+			<CoordX>47.233251</CoordX>
+			<CoordY>39.735303</CoordY>
+			<Metro/>
+			<RegionID>6</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>магазин расположен на 1 этаже ТК</HowToGet>
+			<Distance/>
+			<DeliveryDays>7</DeliveryDays>
+			<DirectorEmail>Director3483@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0484</ID>
+			<SapID>3484</SapID>
+			<Name>ТЦ "Дом Быта"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>394006, Воронеж, 20 лет Октября ул., д.119</Address>
+			<CoordX>51.654454</CoordX>
+			<CoordY>39.187929</CoordY>
+			<Metro/>
+			<RegionID>23</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 9:00 до 20:00</WorkingMode>
+			<HowToGet>на общественном транспорте до остановки "Цирк". Торгово-офисный центр расположен на пересечении ул. 20 лет Октября и Краснознамённая.</HowToGet>
+			<Distance>515</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>Director3484@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0485</ID>
+			<SapID>3485</SapID>
+			<Name>ТРЦ "Московский проспект"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>394049, Воронеж, Московский проспект, д.129/1</Address>
+			<CoordX>51.727600</CoordX>
+			<CoordY>39.177736</CoordY>
+			<Metro/>
+			<RegionID>23</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>на маршрутках № 49, 9КА, 47, 16В, 49Б, 36, 85, 50А, 80, 95. Магазин расположен на 2 этаже ТЦ.</HowToGet>
+			<Distance>515</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3485@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0488</ID>
+			<SapID>3488</SapID>
+			<Name>ТЦ "Улей"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>Тамбов. бул. Энтузиастов 2А ТЦ "Улей"</Address>
+			<CoordX>52.758321</CoordX>
+			<CoordY>41.433624</CoordY>
+			<Metro/>
+			<RegionID>22</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>450</Distance>
+			<DeliveryDays>1</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0489</ID>
+			<SapID>3489</SapID>
+			<Name>ТЦ "Ашан"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>392003, Тамбов, ул.Советская, д.194</Address>
+			<CoordX>52.753672</CoordX>
+			<CoordY>41.44471</CoordY>
+			<Metro/>
+			<RegionID>22</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник - воскресенье c 10.00 до 22.00</WorkingMode>
+			<HowToGet>на троллейбусе № 1, на автобусах № 1, 18, 44, 52, 50, 55, 60. Магазин расположен на 1 этаже в самом конце торговой галереи.</HowToGet>
+			<Distance>450</Distance>
+			<DeliveryDays>1</DeliveryDays>
+			<DirectorEmail>Director3489@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0490</ID>
+			<SapID>3490</SapID>
+			<Name>ТЦ "Лайнер"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>614077, Пермь, Гагарина б-р, д.46</Address>
+			<CoordX>58.005666</CoordX>
+			<CoordY>56.283337</CoordY>
+			<Metro/>
+			<RegionID>5</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на общественном транспорте до остановки "Макаренко" или "Пермская ярмарка", торговый центр находится на пересечении ул. Революции и бульвара Гагарина.</HowToGet>
+			<Distance>1455</Distance>
+			<DeliveryDays>4</DeliveryDays>
+			<DirectorEmail>director3490@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0506</ID>
+			<SapID>3506</SapID>
+			<Name>Проспект Чайковского</Name>
+			<OwnerID>1</OwnerID>
+			<Address>170002, Тверь, Чайковского проспект, д.37</Address>
+			<CoordX>56.837882</CoordX>
+			<CoordY>35.894176</CoordY>
+			<Metro/>
+			<RegionID>11</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>Магазин расположен на площади перед авто- и железнодорожными вокзалами. Добраться до магазина можно на трамвае № 5, троллейбусе № 2, маршрутках  №1, 2, 4, 5, 10, 12, 24, 25, 27, 28, 30, 36, 52, 106, 114, 118, 128, 177, 202, 223, 227</HowToGet>
+			<Distance>176</Distance>
+			<DeliveryDays>1</DeliveryDays>
+			<DirectorEmail>director3506@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0507</ID>
+			<SapID>3507</SapID>
+			<Name>ТУЦ "Сарафан"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>300041, Тула, Путейская ул., д.5</Address>
+			<CoordX>54.1978725</CoordX>
+			<CoordY>37.579869</CoordY>
+			<Metro/>
+			<RegionID>21</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>торговый центр расположен в трех минутах ходьбы от Московского вокзала, магазин находится во 2 корпусе на 1 этаже. Входить в ТЦ удобнее со стороны гостиницы "Москва".</HowToGet>
+			<Distance>155</Distance>
+			<DeliveryDays>1</DeliveryDays>
+			<DirectorEmail>director3507@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0508</ID>
+			<SapID>3508</SapID>
+			<Name>ТЦ "Озерки" </Name>
+			<OwnerID>1</OwnerID>
+			<Address>194356, Санкт-Петербург, Энгельса пр-кт, д.120</Address>
+			<CoordX>60.036967</CoordX>
+			<CoordY>30.321340</CoordY>
+			<Metro>Озерки</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>станция метро "Озерки", выход из метро налево, торговый центр в 100 метрах от метро, магазин находится на 2 этаже.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3508@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0514</ID>
+			<SapID>3514</SapID>
+			<Name>ТЦ "Айсберг"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>614000, Пермь, Попова ул., д.16</Address>
+			<CoordX>58.008314</CoordX>
+			<CoordY>56.228229</CoordY>
+			<Metro/>
+			<RegionID>5</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на автобусах № 7, 10, 14, 33, 41, 68, 152 или троллейбусе № 5 до остановки ул. Ленина. Торговый центр находится на пересечении ул. Ленина и ул. Попова, магазин расположен на цокольном этаже.</HowToGet>
+			<Distance>1455</Distance>
+			<DeliveryDays>4</DeliveryDays>
+			<DirectorEmail>director3514@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0518</ID>
+			<SapID>3518</SapID>
+			<Name>ТЦ "Солнечный рай"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>119634, Москва, Боровское ш., д.6</Address>
+			<CoordX>55.658649</CoordX>
+			<CoordY>37.401814</CoordY>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>Нужно доехать до остановки "Улица Главмосстроя": от станции метро "Саларьево" на автобусе № 734; от станции метро  "Юго-Западная" на автобусах  №718, 718к или  маршрутке № 510; от станции метро "Проспект Вернадского" на маршрутках № 374, 497 или автобусах № 830, 810; от станции метро "Теплый стан" на маршрутке № 67 или автобусе № 767. Магазин расположен через дорогу от остановки. Также добраться можно на электричке: станция "Солнечная" Киевского направления, от станции пешком до торгового центра</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3518@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0529</ID>
+			<SapID>3529</SapID>
+			<Name>ТЦ "Волжские зори"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>445036, Тольятти, Степана Разина проспект, д.8</Address>
+			<CoordX>53.532501</CoordX>
+			<CoordY>49.296270</CoordY>
+			<Metro/>
+			<RegionID>9</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>980</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director@net040.sv.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0550</ID>
+			<SapID>6550</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0557</ID>
+			<SapID>3557</SapID>
+			<Name>ТСК "Сипайловский"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>450099, Уфа, Маршала Жукова ул., д.10</Address>
+			<CoordX>54.770110</CoordX>
+			<CoordY>56.059367</CoordY>
+			<Metro/>
+			<RegionID>25</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 20:00</WorkingMode>
+			<HowToGet>торговый центр расположен напротив ТРЦ "Простор", вход в магазин слева от центрального входа. </HowToGet>
+			<Distance>1328</Distance>
+			<DeliveryDays>3</DeliveryDays>
+			<DirectorEmail>director3557@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0576</ID>
+			<SapID>3576</SapID>
+			<Name>ТЦ "Автограф"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>150048, Ярославль, Московский пр-кт, д.80А</Address>
+			<CoordX>57.592528</CoordX>
+			<CoordY>39.860648</CoordY>
+			<Metro/>
+			<RegionID>24</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>магазин находится возле Ярославского автовокзала, на 2 этаже торгового центра.</HowToGet>
+			<Distance>280</Distance>
+			<DeliveryDays/>
+			<DirectorEmail>director3576@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0580</ID>
+			<SapID>6580</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>237</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0581</ID>
+			<SapID>6581</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>236</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0582</ID>
+			<SapID>6582</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>17</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0583</ID>
+			<SapID>3583</SapID>
+			<Name>ТЦ "Демидовский"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>300027, Тула, Металлургов ул., д.62</Address>
+			<CoordX>54.191169</CoordX>
+			<CoordY>37.689411</CoordY>
+			<Metro/>
+			<RegionID>21</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на автобусах № 4М, 65 до остановки "Кинотеатр "Искра" или на автобусе № 62 до остановки "Быткомбинат". Магазин расположен на 2 этаже торгового центра.</HowToGet>
+			<Distance>155</Distance>
+			<DeliveryDays>1</DeliveryDays>
+			<DirectorEmail>director3583@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0591</ID>
+			<SapID>3591</SapID>
+			<Name>ТЦ "Норд"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>195248, Санкт-Петербург, Революции ш., д.41/39</Address>
+			<CoordX>59.959877</CoordX>
+			<CoordY>30.439550</CoordY>
+			<Metro>Ладожская</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>от станции метро "Ладожская" автобусы № 82, 123 и маршрутки № 271, 123, 17, 369; от станции метро "Новочеркасская" автобус № 174 и маршрутка № 83. Торговый центр расположен на перекрестке пр. Энергетиков и ш. Революции, магазин находится на 2 этаже.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3591@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0592</ID>
+			<SapID>6592</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>230</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0594</ID>
+			<SapID>6594</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>229</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0596</ID>
+			<SapID>6596</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>227</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0597</ID>
+			<SapID>6597</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>228</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0598</ID>
+			<SapID>3598</SapID>
+			<Name>ТЦ "Гипермаркет Техносила"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>248001, Калуга, Дзержинского ул., д.37</Address>
+			<CoordX>54.513073</CoordX>
+			<CoordY>36.255395</CoordY>
+			<Metro/>
+			<RegionID>31</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>Магазин расположен на улице с односторонним движением, поворачивать на нее лучше всего с ул. Московской. Если вы добираетесь в магазин на общественном транспорте, используйте автобусы № 3, 4, 80. Выходите на остановке "м-н Калуга", затем двигайтесь пешком по ул. Театральной и поверните на ул. Дзержинского. </HowToGet>
+			<Distance>154</Distance>
+			<DeliveryDays/>
+			<DirectorEmail>director3598@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0599</ID>
+			<SapID>6599</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>169</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0600</ID>
+			<SapID>3600</SapID>
+			<Name>ТЦ "Европа 15"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>305048, Курск, Хрущева проспект, д.5А</Address>
+			<CoordX>51.733581</CoordX>
+			<CoordY>36.139022</CoordY>
+			<Metro/>
+			<RegionID>16</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>магазин расположен на 2 этаже ТЦ.</HowToGet>
+			<Distance>513</Distance>
+			<DeliveryDays/>
+			<DirectorEmail>director3600@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0613</ID>
+			<SapID>6613</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>32</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0631</ID>
+			<SapID>6631</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>22</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0632</ID>
+			<SapID>3632</SapID>
+			<Name>Щелковская</Name>
+			<OwnerID>1</OwnerID>
+			<Address>107497, Москва, Монтажная ул., д.7</Address>
+			<CoordX>55.815112</CoordX>
+			<CoordY>37.772645</CoordY>
+			<Metro>Щелковская</Metro>
+			<RegionID>1</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>На метро: станция "Щелковская", первый вагон из центра, затем налево и еще раз налево, двигайтесь прямо примерно 300 метров до остановки автобуса № 3, на нем нужно доехать до остановки "магазин Техносила" и затем по движению автобуса пройти еще 200 метров до магазина.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3632@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0634</ID>
+			<SapID>6634</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>9</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0645</ID>
+			<SapID>6645</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>177</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0646</ID>
+			<SapID>6646</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>224</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0647</ID>
+			<SapID>6647</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>225</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0648</ID>
+			<SapID>6648</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>226</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0653</ID>
+			<SapID>3653</SapID>
+			<Name>ТРЦ «Монпансье»</Name>
+			<OwnerID>1</OwnerID>
+			<Address>197373, Санкт-Петербург, Планерная ул., д.59</Address>
+			<CoordX>60.021349</CoordX>
+			<CoordY>30.224431</CoordY>
+			<Metro>Комендантский проспект</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3653@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0656</ID>
+			<SapID>2656</SapID>
+			<Name>Склад СПБ (Бизнес Про)</Name>
+			<OwnerID>1</OwnerID>
+			<Address>193079, г.Санкт-Петербург, Дальневосточный пр., д.73 лит.А пом.1-Н</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>2</RegionID>
+			<Type>Региональный склад</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0659</ID>
+			<SapID>3659</SapID>
+			<Name>ТЦ "Андреевский двор"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>199034, Санкт-Петербург, Большой пр-т Васильевского Остр, д.18</Address>
+			<CoordX>59.938947</CoordX>
+			<CoordY>30.284298</CoordY>
+			<Metro>Василеостровская</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>Bolshoy18_dir@tshock.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0660</ID>
+			<SapID>3660</SapID>
+			<Name>Выборгское шоссе</Name>
+			<OwnerID>1</OwnerID>
+			<Address>194356, Санкт-Петербург, Выборгское шоссе, д.7</Address>
+			<CoordX>60.042370</CoordX>
+			<CoordY>30.317660</CoordY>
+			<Metro>Озерки</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3660@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0661</ID>
+			<SapID>3661</SapID>
+			<Name>ТД "Южный"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>192281, Санкт-Петербург, Ярослава Гашека ул, д.6</Address>
+			<CoordX>59.833070</CoordX>
+			<CoordY>30.390556</CoordY>
+			<Metro>Купчино</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>станция метро "Купчино", выход на Балканскую площадь, далее нужно перейти на левую сторону улицы Гашека и пройти 1000 м до торгового центра. Магазин находится на 2 этаже.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0661</ID>
+			<SapID>3661</SapID>
+			<Name>ТД "Южный"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>192281, Санкт-Петербург, Ярослава Гашека ул, д.6</Address>
+			<CoordX>59.833070</CoordX>
+			<CoordY>30.390556</CoordY>
+			<Metro>Купчино</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>станция метро "Купчино", выход на Балканскую площадь, далее нужно перейти на левую сторону улицы Гашека и пройти 1000 м до торгового центра. Магазин находится на 2 этаже.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3661@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0662</ID>
+			<SapID>3662</SapID>
+			<Name>ТЦ "Диана"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>192177, Санкт-Петербург, Караваевская ул., д. 24, корп.1</Address>
+			<CoordX>59.833124</CoordX>
+			<CoordY>30.506955</CoordY>
+			<Metro>Рыбацкое</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>станция метро "Рыбацкое", выход из метро на Прибрежную улицу, в 500 метрах от метро - торговый центр "Диана", магазин расположен на 2 этаже.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3662@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0663</ID>
+			<SapID>3663</SapID>
+			<Name>Комендантский проспект</Name>
+			<OwnerID>1</OwnerID>
+			<Address>197227, Санкт-Петербург, Комендантский проспект, д.9</Address>
+			<CoordX>60.005863</CoordX>
+			<CoordY>30.26291</CoordY>
+			<Metro>Комендантский проспект</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>burlakaS@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0664</ID>
+			<SapID>3664</SapID>
+			<Name>Лиговский проспект</Name>
+			<OwnerID>1</OwnerID>
+			<Address>191040, Санкт-Петербург, Лиговский пр., д.52</Address>
+			<CoordX>59.924956</CoordX>
+			<CoordY>30.358120</CoordY>
+			<Metro>Площадь Восстания</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>из метро "Площадь Восстания" выход налево или из метро "Лиговский проспект" выход направо - и пешком 200 м по Лиговскому проспекту.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3664@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0665</ID>
+			<SapID>3665</SapID>
+			<Name>ТРК "Шкиперский Молл"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>199406, Санкт-Петербург, Малый пр-кт В.О., д.88</Address>
+			<CoordX>59.938432</CoordX>
+			<CoordY>30.229709</CoordY>
+			<Metro>Приморская</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>от станции метро "Приморская" 15 минут пешком по ул. Наличной, либо на маршрутке № 6к, автобусе № 128, троллейбусе № 10 или любом трамвае. Торговый комплекс находится на пересечении Малого проспекта и ул. Наличной, магазин расположен на 3 этаже.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3665@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0666</ID>
+			<SapID>3666</SapID>
+			<Name>ТЦ "Штрих-Код"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>193079, Санкт-Петербург, Народная ул., д.3а</Address>
+			<CoordX>59.878439</CoordX>
+			<CoordY>30.460685</CoordY>
+			<Metro>Ломоносовская</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>от станции метро "Ломоносовская" на автобусах № 5, 119, на маршрутках № 97, 118, 5, 8, 239, 365, 409, на троллейбусе № 14 до остановки "ул. Народная". Пешком от метро "Ломоносовская": выйти на перекресток ул. Бабушкинской и Ивановской, затем перейти через Володарский мост, торговый комплекс будет по правую сторону, магазин находится на 2 этаже.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3666@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0666</ID>
+			<SapID>3666</SapID>
+			<Name>ТЦ "Штрих-Код"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>193079, Санкт-Петербург, Народная ул., д.3а</Address>
+			<CoordX>59.878439</CoordX>
+			<CoordY>30.460685</CoordY>
+			<Metro>Ломоносовская</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>от станции метро "Ломоносовская" на автобусах № 5, 119, на маршрутках № 97, 118, 5, 8, 239, 365, 409, на троллейбусе № 14 до остановки "ул. Народная". Пешком от метро "Ломоносовская": выйти на перекресток ул. Бабушкинской и Ивановской, затем перейти через Володарский мост, торговый комплекс будет по правую сторону, магазин находится на 2 этаже.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3666@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0667</ID>
+			<SapID>3667</SapID>
+			<Name>проспект Просвещения</Name>
+			<OwnerID>1</OwnerID>
+			<Address>195269, Санкт-Петербург, Просвещения пр., д.81</Address>
+			<CoordX>60.037260</CoordX>
+			<CoordY>30.406424</CoordY>
+			<Metro>Гражданский проспект</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на трамваях № 51, 100 до остановки "ул. Брянцева"; на троллейбусах № 6, 38 до остановки "станция метро "Гражданский проспект" и 5 минут пешком; на автобусе № 93 до остановки "ул. Ушинского" или № 121, 139, 176 до остановки "ул. Брянцева"; на маршрутках К93, К95, К108, К112, К118, К121, К175, К188, К199, К208, К214, К284, К288, К298 </HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3667@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0668</ID>
+			<SapID>3668</SapID>
+			<Name>ТЦ "Слава"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>188800, Выборг, Победы пр-кт., д.16</Address>
+			<CoordX>60.697704</CoordX>
+			<CoordY>28.776108</CoordY>
+			<Metro/>
+			<RegionID>203</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>торговый центр находится в Южном микрорайоне.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3668@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0668</ID>
+			<SapID>3668</SapID>
+			<Name>ТЦ "Слава"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>188800, Выборг, Победы пр-кт., д.16</Address>
+			<CoordX>60.697704</CoordX>
+			<CoordY>28.776108</CoordY>
+			<Metro/>
+			<RegionID>203</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>торговый центр находится в Южном микрорайоне.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0669</ID>
+			<SapID>3669</SapID>
+			<Name>Приморская ул.</Name>
+			<OwnerID>1</OwnerID>
+			<Address>188800, Выборг, Приморская ул., д.25 - Магазин Техношок</Address>
+			<CoordX>60.696537</CoordX>
+			<CoordY>28.773183</CoordY>
+			<Metro/>
+			<RegionID>203</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0670</ID>
+			<SapID>3670</SapID>
+			<Name>ТРК "Пилот"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>188309, Гатчина, Генерала Кныша ул., д.2а</Address>
+			<CoordX>59.563325</CoordX>
+			<CoordY>30.093241</CoordY>
+			<Metro/>
+			<RegionID>201</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на автобусах № 22, 107, магазин находится на 2 этаже ТЦ. </HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3670@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0671</ID>
+			<SapID>3671</SapID>
+			<Name>пр. 25 Октября</Name>
+			<OwnerID>1</OwnerID>
+			<Address>188300, Гатчина, пр. 25 Октября, д.42е</Address>
+			<CoordX>59.574092</CoordX>
+			<CoordY>30.125751</CoordY>
+			<Metro/>
+			<RegionID>201</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>торговый комплекс находится на главном проспекте города, магазин расположен на 2 этаже.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3671@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0672</ID>
+			<SapID>3672</SapID>
+			<Name>ТРК "Сити Молл"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>197341, Санкт-Петербург, Коломяжский пр., д.17</Address>
+			<CoordX>60.005321</CoordX>
+			<CoordY>30.299554</CoordY>
+			<Metro>Пионерская</Metro>
+			<RegionID>2</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet/>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3672@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0673</ID>
+			<SapID>3673</SapID>
+			<Name>ТК "Мельница"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>188643, Всеволожск, Александровская ул., д.80</Address>
+			<CoordX>60.024649</CoordX>
+			<CoordY>30.631759</CoordY>
+			<Metro/>
+			<RegionID>202</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на метро: от станции "Ладожская" на автобусе № 430 (20 минут), от станции "Площадь Ленина" на автобусе №530 (35 мин). На автомобиле: проехать 8 км по Дороге жизни, затем направо на Александровскую ул., через 800 м слева будет расположен ТЦ. Магазин находится на 2 этаже.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3673@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0674</ID>
+			<SapID>3674</SapID>
+			<Name>ТЦ "Семейный Магнит"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>188480, Кингисепп, 1-я Линия, д.2Б</Address>
+			<CoordX>59.373634</CoordX>
+			<CoordY>28.623881</CoordY>
+			<Metro/>
+			<RegionID>207</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>торговый центр находится на выезде из города, перед круговым движением. Имеется большая парковка.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3674@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0675</ID>
+			<SapID>3675</SapID>
+			<Name>ТЦ "Волхов"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>187110, Кириши, Романтиков ул., д.4</Address>
+			<CoordX>59.449998</CoordX>
+			<CoordY>32.026566</CoordY>
+			<Metro/>
+			<RegionID>204</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>при выходе из железнодорожного вокзала повернуть налево, пройти 450 м по проспекту Победы, дойдя до улицы Романтиков, повернуть направо и двигаться еще 500 м до торгового центра, магазин находится на 2 этаже.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3675@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0675</ID>
+			<SapID>3675</SapID>
+			<Name>ТЦ "Волхов"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>187110, Кириши, Романтиков ул., д.4</Address>
+			<CoordX>59.449998</CoordX>
+			<CoordY>32.026566</CoordY>
+			<Metro/>
+			<RegionID>204</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>при выходе из железнодорожного вокзала повернуть налево, пройти 450 м по проспекту Победы, дойдя до улицы Романтиков, повернуть направо и двигаться еще 500 м до торгового центра, магазин находится на 2 этаже.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>expert3675@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0676</ID>
+			<SapID>3676</SapID>
+			<Name>Трудящихся бульвар</Name>
+			<OwnerID>1</OwnerID>
+			<Address>196657, Колпино, Трудящихся б-р, д.4/5</Address>
+			<CoordX>59.738194</CoordX>
+			<CoordY>30.571098</CoordY>
+			<Metro/>
+			<RegionID>178</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на автобусах № 386, 332, 336, 366, 369 или маршрутках № К391, К293А, К220А до остановки "бульвар Трудящихся, д.15". Магазин находится рядом с ТК "Ока", за детской площадкой.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3676@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0677</ID>
+			<SapID>3677</SapID>
+			<Name>Тверская улица</Name>
+			<OwnerID>1</OwnerID>
+			<Address>196655, Колпино, ул.Тверская , д.36/9</Address>
+			<CoordX>59.740956</CoordX>
+			<CoordY>30.611255</CoordY>
+			<Metro/>
+			<RegionID>178</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director201@tshock.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0678</ID>
+			<SapID>3678</SapID>
+			<Name>ТРК "Ока"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>196655, Колпино, ул.Октябрьская , д.8</Address>
+			<CoordX>59.738825</CoordX>
+			<CoordY>30.622527</CoordY>
+			<Metro/>
+			<RegionID>178</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>до остановки "Окей" от станции метро "Ломоносовская" на маршрутке № 220Б; от станции метро "Купчино" на маршрутке № 292; от станции метро "Звездная" на маршрутке № 296; по Колпино - на автобусах № 192, 326, 368, 386, 387 и маршрутке № 391А. Магазин расположен на 2 этаже ТРК.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3678@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0679</ID>
+			<SapID>3679</SapID>
+			<Name>ТЦ "Константиновский"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>196603, Пушкин, ул. Полковая, д.1</Address>
+			<CoordX>59.702171</CoordX>
+			<CoordY>30.381526</CoordY>
+			<Metro/>
+			<RegionID>179</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>остановка "ул. Саперная, д. 40" - от метро "Купчино" и "Московская" на маршрутках № 287, 186, от ЖД вокзала г. Пушкин на автобусе № 376, 186; из г. Павловска - маршрутка № 372. Затем пешком - первый поворот направо, ТЦ будет через 300 м по левую сторону дороги, магазин находится на 2 этаже, слева от центральной лестницы.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3679@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0681</ID>
+			<SapID>3681</SapID>
+			<Name>ТК "Дубрава"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>187555, Тихвин, Ново-Вязитская ул., д.1</Address>
+			<CoordX>59.640370</CoordX>
+			<CoordY>33.520123</CoordY>
+			<Metro/>
+			<RegionID>205</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на автобусе № 11 до остановки "ул. Машиностроителей, д. 38", магазин находится на 2 этаже ТК.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director36812@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0683</ID>
+			<SapID>3683</SapID>
+			<Name>ТЦ "Мебельцентр"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>160000, Вологда, Герцена ул., д.124</Address>
+			<CoordX>59.200703</CoordX>
+			<CoordY>39.911581</CoordY>
+			<Metro/>
+			<RegionID>206</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>Магазин расположен на 2 этаже торгового центра "Мебельцентр".</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3683@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0684</ID>
+			<SapID>3684</SapID>
+			<Name>БЦ "Диалог"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>160000, Вологда, Мальцева ул., д.52 - Магазин Техношок</Address>
+			<CoordX>59.214661</CoordX>
+			<CoordY>39.872873</CoordY>
+			<Metro/>
+			<RegionID>206</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0687</ID>
+			<SapID>3687</SapID>
+			<Name>улица Свердлова</Name>
+			<OwnerID>1</OwnerID>
+			<Address>183031, Мурманск, Свердлова ул., д.19А</Address>
+			<CoordX>68.996135</CoordX>
+			<CoordY>33.114314</CoordY>
+			<Metro/>
+			<RegionID>211</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – суббота с 10:00 до 21:00; воскресенье с 10:00 до 20:00</WorkingMode>
+			<HowToGet>на автобусах № 27, 33 до остановки "ул. Свердлова".</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3687@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0688</ID>
+			<SapID>3688</SapID>
+			<Name>ТЦ "Гермес"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>183014, Мурманск, Баумана ул., д.3</Address>
+			<CoordX>68.914535</CoordX>
+			<CoordY>33.087886</CoordY>
+			<Metro/>
+			<RegionID>211</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – суббота с 10:00 до 21:00; воскресенье с 10:00 до 20:00</WorkingMode>
+			<HowToGet>на общественном транспорте из центра или северной части города до станции "ул. Беринга".</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3688@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0689</ID>
+			<SapID>3689</SapID>
+			<Name>ул. Большая Санкт-Петербургская</Name>
+			<OwnerID>1</OwnerID>
+			<Address>173008, Новгород, Большая Санкт-Петербургская ул., д.130 - Магазин Техношок</Address>
+			<CoordX>58.565341</CoordX>
+			<CoordY>31.280253</CoordY>
+			<Metro/>
+			<RegionID>213</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0690</ID>
+			<SapID>3690</SapID>
+			<Name>ул. Федоровский Ручей</Name>
+			<OwnerID>1</OwnerID>
+			<Address>173000, Новгород, Федоровский Ручей ул., д.2</Address>
+			<CoordX>58.522864</CoordX>
+			<CoordY>31.285023</CoordY>
+			<Metro/>
+			<RegionID>213</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0691</ID>
+			<SapID>3691</SapID>
+			<Name>ТЦ "Магнит"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>173020, Великий Новгород, Державина ул., д.19</Address>
+			<CoordX>58.543397</CoordX>
+			<CoordY>31.319897</CoordY>
+			<Metro/>
+			<RegionID>213</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на автобусе № 4, 19, 1А до конечной остановки и затем 500 м пешком. Магазин находится на 2 этаже ТЦ.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3691@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0692</ID>
+			<SapID>3692</SapID>
+			<Name>ул. Горького</Name>
+			<OwnerID>1</OwnerID>
+			<Address>185035, Петрозаводск, Максима Горького ул., д.25</Address>
+			<CoordX>61.781701</CoordX>
+			<CoordY>34.348107</CoordY>
+			<Metro/>
+			<RegionID>218</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet> </HowToGet>
+			<Distance/>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>petrozavodsk_dir@tshock.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0693</ID>
+			<SapID>3693</SapID>
+			<Name>ТЦ "Весна"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>185016, Петрозаводск, Интернационалистов б-р., д.25</Address>
+			<CoordX>61.763689</CoordX>
+			<CoordY>34.314479</CoordY>
+			<Metro/>
+			<RegionID>218</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на троллейбусе №1, 8; на автобусах № 1, 4, 9, 12, 14, 17, 19, 20, 26, 27. Торговый центр находится в районе "Древлянка", магазин расположен на 2 этаже.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3693@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0694</ID>
+			<SapID>3694</SapID>
+			<Name>ул. Красная</Name>
+			<OwnerID>1</OwnerID>
+			<Address>185035, Петрозаводск, Красная ул., д.49 - Магазин Техношок</Address>
+			<CoordX>61.787019</CoordX>
+			<CoordY>34.348199</CoordY>
+			<Metro/>
+			<RegionID>218</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>petrozavodsk3_dir@tshock.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0695</ID>
+			<SapID>3695</SapID>
+			<Name>ТК "ПИК-60"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>180024, Псков, Юбилейная ул., д.68</Address>
+			<CoordX>57.821605</CoordX>
+			<CoordY>28.291341</CoordY>
+			<Metro/>
+			<RegionID>219</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на автомобиле: подъехать к ТК можно по улицам Кузбасской Дивизии, Коммунальной, Юбилейной. На автобусах № 16, 22, 2, 3, 4, 6, 16, 17, 18, 22, 25, 30 до остановки "ул. Юбилейная", на автобусах № 3, 4, 6, 6А, 14, 14Т, 18, 25 до остановки "Торговый дом".</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3695@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0696</ID>
+			<SapID>3696</SapID>
+			<Name>ул. Ленинградская</Name>
+			<OwnerID>1</OwnerID>
+			<Address>160000, Череповец, Ленинградская ул., д.1</Address>
+			<CoordX>59.099557</CoordX>
+			<CoordY>37.913254</CoordY>
+			<Metro/>
+			<RegionID>208</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Суббота с 10:00 до 21:00; Воскресенье с 10:00 до 20:00</WorkingMode>
+			<HowToGet/>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>cher1dir@tshock.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0697</ID>
+			<SapID>3697</SapID>
+			<Name>улица Архангельская</Name>
+			<OwnerID>1</OwnerID>
+			<Address>162601, Череповец, Архангельская ул., д.46</Address>
+			<CoordX>59.117447</CoordX>
+			<CoordY>37.979495</CoordY>
+			<Metro/>
+			<RegionID>208</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на автобусе №31, 7, 38, остановка находится в 50 метрах от магазина.</HowToGet>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3697@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0698</ID>
+			<SapID>3698</SapID>
+			<Name>ул. Горького</Name>
+			<OwnerID>1</OwnerID>
+			<Address>160000, Череповец, Горького ул., д.20Б - Магазин Техношок</Address>
+			<CoordX>59.126335</CoordX>
+			<CoordY>37.920634</CoordY>
+			<Metro/>
+			<RegionID>208</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>783</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0700</ID>
+			<SapID>3700</SapID>
+			<Name>ТЦ "Пятигорск"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>357353, Пятигорск, Георгиевское ш., 1, ТЦ "Пятигорск"</Address>
+			<CoordX>44.029895</CoordX>
+			<CoordY>43.127205</CoordY>
+			<Metro/>
+			<RegionID>28</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 9:00 до 20:00</WorkingMode>
+			<HowToGet/>
+			<Distance>1600</Distance>
+			<DeliveryDays>3</DeliveryDays>
+			<DirectorEmail>director@net115.sv.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0701</ID>
+			<SapID>6701</SapID>
+			<Name>Точка экспресс продаж "Полежаевская"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>123308, Москва, Хорошевское ш., д. 39, корп.2</Address>
+			<CoordX>55.777343</CoordX>
+			<CoordY>37.512952</CoordY>
+			<Metro>Полежаевская</Metro>
+			<RegionID>1</RegionID>
+			<Type>PICKUP</Type>
+			<WorkingMode>Понедельник – Суббота с 10:00 до 22:00; Воскресенье с 10:00 до 19:00</WorkingMode>
+			<HowToGet>Выход со станции метро "Полежаевская" в сторону улиц Зорге и Куусинена. После стеклянных дверей поверните налево. Выйдя на улицу, идите вдоль Хорошёвского шоссе против движения автомобилей до высотного жилого дома, в торце которого находится пункт выдачи «Техносила».</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0702</ID>
+			<SapID>6702</SapID>
+			<Name>Точка экспресс продаж "Рязанский проспект"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>109456, Москва, Рязанский проспект, д.75, корп.3</Address>
+			<CoordX>55.717517</CoordX>
+			<CoordY>37.794046</CoordY>
+			<Metro>Рязанский проспект</Metro>
+			<RegionID>1</RegionID>
+			<Type>PICKUP</Type>
+			<WorkingMode>Понедельник – Суббота с 10:00 до 22:00; Воскресенье с 10:00 до 19:00</WorkingMode>
+			<HowToGet>Выход со станции метро "Рязанский проспект" со стороны первого вагона из центра. После стеклянных дверей поверните налево. Пройдите по пешеходной дорожке до перекрёстка и сверните направо. С правой стороны улицы увидите рекламный щит, а возле него пункт выдачи «Техносила». </HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0703</ID>
+			<SapID>6703</SapID>
+			<Name>Точка экспресс продаж "Зябликово"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>115597, Москва, Воронежская ул., д.44, корп.1</Address>
+			<CoordX>55.610119</CoordX>
+			<CoordY>37.747723</CoordY>
+			<Metro>Зябликово</Metro>
+			<RegionID>1</RegionID>
+			<Type>PICKUP</Type>
+			<WorkingMode>Понедельник – Суббота с 10:00 до 22:00; Воскресенье с 10:00 до 19:00</WorkingMode>
+			<HowToGet>Выход со станции метро "Зябликово" на Ясеневую улицу со стороны первого вагона из центра. Пройти до перекрёстка Ясеневой улицы с Воронежской и повернуть налево. Через 100 метров на противоположной стороне улицы увидите жилой дом с пунктом выдачи «Техносила» в торце здания.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0704</ID>
+			<SapID>6704</SapID>
+			<Name>Точка экспресс продаж "Волоколамская"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>125310, Москва, Новотушинский проезд, д.6, корп.1</Address>
+			<CoordX>55.837020</CoordX>
+			<CoordY>37.383188</CoordY>
+			<Metro>Волоколамская </Metro>
+			<RegionID>1</RegionID>
+			<Type>PICKUP</Type>
+			<WorkingMode>Понедельник – Суббота с 10:00 до 22:00; Воскресенье с 10:00 до 19:00</WorkingMode>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0709</ID>
+			<SapID>6709</SapID>
+			<Name>Точка экспресс продаж "улица Пензенская"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>443082, Самара, улица Пензенская, 71</Address>
+			<CoordX>53.193936</CoordX>
+			<CoordY>50.148090</CoordY>
+			<Metro/>
+			<RegionID>3</RegionID>
+			<Type>PICKUP</Type>
+			<WorkingMode>Понедельник – Суббота с 10:00 до 22:00; Воскресенье с 10:00 до 19:00</WorkingMode>
+			<HowToGet/>
+			<Distance>1056</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0710</ID>
+			<SapID>6710</SapID>
+			<Name>Точка экспресс продаж "улица Победы"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>443083, Самара, улица Победы, 12</Address>
+			<CoordX>53.205328</CoordX>
+			<CoordY>50.231251</CoordY>
+			<Metro/>
+			<RegionID>3</RegionID>
+			<Type>PICKUP</Type>
+			<WorkingMode>Понедельник – Суббота с 10:00 до 22:00; Воскресенье с 10:00 до 19:00</WorkingMode>
+			<HowToGet/>
+			<Distance>1056</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0711</ID>
+			<SapID>6711</SapID>
+			<Name>Точка экспресс продаж "Алтуфьевское шоссе"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>125310, Москва, Алтуфьевское шоссе, д.89</Address>
+			<CoordX>55.894942</CoordX>
+			<CoordY>37.585555</CoordY>
+			<Metro>Алтуфьево</Metro>
+			<RegionID>1</RegionID>
+			<Type>PICKUP</Type>
+			<WorkingMode>Понедельник – Суббота с 10:00 до 22:00; Воскресенье с 10:00 до 19:00</WorkingMode>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0712</ID>
+			<SapID>6712</SapID>
+			<Name>Точка экспресс продаж "улица Красноармейская"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>344022, Ростов-на-Дону, Красноармейская улица, д.264</Address>
+			<CoordX>47.232406</CoordX>
+			<CoordY>39.734794</CoordY>
+			<Metro/>
+			<RegionID>6</RegionID>
+			<Type>PICKUP</Type>
+			<WorkingMode>Понедельник - Пятница с 10:00 до 21:00; Суббота - Воскресение с 10:00 до 20:00</WorkingMode>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays>7</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0714</ID>
+			<SapID>6714</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>205</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0715</ID>
+			<SapID>6715</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>218</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0716</ID>
+			<SapID>6716</SapID>
+			<Name>Точка экспресс продаж "Площадь Юности"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>124482, Москва, Зеленоград, Площадь Юности, 2С1</Address>
+			<CoordX>56.001786</CoordX>
+			<CoordY>37.210751</CoordY>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>PICKUP</Type>
+			<WorkingMode>Понедельник – Суббота с 10:00 до 22:00; Воскресенье с 10:00 до 19:00</WorkingMode>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0717</ID>
+			<SapID>6717</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>203</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0718</ID>
+			<SapID>6718</SapID>
+			<Name>ТЦ "Магнит"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>173020, Великий Новгород, Державина ул., д.19</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>213</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на автобусе № 4, 19, 1А до конечной остановки и затем 500 м пешком. Магазин находится на 2 этаже ТЦ.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0719</ID>
+			<SapID>6719</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>211</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0721</ID>
+			<SapID>6721</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>204</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0722</ID>
+			<SapID>6722</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>219</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0723</ID>
+			<SapID>6723</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>207</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0763</ID>
+			<SapID>3763</SapID>
+			<Name>ТЦ "Центральный"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>432001, Ульяновск, К. Маркса ул., д.12</Address>
+			<CoordX>54.319652</CoordX>
+			<CoordY>48.393742</CoordY>
+			<Metro/>
+			<RegionID>33</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на маршрутках № 12, 22, 25, 50, 52, 55, 68, 74, 81, 93 до остановки "Стадион Труд".</HowToGet>
+			<Distance>879</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3763@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0782</ID>
+			<SapID>2782</SapID>
+			<Name>Склад "Чехов" - Склад основного товара</Name>
+			<OwnerID>1</OwnerID>
+			<Address>142326, Московская обл, Чеховский район, с. Новосёлки, влад . 11, стр 5, блок 2</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>Центральный склад</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0783</ID>
+			<SapID>2783</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address>г. Домодедово, ул. Логистическая, д. 1/14</Address>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>Склад</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0784</ID>
+			<SapID>2784</SapID>
+			<Name>Склад СПСР-Экспресс - 2784 - Склад основного товара</Name>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>Партнерский</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0786</ID>
+			<SapID>2786</SapID>
+			<Name>Склад ДМД Е96 - 2786 - Склад основного товара</Name>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>Партнерский</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0787</ID>
+			<SapID>2787</SapID>
+			<Name>Склад партнерского товара ДМД - 2787 - Склад основного товара</Name>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>Партнерский</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0801</ID>
+			<SapID>6801</SapID>
+			<Name>ТЦ "Парк Хаус"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>443111, Самара, Московское шоссе, д.81а</Address>
+			<CoordX>53.233244</CoordX>
+			<CoordY>50.200585</CoordY>
+			<Metro/>
+			<RegionID>3</RegionID>
+			<Type>SPOS</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet/>
+			<Distance>1056</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0802</ID>
+			<SapID>6802</SapID>
+			<Name>ТЦ "Сити Центр"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>420101, Казань, Академика Парина ул., д.3</Address>
+			<CoordX>55.744448</CoordX>
+			<CoordY>49.194243</CoordY>
+			<Metro>Проспект Победы</Metro>
+			<RegionID>27</RegionID>
+			<Type>SPOS</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet/>
+			<Distance>809</Distance>
+			<DeliveryDays>3</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0808</ID>
+			<SapID>6808</SapID>
+			<Name>Диамант "7 ветров"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>400137, Волгоград, 8-й Воздушной Армии, 28А</Address>
+			<CoordX>48.751952</CoordX>
+			<CoordY>44.505843</CoordY>
+			<Metro/>
+			<RegionID>14</RegionID>
+			<Type>SPOS</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>950</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0856</ID>
+			<SapID>3856</SapID>
+			<Name>ТЦ "ОРТЦ Ставрополь"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>355042, Ставрополь, Доваторцев ул., д.61</Address>
+			<CoordX>45.004425</CoordX>
+			<CoordY>41.926378</CoordY>
+			<Metro/>
+			<RegionID>30</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>1420</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0860</ID>
+			<SapID>3860</SapID>
+			<Name>ТЦ "Барс"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>390006, Рязань, Есенина ул., д.13А</Address>
+			<CoordX>54.626668</CoordX>
+			<CoordY>39.766020</CoordY>
+			<Metro/>
+			<RegionID>29</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 20:00</WorkingMode>
+			<HowToGet>магазин расположен на одной из центральных улиц города, добраться до него можно на любом общественном транспорте (оставновки "Мясокомбинат" и "ул. Грибоедова").</HowToGet>
+			<Distance>175</Distance>
+			<DeliveryDays>1</DeliveryDays>
+			<DirectorEmail>director3860@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0890</ID>
+			<SapID>3890</SapID>
+			<Name>ТЦ "Универмаг Белгород"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>308000, Белгород, Попова ул., д.36</Address>
+			<CoordX>50.599850</CoordX>
+			<CoordY>36.590482</CoordY>
+			<Metro/>
+			<RegionID>35</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – dоскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на общественном транспорте до остановки "Центральный рынок". Магазин расположен на 2 этаже ТЦ. Имеется парковка.</HowToGet>
+			<Distance>664</Distance>
+			<DeliveryDays>3</DeliveryDays>
+			<DirectorEmail>director3890@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0892</ID>
+			<SapID>3892</SapID>
+			<Name>ТЦ "Северо-Западный"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>454014, Челябинск, Победы пр-т, д.348</Address>
+			<CoordX>55.189743</CoordX>
+			<CoordY>61.319460</CoordY>
+			<Metro/>
+			<RegionID>60</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>торговый центр расположен возле Колхозного рынка, магазин находится на 2 этаже, справа от эскалатора.</HowToGet>
+			<Distance>1735</Distance>
+			<DeliveryDays>5</DeliveryDays>
+			<DirectorEmail>Director3892@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0897</ID>
+			<SapID>8897</SapID>
+			<Name>Маркетплейс - Нижний Тагил - 8897</Name>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>69</RegionID>
+			<Type>Склад</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0898</ID>
+			<SapID>8898</SapID>
+			<Name>Маркетплейс - E96 - 8898</Name>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>7</RegionID>
+			<Type>Склад</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0903</ID>
+			<SapID>3903</SapID>
+			<Name>ТЦ "Космос"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>150062, Ярославль, Авиаторов пр-кт, д.149</Address>
+			<CoordX>57.656205</CoordX>
+			<CoordY>39.944119</CoordY>
+			<Metro/>
+			<RegionID>24</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 20:00</WorkingMode>
+			<HowToGet>магазин расположен на 2 этаже.</HowToGet>
+			<Distance>280</Distance>
+			<DeliveryDays/>
+			<DirectorEmail>director3903@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0905</ID>
+			<SapID>3905</SapID>
+			<Name>ТРЦ "Радуга"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>398007, Липецк, Студеновская ул., 184</Address>
+			<CoordX>52.629677</CoordX>
+			<CoordY>39.648552</CoordY>
+			<Metro/>
+			<RegionID>34</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 20:00</WorkingMode>
+			<HowToGet>на общественном транспорте до остановки "пл. Заводская", торговый центр расположен в районе поселка "Свободный сокол", магазин находится на 2 этаже ТЦ.</HowToGet>
+			<Distance>431</Distance>
+			<DeliveryDays>1</DeliveryDays>
+			<DirectorEmail>director3905@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0909</ID>
+			<SapID>3909</SapID>
+			<Name>ТЦ "Сити Центр"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>420101, Казань, Академика Парина ул., д.3</Address>
+			<CoordX>55.744448</CoordX>
+			<CoordY>49.194243</CoordY>
+			<Metro>Проспект Победы</Metro>
+			<RegionID>27</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>пешком от станции метро Проспект Победы (15 мин), на трамвае № 5, автобусах № 103с,105с,111с,197, 22, 33, 34, 37, 4, 45, 55 , 5, 77 до остановок "Деревня Универсиады" или "ул. Сыртлановой", на автобусах № 22, 4, 47, 5, 74, 77 или троллейбусе № 8 до остановки Парина. ТЦ находится на пересечении пр. Победы и ул. Мавлютова, магазин расположен на цокольном этаже 2 корпуса.</HowToGet>
+			<Distance>809</Distance>
+			<DeliveryDays>3</DeliveryDays>
+			<DirectorEmail>director3909@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0912</ID>
+			<SapID>3912</SapID>
+			<Name>ТЦ "Центральный"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>142104, Подольск, Б.Серпуховская ул., д.5</Address>
+			<CoordX>55.427443</CoordX>
+			<CoordY>37.546589</CoordY>
+			<Metro/>
+			<RegionID>74</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>торговый центр находится рядом с центральным рынком, добраться можно на любом общественном транспорте; магазин расположен на цокольном этаже.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>director3912@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0913</ID>
+			<SapID>3913</SapID>
+			<Name>ТЦ "Галерея"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>142100, Подольск, ул.Свердлова, д.26</Address>
+			<CoordX>55.424286</CoordX>
+			<CoordY>37.538242</CoordY>
+			<Metro/>
+			<RegionID>74</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 22:00</WorkingMode>
+			<HowToGet>на автомобиле: при движении по Калужскому шоссе повернуть на ул. К. Готвальда, затем на ул. Свердлова. На общественном транспорте: от станции "Подольск" на любом троллейбусе нужно доехать до остановки "Стекольникова" и затем, повернув на ул. Свердлова, пройти 250 м до торгового центра. Магазин расположен на 3 этаже.</HowToGet>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail>Director3913@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>No</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0964</ID>
+			<SapID>3964</SapID>
+			<Name>ТЦ "Тулпар"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>423800, Набережные Челны, Московский проспект, д.136</Address>
+			<CoordX>55.749422</CoordX>
+			<CoordY>52.442462</CoordY>
+			<Metro/>
+			<RegionID>32</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>1046</Distance>
+			<DeliveryDays>3</DeliveryDays>
+			<DirectorEmail>director@net157.sv.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0967</ID>
+			<SapID>3967</SapID>
+			<Name>ТЦ "Панорама"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>649002, Горно-Алтайск, Коммунистический проспект, д.11</Address>
+			<CoordX>51.958230</CoordX>
+			<CoordY>85.958998</CoordY>
+			<Metro/>
+			<RegionID>46</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet/>
+			<Distance>3806</Distance>
+			<DeliveryDays>9</DeliveryDays>
+			<DirectorEmail>director@net070.sv.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0968</ID>
+			<SapID>3968</SapID>
+			<Name>ТЦ "Бизнес-Холл"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>394000, Воронеж, Революции проспект, д.1в</Address>
+			<CoordX>51.681942</CoordX>
+			<CoordY>39.216394</CoordY>
+			<Metro/>
+			<RegionID>23</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – воскресенье с 10:00 до 21:00</WorkingMode>
+			<HowToGet>на автобусах № 1нс, 10а, 120, 26а, 33к, 44н, 9кс, маршрутках № 1кс, 108а, 20м, 22, 25а, 27к, 29, 3, 49м, 5, 50, 70а, 70м, 75, 88 до остановки "ЖД-поликлиника"</HowToGet>
+			<Distance>515</Distance>
+			<DeliveryDays>2</DeliveryDays>
+			<DirectorEmail>director3968@tehnosila.ru</DirectorEmail>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>0975</ID>
+			<SapID>3975</SapID>
+			<Name>ТЦ "Феникс"</Name>
+			<OwnerID>1</OwnerID>
+			<Address>622002, Нижний Тагил, Фрунзе ул., д.56</Address>
+			<CoordX>57.922554</CoordX>
+			<CoordY>59.940402</CoordY>
+			<Metro/>
+			<RegionID>69</RegionID>
+			<Type>Розничный магазин</Type>
+			<WorkingMode>Понедельник – Воскресенье с 10-00 до 21-00</WorkingMode>
+			<HowToGet/>
+			<Distance>1840</Distance>
+			<DeliveryDays>4</DeliveryDays>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>2295</ID>
+			<SapID>2295</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>Склад</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+		<Shop>
+			<ID>2309</ID>
+			<SapID>2309</SapID>
+			<Name/>
+			<OwnerID>1</OwnerID>
+			<Address/>
+			<CoordX/>
+			<CoordY/>
+			<Metro/>
+			<RegionID>1</RegionID>
+			<Type>Склад</Type>
+			<WorkingMode/>
+			<HowToGet/>
+			<Distance/>
+			<DeliveryDays/>
+			<DirectorEmail/>
+			<SwitchedOff>Yes</SwitchedOff>
+			<DimentionsLimit>0</DimentionsLimit>
+		</Shop>
+	</Shops>
+	<PickUpPoints>
+		<Point>
+			<ID>E96-0002</ID>
+			<Name>Вильгельма де Геннина</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Екатеринбург, Вильгельма де Геннина, 42</Address>
+			<CoordX>56.790373</CoordX>
+			<CoordY>60.515216</CoordY>
+			<Metro/>
+			<RegionID>7</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт,Сб,Вск: с 10:00 до 21:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>422</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>E96-0001</ID>
+			<Name>8 Марта</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Екатеринбург, 8 Марта, 55/Декабристов, 77б</Address>
+			<CoordX>56.822484</CoordX>
+			<CoordY>60.605712</CoordY>
+			<Metro/>
+			<RegionID>7</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт,Cб,Вск: с 10:00 до 21:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>40</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0.6</WidthMax>
+			<HeightMax>1</HeightMax>
+			<DepthMax>0.5</DepthMax>
+			<OuterCode>506</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00026</ID>
+			<Name>Архангельск - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Архангельск, Ленинградский проспект, д.382</Address>
+			<CoordX>64.483111</CoordX>
+			<CoordY>40.737924</CoordY>
+			<Metro/>
+			<RegionID>236</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:30 до 18:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays/>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>ARH</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00027</ID>
+			<Name>Астрахань - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Астрахань, Боевая ул, д.132С</Address>
+			<CoordX>46.314682</CoordX>
+			<CoordY>48.021302</CoordY>
+			<Metro/>
+			<RegionID>17</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:30 до 18:00;Сб,Вс: с 9:00 до 13:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>3</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>ASF</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00033</ID>
+			<Name>Брянск-терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Брянск, Станке Димитрова проспект, д.62</Address>
+			<CoordX>53.238173</CoordX>
+			<CoordY>34.323801</CoordY>
+			<Metro/>
+			<RegionID>237</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт,Сб,Вс: с 9:30 до 18:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays/>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>BZK</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00041</ID>
+			<Name>Чита - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Чита, Пограничная ул, д.9</Address>
+			<CoordX>52.049999</CoordX>
+			<CoordY>113.446294</CoordY>
+			<Metro/>
+			<RegionID>239</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 10:00 до 17:00;Сб,Вс: с 10:00 до 16:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>10</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>HTA</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00075</ID>
+			<Name>Магнитогорск - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Магнитогорск, Профсоюзная улица, д.8А</Address>
+			<CoordX>53.397688</CoordX>
+			<CoordY>59.038888</CoordY>
+			<Metro/>
+			<RegionID>79</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>5</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>MQF</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00099</ID>
+			<Name>Оренбург - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Оренбург, Металлистов улица, д.16</Address>
+			<CoordX>51.757597</CoordX>
+			<CoordY>55.08216</CoordY>
+			<Metro/>
+			<RegionID>169</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00;Сб: с 10:00 до 14:00;Вс: с 10:00 до 15:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>3</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>REN</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00123</ID>
+			<Name>Улан-Удэ - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Улан-Удэ, Сахьяновой улица, д.9</Address>
+			<CoordX>51.811596</CoordX>
+			<CoordY>107.632472</CoordY>
+			<Metro/>
+			<RegionID>238</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:30 до 18:00;Сб: с 8:00 до 14:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays/>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>UUD</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00134</ID>
+			<Name>Якутск - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Якутск, Стадухина ул, д.83/3Г</Address>
+			<CoordX>62.042434</CoordX>
+			<CoordY>129.721847</CoordY>
+			<Metro/>
+			<RegionID>240</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт,Сб,Вс: с 8:00 до 20:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>18</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>YKS</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00136</ID>
+			<Name>Хабаровск - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Хабаровск, Промышленная ул, д.3</Address>
+			<CoordX>48.486493</CoordX>
+			<CoordY>135.115438</CoordY>
+			<Metro/>
+			<RegionID>230</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт,Сб,Вс: с 8:00 до 20:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>11</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>KHV</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>E96-0003</ID>
+			<Name>Газетная, 77a</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Нижний Тагил, Газетная</Address>
+			<CoordX>57.914002</CoordX>
+			<CoordY>59.966165</CoordY>
+			<Metro/>
+			<RegionID>69</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Вт,Ср,Чт,Пт: с 10:00 до 20:00; Сб: c 10:00 до 17:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>221</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>E96-0004</ID>
+			<Name>Газетная,77a</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Нижний Тагил,Газетная</Address>
+			<CoordX>57.914063</CoordX>
+			<CoordY>59.96616</CoordY>
+			<Metro/>
+			<RegionID>7</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Вт,Ср,Чт,Пт: с 10:00 до 20:00; Сб: c 10:00 до 17:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>221</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>E96-0005</ID>
+			<Name>Октябрьская,41a</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Каменск-Уральский,Октябрьская</Address>
+			<CoordX>56.379207</CoordX>
+			<CoordY>61.946573</CoordY>
+			<Metro/>
+			<RegionID>7</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 10:00 до 20:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>1054</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>E96-0006</ID>
+			<Name>Скорынина,4</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Нижняя-Тура,Скорынина 4</Address>
+			<CoordX>58.622967</CoordX>
+			<CoordY>59.855421</CoordY>
+			<Metro/>
+			<RegionID>7</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 10:00 до 20:00; Сб: c 10:00 до 17:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>213</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>E96-0007</ID>
+			<Name>Ленина,86</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Лесной,Ленина</Address>
+			<CoordX>58.633274</CoordX>
+			<CoordY>59.769345</CoordY>
+			<Metro/>
+			<RegionID>7</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 10:00 до 20:00; Сб: c 10:00 до 17:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>857</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>E96-0008</ID>
+			<Name>ПВЗ Качканар</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Качканар, 2-й микрорайон, д.8</Address>
+			<CoordX>58.704306</CoordX>
+			<CoordY>59.485989</CoordY>
+			<Metro/>
+			<RegionID>7</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 10:00 до 20:00; Сб: c 10:00 до 17:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>474</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>E96-0009</ID>
+			<Name>ПВЗ Серов</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Серов, Карла Маркса, д29</Address>
+			<CoordX>51.802815</CoordX>
+			<CoordY>107.607375</CoordY>
+			<Metro/>
+			<RegionID>7</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Вт,Ср,Чт,Пт: с 10:00 до 20:00; Сб: c 10:00 до 17:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>355</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00039</ID>
+			<Name>Нижний Новгород - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Дружный, Кудьминская Промзона  ., д.5</Address>
+			<CoordX>56.169535</CoordX>
+			<CoordY>43.899203</CoordY>
+			<Metro/>
+			<RegionID>223</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00;Сб: с 9:00 до 14:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>2</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>GOJ</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00148</ID>
+			<Name>Нижний Новгород - Удмуртская</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Нижний Новгород, Удмуртская улица, д.38</Address>
+			<CoordX>56.294361</CoordX>
+			<CoordY>43.88528</CoordY>
+			<Metro/>
+			<RegionID>223</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 17:30</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>2</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>G11</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>E96-0010</ID>
+			<Name>ПВЗ Уфа</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Уфа, Высотная улица, д.14/2 </Address>
+			<CoordX>54.703525</CoordX>
+			<CoordY>55.981859</CoordY>
+			<Metro/>
+			<RegionID>25</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн-Пт с 10:00 до 18:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>220</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>Е96-0011</ID>
+			<Name>ПВЗ Пермь</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Пермь, улица Карпинского, 109 </Address>
+			<CoordX>57.963856</CoordX>
+			<CoordY>56.200024</CoordY>
+			<Metro/>
+			<RegionID>5</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн-Пт с 10:30 до 19:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>218</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>Е96-0012</ID>
+			<Name>ПВЗ Челябинск</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Челябинск, улица Первой Пятилетки, 45</Address>
+			<CoordX>55.167678</CoordX>
+			<CoordY>61.435854</CoordY>
+			<Metro/>
+			<RegionID>60</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн-Пт с 10:00 до 18:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>217</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>Е96-0013</ID>
+			<Name>ПВЗ Омск</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Омск, улица Пушкина, 137 </Address>
+			<CoordX>54.963</CoordX>
+			<CoordY>73.389313</CoordY>
+			<Metro/>
+			<RegionID>37</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн-Пт с 10:00 до 19:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>622</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>Е96-0014</ID>
+			<Name>ПВЗ Тюмень</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Тюмень, Харьковская улица, 83Ак4</Address>
+			<CoordX>57.141984</CoordX>
+			<CoordY>65.598692</CoordY>
+			<Metro/>
+			<RegionID>20</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн-Пт с 11:00 до 19:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>219</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>Е96-0015</ID>
+			<Name>ПВЗ Тюмень</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Тюмень, Максима Горького, 59/1</Address>
+			<CoordX>57.146506</CoordX>
+			<CoordY>65.558501</CoordY>
+			<Metro/>
+			<RegionID>20</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн-Вт c 10:00 до 17:00; 
+Ср-Пт c 10:00 до 20:00; 
+Сб c 13:00 до 19:00.</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>699</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>Е96-0016</ID>
+			<Name>Монтажников, 30а</Name>
+			<OwnerID>5</OwnerID>
+			<Address>Екатеринбург,Монтажников</Address>
+			<CoordX>56.896357</CoordX>
+			<CoordY>60.515961</CoordY>
+			<Metro/>
+			<RegionID>7</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт с 09:00 до 20:00 Сб,Вск: с 09:00 до 18:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>1093</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00016</ID>
+			<Name>Иркутск - Баррикад</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Иркутск, Баррикад ул, д.51/3</Address>
+			<CoordX>52.296497</CoordX>
+			<CoordY>104.306478</CoordY>
+			<Metro/>
+			<RegionID>225</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>8</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>I11</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00020</ID>
+			<Name>Горно-Алтайск - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Горно-Алтайск, Ленина ул, д.220</Address>
+			<CoordX>51.931926</CoordX>
+			<CoordY>85.976714</CoordY>
+			<Metro/>
+			<RegionID>46</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:30 до 18:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>7</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>RGK</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00025</ID>
+			<Name>Сочи - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Сочи, Голенева улица, д.36</Address>
+			<CoordX>43.6066</CoordX>
+			<CoordY>39.745717</CoordY>
+			<Metro/>
+			<RegionID>228</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:30 до 18:00;Сб,Вс: с 9:00 до 13:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>4</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>AER</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00028</ID>
+			<Name>Барнаул - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Барнаул, Попова улица, д.244</Address>
+			<CoordX>53.322927</CoordX>
+			<CoordY>83.638803</CoordY>
+			<Metro/>
+			<RegionID>177</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00;Сб,Вс: с 9:00 до 15:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>6</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>BAX</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00036</ID>
+			<Name>Чебоксары - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Чебоксары, Канашское ш, д.7/1</Address>
+			<CoordX>56.066278</CoordX>
+			<CoordY>47.271578</CoordY>
+			<Metro/>
+			<RegionID>80</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>3</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>CSY</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00042</ID>
+			<Name>Ижевск - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Ижевск, Пойма улица, д.3</Address>
+			<CoordX>56.816804</CoordX>
+			<CoordY>53.197142</CoordY>
+			<Metro/>
+			<RegionID>18</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 11:00 до 17:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>3</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>IJK</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00043</ID>
+			<Name>Иркутск-терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Иркутск, Розы Люксембург улица, д.198В</Address>
+			<CoordX>52.362802</CoordX>
+			<CoordY>104.151626</CoordY>
+			<Metro/>
+			<RegionID>225</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00;Сб,Вс: с 9:30 до 17:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>8</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>IKT</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00050</ID>
+			<Name>Красноярск - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Красноярск, Рейдовая ул, д.68А</Address>
+			<CoordX>56.040709</CoordX>
+			<CoordY>93.02823</CoordY>
+			<Metro/>
+			<RegionID>226</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт,Сб,Вс: с 8:00 до 20:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>6</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>KJA</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00077</ID>
+			<Name>Набережные  Челны - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Набережные Челны, Техническая улица, д.20</Address>
+			<CoordX>55.725212</CoordX>
+			<CoordY>52.442308</CoordY>
+			<Metro/>
+			<RegionID>32</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 10:00 до 18:00;Сб: с 10:00 до 12:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>3</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>NBC</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00079</ID>
+			<Name>Нижневартовск - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Нижневартовск, Ленина улица, д.10П</Address>
+			<CoordX>60.936893</CoordX>
+			<CoordY>76.544763</CoordY>
+			<Metro/>
+			<RegionID>168</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн: с 9:00 до 18:00;Вт,Ср,Чт,Пт: с 10:00 до 18:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>7</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>NJC</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00081</ID>
+			<Name>Ноябрьск - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Ноябрьск, Панель 14, проезд 12 проезд, д.5</Address>
+			<CoordX>63.208545</CoordX>
+			<CoordY>75.519704</CoordY>
+			<Metro/>
+			<RegionID>53</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00;Сб,Вс: с 8:00 до 9:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>7</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>NOJ</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00082</ID>
+			<Name>Новокузнецк - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Новокузнецк, Полевая ул, д.35</Address>
+			<CoordX>53.737181</CoordX>
+			<CoordY>87.157873</CoordY>
+			<Metro/>
+			<RegionID>44</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:30 до 17:30;Сб,Вс: с 10:00 до 17:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>6</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>NOZ</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00096</ID>
+			<Name>Пятигорск - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Пятигорск, Кисловодское ш, д.48</Address>
+			<CoordX>44.060799</CoordX>
+			<CoordY>42.950816</CoordY>
+			<Metro/>
+			<RegionID>30</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:30 до 18:00;Сб,Вс: с 10:30 до 14:30</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>3</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>PGK</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00105</ID>
+			<Name>Сургут - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>628400,  Россия, АО Ханты-Мансийский, г Сургут, ул Аграрная, дом 3/2</Address>
+			<CoordX>61.265179</CoordX>
+			<CoordY>73.474326</CoordY>
+			<Metro/>
+			<RegionID>229</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00;Сб,Вс: с 10:00 до 14:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>6</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>SGC</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00110</ID>
+			<Name>Ставрополь - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Ставрополь, Старомарьевское ш, д.13</Address>
+			<CoordX>45.053659</CoordX>
+			<CoordY>42.02168</CoordY>
+			<Metro/>
+			<RegionID>30</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00;Сб,Вс: с 8:00 до 11:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>3</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>STW</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00114</ID>
+			<Name>Тольятти - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Тольятти, Транспортная улица, д.24</Address>
+			<CoordX>53.557182</CoordX>
+			<CoordY>49.303549</CoordY>
+			<Metro/>
+			<RegionID>9</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00;Сб,Вс: с 9:00 до 13:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>3</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>TGL</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00116</ID>
+			<Name>Томск - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Томск, Мичурина ул, д.45/1</Address>
+			<CoordX>56.514143</CoordX>
+			<CoordY>85.020197</CoordY>
+			<Metro/>
+			<RegionID>15</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00;Сб,Вс: с 9:30 до 17:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>6</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>TOF</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00130</ID>
+			<Name>Волгоград - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Волгоград, Козловская ул, д.54</Address>
+			<CoordX>48.68707</CoordX>
+			<CoordY>44.476645</CoordY>
+			<Metro/>
+			<RegionID>14</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00;Сб,Вс: с 10:00 до 12:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>3</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>VOG</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00132</ID>
+			<Name>Владивосток - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Владивосток, Карьерная ул, д.20А</Address>
+			<CoordX>43.144821</CoordX>
+			<CoordY>131.963962</CoordY>
+			<Metro/>
+			<RegionID>224</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00;Вс: с 10:00 до 17:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>1</Card>
+			<DeliveryDays>11</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>VVO</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+		<Point>
+			<ID>DPD-00137</ID>
+			<Name>Саратов - терминал</Name>
+			<OwnerID>2</OwnerID>
+			<Address>Саратов, Трофимовский 2 ст, д.1</Address>
+			<CoordX>51.602484</CoordX>
+			<CoordY>45.942878</CoordY>
+			<Metro/>
+			<RegionID>222</RegionID>
+			<Type>ПВЗ</Type>
+			<WorkingMode>Пн,Вт,Ср,Чт,Пт: с 9:00 до 18:00;Сб,Вс: с 9:00 до 12:00</WorkingMode>
+			<Cash>1</Cash>
+			<Card>0</Card>
+			<DeliveryDays>3</DeliveryDays>
+			<WeightMin>0</WeightMin>
+			<WeightMax>0</WeightMax>
+			<DimentionsLimit>0</DimentionsLimit>
+			<MaxSKU>0</MaxSKU>
+			<WidthMax>0</WidthMax>
+			<HeightMax>0</HeightMax>
+			<DepthMax>0</DepthMax>
+			<OuterCode>RTW</OuterCode>
+			<cost_limit_cash>0</cost_limit_cash>
+			<cost_limit_cart>0</cost_limit_cart>
+		</Point>
+	</PickUpPoints>
+</Data>
