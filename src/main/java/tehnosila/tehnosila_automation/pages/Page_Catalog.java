@@ -1,13 +1,11 @@
 package tehnosila.tehnosila_automation.pages;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import org.apache.commons.lang.ArrayUtils;
+
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+
 /**
  * @author RasstriginaMK
  *
@@ -16,9 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.Assert;
 
-import com.google.common.collect.Lists;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
@@ -40,7 +36,7 @@ public class Page_Catalog extends PagesBase{
 	//private List<String> numbersSubcategories = new ArrayList<>(); // массив кол-ва товаров по категориям
 	private static int presult;
 	
-	private List<String> subcategories = new ArrayList<>(); // массив подкатегорий в catalog
+	//private List<String> subcategories = new ArrayList<>(); // массив подкатегорий в catalog
 	
 	private List<Integer> numberList = new ArrayList<>();
 	

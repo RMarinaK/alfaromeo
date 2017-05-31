@@ -1,7 +1,7 @@
 /**
  * 
  */
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Old;
 
 import java.io.File;
 
@@ -14,6 +14,7 @@ import tehnosila.tehnosila_automation.pages.Page_Order;
 import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -22,22 +23,24 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Самовывоз оплата банковской картой
-public class SelfDeliveryCreditInStore extends TestBase{
+// Доставка оплата Наличными
+public class OnlineCourierBank extends TestBase{
 		
-	//private static Logger Log = LoggerFactory.getLogger(SelfDeliveryCreditInStore.class);
+//	private static Logger Log = LoggerFactory.getLogger(OnlineCourierBank.class);
 
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"SelfDeliveryCreditInStore.xls",
-                "SelfDeliveryCreditInStore", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"OnlineCourierBank.xls",
+                "OnlineCourierBank", "Data");
         return(retObjArr);
     }
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
+	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName,
+			String inn, String kpp, String nameCompany, String companyAddress, String companyAddressFact, String companyAccount,
+			String bik, String accountCorr, String bankName, String city) throws Exception{ //
 		// авторизация
 	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
 	//	app.getLoginHelper().login(senderLogin,password); 
@@ -55,15 +58,29 @@ public class SelfDeliveryCreditInStore extends TestBase{
 		pagetehnosila.clickTVVA();
 		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
 		pagetehnosila.clickTV();
-		pagecatalogtvivideotelevizorytelevizory.clickOpenSelfDeliveryDescription();
+ 		pagecatalogtvivideotelevizorytelevizory.clickOpenCourierDescription();
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
+		pagecart.clickRCourierDelivery();
+		pagecart.waitCartLoadingLayer();
 		pagecart.clickButtonOrdering();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
-		pageorder.clickFirstPoint();
-		pageorder.clickRCreditInStore(paymentName);
+		pageorder.setMetro();
+		pageorder.setOrderFormOrderAddressStreet(street);
+		pageorder.setOrderFormOrderAddressHouse(house);
+		pageorder.clickRBank(paymentName);
+		pageorder.setOrderFormOrderContactCompanyInn(inn);
+		pageorder.setOrderFormOrderContactCompanyKpp(kpp);
+		pageorder.setOrderFormOrderContactNameCompany(nameCompany);
+		pageorder.setOrderFormOrderContactCompanyAddress(companyAddress);
+		pageorder.setOrderFormOrderContactCompanyAddressFact(companyAddressFact);
+		pageorder.setOrderFormOrderContactCompanyAccount(companyAccount);
+		pageorder.setOrderFormOrderContactCompanyBik(bik);
+		pageorder.setOrderFormOrderContactCompanyAccountCorr(accountCorr);
+		pageorder.setOrderFormOrderContactCompanyBankName(bankName);
+		pageorder.setOrderFormOrderContactCompanyCity(city);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();

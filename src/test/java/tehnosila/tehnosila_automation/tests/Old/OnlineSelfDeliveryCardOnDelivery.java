@@ -1,7 +1,7 @@
 /**
  * 
  */
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Old;
 
 import java.io.File;
 
@@ -14,6 +14,7 @@ import tehnosila.tehnosila_automation.pages.Page_Order;
 import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -23,15 +24,15 @@ import org.testng.annotations.Test;
  *
  */
 // Самовывоз оплата банковской картой
-public class SelfDeliveryCardOnDelivery extends TestBase{
+public class OnlineSelfDeliveryCardOnDelivery extends TestBase{
 		
-//	private static Logger Log = LoggerFactory.getLogger(SelfDeliveryCardOnDelivery.class);
+//	private static Logger Log = LoggerFactory.getLogger(OnlineSelfDeliveryCardOnDelivery.class);
 
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"SelfDeliveryCardOnDelivery.xls",
-                "SelfDeliveryCardOnDelivery", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"OnlineSelfDeliveryCardOnDelivery.xls",
+                "OnlinSelfDeliveryCardOnDelivery", "Data");
         return(retObjArr);
     }
 	
@@ -63,7 +64,7 @@ public class SelfDeliveryCardOnDelivery extends TestBase{
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
-		pageorder.clickRCardOnDelivery(paymentName);
+		pageorder.clickROnlineCardOnDelivery(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();

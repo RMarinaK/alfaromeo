@@ -1,7 +1,7 @@
 /**
  * 
  */
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Old;
 
 import java.io.File;
 
@@ -14,6 +14,7 @@ import tehnosila.tehnosila_automation.pages.Page_Order;
 import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -22,22 +23,22 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Доставка оплата Наличными
-public class CourierCash extends TestBase{
+// Доставка оплата банковской картой
+public class OnlineCourierCardOnDelivery extends TestBase{
 		
-//	private static Logger Log = LoggerFactory.getLogger(CourierCash.class);
+//	private static Logger Log = LoggerFactory.getLogger(OnlineCourierCardOnDelivery.class);
 
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"CourierCash.xls",
-                "CourierCash", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"OnlineCourierCardOnDelivery.xls",
+                "OnlineCourierCardOnDelivery", "Data");
         return(retObjArr);
     }
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
+	public void loginTest(String fio, String phone, String email,  String street, String house, String paymentName, String deliveryName) throws Exception{ //3
 		// авторизация
 	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
 	//	app.getLoginHelper().login(senderLogin,password); 
@@ -67,12 +68,12 @@ public class CourierCash extends TestBase{
 		pageorder.setMetro();
 		pageorder.setOrderFormOrderAddressStreet(street);
 		pageorder.setOrderFormOrderAddressHouse(house);
-		pageorder.clickRCash(paymentName);
+		pageorder.clickROnlineCardOnDelivery(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
-		sysgetorders.assertPaymentName(paymentNameGO);
+		sysgetorders.assertPaymentName(paymentName);
 		sysgetorders.assertDeliveryName(deliveryName);
 	}
 	

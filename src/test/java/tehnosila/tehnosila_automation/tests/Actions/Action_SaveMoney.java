@@ -89,7 +89,7 @@ public class Action_SaveMoney extends TestBase{
 		pagecart.clickPromoCodeField();
 		pagecart.setСartPromoСode(NavigationHelper.promocode);
 		pagecart.clickButtonApplyBonus();
-	//	app.getNavigationHelper().refreshPage();
+		app.getNavigationHelper().refreshPage();
 		pagecart.clickButtonOrdering();
 		commonmetods.getHTTPResponseCode();
 		pageorder.setOrderFromOrderContactFio(fio);

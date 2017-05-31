@@ -1,7 +1,7 @@
 /**
  * 
  */
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Mobile;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,6 +16,7 @@ import tehnosila.tehnosila_automation.pages.Mobile_Page_Order;
 import tehnosila.tehnosila_automation.pages.Mobile_Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

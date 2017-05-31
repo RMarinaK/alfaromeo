@@ -1,7 +1,7 @@
 /**
  * 
  */
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Old;
 
 import java.io.File;
 
@@ -14,6 +14,7 @@ import tehnosila.tehnosila_automation.pages.Page_Order;
 import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -22,24 +23,22 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Самовывоз оплата Юридическое лицо
-public class OnlineSelfDeliverBank extends TestBase{
+// Самовывоз оплата Наличными
+public class SelfDeliverCash extends TestBase{
 		
-//	private static Logger Log = LoggerFactory.getLogger(OnlineSelfDeliverBank.class);
+//	private static Logger Log = LoggerFactory.getLogger(SelfDeliverCash.class);
 
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"OnlineSelfDeliverBank.xls",
-                "OnlineSelfDeliverBank", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"SelfDeliveryCash.xls",
+                "SelfDeliverCash", "Data");
         return(retObjArr);
     }
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName,
-			String inn, String kpp, String nameCompany, String companyAddress, String companyAddressFact, String companyAccount,
-			String bik, String accountCorr, String bankName, String city) throws Exception{ //
+	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ //3
 		// авторизация
 	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
 	//	app.getLoginHelper().login(senderLogin,password); 
@@ -65,17 +64,7 @@ public class OnlineSelfDeliverBank extends TestBase{
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
-		pageorder.clickRBank(paymentName);
-		pageorder.setOrderFormOrderContactCompanyInn(inn);
-		pageorder.setOrderFormOrderContactCompanyKpp(kpp);
-		pageorder.setOrderFormOrderContactNameCompany(nameCompany);
-		pageorder.setOrderFormOrderContactCompanyAddress(companyAddress);
-		pageorder.setOrderFormOrderContactCompanyAddressFact(companyAddressFact);
-		pageorder.setOrderFormOrderContactCompanyAccount(companyAccount);
-		pageorder.setOrderFormOrderContactCompanyBik(bik);
-		pageorder.setOrderFormOrderContactCompanyAccountCorr(accountCorr);
-		pageorder.setOrderFormOrderContactCompanyBankName(bankName);
-		pageorder.setOrderFormOrderContactCompanyCity(city);
+		pageorder.clickRCash(paymentName);
 		pageorder.clickButtonSubmitOrder();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();

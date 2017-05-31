@@ -1,4 +1,7 @@
-package tehnosila.tehnosila_automation.tests;
+/**
+ * 
+ */
+package tehnosila.tehnosila_automation.tests.Desctop;
 
 import java.io.File;
 
@@ -19,37 +22,35 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
- * @author EDanilova
+ * @author MRasstrigina
  *
  */
-// Самовывоз оплата Наличными
-public class Solr_BonusAccrue extends TestBase{
+// Самовывоз оплата Юридическое лицо
+public class Solr_OnlineSelfDeliverBank extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Solr_BonusAccrue.class);
+	private static Logger Log = LoggerFactory.getLogger(Solr_OnlineSelfDeliverBank.class);
 
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"BonusAccrue.xls",
-                "SelfDeliverCash", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"OnlineSelfDeliverBank.xls",
+                "OnlineSelfDeliverBank", "Data");
         return(retObjArr);
     }
-
-	public String getBaseURL(){
-		return getBaseURL();
-	}
+	
 	
 	@Test (dataProvider = "DP1")
-	public void BonusTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName, String cardNumber) throws Exception{
+	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName,
+			String inn, String kpp, String nameCompany, String companyAddress, String companyAddressFact, String companyAccount,
+			String bik, String accountCorr, String bankName, String city) throws Exception{ 
 
-		Log.info("***QA: Самовывоз оплата Наличными Бонусы Solr_BonusAccrue");
-	
-		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_1 +
-				NavigationBase.psolrand + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
+		Log.info("***QA: Самовывоз онлайн оплата Юридическое лицо Solr_OnlineSelfDeliverBank");
+		
+		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_17 + NavigationBase.psolrand + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
 				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		commonmetods.getHTTPResponseCode();
-		app.getGetDataHelper().getTotalNumber();
+		app.getGetDataHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
 		commonmetods.getHTTPResponseCode();
@@ -58,10 +59,9 @@ public class Solr_BonusAccrue extends TestBase{
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
-
+		
 		pageproduct.logItemprop();
 		app.getNavigationHelper().refreshPage();
-		pageproduct.bonusSteal();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
 		commonmetods.getHTTPResponseCode();
@@ -71,25 +71,29 @@ public class Solr_BonusAccrue extends TestBase{
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
-		//pageorder.clickRCash(paymentName);
-		pageorder.bonusSteal(0);
-		commonmetods.bonusAmountCheck(NavigationBase.bonusAccCard, NavigationBase.bonusAccOffer0); 
-		pageorder.clickButtonSetCard();
-		pageorder.setOrderFromOrderContactCard(cardNumber);
-		pageorder.clickButtonApplyCard();	
-		pageorder.getGiveCardNumber();
-		commonmetods.bonusCardCheck(NavigationBase.bonusCard, cardNumber);
-		pageorder.bonusSteal(1);
-		commonmetods.bonusAmountCheck(NavigationBase.bonusAccOffer0, NavigationBase.bonusAccOffer1);
+		pageorder.clickRBank(paymentName);
+		pageorder.setOrderFormOrderContactCompanyInn(inn);
+		pageorder.setOrderFormOrderContactCompanyKpp(kpp);
+		pageorder.setOrderFormOrderContactNameCompany(nameCompany);
+		pageorder.setOrderFormOrderContactCompanyAddress(companyAddress);
+		pageorder.setOrderFormOrderContactCompanyAddressFact(companyAddressFact);
+		pageorder.setOrderFormOrderContactCompanyAccount(companyAccount);
+		pageorder.setOrderFormOrderContactCompanyBik(bik);
+		pageorder.setOrderFormOrderContactCompanyAccountCorr(accountCorr);
+		pageorder.setOrderFormOrderContactCompanyBankName(bankName);
+		pageorder.setOrderFormOrderContactCompanyCity(city);
+		commonmetods.getCookieSession();
 		pageorder.clickButtonSubmitOrder();
+		commonmetods.getCookieSession();
 		commonmetods.getHTTPResponseCode();
 		app.getNavigationHelper().refreshPage();
+		commonmetods.getCookieSession();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
 		commonmetods.getHTTPResponseCode();
-	//	sysgetorders.assertPaymentName(paymentNameGO);
-	//	sysgetorders.assertDeliveryName(deliveryName);
+		sysgetorders.assertPaymentName(paymentNameGO);
+		sysgetorders.assertDeliveryName(deliveryName);
 	}
 	
 }

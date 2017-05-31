@@ -1,7 +1,7 @@
 /**
  * 
  */
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Desctop;
 
 import java.io.File;
 
@@ -14,6 +14,7 @@ import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
 import tehnosila.tehnosila_automation.pages.Page_Product;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,29 +25,27 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Самовывоз оплата Юридическое лицо
-public class Solr_OnlineSelfDeliverBank extends TestBase{
+// Доставка онлайн оплата банковской картой
+public class Solr_OnlineCourierCardOnDelivery extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Solr_OnlineSelfDeliverBank.class);
+	private static Logger Log = LoggerFactory.getLogger(Solr_OnlineCourierCardOnDelivery.class);
 
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"OnlineSelfDeliverBank.xls",
-                "OnlineSelfDeliverBank", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"OnlineCourierCardOnDelivery.xls",
+                "OnlineCourierCardOnDelivery", "Data");
         return(retObjArr);
     }
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName,
-			String inn, String kpp, String nameCompany, String companyAddress, String companyAddressFact, String companyAccount,
-			String bik, String accountCorr, String bankName, String city) throws Exception{ 
+	public void loginTest(String fio, String phone, String email,  String street, String house, String paymentName, String deliveryName) throws Exception{
 
-		Log.info("***QA: Самовывоз онлайн оплата Юридическое лицо Solr_OnlineSelfDeliverBank");
-		
+		Log.info("***QA: Доставка онлайн оплата банковской картой Solr_OnlineCourierCardOnDelivery");
+			
 		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_17 + NavigationBase.psolrand + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
-				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
+				+ NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		commonmetods.getHTTPResponseCode();
 		app.getGetDataHelper().getCodeString();
@@ -64,23 +63,17 @@ public class Solr_OnlineSelfDeliverBank extends TestBase{
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
 		commonmetods.getHTTPResponseCode();
+		pagecart.clickRCourierDelivery();
+		pagecart.waitCartLoadingLayer();
 		pagecart.clickButtonOrdering();
 		commonmetods.getHTTPResponseCode();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
-		pageorder.clickFirstPoint();
-		pageorder.clickRBank(paymentName);
-		pageorder.setOrderFormOrderContactCompanyInn(inn);
-		pageorder.setOrderFormOrderContactCompanyKpp(kpp);
-		pageorder.setOrderFormOrderContactNameCompany(nameCompany);
-		pageorder.setOrderFormOrderContactCompanyAddress(companyAddress);
-		pageorder.setOrderFormOrderContactCompanyAddressFact(companyAddressFact);
-		pageorder.setOrderFormOrderContactCompanyAccount(companyAccount);
-		pageorder.setOrderFormOrderContactCompanyBik(bik);
-		pageorder.setOrderFormOrderContactCompanyAccountCorr(accountCorr);
-		pageorder.setOrderFormOrderContactCompanyBankName(bankName);
-		pageorder.setOrderFormOrderContactCompanyCity(city);
+		pageorder.setMetro();
+		pageorder.setOrderFormOrderAddressStreet(street);
+		pageorder.setOrderFormOrderAddressHouse(house);
+		pageorder.clickROnlineCardOnDelivery(paymentName);
 		commonmetods.getCookieSession();
 		pageorder.clickButtonSubmitOrder();
 		commonmetods.getCookieSession();
@@ -91,7 +84,7 @@ public class Solr_OnlineSelfDeliverBank extends TestBase{
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
 		commonmetods.getHTTPResponseCode();
-		sysgetorders.assertPaymentName(paymentNameGO);
+		sysgetorders.assertPaymentName(paymentName);
 		sysgetorders.assertDeliveryName(deliveryName);
 	}
 	

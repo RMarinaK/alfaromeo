@@ -1,7 +1,7 @@
 /**
  * 
  */
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Desctop;
 
 import java.io.File;
 
@@ -14,6 +14,7 @@ import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
 import tehnosila.tehnosila_automation.pages.Page_Product;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,36 +25,34 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Доставка оплата банковской картой
-public class Solr_CourierCardOnDelivery extends TestBase{
+// Самовывоз оплата банковской картой
+public class Solr_SelfDeliveryCardOnDelivery extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Solr_CourierCardOnDelivery.class);
+	private static Logger Log = LoggerFactory.getLogger(Solr_SelfDeliveryCardOnDelivery.class);
 
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"CourierCardOnDelivery.xls",
-                "CourierCardOnDelivery", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"SelfDeliveryCardOnDelivery.xls",
+                "SelfDeliveryCardOnDelivery", "Data");
         return(retObjArr);
     }
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email,  String street, String house, String paymentName, String deliveryName) throws Exception{
-
-		Log.info("***QA: Доставка оплата банковской картой Solr_CourierCardOnDelivery");
+	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{ 
+		Log.info("***QA: Самовывоз оплата банковской картой Solr_SelfDeliveryCardOnDelivery");
 		
 		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_1 +
-				NavigationBase.psolrand + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
-				+ NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
+				NavigationBase.psolrand +  NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
+				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		commonmetods.getHTTPResponseCode();
 		app.getGetDataHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
 		commonmetods.getHTTPResponseCode();
-		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);
-		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
+		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);	Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
@@ -63,16 +62,12 @@ public class Solr_CourierCardOnDelivery extends TestBase{
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
 		commonmetods.getHTTPResponseCode();
-		pagecart.clickRCourierDelivery();
-		pagecart.waitCartLoadingLayer();
 		pagecart.clickButtonOrdering();
 		commonmetods.getHTTPResponseCode();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
-		pageorder.setMetro();
-		pageorder.setOrderFormOrderAddressStreet(street);
-		pageorder.setOrderFormOrderAddressHouse(house);
+		pageorder.clickFirstPoint();
 		pageorder.clickRCardOnDelivery(paymentName);
 		commonmetods.getCookieSession();
 		pageorder.clickButtonSubmitOrder();

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Desctop;
 
 import java.io.File;
 
@@ -14,6 +14,7 @@ import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
 import tehnosila.tehnosila_automation.pages.Page_Product;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,9 +26,9 @@ import org.testng.annotations.Test;
  *
  */
 // Доставка онлайн оплата банковской картой
-public class Solr_OnlineCourierCardOnDelivery extends TestBase{
+public class Solr_OnlineCourierCardOnDelivery_17assortment extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Solr_OnlineCourierCardOnDelivery.class);
+	private static Logger Log = LoggerFactory.getLogger(Solr_OnlineCourierCardOnDelivery_17assortment.class);
 
 	
 	@DataProvider(name = "DP1")
@@ -39,12 +40,12 @@ public class Solr_OnlineCourierCardOnDelivery extends TestBase{
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email,  String street, String house, String paymentName, String deliveryName) throws Exception{
+	public void loginTest(String fio, String phone, String email,  String street, String house, String paymentName, String deliveryName) throws Exception{ 
 
-		Log.info("***QA: Доставка онлайн оплата банковской картой Solr_OnlineCourierCardOnDelivery");
-			
-		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_17 + NavigationBase.psolrand + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
-				+ NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
+		Log.info("***QA: Доставка онлайн оплата банковской картой Solr_OnlineCourierCardOnDelivery_17assortment");
+		
+		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_17 + NavigationBase.psolrand
+				+ NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand + NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		commonmetods.getHTTPResponseCode();
 		app.getGetDataHelper().getCodeString();
@@ -56,7 +57,7 @@ public class Solr_OnlineCourierCardOnDelivery extends TestBase{
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
-		
+
 		pageproduct.logItemprop();
 		app.getNavigationHelper().refreshPage();
 		pageproduct.clickButtonBuy();
@@ -72,7 +73,7 @@ public class Solr_OnlineCourierCardOnDelivery extends TestBase{
 		pageorder.setMetro();
 		pageorder.setOrderFormOrderAddressStreet(street);
 		pageorder.setOrderFormOrderAddressHouse(house);
-		pageorder.clickROnlineCardOnDelivery(paymentName);
+		pageorder.assertROnlineCardOnDelivery(paymentName);
 		commonmetods.getCookieSession();
 		pageorder.clickButtonSubmitOrder();
 		commonmetods.getCookieSession();

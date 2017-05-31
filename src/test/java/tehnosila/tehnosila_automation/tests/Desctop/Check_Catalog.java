@@ -1,4 +1,4 @@
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Desctop;
 /**
  * @author MRasstrigina
  *
@@ -14,6 +14,7 @@ import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Catalog;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +35,7 @@ public class Check_Catalog extends TestBase{
 		pagetehnosila.getPageCatalog();
 		app.getNavigationHelper().refreshPage();
 		pagecatalog.summAllProducts(numbersSubcategories);
-		pagecatalog.checkPtotatlnumber();
+	//	pagecatalog.checkPtotatlnumber();
 		pagecatalog.AllSubcategories(numbersSubSubcategories);
 	}
 }

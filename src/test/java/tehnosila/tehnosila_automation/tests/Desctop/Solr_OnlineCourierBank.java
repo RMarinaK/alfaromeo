@@ -1,20 +1,23 @@
 /**
  * 
  */
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Desctop;
 
 import java.io.File;
 
-
+import tehnosila.tehnosila_automation.AppManager.NavigationBase;
+import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_Cart;
-import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizory;
-import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizoryID;
 import tehnosila.tehnosila_automation.pages.Page_Order;
 import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
+import tehnosila.tehnosila_automation.pages.Page_Product;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -22,10 +25,10 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Доставка оплата Наличными
-public class OnlineCourierBank extends TestBase{
+// Доставка онлайн оплата Юридическое лицо
+public class Solr_OnlineCourierBank extends TestBase{
 		
-//	private static Logger Log = LoggerFactory.getLogger(OnlineCourierBank.class);
+	private static Logger Log = LoggerFactory.getLogger(Solr_OnlineCourierBank.class);
 
 	
 	@DataProvider(name = "DP1")
@@ -39,30 +42,34 @@ public class OnlineCourierBank extends TestBase{
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName,
 			String inn, String kpp, String nameCompany, String companyAddress, String companyAddressFact, String companyAccount,
-			String bik, String accountCorr, String bankName, String city) throws Exception{ //
-		// авторизация
-	//	Log.info("***QA: SmokeTests:loginTest() starteClientTaxAdddocumentnfd. Login with parameters: "+senderLogin+", "+password);
-	//	app.getLoginHelper().login(senderLogin,password); 
-//		Page_AreaMenu areamenu = MyPageFactory.getPage(Page_AreaMenu.class);
-	//	Assert.assertTrue(areamenu.isLogo()); // проверка наличия логотипчика
+			String bik, String accountCorr, String bankName, String city) throws Exception{ 
+
+		Log.info("***QA: Доставка онлайн оплата Юридическое лицо Solr_OnlineCourierBank");
+
 		
+		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_17 + NavigationBase.psolrand + 
+				NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand + NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
+		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
+		commonmetods.getHTTPResponseCode();
+		app.getGetDataHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
-		Page_CatalogTv_i_videoTelevizoryTelevizory pagecatalogtvivideotelevizorytelevizory = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizory.class);
-		Page_CatalogTv_i_videoTelevizoryTelevizoryID pagecatalogtvivideotelevizorytelevizoryid = MyPageFactory.getPage(Page_CatalogTv_i_videoTelevizoryTelevizoryID.class);
+		pagetehnosila.getPage();
+		commonmetods.getHTTPResponseCode();
+		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);
 		Page_Cart pagecart = MyPageFactory.getPage(Page_Cart.class);
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
 		
-		pagetehnosila.clickTVVA();
-		pagecatalogtvivideotelevizorytelevizory.getWaitPage();
-		pagetehnosila.clickTV();
- 		pagecatalogtvivideotelevizorytelevizory.clickOpenCourierDescription();
-		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
-		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
+		pageproduct.logItemprop();
+		app.getNavigationHelper().refreshPage();
+		pageproduct.clickButtonBuy();
+		pageproduct.clickPopupButtonToCart();
+		commonmetods.getHTTPResponseCode();
 		pagecart.clickRCourierDelivery();
 		pagecart.waitCartLoadingLayer();
 		pagecart.clickButtonOrdering();
+		commonmetods.getHTTPResponseCode();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
@@ -80,10 +87,16 @@ public class OnlineCourierBank extends TestBase{
 		pageorder.setOrderFormOrderContactCompanyAccountCorr(accountCorr);
 		pageorder.setOrderFormOrderContactCompanyBankName(bankName);
 		pageorder.setOrderFormOrderContactCompanyCity(city);
+		commonmetods.getCookieSession();
 		pageorder.clickButtonSubmitOrder();
+		commonmetods.getCookieSession();
+		commonmetods.getHTTPResponseCode();
+		app.getNavigationHelper().refreshPage();
+		commonmetods.getCookieSession();
 		pageordersuccess.assertTitle();
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
+		commonmetods.getHTTPResponseCode();
 		sysgetorders.assertPaymentName(paymentNameGO);
 		sysgetorders.assertDeliveryName(deliveryName);
 	}

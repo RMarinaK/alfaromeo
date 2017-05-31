@@ -1,7 +1,7 @@
 /**
  * 
  */
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Terminal;
 
 
 import java.io.File;
@@ -16,6 +16,7 @@ import tehnosila.tehnosila_automation.pages.Term_Page_CatalogTv_i_videoTelevizor
 import tehnosila.tehnosila_automation.pages.Term_Page_CatalogTv_i_videoTelevizoryTelevizoryID;
 import tehnosila.tehnosila_automation.pages.Term_Page_Order;
 import tehnosila.tehnosila_automation.pages.Term_Page_Tehnosila;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

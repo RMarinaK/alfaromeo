@@ -1,7 +1,7 @@
 /**
  * 
  */
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Desctop;
 
 import java.io.File;
 
@@ -14,6 +14,7 @@ import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
 import tehnosila.tehnosila_automation.pages.Page_Product;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,27 +25,28 @@ import org.testng.annotations.Test;
  * @author MRasstrigina
  *
  */
-// Самовывоз оплата в кредит
-public class Solr_SelfDeliveryCreditInStore extends TestBase{
+// Доставка оплата Наличными
+public class Solr_CourierCash extends TestBase{
 		
-	private static Logger Log = LoggerFactory.getLogger(Solr_SelfDeliveryCreditInStore.class);
+	private static Logger Log = LoggerFactory.getLogger(Solr_CourierCash.class);
 
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"SelfDeliveryCreditInStore.xls",
-                "SelfDeliveryCreditInStore", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"CourierCash.xls",
+                "CourierCash", "Data");
         return(retObjArr);
     }
 	
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ 
-		Log.info("***QA: Самовывоз оплата в кредит Solr_SelfDeliveryCreditInStore");
-		
+	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{
+
+		Log.info("***QA: Доставка оплата Наличными Solr_CourierCash");
+	
 		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_1 +
-				NavigationBase.psolrand +  NavigationBase.psolrpriceValue_3000_3500 + NavigationBase.psolrand 
-				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
+				NavigationBase.psolrand + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
+				+ NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		commonmetods.getHTTPResponseCode();
 		app.getGetDataHelper().getCodeString();
@@ -61,13 +63,18 @@ public class Solr_SelfDeliveryCreditInStore extends TestBase{
 		app.getNavigationHelper().refreshPage();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
+		commonmetods.getHTTPResponseCode();
+		pagecart.clickRCourierDelivery();
+		pagecart.waitCartLoadingLayer();
 		pagecart.clickButtonOrdering();
 		commonmetods.getHTTPResponseCode();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
-		pageorder.clickFirstPoint();
-		pageorder.clickRCreditInStore(paymentName);
+		pageorder.setMetro();
+		pageorder.setOrderFormOrderAddressStreet(street);
+		pageorder.setOrderFormOrderAddressHouse(house);
+		pageorder.clickRCash(paymentName);
 		commonmetods.getCookieSession();
 		pageorder.clickButtonSubmitOrder();
 		commonmetods.getCookieSession();
