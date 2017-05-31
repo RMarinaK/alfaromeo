@@ -71,13 +71,12 @@ public class Solr_BonusAccrue extends TestBase{
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
-		//pageorder.clickRCash(paymentName);
+		pageorder.clickRCash(paymentName);
 		pageorder.bonusSteal(0);
 		commonmetods.bonusAmountCheck(NavigationBase.bonusAccCard, NavigationBase.bonusAccOffer0); 
 		pageorder.clickButtonSetCard();
 		pageorder.setOrderFromOrderContactCard(cardNumber);
 		pageorder.clickButtonApplyCard();
-		pageorder.waitForInfoText();
 		pageorder.waitForInfoText();
 		pageorder.getGiveCardNumber();
 		commonmetods.bonusCardCheck(NavigationBase.bonusCard, cardNumber);
@@ -90,8 +89,8 @@ public class Solr_BonusAccrue extends TestBase{
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
 		commonmetods.getHTTPResponseCode();
-	//	sysgetorders.assertPaymentName(paymentNameGO);
-	//	sysgetorders.assertDeliveryName(deliveryName);
+		sysgetorders.assertPaymentName(paymentNameGO);
+		sysgetorders.assertDeliveryName(deliveryName);
 	}
 	
 }
