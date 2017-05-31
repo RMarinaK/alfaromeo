@@ -88,12 +88,20 @@
    		<artifactId>guice</artifactId>
    		<version>4.0-beta4</version>
    	</dependency>
+   	<dependency>
+	    <groupId>commons-net</groupId>
+  		<artifactId>commons-net</artifactId>
+  		<version>3.6</version>
+	</dependency>
+   	
+   	
 <!--    	<dependency>
    		<groupId>velocity</groupId>
    		<artifactId>velocity-dep</artifactId>
    		<version>1.5-beta2</version>
    	</dependency> -->
   </dependencies>
+  
 
   <build>
     <resources> 
