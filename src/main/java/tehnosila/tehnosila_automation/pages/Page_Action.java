@@ -29,8 +29,9 @@ public class Page_Action extends PagesBase{
 	@FindBy(xpath="//div[@class='item'][2]")
 	private WebElement clickactioncatalogitem; // Выбор второго блока товаров в акции честные цены
 	
-	@FindBy(xpath="//a[@class='item first-in-row']")
-	private WebElement clickcatalogitemincategory; // Выбор первого блока товаров в категории
+	//@FindBy(xpath="//a[@class='item first-in-row']")
+//	@FindBy(xpath="//a[@class='item first-in-row']")
+//	private WebElement clickcatalogitemincategory; // Выбор первого блока товаров в категории
 	
 	@FindBy(xpath = "//span[@class='items-per-page-view']") 
 	private WebElement itemsperpageview; // Найдено N товаров в наличии
@@ -87,7 +88,7 @@ public class Page_Action extends PagesBase{
 	}
 		
 	// жмаканье на первый блок товаров в категории 
-	public void clickCatalogItemInCategory() throws Exception{
+/*	public void clickCatalogItemInCategory() throws Exception{
 		try {
 			clickcatalogitemincategory.click(); 
 			Log.info("жмаканье на первый блок товаров в категории");
@@ -96,7 +97,7 @@ public class Page_Action extends PagesBase{
 	    	Log.info("Element Not Found");     
 	        ScreenShot.takeScreenShot();       
 	    }  
-	}
+	}*/
 	
 	// получение количество товаров с сайта
 	public void getTotalNubmer(){

@@ -4,7 +4,7 @@
 	<test name="Interchange">
 		<parameter name="application.properties" value="src/main/resources/application.properties"/>
 		<classes>			
-			<class name="tehnosila.tehnosila_automation.tests.Check_Catalog"/>
+			<class name="tehnosila.tehnosila_automation.tests.Desctop.Check_Catalog"/>
 		</classes>
 	</test>  
 </suite>

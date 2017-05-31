@@ -259,6 +259,7 @@
         <user.password></user.password>
         <grid2.hub></grid2.hub>
         <site.url>${project.test.baseurl}</site.url>
+        <cookies>src/main/resources/${Cookies}.data</cookies>
         <browser.name>chromemobile</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
@@ -285,6 +286,7 @@
         <user.password></user.password>
         <grid2.hub></grid2.hub>
         <site.url>${project.test.baseurl}</site.url>
+        <cookies>src/main/resources/${Cookies}.data</cookies>
         <browser.name>chrometerminal</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
@@ -296,7 +298,7 @@
     <profile>
 		<id>chrome_ff_test</id>
 	<activation>
-        	<activeByDefault>false</activeByDefault>
+        	<activeByDefault>true</activeByDefault>
       	</activation>
 	    
       <build>
@@ -331,7 +333,7 @@
     <profile>
 		<id>remote_chrome_test_mobile</id>
 		<activation>
-        	<activeByDefault>true</activeByDefault>
+        	<activeByDefault>false</activeByDefault>
       	</activation>
       <build>
         <plugins>
@@ -387,7 +389,9 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub>http://localhost:4445/wd/hub</grid2.hub>
-        <site.url>terminal.tehnosila.ru/?terminal=1234</site.url>
+        <!--  <site.url>terminal.tehnosila.ru/?terminal=1234</site.url> строе локальное     -->
+        <site.url>terminal.test7.srvtest-tehnosila.ru/?terminal=1234</site.url>
+        <cookies>src/main/resources/Null.data</cookies>   
         <browser.name>chrometerminal</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
