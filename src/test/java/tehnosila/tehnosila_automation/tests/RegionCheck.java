@@ -28,6 +28,7 @@ public class RegionCheck extends TestBase{
 	public void regionTest(String ftpAdr, String port, String user, String password, String FullPathToPutFile, String FilenameOnFTP, String PathToCreateFile) throws Exception{			 	
 		
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
+		
 	    WorkWithSFTP workwithsftp = MyPageFactory.getPage(WorkWithSFTP.class);
 	    WorkWithXML workwithxml = MyPageFactory.getPage(WorkWithXML.class);
 	    WorkWithArr workwitharr = MyPageFactory.getPage(WorkWithArr.class);
@@ -36,6 +37,7 @@ public class RegionCheck extends TestBase{
 	    workwithxml.createFile(PathToCreateFile);
 	    workwithxml.ReadXMLFileDOM(PathToCreateFile, FullPathToPutFile);
 	    workwitharr.getDataFromTxt(PathToCreateFile);
+	    app.getNavigationHelper().refreshPage();
 	    pagetehnosila.clickCityPopup(0);
 	    workwitharr.cityAmount();
 	    workwitharr.CityCountCheck(NavigationBase.acCount, NavigationBase.arrSize);

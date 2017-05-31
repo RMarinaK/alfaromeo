@@ -532,13 +532,13 @@ public class Page_Tehnosila extends PagesBase {
 	//клик по региону для вызова попапа смены города
 	public void clickCityPopup(int i) throws Exception {
 		try {
-			if (i == 0){
+		/*	if (i == 0){
 				cityPopap.click();
 				Log.info("***QA: Клик по выбрать другой город");
-			} else {
+			} else {*/
 				currentRegion.click();
 				Log.info("***QA: Клик по выбранному городу");
-			}
+			//}
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 		}
