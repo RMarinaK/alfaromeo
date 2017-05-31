@@ -28,13 +28,13 @@ public class Page_Cart extends PagesBase{
 	
 //	@FindBy(xpath="//div[@id='button-buy-in-order']/a[@id='ordering']")  [contains(text(),'Оформить заказ')]
 	@FindBy(xpath="//div[@id='button-buy-in-order']/a")
-	private WebElement buttonordering; // Кнопка "Оформить заказ"
+private WebElement buttonordering; // Кнопка "Оформить заказ"
 
 	@FindBy(xpath="//input[@id='courier']/../span")
 	private WebElement rcourierdelivery; // Радиобаттон "Курьерская доставка"
 	
 	@FindBy(id="loading-layer")
-	private WebElement loadinglayer; // Лоэдер
+	private WebElement loadinglayer; // 
 	
 	@FindBy(xpath="//a[@class='title']")
 	private WebElement promocodefield; // Поле "Код купона" для клика
@@ -145,7 +145,7 @@ public class Page_Cart extends PagesBase{
 	//		app.getNavigationHelper().waitVisible(buttonordering,10);
 			buttonordering.click(); 
 			Log.info("жмаканье на Офорить заказ");
-	}	
+	} 
 	
 	// Вставить купон
 	public void setСartPromoСode(String string) {

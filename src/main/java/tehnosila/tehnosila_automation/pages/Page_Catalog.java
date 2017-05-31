@@ -2,8 +2,10 @@ package tehnosila.tehnosila_automation.pages;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang.ArrayUtils;
+
+
 import org.openqa.selenium.By;
+
 /**
  * @author RasstriginaMK
  *
@@ -12,7 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.Assert;
+
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
@@ -31,10 +33,12 @@ public class Page_Catalog extends PagesBase{
 	@FindBy(xpath="//div[@class='count']")//
 	private WebElement count; // Количество товаров
 
-	private List<Integer> numbers = new ArrayList<>(); // массив кол-ва товаров по категориям
+	//private List<String> numbersSubcategories = new ArrayList<>(); // массив кол-ва товаров по категориям
 	private static int presult;
 	
-	private List<String> subcategories = new ArrayList<>(); // массив подкатегорий в catalog
+	//private List<String> subcategories = new ArrayList<>(); // массив подкатегорий в catalog
+	
+	private List<Integer> numberList = new ArrayList<>();
 	
 	@Override
 	void tryToOpen() {
@@ -63,83 +67,95 @@ public class Page_Catalog extends PagesBase{
             ScreenShot.takeScreenShot();       
          } 
 	}
+	
+	@FindBy(xpath="//div[@class='list']/a[4]/div[@class='count']")//
+	private WebElement count1; // Количество товаров
 
-	// Формирование ArrayList из кол-ва товаров по верхнеуровневым каталогам и подсчет суммы кол-ва товаров
-	public void AllProducts() {
-		List<WebElement> items = driver.findElements(By.xpath("//div[@class='count']"));
-		for(WebElement count: items)
+	// Формирование ArrayList из кол-ва товаров по верхнеуровневым каталогам
+	public void AllProducts(List<String> list) {
+		List<WebElement> itemsCount = driver.findElements(By.xpath("//div[@class='count']"));
+		for(WebElement count: itemsCount)
 		{	
-			String countstr = count.getText();
-			int countint = Integer.valueOf(countstr);
-			numbers.add(countint);
+			String countstr = count.getAttribute("innerHTML");
+			list.add(countstr);
 		}
-		Log.info("***QA: Массив numbers " + numbers);
+		Log.info("***QA: Массив numbers " + list);
+		
 	}
 	
-	// Суммирование всех товаров
-	public void summAllProducts() {
-		AllProducts();
-		int[] myArray = {}; // конвертируем ArrayList в массив
-		myArray = ArrayUtils.toPrimitive(numbers.toArray(new Integer[numbers.size()]));
+	// Суммирование всех товаров из массива numbers
+	public void summAllProducts(List<String> list) {
+		AllProducts(list);
 		presult = 0;
-		for(int i = 0; i < myArray.length; i ++){
-			int countint = Integer.valueOf(myArray[i]);
-			presult = presult + countint;
+		for(String number : list) {
+			int intnumber = Integer.parseInt(number);
+			numberList.add(intnumber); 
+			presult = presult + intnumber;
 		}
-		Log.info("***QA: summAllProducts " + presult);
+		Log.info("***QA: summAllProducts in catalog " + presult);
 	}
-	
-	// сравнение общего кол-ва товаров
-	public void assertCount() {
-		try {
-			Assert.assertEquals(presult, NavigationBase.ptotatlnumber); 
-			Log.info("***QA: Общее кол-во товаров "+ NavigationBase.ptotatlnumber);
-		}
-	    catch(Exception e) {      
-	    	Log.info("Element Not Found");     
-	     //     ScreenShot.takeScreenShot();       
-	    }      
-	}  
-	
-	@FindBy(xpath="//div[@class='subcategories']/div[@class='list']/a")//
-	private WebElement qw; // Количество товаров
-	
-	// проход по каждому подкаталогу catalogа
-	public void AllSubcategories() {
-		List<WebElement> items = driver.findElements(By.xpath("//div[@class='subcategories']/div[@class='list']/a"));
-		for(WebElement count: items)
-		{	
-			
-			String countstr = count.getText();
-		//	int countint = Integer.valueOf(countstr);
-		//	numbers.add(countint);
-			subcategories.add(countstr);
-			qw.click();
-		}
-		Log.info("***QA: Массив subcategories" + subcategories);
-	}
-	
-	// Если количество товаров из апи ptotatlnumber < 40 0000, выводить ошибку
+		
+	// Общее кол-во товаров по API <39 000 или кол-во товаров в каталоге < 40 000 или Разница кол-ва товаров в каталоге и в API < 10%
 	public void checkPtotatlnumber() {		
 		try {
 			int checkptotatlnumber = Integer.valueOf(NavigationBase.ptotatlnumber);
-			if (checkptotatlnumber < 40000) {
-				throw new NullPointerException("Общее кол-во товаров в API " + NavigationBase.ptotatlnumber + " < 40 000");
-			} 
+			int checkpresult = Integer.valueOf(presult);
+			if (checkptotatlnumber < 25000 || checkpresult < 25000) {
+				throw new NullPointerException("Общее кол-во товаров по API <25 000 или кол-во товаров в каталоге < 25 000");
+			} else {
+				try {
+					double percentageofaverage = ((checkptotatlnumber + checkpresult)/2)*0.1;
+					int intpercentageofaverage = (int)Math.ceil(percentageofaverage);
+					Log.info("***QA: percentage of average " + intpercentageofaverage);
+					int difference = Math.abs(checkpresult-checkptotatlnumber);
+					Log.info("***QA: difference " + difference);
+					if (difference > intpercentageofaverage) {
+						throw new NullPointerException("Разница кол-ва товаров в каталоге и в API < 10%");
+					}
+				}
+				catch(NullPointerException e) {     
+			    	 throw e; 
+			    }      
+			}
 		}
 	    catch(NullPointerException e) {     
 	    	 throw e; 
 	    }      
 	}  
 	
-	// Если количество товаров из апи presult < 40 0000, выводить ошибку
-	public void checkPresult() {		
-		try {
-			if (presult < 40000) { throw new NullPointerException("Общее кол-во товаров на сайте " + presult + " < 40 000");} 
-		}
-	    catch(NullPointerException e) {     
-	    	 throw e;     
-	    }      
-	}  
+	@FindBy(xpath = "//h1") 
+	private WebElement header; // заголовок на страницах
+	
+	//Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
+	// проход по каждому подкаталогу catalogа и формирование массива subcategories
+	public void AllSubcategories(List<String> list) {
+		/*List<WebElement> itemsHtef = driver.findElements(By.xpath("//div[@class='subcategories']/div[@class='list']/a"));
+		for(WebElement hrefItems: itemsHtef)
+		{	
+			String hrefstr = hrefItems.getAttribute("href");
+			subcategories.add(hrefstr);
+			Log.info("***QA: Массив subcategories" + hrefstr);
+		}*/
+		List<WebElement> itemsHtef = driver.findElements(By.xpath("//div[@class='subcategories']/div[@class='list']/a"));
+		for (int i =1; i<itemsHtef.size()+1; i++) {
+			WebElement we = driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]"));
+			
+			Log.info("массивчик " + we.getAttribute("href"));
+			we.click();
+			Log.info("title " + header.getText());
+			summAllProducts(list);
+			
+			driver.navigate().back();
+			/*	driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]")).click();
+				Log.info(" " + driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]")).getText());
+				summAllProducts(list);
+				driver.navigate().back();*/
+			    
+			  }
+		
+	}
+
+	
+	
 	
 }
