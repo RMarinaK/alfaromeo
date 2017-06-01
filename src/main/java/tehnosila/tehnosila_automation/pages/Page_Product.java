@@ -2,7 +2,6 @@ package tehnosila.tehnosila_automation.pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 /**
  * @author RasstriginaMK
  *
@@ -91,7 +90,6 @@ public class Page_Product extends PagesBase{
 				Log.info("жмаканье на Купить");
 				break;
 			}
-
 		}
 	}
 		
