@@ -10,3 +10,6 @@ logback/**
 target/**
 
 *.class
+
+src/test/resources/DDT/RegionCheck/city_list.txt
+src/test/resources/DDT/RegionCheck/region_shop_data.xml
