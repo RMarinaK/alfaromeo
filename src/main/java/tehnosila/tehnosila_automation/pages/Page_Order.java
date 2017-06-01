@@ -132,6 +132,7 @@ public class Page_Order extends PagesBase{
 	
 	@FindBy(xpath = "//span[@class = 'give-card']") //Номер привязанной карты
 	private WebElement giveCard;
+
 	
 	protected boolean isNecessaryToChangeParam(String param){
 		if(param.equals(" ")||param.equals("")){
@@ -565,15 +566,18 @@ public class Page_Order extends PagesBase{
 	}	
 	
 	//Ожидаем, пока обновится информация о привязанной крате и кол-ве бонусов
-	public void waitForInfoText() throws InterruptedException, IOException {   
+/*	public void waitForInfoText() {   
 		//To wait for element visible
+		
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("just-all")));
 		Log.info("***QA: появилась информация о номере привязанной карты и начисялемых бонусах");    
-	 }
+	 }*/
 	
 	//Получение номера привязанной бонусной карты
 	public void getGiveCardNumber() throws Exception{
+		app.getNavigationHelper().waitVisible(justAll, 5);
+		Log.info("***QA: появилась информация о номере привязанной карты и начисялемых бонусах");    
 		String resivedStr =  giveCard.getText().trim();
 		String[] cutStr = resivedStr.split ("-");
 		String cardNum;

@@ -77,7 +77,7 @@ public class Solr_BonusAccrue extends TestBase{
 		pageorder.clickButtonSetCard();
 		pageorder.setOrderFromOrderContactCard(cardNumber);
 		pageorder.clickButtonApplyCard();
-		pageorder.waitForInfoText();
+		//pageorder.waitForInfoText();
 		pageorder.getGiveCardNumber();
 		commonmetods.bonusCardCheck(NavigationBase.bonusCard, cardNumber);
 		pageorder.bonusSteal(1);
