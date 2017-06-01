@@ -242,6 +242,10 @@ public class NavigationHelper extends NavigationBase{
 		driver.navigate().to(URL);
 	}
 	
+	// читска кук
+	public void delCookies(){ 
+		driver.manage().deleteAllCookies();
+	}
 	
 	
 }

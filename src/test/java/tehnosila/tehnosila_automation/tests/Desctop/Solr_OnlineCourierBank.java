@@ -99,6 +99,7 @@ public class Solr_OnlineCourierBank extends TestBase{
 		commonmetods.getHTTPResponseCode();
 		sysgetorders.assertPaymentName(paymentNameGO);
 		sysgetorders.assertDeliveryName(deliveryName);
+		app.getNavigationHelper().delCookies();
 	}
 	
 }

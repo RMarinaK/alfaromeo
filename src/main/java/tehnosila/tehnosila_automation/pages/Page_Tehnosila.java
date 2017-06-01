@@ -127,6 +127,12 @@ public class Page_Tehnosila extends PagesBase {
 	
 	@FindBy(xpath = "//a[contains(text(),'Акции')]")
 	private WebElement actions; //  Акции
+	
+	@FindBy(xpath="//a[@class = 'reject button gray-flat pressable']")
+	public WebElement cityPopap; // Попап "Выбрать другой"   @author EDanilova	
+	
+	@FindBy(id="current-region")
+	public WebElement currentRegion; // Текущий город   @author EDanilova	
 
 	@Override
 	public void tryToOpen() {
@@ -528,6 +534,23 @@ public class Page_Tehnosila extends PagesBase {
 	public void clickActions(){
 		actions.click(); 		
 	}	
+
+	// ----------------------------------------------------------------------------------------------------------------------------
+	//Проверка смены города	@author EDanilova
 	
-	
+	//клик по региону для вызова попапа смены города
+	public void clickCityPopup(int i) throws Exception {
+		try {
+		/*	if (i == 0){
+				cityPopap.click();
+				Log.info("***QA: Клик по выбрать другой город");
+			} else {*/
+				currentRegion.click();
+				Log.info("***QA: Клик по выбранному городу");
+			//}
+		} catch (Exception e) {
+			Log.info("Element Not Found");
+		}
+	}	
+
 }

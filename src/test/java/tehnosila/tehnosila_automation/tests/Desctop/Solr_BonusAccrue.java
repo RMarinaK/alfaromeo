@@ -46,7 +46,7 @@ public class Solr_BonusAccrue extends TestBase{
 	
 		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_1 +
 				NavigationBase.psolrand + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
-				+ NavigationBase.psolrdeliveryAvailabilityTyp + NavigationBase.psolrtail);
+				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		commonmetods.getHTTPResponseCode();
 		app.getGetDataHelper().getCodeString();
@@ -89,8 +89,10 @@ public class Solr_BonusAccrue extends TestBase{
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
 		commonmetods.getHTTPResponseCode();
-		sysgetorders.assertPaymentName(paymentNameGO);
-		sysgetorders.assertDeliveryName(deliveryName);
+
+	//	sysgetorders.assertPaymentName(paymentNameGO);
+	//	sysgetorders.assertDeliveryName(deliveryName);
+		app.getNavigationHelper().delCookies();
 	}
 	
 }
