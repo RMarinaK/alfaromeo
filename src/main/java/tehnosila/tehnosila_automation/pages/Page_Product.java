@@ -1,4 +1,7 @@
 package tehnosila.tehnosila_automation.pages;
+import java.util.List;
+
+import org.openqa.selenium.By;
 /**
  * @author RasstriginaMK
  *
@@ -79,16 +82,16 @@ public class Page_Product extends PagesBase{
 	
 	// жмаканье на "Купить"
 	public void clickButtonBuy() throws Exception {
-//		try {
-		//	app.getNavigationHelper().waitVisible(buttonbuy,10);
-			buttonbuy.click(); 
-			Log.info("жмаканье на Купить");
-	/*	}
-	    catch(Exception e) {      
-	    	Log.info("Element Not Found");     
-            ScreenShot.takeScreenShot();       
-         }*/    
-	}	 
+		List<WebElement> itemsCount = driver.findElements(By.xpath("//div[@class='cart-block cart']/a"));
+		for(WebElement count: itemsCount)
+		{	
+			if (count.isDisplayed()) {
+				count.click();
+				Log.info("жмаканье на Купить");
+				break;
+			}
+		}
+	}
 		
 	// жмаканье на "Перейти в корзину"
 	public void clickPopupButtonToCart() throws Exception {

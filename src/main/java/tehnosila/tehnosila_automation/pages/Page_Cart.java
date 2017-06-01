@@ -12,7 +12,6 @@ import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 /**
@@ -21,14 +20,14 @@ import tehnosila.tehnosila_automation.AppManager.ScreenShot;
  */
 
 public class Page_Cart extends PagesBase{
-	private static final boolean FindElement = false;
+
 	private static Logger Log = LoggerFactory.getLogger(Page_Cart.class);
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL()+"#/cart";
 	
 //	@FindBy(xpath="//div[@id='button-buy-in-order']/a[@id='ordering']")  [contains(text(),'Оформить заказ')]
-	@FindBy(xpath="//div[@id='button-buy-in-order']/a")
-private WebElement buttonordering; // Кнопка "Оформить заказ"
+	@FindBy(xpath="//div[@id='button-buy-in-order']")
+	private WebElement buttonordering; // Кнопка "Оформить заказ"
 
 	@FindBy(xpath="//input[@id='courier']/../span")
 	private WebElement rcourierdelivery; // Радиобаттон "Курьерская доставка"

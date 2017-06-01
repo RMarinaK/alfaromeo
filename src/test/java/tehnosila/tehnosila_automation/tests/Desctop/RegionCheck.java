@@ -3,7 +3,7 @@
  *
  */
 
-package tehnosila.tehnosila_automation.tests;
+package tehnosila.tehnosila_automation.tests.Desctop;
 
 import java.io.File;
 import org.testng.annotations.DataProvider;
@@ -14,6 +14,7 @@ import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.WorkWithArr;
 import tehnosila.tehnosila_automation.pages.WorkWithSFTP;
 import tehnosila.tehnosila_automation.pages.WorkWithXML;
+import tehnosila.tehnosila_automation.tests.TestBase;
 
 public class RegionCheck extends TestBase{
 		
