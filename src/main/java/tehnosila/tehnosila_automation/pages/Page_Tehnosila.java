@@ -546,7 +546,7 @@ public class Page_Tehnosila extends PagesBase {
 				Log.info("***QA: Клик по выбрать другой город");
 			} else {*/
 				currentRegion.click();
-				Log.info("***QA: Клик по выбранному городу");
+				Log.info("***QA: Клик по выбранному городу.");
 			//}
 		} catch (Exception e) {
 			Log.info("Element Not Found");
