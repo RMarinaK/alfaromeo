@@ -35,8 +35,11 @@
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/selenium"/>
 	<classpathentry kind="lib" path="D:/selenium-server-standalone-2.48.2.jar"/>
+<<<<<<< HEAD
 	<!-- <classpathentry kind="lib" path="D:/ts_tests/tests/src/main/resources/jsch-0.1.54.jar"/> 
 	<classpathentry kind="lib" path="D:/ts_tests/tests/src/main/resources/jsoup-1.10.2.jar"/> -->
+=======
+>>>>>>> da1ed3a8f056e29c96ccc8c64e0f370944565dc1
 	<classpathentry kind="lib" path="src/main/resources/commons-net-3.6.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/xml-apis-2.0.2.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/jsch-0.1.54.jar"/>

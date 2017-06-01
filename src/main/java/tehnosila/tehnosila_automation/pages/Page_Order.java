@@ -1,11 +1,14 @@
 package tehnosila.tehnosila_automation.pages;
 
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -561,21 +564,27 @@ public class Page_Order extends PagesBase{
 		} 
 	}	
 	
+	//Ожидаем, пока обновится информация о привязанной крате и кол-ве бонусов
+	public void waitForInfoText() throws InterruptedException, IOException {   
+		//To wait for element visible
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("just-all")));
+		Log.info("***QA: появилась информация о номере привязанной карты и начисялемых бонусах");    
+	 }
+	
 	//Получение номера привязанной бонусной карты
 	public void getGiveCardNumber() throws Exception{
-		Thread.sleep(2000);	
-		String resivedStr =  giveCard.getText();
+		String resivedStr =  giveCard.getText().trim();
 		String[] cutStr = resivedStr.split ("-");
-		String[] cutStr2 = new String[2];
 		String cardNum;
-		boolean isContain = cutStr[2].contains(" ");
-		if(isContain == true){
-			cutStr2 = cutStr[2].split (" ");
+		if(cutStr[2].contains(" ")){
+			String[] cutStr2 = cutStr[2].split (" ");
 			cardNum = cutStr[0] + cutStr[1] + cutStr2[0] + cutStr2[1];
-		} else
-		cardNum = cutStr[0] + cutStr[1] + cutStr[2];
+		} else{
+			cardNum = cutStr[0] + cutStr[1] + cutStr[2];
+		}
 		Log.info("***QA: Номер привязанной карты: " + cardNum);
-		NavigationBase.bonusCard = cardNum.trim();
+		NavigationBase.bonusCard = cardNum;
 	}		
 	
 }

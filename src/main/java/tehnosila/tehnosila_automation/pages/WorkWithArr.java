@@ -135,6 +135,7 @@ public class WorkWithArr extends Page_AreaMenu {
 			WebElement findCity = driver.findElement(By.xpath("//div[@class='region-lists']/table/tbody/tr[2]/td[" + i + "]/ul[" + j + "]/li[" + k + "]/a"));
 				
 			//выдёргиваем из кода название города и его домен
+			app.getNavigationHelper().waitVisible(findCity, 5);
 			String city = findCity.getText();
 			String cityURL = findCity.getAttribute("href");
 				
