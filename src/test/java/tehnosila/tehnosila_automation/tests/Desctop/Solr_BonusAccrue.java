@@ -49,7 +49,7 @@ public class Solr_BonusAccrue extends TestBase{
 				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		commonmetods.getHTTPResponseCode();
-		app.getGetDataHelper().getTotalNumber();
+		app.getGetDataHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
 		commonmetods.getHTTPResponseCode();
@@ -71,12 +71,13 @@ public class Solr_BonusAccrue extends TestBase{
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
-		//pageorder.clickRCash(paymentName);
+		pageorder.clickRCash(paymentName);
 		pageorder.bonusSteal(0);
 		commonmetods.bonusAmountCheck(NavigationBase.bonusAccCard, NavigationBase.bonusAccOffer0); 
 		pageorder.clickButtonSetCard();
 		pageorder.setOrderFromOrderContactCard(cardNumber);
-		pageorder.clickButtonApplyCard();	
+		pageorder.clickButtonApplyCard();
+		pageorder.waitForInfoText();
 		pageorder.getGiveCardNumber();
 		commonmetods.bonusCardCheck(NavigationBase.bonusCard, cardNumber);
 		pageorder.bonusSteal(1);
@@ -88,6 +89,7 @@ public class Solr_BonusAccrue extends TestBase{
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
 		commonmetods.getHTTPResponseCode();
+
 	//	sysgetorders.assertPaymentName(paymentNameGO);
 	//	sysgetorders.assertDeliveryName(deliveryName);
 		app.getNavigationHelper().delCookies();
