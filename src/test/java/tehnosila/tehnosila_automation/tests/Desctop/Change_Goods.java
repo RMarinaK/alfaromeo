@@ -36,12 +36,36 @@ public class Change_Goods extends TestBase{
 		pagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		pagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
 		pagecart.waitCartLoadingLayer();
+		pagecart.itemPrice();
+		pagecart.getCartPrice();
+		pagecart.clickServiceCheckBox();
+		pagecart.waitCartLoadingLayer();
+		pagecart.getServicePrice();
+		pagecart.getItemPlusServicePrice();
+		pagecart.assertCartItemPlusService();
+		pagecart.clickButtonAccessories();
+		pagecart.waitCartLoadingLayer();
+		pagecart.clickAccessoriesButtonCart(); //
+		pagecart.waitCartLoadingLayer();
+		pagecart.itemPrice();
+		pagecart.secondItemPrice();
+		pagecart.getCartPrice();
+		pagecart.assertCart();
 		pagecart.clickButtonPlus();
 		pagecart.waitCartLoadingLayer();
+		pagecart.itemPrice();
+		pagecart.secondItemPrice();
+		pagecart.getCartPrice();
+		pagecart.assertCart();
 		pagecart.clickButtonMinus();
 		pagecart.waitCartLoadingLayer();
+		pagecart.itemPrice();
+		pagecart.secondItemPrice();
+		pagecart.getCartPrice();
+		pagecart.assertCart();
 		pagecart.clickButtonDelete();
 		pagecart.waitCartLoadingLayer();
+		pagecart.clickButtonDelete();
 		pagecart.emptycart();
 	}
 }

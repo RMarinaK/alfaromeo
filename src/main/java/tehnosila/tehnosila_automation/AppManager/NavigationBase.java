@@ -53,9 +53,22 @@ public class NavigationBase {
 	public static String papicatalog = "http://hybris.tehnosila.ru/api/v2/ts/1/catalogs/parsePath?path=/catalog"; 
 			// "http://hybris.tehnosila.ru/api/v2/ts/1/catalogs/technosilaProductCatalog/Online";
 	
+
+	public static String currCity;
+	public static String currDomain;
+	public static int[] count;
+	public static int arrSize;
+	public static int acCount;	
+		
+	public static String[] cityXML;
+	public static String[] domainXML;
+	public static String[] citySite;
+	public static String[] domainSite;
+
 	public static int bonusAccCard;
 	public static int bonusAccOffer0;
 	public static int bonusAccOffer1;
 	public static String bonusCard;	
 	
+
 }

@@ -90,6 +90,7 @@ public class Solr_BonusAccrue extends TestBase{
 		commonmetods.getHTTPResponseCode();
 	//	sysgetorders.assertPaymentName(paymentNameGO);
 	//	sysgetorders.assertDeliveryName(deliveryName);
+		app.getNavigationHelper().delCookies();
 	}
 	
 }

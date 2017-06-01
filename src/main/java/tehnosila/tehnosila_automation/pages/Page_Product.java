@@ -165,6 +165,7 @@ public class Page_Product extends PagesBase{
 			Log.info("жмаканье на Закрыть");   
 	}
 	
+
 	//Получение количества бонусов к начислению   @author EDanilova
 	public void bonusSteal(){
 			String resivedStr = bonusAccrueCard.getText();
