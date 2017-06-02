@@ -149,7 +149,7 @@ public class Page_Tehnosila extends PagesBase {
 	
 	// ожидание пока страница прогрузится и проверка соответствия номер заказа
 	public void getPage() {
-		driver.navigate().to(getBaseURL()+"item?code=" + "1266121"); // NavigationBase.psolrarticle
+		driver.navigate().to(getBaseURL()+"item?code=" + NavigationBase.psolrarticle); 
 		Log.info("***QA: "+getBaseURL());
 	}
 	

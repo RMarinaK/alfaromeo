@@ -47,12 +47,12 @@ public class Solr_SelfDeliverCash extends TestBase{
 
 		Log.info("***QA: Самовывоз оплата Наличными Solr_SelfDeliverCash");
 	
-	/*	app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_1 +
+		app.getNavigationHelper().getURL(NavigationBase.psolrurl + NavigationBase.psolrassortmentLevelValues_1 +
 				NavigationBase.psolrand + NavigationBase.psolrpriceValue_0_1000 + NavigationBase.psolrand 
-				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);*/
+				+ NavigationBase.psolrpickupAvailabilityTyp + NavigationBase.psolrtail);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
-	//	commonmetods.getHTTPResponseCode();
-		//app.getGetDataHelper().getCodeString();
+		commonmetods.getHTTPResponseCode();
+		app.getGetDataHelper().getCodeString();
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		pagetehnosila.getPage();
 		commonmetods.getHTTPResponseCode();

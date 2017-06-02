@@ -82,9 +82,7 @@ public class Page_Product extends PagesBase{
 	
 	// жмаканье на "Купить"
 	public void clickButtonBuy() throws Exception {
-		
 		//By.xpath("//div[@class='cart-block cart']/a") != null
-		
 		if (app.getNavigationHelper().isElementPresent(By.xpath("//div[@class='cart-block cart']/a")) == true) {
 			List<WebElement> itemsCart = driver.findElements(By.xpath("//div[@class='cart-block cart']/a"));
 			for(WebElement count: itemsCart)
