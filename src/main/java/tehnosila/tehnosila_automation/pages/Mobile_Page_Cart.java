@@ -23,6 +23,23 @@ public class Mobile_Page_Cart extends PagesBase{
 	@FindBy(xpath="//div[2]/label[1][@class='input-title']")
 	private WebElement rcourierdelivery; // Радиобаттон "Курьерская доставка"
 	
+	@FindBy(xpath="//*[@id='cart-form']/div[5]/div[1]/div[2]/div[1]")
+	private WebElement havebonuscard; // Блок у меня есть бонусная карта
+	
+	@FindBy(id="Cart_codeLoyalty")
+	private WebElement bonuscardform; // Форма Номер бонусной карты
+	
+	@FindBy(xpath="//*[@id='promo-code-fields']/input[2]")
+	private WebElement buttonapply;
+	
+	protected boolean isNecessaryToChangeParam(String param){
+		if(param.equals(" ")||param.equals("")){
+			return false;
+		}else{
+			return true;
+		}		
+	}
+	
 	@Override
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
@@ -51,5 +68,25 @@ public class Mobile_Page_Cart extends PagesBase{
             ScreenShot.takeScreenShot();       
          }    
 	}
-
+	
+	// Жмаканье ан блок У меня есть бонусная карта
+	public void clickHaveBonusCard() {
+		havebonuscard.click();
+		Log.info("Жмаканье на блок У меня есть бонусная карта");
+	}
+	
+	// Ввод бонусной карты
+	public void setBonusCardForm(String string) {
+		if(isNecessaryToChangeParam(string)){
+			bonuscardform.click();
+			bonuscardform.clear();
+			bonuscardform.sendKeys(string);
+		}
+	}
+	
+	// Жмаканье на применить
+	public void clickButtonApply() {
+		buttonapply.click();
+		Log.info("Жмаканье на Применить");
+	}
 }
