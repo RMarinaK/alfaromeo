@@ -12,8 +12,4 @@ target/**
 *.class
 
 src/test/resources/DDT/RegionCheck/city_list.txt
-<<<<<<< HEAD
 src/test/resources/DDT/RegionCheck/region_shop_data.xml
-=======
-src/test/resources/DDT/RegionCheck/region_shop_data.xml
->>>>>>> da1ed3a8f056e29c96ccc8c64e0f370944565dc1

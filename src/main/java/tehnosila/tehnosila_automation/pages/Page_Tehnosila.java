@@ -89,13 +89,13 @@ public class Page_Tehnosila extends PagesBase {
 	@FindBy(xpath = "//a[contains(text(),'Покупка в кредит')]")
 	private WebElement purchaseOnCredit; // Покупка в кредит
 
-	@FindBy(xpath = "//a[contains(text(),'Бонусная программа')]")
+	@FindBy(xpath = "//li[@class='footer-column-item']/a[contains(text(),'Бонусная программа')]")
 	private WebElement bonusProgramm; // Бонусная программа
 
 	@FindBy(xpath = "//a[contains(text(),'Настройка и установка')]")
 	private WebElement setupAndInstallation; // Настройка и установка
 
-	@FindBy(xpath = "//a[contains(text(),'Подарочные карты')]")
+	@FindBy(xpath = "//li[@class='footer-column-item']/a[contains(text(),'Подарочные карты')]")
 	private WebElement giftCards; // Подарочные карты
 
 	@FindBy(xpath = "//a[contains(text(),'Программа Сервис+')]")
@@ -106,6 +106,12 @@ public class Page_Tehnosila extends PagesBase {
 
 	@FindBy(xpath = "//a[contains(text(),'Программа Технотренд')]")
 	private WebElement tehnotrendProgram; // Программа Технотренд
+	
+	@FindBy(xpath = "//a[contains(text(),'Онлайн и рядом 24/7')]")
+	private WebElement onlineAndNear; // Онлайн и рядом 24/7
+	
+	@FindBy(xpath = "//a[contains(text(),'Оплата кредита')]")
+	private WebElement creditPayment; // Оплата кредита
 
 	@FindBy(xpath = "//a[contains(text(),'Гарантийное обслуживание')]")
 	private WebElement warrantyService; // Гарантийное обслуживание
@@ -399,7 +405,29 @@ public class Page_Tehnosila extends PagesBase {
 	}
 
 	// УСЛУГИ И СЕРВИС
+	
+	// клик по ссылке "Оплата кредита"
+	public void clickCreditPayment() throws Exception {
+		try {
+			creditPayment.click();
+			Log.info("Оплата кредита");
+		} catch (Exception e) {
+			Log.info("Element Not Found");
+			ScreenShot.takeScreenShot();
+		}
+	}
 
+	// клик по ссылке "Онлайн и рядом 24/7"
+	public void clickOnlineAndNear() throws Exception {
+		try {
+			onlineAndNear.click();
+			Log.info("Онлайн и рядом 24/7");
+		} catch (Exception e) {
+			Log.info("Element Not Found");
+			ScreenShot.takeScreenShot();
+		}
+	}	
+	
 	// клик по ссылке "Покупка в кредит"
 	public void clickPurchaseOnCredit() throws Exception {
 		try {
@@ -437,7 +465,7 @@ public class Page_Tehnosila extends PagesBase {
 	public void clickGiftCards() throws Exception {
 		try {
 			giftCards.click();
-			Log.info("Подарочные карты");
+			Log.info("Подарочные карты");	
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();

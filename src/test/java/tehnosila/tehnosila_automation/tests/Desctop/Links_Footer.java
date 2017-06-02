@@ -31,9 +31,10 @@ public class Links_Footer extends TestBase{
 			String helpfeedback,  String purchaseOnCredit, String bonusProgramm, String setupAndInstallation,
 			String giftCards, String servicePlus, String insuranceTechniques, String tehnotrendProgram,
 			String warrantyService, String serviceCenterLocations, String inputname, String inputemail, String inputphone,
-			String inputcity, String textareamessage, String message) throws Exception{ 
+			String inputcity, String textareamessage, String message, String onlineAndNear, String creditPayment) throws Exception{ 
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
+		app.getNavigationHelper().refreshPage();
 	//	Page_HelpFeedback pagehelpfeedback = MyPageFactory.getPage(Page_HelpFeedback.class);
 		// О компании Техносила
 		commonmetods.scrollPage();
@@ -132,23 +133,6 @@ public class Links_Footer extends TestBase{
 		commonmetods.assertTitle(purchaseOnCredit);
 		commonmetods.assertHeader(purchaseOnCredit);
 		commonmetods.clickLogo();
-		//Бонусная программа - нужна доработка
-	/*	commonmetods.scrollPage();
-		pagetehnosila.clickBonusProgramm();	
-		commonmetods.assertTitle(bonusProgramm);
-		pagetehnosila.tryToOpen();*/
-		//Настройка и установка
-		commonmetods.scrollPage();
-		pagetehnosila.clickSetupAndInstallation();
-		commonmetods.assertTitle(setupAndInstallation);
-		commonmetods.assertHeader(setupAndInstallation);
-		commonmetods.clickLogo();
-		//Подарочные карты
-	/*	commonmetods.scrollPage();
-		pagetehnosila.clickGiftCards();
-		commonmetods.assertTitle(giftCards);
-		commonmetods.assertHeader(giftCards);
-		commonmetods.clickLogo();*/
 		//Сервис плюс
 		commonmetods.scrollPage();
 		pagetehnosila.clickServicePlus();
@@ -161,11 +145,49 @@ public class Links_Footer extends TestBase{
 		commonmetods.assertTitle(insuranceTechniques);
 		commonmetods.assertHeader(insuranceTechniques);
 		commonmetods.clickLogo();
-		//Программа Технотренд
+		//Настройка и установка
+		commonmetods.scrollPage();
+		pagetehnosila.clickSetupAndInstallation();
+		commonmetods.assertTitle(setupAndInstallation);
+		commonmetods.assertHeader(setupAndInstallation);
+		commonmetods.clickLogo();
+		
+		//---------------
+		//УСЛУГИ И СЕРВИС (Данилова Е.А. 02.06.2017)
+		//---------------
+		
+		//Онлайн и рядом 27/7
+		commonmetods.scrollPage();
+		pagetehnosila.clickOnlineAndNear();
+		commonmetods.assertTitle(onlineAndNear);
+		commonmetods.assertHeader(onlineAndNear);
+		commonmetods.clickLogo();
+		//Подарочные карты 
+		commonmetods.scrollPage();
+		pagetehnosila.clickGiftCards();
+		commonmetods.assertTitle(giftCards);
+		commonmetods.assertHeader(giftCards);
+		commonmetods.clickLogo();
+		//Бонусная программа - нужна доработка - какая?
+		commonmetods.scrollPage();
+		pagetehnosila.clickBonusProgramm();	
+		commonmetods.assertTitle(bonusProgramm);
+		pagetehnosila.tryToOpen();
+		//Оплата кредита 
+		commonmetods.scrollPage();
+		pagetehnosila.clickCreditPayment();
+		commonmetods.assertTitle(creditPayment);
+		commonmetods.assertHeader(creditPayment);
+		commonmetods.clickLogo();
+		
+		//---------------
+		
+		//Программа Технотренд - ссылка убрана с сайта
 		/*pagetehnosila.clickTehnotrendProgram();
 		commonmetods.assertTitle(tehnotrendProgram);
 		commonmetods.assertHeader(tehnotrendProgram);
 		commonmetods.clickLogo();*/
+		
 		//Гарантийное обслуживание
 		commonmetods.scrollPage();
 		pagetehnosila.clickWarrantyService();
