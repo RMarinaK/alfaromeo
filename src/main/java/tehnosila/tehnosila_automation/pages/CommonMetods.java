@@ -110,6 +110,12 @@ public class CommonMetods extends Page_AreaMenu {
 		js.executeScript("window.scrollBy(0,700)","");
 	}
 	
+	// скрол страницы вниз (не изменять кол-во пикселей)
+	public void mobileScrolling() {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,500)","");
+	}
+	
 	// проверка отображения Title
 	public void assertTitle(String title) throws Exception {
 		try {

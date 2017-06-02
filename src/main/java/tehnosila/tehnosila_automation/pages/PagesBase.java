@@ -27,7 +27,7 @@ import tehnosila.tehnosila_automation.AppManager.ApplicationManager;
  *
  */
 public abstract class PagesBase {
-	private static Logger Log = LoggerFactory.getLogger(PagesBase.class);
+	protected static Logger Log = LoggerFactory.getLogger(PagesBase.class);
 	protected ApplicationManager app;
 	protected WebDriver driver;
 	
