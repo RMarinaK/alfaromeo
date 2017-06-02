@@ -1,14 +1,12 @@
 package tehnosila.tehnosila_automation.pages;
 
-import java.io.IOException;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -184,7 +182,7 @@ public class Page_Order extends PagesBase{
 		if (moscow.isDisplayed()) {
 			try {
 				metrostation.click(); 
-				Log.info("жмаканье на выпадашку выбора меню");
+				Log.info("жмаканье на выпадашку выбора метро");
 				firstmetrostation.click();
 				Log.info("жмаканье на первое по списку метро");
 			}
@@ -201,7 +199,7 @@ public class Page_Order extends PagesBase{
 		}*/
 	}	
 	
-	
+	// вводи названия улицы
 	public void setOrderFormOrderAddressStreet(String string) {
 		if(isNecessaryToChangeParam(string)){
 			orderformorderaddressstreet.click();
@@ -210,7 +208,7 @@ public class Page_Order extends PagesBase{
 		}
 	}
 
-	
+	// ввод номера дома
 	public void setOrderFormOrderAddressHouse(String string) {
 		if(isNecessaryToChangeParam(string)){
 			orderformorderaddresshouse.click();
