@@ -34,6 +34,7 @@ public class Action_SaveMoney extends TestBase{
 		
 	private static Logger Log = LoggerFactory.getLogger(Action_SaveMoney.class);
 
+	private double percent = 0.05;
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
@@ -70,7 +71,7 @@ public class Action_SaveMoney extends TestBase{
 		commonmetods.getHTTPResponseCode();
 		pagetehnosila.getPageActionCatalog();	
 		pageaction.getTotalNubmer();
-		pageaction.assertTotalNumber();
+		pageaction.assertTotalNumber(percent);
 		pagetehnosila.clickActions();
 		app.getNavigationHelper().refreshPage();
 		commonmetods.getHTTPResponseCode();

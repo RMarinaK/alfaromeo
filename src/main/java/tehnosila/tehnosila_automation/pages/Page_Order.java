@@ -1,5 +1,6 @@
 package tehnosila.tehnosila_automation.pages;
 
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -129,6 +130,7 @@ public class Page_Order extends PagesBase{
 	
 	@FindBy(xpath = "//span[@class = 'give-card']") //Номер привязанной карты
 	private WebElement giveCard;
+
 	
 	protected boolean isNecessaryToChangeParam(String param){
 		if(param.equals(" ")||param.equals("")){
@@ -180,7 +182,7 @@ public class Page_Order extends PagesBase{
 		if (moscow.isDisplayed()) {
 			try {
 				metrostation.click(); 
-				Log.info("жмаканье на выпадашку выбора меню");
+				Log.info("жмаканье на выпадашку выбора метро");
 				firstmetrostation.click();
 				Log.info("жмаканье на первое по списку метро");
 			}
@@ -197,7 +199,7 @@ public class Page_Order extends PagesBase{
 		}*/
 	}	
 	
-	
+	// вводи названия улицы
 	public void setOrderFormOrderAddressStreet(String string) {
 		if(isNecessaryToChangeParam(string)){
 			orderformorderaddressstreet.click();
@@ -206,7 +208,7 @@ public class Page_Order extends PagesBase{
 		}
 	}
 
-	
+	// ввод номера дома
 	public void setOrderFormOrderAddressHouse(String string) {
 		if(isNecessaryToChangeParam(string)){
 			orderformorderaddresshouse.click();
@@ -512,6 +514,7 @@ public class Page_Order extends PagesBase{
 		Log.info("***QA: Текст Скидка 5 %");
 	}
 	
+
 //--------------------------------------------------------------------------------------------------
 // Проверка количества начисляемых бонусов     @author EDanilova
 	
@@ -560,21 +563,30 @@ public class Page_Order extends PagesBase{
 		} 
 	}	
 	
+	//Ожидаем, пока обновится информация о привязанной крате и кол-ве бонусов
+/*	public void waitForInfoText() {   
+		//To wait for element visible
+		
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("just-all")));
+		Log.info("***QA: появилась информация о номере привязанной карты и начисялемых бонусах");    
+	 }*/
+	
 	//Получение номера привязанной бонусной карты
 	public void getGiveCardNumber() throws Exception{
-		Thread.sleep(2000);	
-		String resivedStr =  giveCard.getText();
+		app.getNavigationHelper().waitVisible(justAll, 5);
+		Log.info("***QA: появилась информация о номере привязанной карты и начисялемых бонусах");    
+		String resivedStr =  giveCard.getText().trim();
 		String[] cutStr = resivedStr.split ("-");
-		String[] cutStr2 = new String[2];
 		String cardNum;
-		boolean isContain = cutStr[2].contains(" ");
-		if(isContain == true){
-			cutStr2 = cutStr[2].split (" ");
+		if(cutStr[2].contains(" ")){
+			String[] cutStr2 = cutStr[2].split (" ");
 			cardNum = cutStr[0] + cutStr[1] + cutStr2[0] + cutStr2[1];
-		} else
-		cardNum = cutStr[0] + cutStr[1] + cutStr[2];
+		} else{
+			cardNum = cutStr[0] + cutStr[1] + cutStr[2];
+		}
 		Log.info("***QA: Номер привязанной карты: " + cardNum);
-		NavigationBase.bonusCard = cardNum.trim();
+		NavigationBase.bonusCard = cardNum;
 	}		
 	
 }

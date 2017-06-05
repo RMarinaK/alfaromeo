@@ -39,7 +39,7 @@ public class GetDataHelper extends NavigationHelper{
 			String productpart = stringpre.substring(start + 15);
 			NavigationBase.psolrarticle = productpart.substring(0, productpart.indexOf("\"}"));
 		}
-		Log.info("***QA: Message "+ NavigationBase.psolrarticle);
+		Log.info("***QA: Артикул товара: "+ NavigationBase.psolrarticle);
 	}
 		
 	// вытягивание кол-ва товаров из апи
