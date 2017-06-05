@@ -42,6 +42,7 @@ public class Action_Sale5 extends TestBase{
 	
 	String actionnameplates = "Скидка 5% при онлайн-оплате";
 	int salesize = 5;
+	private double percent = 0.05;
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{
 	
@@ -74,7 +75,7 @@ public class Action_Sale5 extends TestBase{
 		app.getNavigationHelper().refreshPage();
 		commonmetods.getHTTPResponseCode();
 		pageaction.getTotalNubmer();
-		pageaction.assertTotalNumber();
+		pageaction.assertTotalNumber(percent);
 		nameplates.checkAction();
 		nameplates.checkAdditionalPromo(actionnameplates);
 		pagecatalog.clickOpenSelfDeliveryDescription();
