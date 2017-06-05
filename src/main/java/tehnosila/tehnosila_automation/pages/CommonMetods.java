@@ -43,6 +43,9 @@ public class CommonMetods extends Page_AreaMenu {
 	
 	@FindBy(xpath = "//h1") 
 	private WebElement header; // заголовок на страницах
+	
+	@FindBy(xpath = "//div[@id='close']/img")
+	public WebElement close; // крестик в форме Дарим на шопинг
 		
 	// жмаканье на ссылку "ссылке" в информационном сообщении
     public void clickLinkText() {
@@ -183,5 +186,11 @@ public class CommonMetods extends Page_AreaMenu {
 		}  				
 	}
 	
-
+	//Жмакание на крестик в окне Дарим на шопинг				
+	public void clickCloseLogin(){
+		if (app.getNavigationHelper().isElementPresent(By.id("login-screen")) == true) {
+			close.click();
+			Log.info("***QA: Закрыли всплывающее окно");
+		}  				
+	}
 }
