@@ -1,10 +1,16 @@
 package tehnosila.tehnosila_automation.pages;
+
+import java.awt.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
+
 /**
  * @author RasstriginaMK
  *
  */
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 
 public class Mobile_Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
@@ -12,8 +18,8 @@ public class Mobile_Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBa
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL();
 	
-	@FindBy(xpath="//a[@class='button-control buy-button to-cart cart gtm-process-add-to-cart flocktory-add-to-cart flix_cart_click_check']")
-	private WebElement buttonbuy; // Кнопка "Купить"
+	@FindBy(xpath="//div[1]/a[contains(text(), 'Купить')]")
+	private WebElement buttonbuy; // Кнопка "Купить" по апи
 	
 	@FindBy(id="popup-button-to-cart")
 	private WebElement popupbuttontocart; // Кнопка "Перейти в корзину"
@@ -24,13 +30,23 @@ public class Mobile_Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBa
 	}
 	
 	// жмаканье на "Купить"
-	public void clickButtonBuy() {
-		buttonbuy.click(); 
-	}
+    public void clickButtonBuy() throws Exception {
+        List<WebElement> itemsCount = driver.findElements(By.xpath("//div[@class='product__buttons-wrap']"));
+        for(WebElement count: itemsCount)
+        {    
+            if (count.isDisplayed()) {
+                count.click();
+                Log.info("жмаканье на Купить");
+                break;
+            }
+
+        }
+    }
 	
 	// жмаканье на "Кнопка "Перейти в корзину"
 	public void clickPopupButtonToCart() {
-		popupbuttontocart.click(); 
+		popupbuttontocart.click();
+		Log.info("жмаканье на Перейти в корзину");
 	}
 	
 }

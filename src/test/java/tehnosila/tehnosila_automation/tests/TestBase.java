@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeClass;
 
 public class TestBase {
-	private static Logger Log = LoggerFactory.getLogger(TestBase.class);
+	protected static Logger Log = LoggerFactory.getLogger(TestBase.class);
 
 	protected ApplicationManager app;
 	public static MyPageFactory pf;
