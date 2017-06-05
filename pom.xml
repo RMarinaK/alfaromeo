@@ -327,7 +327,7 @@
     <profile>
 		<id>chrome_ff_test</id>
 	<activation>
-        	<activeByDefault>true</activeByDefault>
+        	<activeByDefault>false</activeByDefault>
       	</activation>
 	    
       <build>
@@ -362,7 +362,7 @@
     <profile>
 		<id>remote_chrome_test_mobile</id>
 		<activation>
-        	<activeByDefault>false</activeByDefault>
+        	<activeByDefault>true</activeByDefault>
       	</activation>
       <build>
         <plugins>
@@ -383,7 +383,7 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub>http://localhost:4445/wd/hub</grid2.hub>
-        <site.url>m.test7.srvtest-tehnosila.ru/</site.url>
+        <site.url>m.tehnosila.ru/</site.url>
         <cookies>src/main/resources/Null.data</cookies>
         <browser.name>chromemobile</browser.name>
         <browser.version></browser.version>

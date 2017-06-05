@@ -1,13 +1,10 @@
 package tehnosila.tehnosila_automation.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.gargoylesoftware.htmlunit.javascript.host.media.rtc.webkitRTCPeerConnection;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
-import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
 
 /**

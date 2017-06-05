@@ -20,7 +20,7 @@ import tehnosila.tehnosila_automation.AppManager.ScreenShot;
  */
 
 public class Page_Cart extends PagesBase{
-	private static final boolean FindElement = false;
+
 	private static Logger Log = LoggerFactory.getLogger(Page_Cart.class);
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL()+"#/cart";

@@ -1,6 +1,5 @@
 package tehnosila.tehnosila_automation.pages;
 
-import java.awt.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
