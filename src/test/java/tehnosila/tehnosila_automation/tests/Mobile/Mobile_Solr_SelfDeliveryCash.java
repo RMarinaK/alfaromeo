@@ -33,7 +33,7 @@ public class Mobile_Solr_SelfDeliveryCash extends TestBase{
 	
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{
-		Log.info("***QA: Самовывоз оплата в кредит SmokeTests");
+		Log.info("***QA: Самовывоз оплата в кредит Mobile_Solr_SelfDeliveryCash");
 		
 		Page_AreaMenu areamenu = MyPageFactory.getPage(Page_AreaMenu.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);

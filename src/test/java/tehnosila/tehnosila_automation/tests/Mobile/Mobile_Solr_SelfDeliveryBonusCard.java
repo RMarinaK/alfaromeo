@@ -33,7 +33,7 @@ public class Mobile_Solr_SelfDeliveryBonusCard extends TestBase{
 	
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName, String cardNumber) throws Exception{
-		Log.info("***QA: Самовывоз оплата в кредит добавление бонусной карты BonusAccrue");
+		Log.info("***QA: Самовывоз оплата в кредит добавление бонусной карты Mobile_Solr_SelfDeliveryBonusCard");
 		
 		Page_AreaMenu areamenu = MyPageFactory.getPage(Page_AreaMenu.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);

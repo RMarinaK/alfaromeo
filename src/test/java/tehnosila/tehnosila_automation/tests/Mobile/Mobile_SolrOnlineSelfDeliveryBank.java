@@ -35,7 +35,7 @@ public class Mobile_SolrOnlineSelfDeliveryBank extends TestBase{
 	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName,
 			String inn, String kpp, String nameCompany, String companyAddress, String companyAddressFact, String companyAccount,
 			String bik, String accountCorr, String bankName, String city) throws Exception{
-		Log.info("***QA: Самовывоз оплата Юридическое лицо OnlineSelfDeliverBank");
+		Log.info("***QA: Самовывоз оплата Юридическое лицо Mobile_SolrOnlineSelfDeliveryBank");
 		
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);

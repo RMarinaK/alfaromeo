@@ -33,7 +33,7 @@ public class Mobile_SolrCourierCash extends TestBase{
 	
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email,  String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{
-		Log.info("***QA: Доставка оплата Наличными CourierCash");
+		Log.info("***QA: Доставка оплата Наличными Mobile_SolrCourierCash");
 		
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);

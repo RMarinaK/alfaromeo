@@ -35,7 +35,7 @@ public class Mobile_SolrOnlineCourierBank extends TestBase{
 	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName,
 			String inn, String kpp, String nameCompany, String companyAddress, String companyAddressFact, String companyAccount,
 			String bik, String accountCorr, String bankName, String city) throws Exception{
-		Log.info("***QA: Доставка онлайн оплата Юридическое лицо OnlineCourierBank");
+		Log.info("***QA: Доставка онлайн оплата Юридическое лицо Mobile_SolrOnlineCourierBank");
 		
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);

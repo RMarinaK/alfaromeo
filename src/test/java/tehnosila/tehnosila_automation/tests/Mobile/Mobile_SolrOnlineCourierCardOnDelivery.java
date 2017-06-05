@@ -33,7 +33,7 @@ public class Mobile_SolrOnlineCourierCardOnDelivery extends TestBase{
 	
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email,  String street, String house, String paymentName, String deliveryName) throws Exception{
-		Log.info("***QA: Доставка онлайн оплата банковской картой OnlineCourierCardOnDelivery");
+		Log.info("***QA: Доставка онлайн оплата банковской картой Mobile_SolrOnlineCourierCardOnDelivery");
 		
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
