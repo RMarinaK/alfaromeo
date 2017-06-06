@@ -484,14 +484,12 @@ public class Page_Order extends PagesBase{
 		float floatpriceprc = (floatprice/100);
 		Log.info("***QA: процент от всего к оплате "+ floatpriceprc);
 		float discount = floatpriceprc*salesize;
-		Log.info("***QA: 5% от всего к оплате "+ discount);
 		NavigationBase.pdiscountresult = (int)Math.ceil(discount); 
-		Log.info("***QA: 5% Скидон полученый от всего к оплате"+ NavigationBase.pdiscountresult);
+		Log.info("***QA: 5% скидон полученый от всего к оплате "+ NavigationBase.pdiscountresult);
 		String defdisc = getDefaultDuscount();
 		String groupdefdisc = defdisc.replaceAll(" ", "");
 		String onlydefdisc = groupdefdisc.substring(0, groupdefdisc.indexOf('Р'));
 		float floatdefdisc = Float.parseFloat(onlydefdisc);
-		Log.info("***QA: скидон который уже есть у товара "+ floatdefdisc);
 		NavigationBase.fpdiscountresult = (int)Math.ceil(floatdefdisc);
 		Log.info("***QA: скидон который уже есть у товара "+ NavigationBase.fpdiscountresult);
 		int finskidon = NavigationBase.pdiscountresult + NavigationBase.fpdiscountresult;
