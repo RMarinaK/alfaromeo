@@ -19,7 +19,7 @@ public class Term_Page_Tehnosila extends PagesBase{
 	private static Logger Log = LoggerFactory.getLogger(Term_Page_Tehnosila.class);
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL();
-	private String url = "http://terminal.test7.srvtest-tehnosila.ru/";
+	private String url = "http://terminal.tehnosila.ru/";
 	
 //	@FindBy(xpath="//a[@href='http://terminal.test7.srvtest-tehnosila.ru/catalog/tv_i_video']")
 //	private WebElement tvaudiovideo; // Телевизоры, аудио, видео

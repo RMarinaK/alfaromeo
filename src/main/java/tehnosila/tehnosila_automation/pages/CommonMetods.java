@@ -117,11 +117,10 @@ public class CommonMetods extends Page_AreaMenu {
 	}
 	
 	// проверка отображения Title
-	public void assertTitle(String title) throws Exception {
-		try {
-			Log.info("***QA: Title "+ getTitle());
-			Assert.assertEquals(title, getTitle()); // проверка отображения Title
-			Log.info("***QA: Title "+ getTitle());
+	public void assertTitle(String title) throws Exception{
+		try{
+		Assert.assertEquals(title, getTitle());
+		Log.info("***QA: Title "+ getTitle());
 		}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     
@@ -129,6 +128,29 @@ public class CommonMetods extends Page_AreaMenu {
          }    
 	}	
 		
+	public void assertFooterPages (String title) throws Exception {
+		try{
+			String pageTitle = getTitle();
+			/*if (pageTitle.equals("Cервисные центры")){
+				Log.info("***QA: Titles checked "+ getTitle());}*/
+			if (title.equals(pageTitle)){
+				Log.info("***QA: Titles are equal ");
+			} else if (pageTitle.equals("Магазины")){
+				Log.info("***QA: Titles checked "+ getTitle());
+			} else if (pageTitle.equals("Клуб Техносилы. Главная")){
+				Log.info("***QA: Titles checked "+ getTitle());
+			} else if (pageTitle.equals("Cервисные центры")){
+				Log.info("***QA: Titles checked "+ getTitle());
+			} else{
+				Log.info("***QA: ERROR! Titles are different! "+ getTitle());
+			}
+		}
+	    catch(Exception e) {      
+	    	Log.info("Element Not Found");     
+            ScreenShot.takeScreenShot();       
+         }    
+	}	
+	
 	// проверка отображения Header
 	public void assertHeader(String header) throws Exception {
 		try {
@@ -160,6 +182,7 @@ public class CommonMetods extends Page_AreaMenu {
 		 Log.info("***QA: session " + driver.manage().getCookieNamed("session"));
 		
 	}	
+
 	// ----------------------------------------------------------------------------------------------------------------------------
 	
 	//Проверка количества начисляемых бонусов   @author EDanilova	

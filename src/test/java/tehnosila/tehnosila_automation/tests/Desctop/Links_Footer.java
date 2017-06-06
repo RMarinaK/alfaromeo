@@ -1,13 +1,17 @@
 package tehnosila.tehnosila_automation.tests.Desctop;
-
+/*
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+*/
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
+//import tehnosila.tehnosila_automation.pages.Page_Catalog;
 //import tehnosila.tehnosila_automation.pages.Page_HelpFeedback;
 import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
 import tehnosila.tehnosila_automation.tests.TestBase;
 
-import org.testng.annotations.DataProvider;
+//import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
@@ -15,6 +19,16 @@ import org.testng.annotations.Test;
  *
  */
 public class Links_Footer extends TestBase{
+		
+	@Test
+	public void loginTest() throws Exception{
+		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
+		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
+		app.getNavigationHelper().refreshPage();
+		commonmetods.scrollPage();
+		pagetehnosila.AllFooterLinks();
+	}
+	/*
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
         Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"LinksFooter"+File.separator+"LinksFooter.xls",
@@ -31,9 +45,10 @@ public class Links_Footer extends TestBase{
 			String helpfeedback,  String purchaseOnCredit, String bonusProgramm, String setupAndInstallation,
 			String giftCards, String servicePlus, String insuranceTechniques, String tehnotrendProgram,
 			String warrantyService, String serviceCenterLocations, String inputname, String inputemail, String inputphone,
-			String inputcity, String textareamessage, String message) throws Exception{ 
+			String inputcity, String textareamessage, String message, String onlineAndNear, String creditPayment) throws Exception{ 
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
+		app.getNavigationHelper().refreshPage();
 	//	Page_HelpFeedback pagehelpfeedback = MyPageFactory.getPage(Page_HelpFeedback.class);
 		// О компании Техносила
 		commonmetods.scrollPage();
@@ -120,8 +135,6 @@ public class Links_Footer extends TestBase{
 		commonmetods.assertHeader(webshopguide);
 		commonmetods.clickLogo();
 		
-		
-		
 		//---------------
 		//УСЛУГИ И СЕРВИС (Пестерев Д.О. 14.06.2016)
 		//---------------
@@ -132,23 +145,6 @@ public class Links_Footer extends TestBase{
 		commonmetods.assertTitle(purchaseOnCredit);
 		commonmetods.assertHeader(purchaseOnCredit);
 		commonmetods.clickLogo();
-		//Бонусная программа - нужна доработка
-	/*	commonmetods.scrollPage();
-		pagetehnosila.clickBonusProgramm();	
-		commonmetods.assertTitle(bonusProgramm);
-		pagetehnosila.tryToOpen();*/
-		//Настройка и установка
-		commonmetods.scrollPage();
-		pagetehnosila.clickSetupAndInstallation();
-		commonmetods.assertTitle(setupAndInstallation);
-		commonmetods.assertHeader(setupAndInstallation);
-		commonmetods.clickLogo();
-		//Подарочные карты
-	/*	commonmetods.scrollPage();
-		pagetehnosila.clickGiftCards();
-		commonmetods.assertTitle(giftCards);
-		commonmetods.assertHeader(giftCards);
-		commonmetods.clickLogo();*/
 		//Сервис плюс
 		commonmetods.scrollPage();
 		pagetehnosila.clickServicePlus();
@@ -161,11 +157,49 @@ public class Links_Footer extends TestBase{
 		commonmetods.assertTitle(insuranceTechniques);
 		commonmetods.assertHeader(insuranceTechniques);
 		commonmetods.clickLogo();
-		//Программа Технотренд
-		/*pagetehnosila.clickTehnotrendProgram();
+		//Настройка и установка
+		commonmetods.scrollPage();
+		pagetehnosila.clickSetupAndInstallation();
+		commonmetods.assertTitle(setupAndInstallation);
+		commonmetods.assertHeader(setupAndInstallation);
+		commonmetods.clickLogo();
+		
+		//---------------
+		//УСЛУГИ И СЕРВИС (Данилова Е.А. 02.06.2017)
+		//---------------
+		
+		//Онлайн и рядом 27/7
+		commonmetods.scrollPage();
+		pagetehnosila.clickOnlineAndNear();
+		commonmetods.assertTitle(onlineAndNear);
+		commonmetods.assertHeader(onlineAndNear);
+		commonmetods.clickLogo();
+		//Подарочные карты 
+		commonmetods.scrollPage();
+		pagetehnosila.clickGiftCards();
+		commonmetods.assertTitle(giftCards);
+		commonmetods.assertHeader(giftCards);
+		commonmetods.clickLogo();
+		//Бонусная программа - нужна доработка - какая?
+		commonmetods.scrollPage();
+		pagetehnosila.clickBonusProgramm();	
+		commonmetods.assertTitle(bonusProgramm);
+		pagetehnosila.tryToOpen();
+		//Оплата кредита 
+		commonmetods.scrollPage();
+		pagetehnosila.clickCreditPayment();
+		commonmetods.assertTitle(creditPayment);
+		commonmetods.assertHeader(creditPayment);
+		commonmetods.clickLogo();
+		
+		//---------------
+		
+		//Программа Технотренд - ссылка убрана с сайта
+		pagetehnosila.clickTehnotrendProgram();
 		commonmetods.assertTitle(tehnotrendProgram);
 		commonmetods.assertHeader(tehnotrendProgram);
-		commonmetods.clickLogo();*/
+		commonmetods.clickLogo();
+		
 		//Гарантийное обслуживание
 		commonmetods.scrollPage();
 		pagetehnosila.clickWarrantyService();
@@ -181,20 +215,21 @@ public class Links_Footer extends TestBase{
 		commonmetods.clickLogo();
 		
 		// Обратная связь
-		/*commonmetods.scrollPage();
+		commonmetods.scrollPage();
 		pagetehnosila.clickFeedback();
 		commonmetods.assertTitle(helpfeedback);
-		commonmetods.assertHeader(helpfeedback);*/
+		commonmetods.assertHeader(helpfeedback);
 		// Отправка feedback
-		/*pagehelpfeedback.setName(inputname);
+		pagehelpfeedback.setName(inputname);
 		pagehelpfeedback.setEmail(inputemail);
 		pagehelpfeedback.setPhone(inputphone);
 		pagehelpfeedback.setCity(inputcity);
 		pagehelpfeedback.setMessage(textareamessage);
 		pagehelpfeedback.clickButtonSend();
 		pagehelpfeedback.assertMessage(message);
-		commonmetods.clickLogo();*/
+		commonmetods.clickLogo();
+		
 	
-	}
+	}*/
 	
 }

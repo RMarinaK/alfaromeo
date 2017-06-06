@@ -6,6 +6,10 @@ import org.slf4j.LoggerFactory;
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
+//import java.util.ArrayList;
+//import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -89,13 +93,13 @@ public class Page_Tehnosila extends PagesBase {
 	@FindBy(xpath = "//a[contains(text(),'Покупка в кредит')]")
 	private WebElement purchaseOnCredit; // Покупка в кредит
 
-	@FindBy(xpath = "//a[contains(text(),'Бонусная программа')]")
+	@FindBy(xpath = "//li[@class='footer-column-item']/a[contains(text(),'Бонусная программа')]")
 	private WebElement bonusProgramm; // Бонусная программа
 
 	@FindBy(xpath = "//a[contains(text(),'Настройка и установка')]")
 	private WebElement setupAndInstallation; // Настройка и установка
 
-	@FindBy(xpath = "//a[contains(text(),'Подарочные карты')]")
+	@FindBy(xpath = "//li[@class='footer-column-item']/a[contains(text(),'Подарочные карты')]")
 	private WebElement giftCards; // Подарочные карты
 
 	@FindBy(xpath = "//a[contains(text(),'Программа Сервис+')]")
@@ -106,6 +110,12 @@ public class Page_Tehnosila extends PagesBase {
 
 	@FindBy(xpath = "//a[contains(text(),'Программа Технотренд')]")
 	private WebElement tehnotrendProgram; // Программа Технотренд
+	
+	@FindBy(xpath = "//a[contains(text(),'Онлайн и рядом 24/7')]")
+	private WebElement onlineAndNear; // Онлайн и рядом 24/7
+	
+	@FindBy(xpath = "//a[contains(text(),'Оплата кредита')]")
+	private WebElement creditPayment; // Оплата кредита
 
 	@FindBy(xpath = "//a[contains(text(),'Гарантийное обслуживание')]")
 	private WebElement warrantyService; // Гарантийное обслуживание
@@ -228,6 +238,34 @@ public class Page_Tehnosila extends PagesBase {
 
 	// -----------------------------------------------------------------------------------------------------------------------------
 	// ПОДВАЛ
+	
+	//Проход по всем ссылкам в подвале
+	public void AllFooterLinks() throws Exception {
+		
+		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
+		
+		int counter = driver.findElement(By.xpath("//div[@class='content-area cf']")).findElements(By.tagName("ul")).size();
+		int [] linksArr = new int[counter];
+	    
+		for(int i = 0, j = 1; i < linksArr.length; i++, j++){
+			int items = driver.findElement(By.xpath("//ul[@class='footer-column footer-column_"+j+"']")).findElements(By.tagName("li")).size();
+			linksArr[i] = items-1;
+	    }
+		
+		for (int i = 0, f = 1; i < linksArr.length; i++, f++){
+			for (int k = 2; k < linksArr[i]+2; k++) {
+				WebElement link = driver.findElement(By.xpath("//ul[@class='footer-column footer-column_"+f+"']/li["+k+"]/a"));
+				Log.info("ссылка " + link.getAttribute("href"));
+				String linkTitle = link.getAttribute("innerHTML");
+				link.click();
+				Log.info("title " + driver.getTitle());
+				commonmetods.assertFooterPages(linkTitle);
+				driver.navigate().back();
+			}
+		}
+	}
+	
+	
 
 	// жмаканье на ссылку "О компании Техносила"
 	public void clickAboutTC() throws Exception {
@@ -399,7 +437,29 @@ public class Page_Tehnosila extends PagesBase {
 	}
 
 	// УСЛУГИ И СЕРВИС
+	
+	// клик по ссылке "Оплата кредита"
+	public void clickCreditPayment() throws Exception {
+		try {
+			creditPayment.click();
+			Log.info("Оплата кредита");
+		} catch (Exception e) {
+			Log.info("Element Not Found");
+			ScreenShot.takeScreenShot();
+		}
+	}
 
+	// клик по ссылке "Онлайн и рядом 24/7"
+	public void clickOnlineAndNear() throws Exception {
+		try {
+			onlineAndNear.click();
+			Log.info("Онлайн и рядом 24/7");
+		} catch (Exception e) {
+			Log.info("Element Not Found");
+			ScreenShot.takeScreenShot();
+		}
+	}	
+	
 	// клик по ссылке "Покупка в кредит"
 	public void clickPurchaseOnCredit() throws Exception {
 		try {
@@ -437,7 +497,7 @@ public class Page_Tehnosila extends PagesBase {
 	public void clickGiftCards() throws Exception {
 		try {
 			giftCards.click();
-			Log.info("Подарочные карты");
+			Log.info("Подарочные карты");	
 		} catch (Exception e) {
 			Log.info("Element Not Found");
 			ScreenShot.takeScreenShot();
@@ -546,7 +606,7 @@ public class Page_Tehnosila extends PagesBase {
 				Log.info("***QA: Клик по выбрать другой город");
 			} else {*/
 				currentRegion.click();
-				Log.info("***QA: Клик по выбранному городу");
+				Log.info("***QA: Клик по выбранному городу.");
 			//}
 		} catch (Exception e) {
 			Log.info("Element Not Found");
