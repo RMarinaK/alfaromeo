@@ -6,8 +6,8 @@ import org.slf4j.LoggerFactory;
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -239,6 +239,7 @@ public class Page_Tehnosila extends PagesBase {
 	// -----------------------------------------------------------------------------------------------------------------------------
 	// ПОДВАЛ
 	
+	//Проход по всем ссылкам в подвале
 	public void AllFooterLinks() throws Exception {
 		
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
@@ -250,13 +251,7 @@ public class Page_Tehnosila extends PagesBase {
 			int items = driver.findElement(By.xpath("//ul[@class='footer-column footer-column_"+j+"']")).findElements(By.tagName("li")).size();
 			linksArr[i] = items-1;
 	    }
-		/*WebElement link = driver.findElement(By.xpath("//ul[@class='footer-column footer-column_"+3+"']/li["+12+"]/a"));
-		Log.info("ссылка " + link.getAttribute("href"));
-		String linkTitle = link.getAttribute("innerHTML");
-		link.click();
-		Log.info("title " + driver.getTitle());
-		commonmetods.assertFooterPages(linkTitle);
-		driver.navigate().back();*/
+		
 		for (int i = 0, f = 1; i < linksArr.length; i++, f++){
 			for (int k = 2; k < linksArr[i]+2; k++) {
 				WebElement link = driver.findElement(By.xpath("//ul[@class='footer-column footer-column_"+f+"']/li["+k+"]/a"));
