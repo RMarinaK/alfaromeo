@@ -25,6 +25,7 @@ import org.testng.annotations.Test;
 public class Check_Catalog extends TestBase{
 	public List<String> numbersSubcategories = new ArrayList<>(); // массив кол-ва товаров по категориям
 	public List<String> numbersSubSubcategories = new ArrayList<>(); // массив кол-ва товаров по подкатегориям
+	private int maxnumber = 22000;
 	@Test
 	public void loginTest() throws Exception{
 		app.getNavigationHelper().getURL(NavigationBase.papicatalog);
@@ -36,6 +37,6 @@ public class Check_Catalog extends TestBase{
 		app.getNavigationHelper().refreshPage();
 		pagecatalog.summAllProducts(numbersSubcategories);
 		pagecatalog.AllSubcategories(numbersSubSubcategories);
-		pagecatalog.checkPtotatlnumber();
+		pagecatalog.checkPtotatlnumber(maxnumber);
 	}
 }

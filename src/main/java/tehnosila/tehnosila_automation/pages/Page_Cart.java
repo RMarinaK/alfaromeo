@@ -26,8 +26,8 @@ public class Page_Cart extends PagesBase{
 	protected String URL_MATCH = super.getBaseURL()+"#/cart";
 	
 //	@FindBy(xpath="//div[@id='button-buy-in-order']/a[@id='ordering']")  [contains(text(),'Оформить заказ')]
-	@FindBy(xpath="//div[@id='button-buy-in-order']")
-	private WebElement buttonordering; // Кнопка "Оформить заказ"
+	@FindBy(xpath="//div[@id='button-buy-in-order']/a[@id='ordering']")  //div[@id='button-buy-in-order']
+private WebElement buttonordering; // Кнопка "Оформить заказ"
 
 	@FindBy(xpath="//input[@id='courier']/../span")
 	private WebElement rcourierdelivery; // Радиобаттон "Курьерская доставка"

@@ -35,9 +35,7 @@ public class Page_Catalog extends PagesBase{
 
 	//private List<String> numbersSubcategories = new ArrayList<>(); // массив кол-ва товаров по категориям
 	private static int presult;
-	
 	//private List<String> subcategories = new ArrayList<>(); // массив подкатегорий в catalog
-	
 	private List<Integer> numberList = new ArrayList<>();
 	
 	@Override
@@ -95,13 +93,13 @@ public class Page_Catalog extends PagesBase{
 		Log.info("***QA: summAllProducts in catalog " + presult);
 	}
 		
-	// Общее кол-во товаров по API <39 000 или кол-во товаров в каталоге < 40 000 или Разница кол-ва товаров в каталоге и в API < 10%
-	public void checkPtotatlnumber() {		
+	// Общее кол-во товаров по API < maxnumber или кол-во товаров в каталоге < maxnumber или Разница кол-ва товаров в каталоге и в API < 10%
+	public void checkPtotatlnumber(int maxnumber) {		
 		try {
 			int checkptotatlnumber = Integer.valueOf(NavigationBase.ptotatlnumber);
 			int checkpresult = Integer.valueOf(presult);
-			if (checkptotatlnumber < 25000 || checkpresult < 25000) {
-				throw new NullPointerException("Общее кол-во товаров по API <25 000 или кол-во товаров в каталоге < 25 000");
+			if (checkptotatlnumber < maxnumber || checkpresult < maxnumber) {
+				throw new NullPointerException("Общее кол-во товаров по API < " + maxnumber + " или кол-во товаров в каталоге < " + maxnumber);
 			} else {
 				try {
 					double percentageofaverage = ((checkptotatlnumber + checkpresult)/2)*0.1;

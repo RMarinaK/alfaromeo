@@ -69,7 +69,7 @@ public class Page_Product extends PagesBase{
 	}
 	
 	
-	// вытягивание номера заказа
+	// вытягивание Артикула товара
 	public String getItemprop(){
 		return itemprop.getText();
 	}
@@ -82,13 +82,29 @@ public class Page_Product extends PagesBase{
 	
 	// жмаканье на "Купить"
 	public void clickButtonBuy() throws Exception {
-		List<WebElement> itemsCount = driver.findElements(By.xpath("//div[@class='cart-block cart']/a"));
-		for(WebElement count: itemsCount)
-		{	
-			if (count.isDisplayed()) {
-				count.click();
-				Log.info("жмаканье на Купить");
-				break;
+		//By.xpath("//div[@class='cart-block cart']/a") != null
+		if (app.getNavigationHelper().isElementPresent(By.xpath("//div[@class='cart-block cart']/a")) == true) {
+			List<WebElement> itemsCart = driver.findElements(By.xpath("//div[@class='cart-block cart']/a"));
+			for(WebElement count: itemsCart)
+			{	
+				if (count.isDisplayed()) {
+					count.click();
+					Log.info("жмаканье на Купить");
+					break;
+				}
+			}
+		} else
+		{	//By.xpath("//div[@class='cart-block order']/a") != null
+			if (app.getNavigationHelper().isElementPresent(By.xpath("//div[@class='cart-block order']/a")) == true) {
+				List<WebElement> itemsOrder = driver.findElements(By.xpath("//div[@class='cart-block order']/a"));
+				for(WebElement count: itemsOrder)
+				{	
+					if (count.isDisplayed()) {
+						count.click();
+						Log.info("жмаканье на Купить");
+						break;
+					}
+				}
 			}
 		}
 	}

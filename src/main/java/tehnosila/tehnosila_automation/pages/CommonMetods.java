@@ -32,9 +32,6 @@ public class CommonMetods extends Page_AreaMenu {
 	@FindBy(linkText = "ссылке")
 	public WebElement linkText; // ссылка "ссылке" в информационном сообщении
 	
-//	@FindBy(xpath = "//div[@id='viewModel']/div/h3") 
-//	private WebElement title; // заголовок на страницах
-	
 	@FindBy(xpath = "//div[@class='filter-tool']/h3") 
 	private WebElement titlefilter; // заголовок фильтра на страницах реестров документов
 	
@@ -46,11 +43,13 @@ public class CommonMetods extends Page_AreaMenu {
 	
 	@FindBy(xpath = "//h1") 
 	private WebElement header; // заголовок на страницах
+	
+	@FindBy(xpath = "//div[@id='close']/img")
+	public WebElement close; // крестик в форме Дарим на шопинг
 		
 	// жмаканье на ссылку "ссылке" в информационном сообщении
     public void clickLinkText() {
     	linkText.click();  	
-    //	app.getNavigationHelper().waitInvisible(By.xpath("//div[@class='loading']"), 10);
 	}
     
 	// вытягивание названия страницы
@@ -68,10 +67,12 @@ public class CommonMetods extends Page_AreaMenu {
 		app.getNavigationHelper().waitVisible(driver.findElement(By.xpath("//div[@id='menu_popup']")), 10);
 	}
 	
+	// ожидание в мобверсии
 	public void WaitingMobile(){
 		app.getNavigationHelper().waitVisible(driver.findElement(By.xpath("//a[@id='popup-button-to-cart']")), 10);
 	}
 
+	// обновление термверсии
 	public void RefreshTerm(){
 		app.getNavigationHelper().refreshPage();
 	}
@@ -107,6 +108,12 @@ public class CommonMetods extends Page_AreaMenu {
 	public void scrolling() {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,700)","");
+	}
+	
+	// скрол страницы вниз (не изменять кол-во пикселей)
+	public void mobileScrolling() {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,500)","");
 	}
 	
 	// проверка отображения Title
@@ -156,24 +163,6 @@ public class CommonMetods extends Page_AreaMenu {
          }    
 	}
 
-	// вытаскивание pactionurl
-/*	public void getActionURL(){
-	//	NavigationBase.pheader = getHeader();
-	//	Log.info("***QA: nameaction " +getHeader());
-		try {
-			String currenturl = driver.getCurrentUrl();
-			int s = 0;
-			for (int x=1; x< currenturl.indexOf("action/"); x++){
-				s = x++;}
-			Log.info("***QA: s "+ s);
-			NavigationBase.pactionurl = currenturl.substring(s + 1);
-			Log.info("***QA: pactionurl "+ NavigationBase.pactionurl);
-		}
-	    catch(Exception e) {      
-	    	Log.info("Element Not Found");     
-         }  
-	}*/	
-	
 	// Получение HTTP response code
 	public void getHTTPResponseCode() throws IOException {
 		String currenturl = driver.getCurrentUrl();
@@ -188,7 +177,7 @@ public class CommonMetods extends Page_AreaMenu {
 	}
 
 	
-	// 
+	// получение куки session
 	public void getCookieSession() {
 		 Log.info("***QA: session " + driver.manage().getCookieNamed("session"));
 		
@@ -220,5 +209,11 @@ public class CommonMetods extends Page_AreaMenu {
 		}  				
 	}
 	
-
+	//Жмакание на крестик в окне Дарим на шопинг				
+	public void clickCloseLogin(){
+		if (app.getNavigationHelper().isElementPresent(By.id("login-screen")) == true) {
+			close.click();
+			Log.info("***QA: Закрыли всплывающее окно");
+		}  				
+	}
 }

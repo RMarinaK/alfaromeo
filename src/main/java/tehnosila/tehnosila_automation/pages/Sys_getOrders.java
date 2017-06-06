@@ -38,7 +38,7 @@ public class Sys_getOrders extends PagesBase{
 		return invoicegid.getAttribute("gid");
 	}
 	
-	//	проверка отображения типа оплаты 
+	//	проверка отображения номера заказа
 	public void assertOrders() throws Exception {
 		try {
 			Assert.assertEquals(NavigationBase.pnumberorder, getID()); 

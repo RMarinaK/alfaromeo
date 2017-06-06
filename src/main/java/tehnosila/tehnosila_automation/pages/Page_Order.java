@@ -1,14 +1,12 @@
 package tehnosila.tehnosila_automation.pages;
 
-import java.io.IOException;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -132,6 +130,7 @@ public class Page_Order extends PagesBase{
 	
 	@FindBy(xpath = "//span[@class = 'give-card']") //Номер привязанной карты
 	private WebElement giveCard;
+
 	
 	protected boolean isNecessaryToChangeParam(String param){
 		if(param.equals(" ")||param.equals("")){
@@ -183,7 +182,7 @@ public class Page_Order extends PagesBase{
 		if (moscow.isDisplayed()) {
 			try {
 				metrostation.click(); 
-				Log.info("жмаканье на выпадашку выбора меню");
+				Log.info("жмаканье на выпадашку выбора метро");
 				firstmetrostation.click();
 				Log.info("жмаканье на первое по списку метро");
 			}
@@ -200,7 +199,7 @@ public class Page_Order extends PagesBase{
 		}*/
 	}	
 	
-	
+	// вводи названия улицы
 	public void setOrderFormOrderAddressStreet(String string) {
 		if(isNecessaryToChangeParam(string)){
 			orderformorderaddressstreet.click();
@@ -209,7 +208,7 @@ public class Page_Order extends PagesBase{
 		}
 	}
 
-	
+	// ввод номера дома
 	public void setOrderFormOrderAddressHouse(String string) {
 		if(isNecessaryToChangeParam(string)){
 			orderformorderaddresshouse.click();
@@ -565,15 +564,18 @@ public class Page_Order extends PagesBase{
 	}	
 	
 	//Ожидаем, пока обновится информация о привязанной крате и кол-ве бонусов
-	public void waitForInfoText() throws InterruptedException, IOException {   
+/*	public void waitForInfoText() {   
 		//To wait for element visible
+		
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("just-all")));
 		Log.info("***QA: появилась информация о номере привязанной карты и начисялемых бонусах");    
-	 }
+	 }*/
 	
 	//Получение номера привязанной бонусной карты
 	public void getGiveCardNumber() throws Exception{
+		app.getNavigationHelper().waitVisible(justAll, 5);
+		Log.info("***QA: появилась информация о номере привязанной карты и начисялемых бонусах");    
 		String resivedStr =  giveCard.getText().trim();
 		String[] cutStr = resivedStr.split ("-");
 		String cardNum;

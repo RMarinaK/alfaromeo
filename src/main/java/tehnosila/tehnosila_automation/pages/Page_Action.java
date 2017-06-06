@@ -29,10 +29,6 @@ public class Page_Action extends PagesBase{
 	@FindBy(xpath="//div[@class='item'][2]")
 	private WebElement clickactioncatalogitem; // Выбор второго блока товаров в акции честные цены
 	
-	//@FindBy(xpath="//a[@class='item first-in-row']")
-//	@FindBy(xpath="//a[@class='item first-in-row']")
-//	private WebElement clickcatalogitemincategory; // Выбор первого блока товаров в категории
-	
 	@FindBy(xpath = "//span[@class='items-per-page-view']") 
 	private WebElement itemsperpageview; // Найдено N товаров в наличии
 	
@@ -113,11 +109,11 @@ public class Page_Action extends PagesBase{
 	}
 
 	// проверка попадания количества товаров с сайта в диапазон (totalnumber-totalnumber*0.05; totalnumber+totalnumber+0.05)
-	public void assertTotalNumber(){
+	public void assertTotalNumber(double percent){
 		int totatlnumbersite = Integer.valueOf(NavigationBase.ptotalnumbersite);
 		int totatlnumber = Integer.valueOf(NavigationBase.ptotatlnumber);
-		int mintotatlnumber = (int)Math.ceil(totatlnumber - totatlnumber*0.05);
-		int maxtotatlnumber = (int)Math.ceil(totatlnumber + totatlnumber*0.05);
+		int mintotatlnumber = (int)Math.ceil(totatlnumber - totatlnumber*percent);
+		int maxtotatlnumber = (int)Math.ceil(totatlnumber + totatlnumber*percent);
 		if (totatlnumbersite > mintotatlnumber && totatlnumbersite < maxtotatlnumber) {
 			Log.info("***QA: " + mintotatlnumber + "<" + totatlnumbersite + "<" + maxtotatlnumber);
 		} else {
