@@ -94,6 +94,7 @@ public class Action_Sale5 extends TestBase{
 		pageorder.clickFirstPoint();
 		pageorder.findDiscountSize();
 		pageorder.clickROnlineCardOnDelivery(paymentName);
+		pageorder.getDiscount(salesize);
 		pageorder.assertDiscount(salesize);
 		commonmetods.getCookieSession();
 		pageorder.clickButtonSubmitOrder();

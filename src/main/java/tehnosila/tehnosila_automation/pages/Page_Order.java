@@ -464,16 +464,14 @@ public class Page_Order extends PagesBase{
 			Log.info("***QA: psale "+ NavigationBase.psale);
 		}
 	}
-/*	public void DiscountSize() {
-		String stringpre = getDiscountPSize();
-		NavigationBase.psale = "";
-		String sale = stringpre.substring(0);
-		NavigationBase.psale  = sale.substring(0, sale.indexOf(" Р."));
-	}    // тута закоментировано до првоерки!!! */
-		
-	// вытягивание цены товара и расчет 5% от цены товара
+
+	// вытягивание цены товара
 	public String getPrice(){ 
-		return driver.findElement(By.xpath("//li[@id='cart-total-price']")).getText();
+		return driver.findElement(By.xpath("//*[@id='totalCostRequested']")).getText();   //li[@id='cart-total-price']  //*[@id="checkout-total-wrapper"]/div/div/ul[2]/li[2]
+	}
+	
+	public String getDefaultDuscount() {
+		return driver.findElement(By.xpath("//*[@id='checkout-total-wrapper']/div/div/ul[2]/li[2]")).getText();
 	}
 	
 	// расчёт скидки для проверки с отображаемой на сайте 
@@ -482,24 +480,33 @@ public class Page_Order extends PagesBase{
 		String grouprice = price.replaceAll(" ", "");
 		String onlyprice = grouprice.substring(0, grouprice.indexOf('Р'));
 		float floatprice = Float.parseFloat(onlyprice);
-		Log.info("***QA: floatprice "+ floatprice);
+		Log.info("***QA: Всего к оплате "+ floatprice);
 		float floatpriceprc = (floatprice/100);
-		Log.info("***QA: floatpriceprc "+ floatpriceprc);
+		Log.info("***QA: процент от всего к оплате "+ floatpriceprc);
 		float discount = floatpriceprc*salesize;
-		Log.info("***QA: discount "+ discount);
+		Log.info("***QA: 5% от всего к оплате "+ discount);
 		NavigationBase.pdiscountresult = (int)Math.ceil(discount); 
-		Log.info("***QA: Скидон "+ NavigationBase.pdiscountresult);
-	}
+		Log.info("***QA: 5% Скидон полученый от всего к оплате"+ NavigationBase.pdiscountresult);
+		String defdisc = getDefaultDuscount();
+		String groupdefdisc = defdisc.replaceAll(" ", "");
+		String onlydefdisc = groupdefdisc.substring(0, groupdefdisc.indexOf('Р'));
+		float floatdefdisc = Float.parseFloat(onlydefdisc);
+		Log.info("***QA: скидон который уже есть у товара "+ floatdefdisc);
+		NavigationBase.fpdiscountresult = (int)Math.ceil(floatdefdisc);
+		Log.info("***QA: скидон который уже есть у товара "+ NavigationBase.fpdiscountresult);
+		int finskidon = NavigationBase.pdiscountresult + NavigationBase.fpdiscountresult;
+		NavigationBase.finpdiscountresult = (int)Math.ceil(finskidon);
+		Log.info("***QA: итоговый скидон "+ NavigationBase.finpdiscountresult);
+	} 
 	
 	// сравнение скидки рассчитанной и взятой со страницы
-	public void assertDiscount(int salesize) {
+	public void assertDiscount(int salesize) throws InterruptedException {
+		Thread.sleep(2000); // esli chto udalit'
 		app.getNavigationHelper().waitVisible(driver.findElement(By.xpath("//li[contains(text(),'Скидка:')]")), 10);
 		DiscountSize();
-		getDiscount(salesize);
 		int psale = Integer.valueOf(NavigationBase.psale);
-		Log.info("***QA: pdiscountresult "+ NavigationBase.pdiscountresult);
 		try {
-			Assert.assertEquals(psale, NavigationBase.pdiscountresult); 
+			Assert.assertEquals(psale, NavigationBase.finpdiscountresult); 
 			Log.info("***QA: Скидон "+ NavigationBase.psale);
 		}
 	    catch(Exception e) {      

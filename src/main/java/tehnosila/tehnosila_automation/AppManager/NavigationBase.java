@@ -68,7 +68,9 @@ public class NavigationBase {
 	public static int bonusAccCard;
 	public static int bonusAccOffer0;
 	public static int bonusAccOffer1;
-	public static String bonusCard;	
+	public static String bonusCard;
+	public static int fpdiscountresult;
+	public static int finpdiscountresult;	
 	
 
 }
