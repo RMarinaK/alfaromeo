@@ -93,6 +93,7 @@ public class Action_Sale5 extends TestBase{
 		pageorder.setOrderFromOrderContactEmail(email);
 		pageorder.clickFirstPoint();
 		pageorder.findDiscountSize();
+		pageorder.getDiscount(salesize);
 		pageorder.clickROnlineCardOnDelivery(paymentName);
 		pageorder.assertDiscount(salesize);
 		commonmetods.getCookieSession();
