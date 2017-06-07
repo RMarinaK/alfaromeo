@@ -470,6 +470,11 @@ public class Page_Order extends PagesBase{
 		return driver.findElement(By.xpath("//*[@id='totalCostRequested']")).getText();   //li[@id='cart-total-price']  //*[@id="checkout-total-wrapper"]/div/div/ul[2]/li[2]
 	}
 	
+	// вытягивание цены товара акция экономить просто
+	public String getPriceSM(){ 
+		return driver.findElement(By.xpath("//*[@id='cart-total-price']")).getText();   //li[@id='cart-total-price']  //*[@id="checkout-total-wrapper"]/div/div/ul[2]/li[2]
+	}
+	
 	public String getDefaultDuscount() {
 		return driver.findElement(By.xpath("//*[@id='checkout-total-wrapper']/div/div/ul[2]/li[2]")).getText();
 	}
@@ -495,8 +500,8 @@ public class Page_Order extends PagesBase{
 		int finskidon = NavigationBase.pdiscountresult + NavigationBase.fpdiscountresult;
 		NavigationBase.finpdiscountresult = (int)Math.ceil(finskidon);
 		Log.info("***QA: итоговый скидон "+ NavigationBase.finpdiscountresult);
-	} 
-	
+	}
+		
 	// сравнение скидки рассчитанной и взятой со страницы
 	public void assertDiscount(int salesize) throws InterruptedException {
 		Thread.sleep(2000); // esli chto udalit'
@@ -511,7 +516,34 @@ public class Page_Order extends PagesBase{
 	    	Log.info("Element Not Found");     
       //     ScreenShot.takeScreenShot();       
         }      
-	}  
+	}
+	
+	// Расчет скидки для акции "Экономить просто!"
+	public void getDiscountSM() {
+		String price = getPriceSM();
+		String grouprice = price.replaceAll(" ", "");
+		String onlyprice = grouprice.substring(0, grouprice.indexOf('Р'));
+		float floatprice = Float.parseFloat(onlyprice);
+		Log.info("***QA: Всего к оплате "+ floatprice);
+		float floatpriceprc = (floatprice/100); 
+		Log.info("***QA: процент скидки  "+ floatpriceprc);
+		float discount = floatpriceprc*NavigationBase.pcode;
+		NavigationBase.pdiscountresult = (int)Math.ceil(discount);
+		Log.info("***QA: рассчитанная скидка  "+ NavigationBase.pdiscountresult);
+	}
+	
+	// сравнение скидки для акции "Экономить просто!"
+	public void assertDiscountSM() {
+		DiscountSize();
+		int pdisc = Integer.valueOf(NavigationBase.psale);
+		try {
+			Assert.assertEquals(pdisc, NavigationBase.pdiscountresult);
+			Log.info("***QA: Скидон "+ NavigationBase.psale);
+		} catch (Exception e) {
+			Log.info("Element Not Found"); 
+		}
+		
+	}
 	
 	// Поиск элемента <p class="description-red">Скидка 5 % </p>
 	public void findDiscountSize() {
