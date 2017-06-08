@@ -80,8 +80,19 @@ public class Page_Product extends PagesBase{
 		Log.info("***QA: Артикул товара "+ getItemprop());   
 	}	
 	
+	@FindBy(xpath = "//div[@class='cart-block cart']/a") //Поле с количеством начисляемых бонусов в карточке товара
+	private WebElement itemsCartel;
+	
+	@FindBy(xpath = "//div[@class='cart-block order']/a") //Поле с количеством начисляемых бонусов в карточке товара
+	private WebElement itemsOrderel;
+	
+	Iframes iframes = MyPageFactory.getPage(Iframes.class);
+	
 	// жмаканье на "Купить"
 	public void clickButtonBuy() throws Exception {
+	/*	if (itemsCartel.isEnabled() || itemsOrderel.isEnabled()) {
+			iframes.exitIframes();
+		}*/
 		//By.xpath("//div[@class='cart-block cart']/a") != null
 		if (app.getNavigationHelper().isElementPresent(By.xpath("//div[@class='cart-block cart']/a")) == true) {
 			List<WebElement> itemsCart = driver.findElements(By.xpath("//div[@class='cart-block cart']/a"));
@@ -112,9 +123,11 @@ public class Page_Product extends PagesBase{
 	// жмаканье на "Перейти в корзину"
 	public void clickPopupButtonToCart() throws Exception {
 	//	try {
-			app.getNavigationHelper().waitVisible(popupbuttontocart,10);
-			popupbuttontocart.click(); 
-			Log.info("жмаканье на Перейти в корзину");
+	/*	if (popupbuttontocart.isEnabled()) {
+			iframes.exitIframes();
+		}*/
+		popupbuttontocart.click(); 
+		Log.info("жмаканье на Перейти в корзину");
 		/*}
 	    catch(Exception e) {      
 	    	Log.info("Element Not Found");     

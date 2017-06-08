@@ -138,10 +138,12 @@ private WebElement buttonordering; // Кнопка "Оформить заказ"
             ScreenShot.takeScreenShot();       
          }    
 	}	
-	
+	Iframes iframes = MyPageFactory.getPage(Iframes.class);
 	// жмаканье на "Офорить заказ"
 	public void clickButtonOrdering() {
-			app.getNavigationHelper().waitVisible(buttonordering,10);
+		if (buttonordering.isEnabled()) {
+			iframes.exitIframes();
+		}
 			buttonordering.click(); 
 			Log.info("жмаканье на Офорить заказ");
 	} 

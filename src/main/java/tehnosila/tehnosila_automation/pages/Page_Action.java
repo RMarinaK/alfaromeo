@@ -23,7 +23,7 @@ public class Page_Action extends PagesBase{
 	//DSE: url to check page
 	//protected String URL_MATCH = super.getBaseURL()+"#/action/sale_5";
 	
-	@FindBy(xpath="//a[@class='button show-all-items']")
+	@FindBy(xpath="//*[@id='content-wrapper']/div[1]/div/a")
 	private WebElement actioncatalog; // Кнопка Перейти к покупкам
 	
 	@FindBy(xpath="//div[@class='item'][2]")
@@ -58,10 +58,15 @@ public class Page_Action extends PagesBase{
 			start = matcher.end();
 		}
 	}
-	
+	Iframes iframes = MyPageFactory.getPage(Iframes.class);
+	CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
 	// жмаканье на "Перейти к покупкам"
 	public void clickActionCatalog() throws Exception{
 		try {
+		/*	if (actioncatalog.isEnabled()) {
+				iframes.exitIframes();
+				commonmetods.scrolling();
+			}*/
 			actioncatalog.click(); 
 			Log.info("жмаканье на Перейти к покупкам");
 		}
@@ -97,6 +102,9 @@ public class Page_Action extends PagesBase{
 	
 	// получение количество товаров с сайта
 	public void getTotalNubmer(){
+		if (itemsperpageview.isEnabled()) {
+			iframes.exitIframes();
+		}
 		Pattern pattern = Pattern.compile("\\d+");
 		String word = itemsperpageview.getText(); // мой пример строки
 		Matcher matcher = pattern.matcher(word);

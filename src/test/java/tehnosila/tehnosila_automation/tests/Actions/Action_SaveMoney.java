@@ -5,6 +5,7 @@ import java.io.File;
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.NavigationHelper;
 import tehnosila.tehnosila_automation.pages.CommonMetods;
+//import tehnosila.tehnosila_automation.pages.Iframes;
 //import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Nameplates;
@@ -59,7 +60,8 @@ public class Action_SaveMoney extends TestBase{
 		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
 		Nameplates nameplates = MyPageFactory.getPage(Nameplates.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
-		
+	//	Iframes iframes = MyPageFactory.getPage(Iframes.class);
+	//	iframes.exitIframes();
 		app.getNavigationHelper().getURL(NavigationBase.papiparserpath + NavigationBase.pactiondiscount_worldurl + NavigationBase.papiend);
 		app.getGetDataHelper().getTotalNumber();
 		
@@ -67,10 +69,14 @@ public class Action_SaveMoney extends TestBase{
 		commonmetods.getHTTPResponseCode();
 		pagetehnosila.clickActions();
 		app.getNavigationHelper().refreshPage();
+	//	iframes.exitIframes();
 		commonmetods.getHTTPResponseCode();
 		pageactions.clickActionSaveMoney();
 		commonmetods.getHTTPResponseCode();
 		app.getNavigationHelper().refreshPage();
+	//	iframes.exitIframes();
+		
+	//	iframes.exitIframes();
 		pageaction.clickActionCatalog();
 		pageaction.getTotalNubmer();
 		pageaction.assertTotalNumber(percent);
@@ -87,7 +93,7 @@ public class Action_SaveMoney extends TestBase{
 		pagecart.clickPromoCodeField();
 		pagecart.setСartPromoСode(NavigationHelper.promocode);
 		pagecart.clickButtonApplyBonus();
-		app.getNavigationHelper().refreshPage();
+	//	app.getNavigationHelper().refreshPage();
 		pagecart.clickButtonOrdering();
 		commonmetods.getHTTPResponseCode();
 		pageorder.setOrderFromOrderContactFio(fio);

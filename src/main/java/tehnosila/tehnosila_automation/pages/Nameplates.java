@@ -60,8 +60,7 @@ public class Nameplates extends PagesBase {
 	// проверка наличия шильдика Акция
 	public void checkPromowordDiscount() {
 		try {
-			app.getNavigationHelper().waitVisible(promoworddiscount, 10);
-			promoworddiscount.click();
+			app.getNavigationHelper().isElementPresent(By.xpath("//a[@href='/action/discount_world']/img"));
 			Log.info("***QA: Шильдик N% есть");
 		} catch (Exception e) {
 			Log.info("Element Not Found");
