@@ -23,7 +23,7 @@ public class Page_Action extends PagesBase{
 	//DSE: url to check page
 	//protected String URL_MATCH = super.getBaseURL()+"#/action/sale_5";
 	
-	@FindBy(xpath="//*[@id='content-wrapper']/div[1]/div/a")
+	@FindBy(xpath="//*[@id='content-wrapper']/div[3]/a")
 	private WebElement actioncatalog; // Кнопка Перейти к покупкам
 	
 	@FindBy(xpath="//div[@class='item'][2]")
