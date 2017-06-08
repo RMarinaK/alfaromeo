@@ -141,7 +141,7 @@ private WebElement buttonordering; // Кнопка "Оформить заказ"
 	
 	// жмаканье на "Офорить заказ"
 	public void clickButtonOrdering() {
-	//		app.getNavigationHelper().waitVisible(buttonordering,10);
+			app.getNavigationHelper().waitVisible(buttonordering,10);
 			buttonordering.click(); 
 			Log.info("жмаканье на Офорить заказ");
 	} 

@@ -38,20 +38,17 @@ public class Action_SaveMoney extends TestBase{
 	
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
-        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"CourierCash.xls",
-                "CourierCash", "Data");
+        Object[][] retObjArr=getTableArray("src"+File.separator+"test"+File.separator+"resources"+File.separator+"DDT"+File.separator+"SmokeTests"+File.separator+"SelfDeliveryCash.xls",
+                "SelfDeliverCash", "Data");
         return(retObjArr);
     }
 	
 	@Test (dataProvider = "DP1")
-	public void loginTest(String fio, String phone, String email, String street, String house, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ 
+	public void loginTest(String fio, String phone, String email, String paymentName, String paymentNameGO, String deliveryName) throws Exception{ 
 		String discount_world = "Экономить - просто!";
 		Log.info("***QA: Акция " + discount_world);
 		
-		app.getNavigationHelper().getURL(NavigationBase.papiparserpath + NavigationBase.pactiondiscount_worldurl + NavigationBase.papiend);
-		app.getGetDataHelper().getTotalNumber();
-		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
-		pagetehnosila.getPageBase();
+		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);	
 		Page_Actions pageactions = MyPageFactory.getPage(Page_Actions.class);
 		Page_Catalog pagecatalog = MyPageFactory.getPage(Page_Catalog.class);
 		Page_Product pageproduct = MyPageFactory.getPage(Page_Product.class);
@@ -62,21 +59,21 @@ public class Action_SaveMoney extends TestBase{
 		Page_Action pageaction = MyPageFactory.getPage(Page_Action.class);
 		Nameplates nameplates = MyPageFactory.getPage(Nameplates.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
+		
+		app.getNavigationHelper().getURL(NavigationBase.papiparserpath + NavigationBase.pactiondiscount_worldurl + NavigationBase.papiend);
+		app.getGetDataHelper().getTotalNumber();
+		
+		pagetehnosila.getPageBase();
 		commonmetods.getHTTPResponseCode();
 		pagetehnosila.clickActions();
 		app.getNavigationHelper().refreshPage();
 		commonmetods.getHTTPResponseCode();
 		pageactions.clickActionSaveMoney();
-		app.getNavigationHelper().refreshPage();
 		commonmetods.getHTTPResponseCode();
-		pagetehnosila.getPageActionCatalog();	
+		app.getNavigationHelper().refreshPage();
+		pageaction.clickActionCatalog();
 		pageaction.getTotalNubmer();
 		pageaction.assertTotalNumber(percent);
-		pagetehnosila.clickActions();
-		app.getNavigationHelper().refreshPage();
-		commonmetods.getHTTPResponseCode();
-		pageactions.clickActionSaveMoney();
-		app.getNavigationHelper().refreshPage();
 		commonmetods.getHTTPResponseCode();
 		pagecatalog.clickOpenSelfDeliveryDescription();
 		commonmetods.getHTTPResponseCode();
@@ -96,9 +93,9 @@ public class Action_SaveMoney extends TestBase{
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);
-		pageorder.assertDiscount(NavigationBase.pcode);	
+		pageorder.getDiscountSM();
 		pageorder.clickFirstPoint();
-	//	pageorder.clickRCash(paymentName);
+		pageorder.assertDiscountSM();
 		commonmetods.getCookieSession();
 		pageorder.clickButtonSubmitOrder();
 		commonmetods.getCookieSession();
@@ -109,7 +106,7 @@ public class Action_SaveMoney extends TestBase{
 		pageordersuccess.getOrders();
 		sysgetorders.assertOrders();
 		commonmetods.getHTTPResponseCode();
-	//	sysgetorders.assertPaymentName(paymentNameGO);
+		sysgetorders.assertPaymentName(paymentNameGO);
 	}
 	
 }

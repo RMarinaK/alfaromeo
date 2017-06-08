@@ -178,7 +178,7 @@ public class Page_Tehnosila extends PagesBase {
 	// ожидание пока страница прогрузится 
 	public void getPageActionCatalog(){
 		String currenturl = driver.getCurrentUrl();
-		driver.navigate().to(currenturl + "/catalog");
+		driver.navigate().to(currenturl + "catalog");  // / перед каталог
 		Log.info("***QA: "+getBaseURL());
 	}
 		
