@@ -81,7 +81,7 @@ public class Solr_BonusAccrue extends TestBase{
 		pageorder.getGiveCardNumber();
 		commonmetods.bonusCardCheck(NavigationBase.bonusCard, cardNumber);
 		pageorder.bonusSteal(1);
-		commonmetods.bonusAmountCheck(NavigationBase.bonusAccOffer0, NavigationBase.bonusAccOffer1);
+		//commonmetods.bonusAmountCheck(NavigationBase.bonusAccOffer0, NavigationBase.bonusAccOffer1);
 		pageorder.clickButtonSubmitOrder();
 		commonmetods.getHTTPResponseCode();
 		app.getNavigationHelper().refreshPage();
