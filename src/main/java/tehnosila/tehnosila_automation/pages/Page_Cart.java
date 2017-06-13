@@ -25,8 +25,9 @@ public class Page_Cart extends PagesBase{
 	//DSE: url to check page
 	protected String URL_MATCH = super.getBaseURL()+"#/cart";
 	
-//	@FindBy(xpath="//div[@id='button-buy-in-order']/a[@id='ordering']")  [contains(text(),'Оформить заказ')]
-	@FindBy(xpath="//div[@id='button-buy-in-order']/a[@id='ordering']")  //div[@id='button-buy-in-order']
+	@FindBy(xpath="//div[@id='button-buy-in-order']/a[@id='ordering']")  //[contains(text(),'Оформить заказ')]
+//	@FindBy(xpath="//div[@id='page-wrapper']/div[@id='content-wrapper']/div[@class='cart-wrap']/div[@id='cart-contents']/div[@id='cart-items']/form[@id='cart-form']/div[@id='cart-right-menu']/div[@class='button-holder']/div[@id='button-buy-in-order']/a")  //div[@id='button-buy-in-order']
+	////div[@id='page-wrapper']/div[@id='content-wrapper']/div[@class='cart-wrap']/div[@id='cart-contents']/div[@id='cart-items']/form[@id='cart-form']/div[@id='cart-right-menu']/div[@class='button-holder']/div[@id='button-buy-in-order']/a
 private WebElement buttonordering; // Кнопка "Оформить заказ"
 
 	@FindBy(xpath="//input[@id='courier']/../span")
@@ -140,7 +141,7 @@ private WebElement buttonordering; // Кнопка "Оформить заказ"
 	}	
 	Iframes iframes = MyPageFactory.getPage(Iframes.class);
 	// жмаканье на "Офорить заказ"
-	public void clickButtonOrdering() {
+	public void clickButtonOrdering() throws InterruptedException {
 		if (buttonordering.isEnabled()) {
 			iframes.exitIframes();
 		}
