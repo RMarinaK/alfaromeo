@@ -58,7 +58,7 @@ public class Solr_CourierCardOnDelivery extends TestBase{
 		Page_Order pageorder = MyPageFactory.getPage(Page_Order.class);
 		Page_OrderSuccess pageordersuccess = MyPageFactory.getPage(Page_OrderSuccess.class);		
 		Sys_getOrders sysgetorders = MyPageFactory.getPage(Sys_getOrders.class);
-		
+
 		pageproduct.logItemprop();
 		app.getNavigationHelper().refreshPage();
 		pageproduct.clickButtonBuy();

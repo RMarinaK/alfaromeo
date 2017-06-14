@@ -179,6 +179,7 @@ public class CommonMetods extends Page_AreaMenu {
 	// получение куки session
 	public void getCookieSession() {
 		 Log.info("***QA: session " + driver.manage().getCookieNamed("session"));
+		 Log.info("***QA: session " + driver.manage().getCookieNamed("558hyblist54V27"));
 		
 	}	
 
