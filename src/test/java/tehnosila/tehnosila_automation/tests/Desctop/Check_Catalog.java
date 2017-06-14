@@ -12,8 +12,8 @@ import tehnosila.tehnosila_automation.AppManager.NavigationBase;
  */
 
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
-import tehnosila.tehnosila_automation.pages.Page_Catalog;
-import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Catalog;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Tehnosila;
 import tehnosila.tehnosila_automation.tests.TestBase;
 
 import java.util.ArrayList;

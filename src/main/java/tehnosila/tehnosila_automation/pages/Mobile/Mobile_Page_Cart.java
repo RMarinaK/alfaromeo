@@ -1,10 +1,11 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Mobile;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
+import tehnosila.tehnosila_automation.pages.PagesBase;
 
 
 /**
@@ -41,6 +42,7 @@ public class Mobile_Page_Cart extends PagesBase{
 	}
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

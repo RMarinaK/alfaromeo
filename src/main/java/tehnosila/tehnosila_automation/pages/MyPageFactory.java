@@ -14,7 +14,6 @@ import org.slf4j.LoggerFactory;
 
 import tehnosila.tehnosila_automation.AppManager.ApplicationManager;
 
-
 /**
  * @author RasstriginaMK
  *
@@ -58,4 +57,6 @@ public class MyPageFactory {
             throw new RuntimeException(e);
         }
     }
+
+
 }

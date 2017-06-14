@@ -21,6 +21,7 @@ public class Term_Page_Cart extends PagesBase{
 	private WebElement checkout; // Кнопка "Оформить заказ"
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

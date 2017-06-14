@@ -2,6 +2,7 @@
 package tehnosila.tehnosila_automation.pages;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationHelper;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_LoginPage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -46,6 +47,7 @@ public class PageArea_Header extends PagesBase {
 	private WebElement blockUserName;
 	
 	@Override
+	protected
     void tryToOpen() {
 		driver.get(this.URL_MATCH);
     }

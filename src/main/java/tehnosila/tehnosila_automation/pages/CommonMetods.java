@@ -24,7 +24,6 @@ import org.testng.Assert;
 public class CommonMetods extends Page_AreaMenu {
 	private static Logger Log = LoggerFactory.getLogger(CommonMetods.class);
 
-	@Override
 	public boolean isOnThisPage(){
 		return true;
 	}

@@ -1,8 +1,10 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Mobile;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import tehnosila.tehnosila_automation.pages.PagesBase;
 
 import java.util.List;
 
@@ -24,6 +26,7 @@ public class Mobile_Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBa
 	private WebElement popupbuttontocart; // Кнопка "Перейти в корзину"
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

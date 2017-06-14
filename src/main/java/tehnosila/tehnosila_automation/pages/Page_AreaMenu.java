@@ -30,6 +30,7 @@ public class Page_AreaMenu extends PagesBase {
 	
 	
 	@Override
+	protected
     void tryToOpen() {
 		driver.get(this.URL_MATCH);
     }

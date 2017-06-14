@@ -4,14 +4,14 @@ import java.io.File;
 
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
-import tehnosila.tehnosila_automation.pages.Page_Action;
-import tehnosila.tehnosila_automation.pages.Page_Actions;
-import tehnosila.tehnosila_automation.pages.Page_Cart;
-import tehnosila.tehnosila_automation.pages.Page_Catalog;
-import tehnosila.tehnosila_automation.pages.Page_Order;
-import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
-import tehnosila.tehnosila_automation.pages.Page_Product;
-import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Action;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Actions;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Cart;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Catalog;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Order;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_OrderSuccess;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Product;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
 import tehnosila.tehnosila_automation.tests.TestBase;
 

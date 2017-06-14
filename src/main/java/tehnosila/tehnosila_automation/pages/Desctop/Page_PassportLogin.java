@@ -1,4 +1,4 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Desctop;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
+import tehnosila.tehnosila_automation.pages.PagesBase;
 
 /**
  * @author MRasstrigina
@@ -28,6 +29,7 @@ public class Page_PassportLogin extends PagesBase{
 		
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

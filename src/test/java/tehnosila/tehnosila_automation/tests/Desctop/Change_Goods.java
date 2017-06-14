@@ -7,10 +7,10 @@ package tehnosila.tehnosila_automation.tests.Desctop;
  */
 
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
-import tehnosila.tehnosila_automation.pages.Page_Cart;
-import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizory;
-import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizoryID;
-import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Cart;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_CatalogTv_i_videoTelevizoryTelevizory;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_CatalogTv_i_videoTelevizoryTelevizoryID;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Tehnosila;
 import tehnosila.tehnosila_automation.tests.TestBase;
 
 import org.testng.annotations.Test;

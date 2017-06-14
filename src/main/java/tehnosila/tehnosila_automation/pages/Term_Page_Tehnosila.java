@@ -31,6 +31,7 @@ public class Term_Page_Tehnosila extends PagesBase{
 //	private WebElement ledtv; // LED телевизоры
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

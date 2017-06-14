@@ -1,4 +1,4 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Desctop;
 
 
 
@@ -13,6 +13,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
+import tehnosila.tehnosila_automation.pages.MyPageFactory;
+import tehnosila.tehnosila_automation.pages.PagesBase;
 
 /**
  * @author MRasstrigina
@@ -106,6 +108,7 @@ private WebElement buttonordering; // Кнопка "Оформить заказ"
 	}   
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

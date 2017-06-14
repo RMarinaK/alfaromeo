@@ -10,7 +10,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
-import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.WorkWithArr;
 import tehnosila.tehnosila_automation.pages.WorkWithSFTP;
 import tehnosila.tehnosila_automation.pages.WorkWithXML;

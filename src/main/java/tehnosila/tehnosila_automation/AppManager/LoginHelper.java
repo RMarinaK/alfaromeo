@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriverException;
 
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.PageArea_Header;
-import tehnosila.tehnosila_automation.pages.Page_LoginPage;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_LoginPage;
 
 
 /**

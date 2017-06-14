@@ -1,14 +1,9 @@
 package tehnosila.tehnosila_automation.tests.Desctop;
-/*
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-*/
+
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
-//import tehnosila.tehnosila_automation.pages.Page_Catalog;
-//import tehnosila.tehnosila_automation.pages.Page_HelpFeedback;
-import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
+
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Tehnosila;
 import tehnosila.tehnosila_automation.tests.TestBase;
 
 //import org.testng.annotations.DataProvider;

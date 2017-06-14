@@ -23,6 +23,7 @@ public class Term_Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase
 	private WebElement buttontocart; // Кнопка "Корзина"
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

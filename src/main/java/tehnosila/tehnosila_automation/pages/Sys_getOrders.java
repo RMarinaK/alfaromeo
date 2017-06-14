@@ -18,6 +18,7 @@ public class Sys_getOrders extends PagesBase{
 	private static Logger Log = LoggerFactory.getLogger(Sys_getOrders.class);
 
 	@Override
+	protected
 	void tryToOpen() {
 		// TODO Auto-generated method stub
 		

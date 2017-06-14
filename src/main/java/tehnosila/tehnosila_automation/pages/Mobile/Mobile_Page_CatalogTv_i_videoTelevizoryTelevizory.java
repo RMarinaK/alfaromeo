@@ -1,10 +1,12 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Mobile;
 /**
  * @author RasstriginaMK
  *
  */
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import tehnosila.tehnosila_automation.pages.PagesBase;
 
 public class Mobile_Page_CatalogTv_i_videoTelevizoryTelevizory extends PagesBase{
 //	private static Logger Log = LoggerFactory.getLogger(Mobile_Page_CatalogTv_i_videoTelevizoryTelevizory.class);
@@ -15,6 +17,7 @@ public class Mobile_Page_CatalogTv_i_videoTelevizoryTelevizory extends PagesBase
 	private WebElement iteminfowrapfirst; // Первый телевизор
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

@@ -7,12 +7,12 @@ import java.io.File;
 
 
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
-import tehnosila.tehnosila_automation.pages.Page_Cart;
-import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizory;
-import tehnosila.tehnosila_automation.pages.Page_CatalogTv_i_videoTelevizoryTelevizoryID;
-import tehnosila.tehnosila_automation.pages.Page_Order;
-import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
-import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Cart;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_CatalogTv_i_videoTelevizoryTelevizory;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_CatalogTv_i_videoTelevizoryTelevizoryID;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Order;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_OrderSuccess;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
 import tehnosila.tehnosila_automation.tests.TestBase;
 

@@ -120,7 +120,7 @@ public abstract class PagesBase {
 	}
 	
 //    DSE: every page must implement this method
-    abstract void tryToOpen();
+    protected abstract void tryToOpen();
     
     public boolean verifyIfAlertCorrect(String sAlertText){
     	//Log.debug(sAlertText);

@@ -1,4 +1,4 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Desctop;
 
 
 import java.util.regex.Matcher;
@@ -13,6 +13,7 @@ import org.testng.Assert;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
+import tehnosila.tehnosila_automation.pages.PagesBase;
 
 /**
  * @author MRasstrigina
@@ -141,6 +142,7 @@ public class Page_Order extends PagesBase{
 	}
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

@@ -1,4 +1,4 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Desctop;
 /**
  * @author RasstriginaMK
  *
@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
+import tehnosila.tehnosila_automation.pages.PagesBase;
 
 public class Page_CatalogTv_i_videoTelevizoryTelevizory extends PagesBase{
 	private static Logger Log = LoggerFactory.getLogger(Page_CatalogTv_i_videoTelevizoryTelevizory.class);
@@ -24,9 +25,8 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizory extends PagesBase{
 	@FindBy(xpath="//a[@id='open-courier-description']/../../../../..")//a[@id='open-courier-description']
 	private WebElement opencourierdescription; // Первый телевизор с доставкой
 	
-
-	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

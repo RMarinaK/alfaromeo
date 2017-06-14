@@ -6,13 +6,13 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.pages.CommonMetods;
-import tehnosila.tehnosila_automation.pages.Mobile_Page_Cart;
-import tehnosila.tehnosila_automation.pages.Mobile_Page_CatalogTv_i_videoTelevizoryTelevizoryID;
-import tehnosila.tehnosila_automation.pages.Mobile_Page_Order;
+import tehnosila.tehnosila_automation.pages.Mobile.Mobile_Page_Cart;
+import tehnosila.tehnosila_automation.pages.Mobile.Mobile_Page_CatalogTv_i_videoTelevizoryTelevizoryID;
+import tehnosila.tehnosila_automation.pages.Mobile.Mobile_Page_Order;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
-import tehnosila.tehnosila_automation.pages.Page_OrderSuccess;
-import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_OrderSuccess;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.Sys_getOrders;
 import tehnosila.tehnosila_automation.tests.TestBase;
 

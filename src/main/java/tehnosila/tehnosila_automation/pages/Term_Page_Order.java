@@ -62,6 +62,7 @@ public class Term_Page_Order extends PagesBase{
 	}
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

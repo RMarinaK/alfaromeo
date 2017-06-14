@@ -1,4 +1,4 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Desctop;
 /**
  * @author RasstriginaMK
  *
@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import tehnosila.tehnosila_automation.pages.PagesBase;
 
 public class Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
 	private static Logger Log = LoggerFactory.getLogger(Page_CatalogTv_i_videoTelevizoryTelevizory.class);
@@ -25,6 +27,7 @@ public class Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBase{
 	private WebElement itemprop; // Айдишник товара
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

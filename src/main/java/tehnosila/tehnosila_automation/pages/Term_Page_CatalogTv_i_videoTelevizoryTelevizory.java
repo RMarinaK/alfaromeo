@@ -19,6 +19,7 @@ public class Term_Page_CatalogTv_i_videoTelevizoryTelevizory extends PagesBase{
 	private WebElement iteminfowrapfirst; // Первый телевизор
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

@@ -6,8 +6,8 @@ package tehnosila.tehnosila_automation.tests.Desctop;
 import java.io.File;
 
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
-import tehnosila.tehnosila_automation.pages.Page_PassportLogin;
-import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_PassportLogin;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Tehnosila;
 import tehnosila.tehnosila_automation.tests.TestBase;
 
 import org.testng.annotations.DataProvider;

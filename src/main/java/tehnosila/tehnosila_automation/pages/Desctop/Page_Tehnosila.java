@@ -1,10 +1,13 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Desctop;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
+import tehnosila.tehnosila_automation.pages.CommonMetods;
+import tehnosila.tehnosila_automation.pages.MyPageFactory;
+import tehnosila.tehnosila_automation.pages.PagesBase;
 
 //import java.util.ArrayList;
 //import java.util.List;

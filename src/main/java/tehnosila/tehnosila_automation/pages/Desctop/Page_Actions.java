@@ -1,10 +1,15 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Desctop;
 
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import tehnosila.tehnosila_automation.pages.CommonMetods;
+import tehnosila.tehnosila_automation.pages.Desctop.Iframes;
+import tehnosila.tehnosila_automation.pages.MyPageFactory;
+import tehnosila.tehnosila_automation.pages.PagesBase;
 
 
 /**
@@ -35,6 +40,7 @@ public class Page_Actions extends PagesBase{
 	Iframes iframes = MyPageFactory.getPage(Iframes.class);
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

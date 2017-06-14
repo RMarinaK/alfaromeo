@@ -1,4 +1,4 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Mobile;
 
 
 import tehnosila.tehnosila_automation.pages.PagesBase;
@@ -24,6 +24,7 @@ public class Mobile_Page_Tehnosila extends PagesBase{
 	public WebElement menutrigger; // Меню
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

@@ -1,4 +1,4 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Desctop;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +18,7 @@ import org.slf4j.LoggerFactory;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
+import tehnosila.tehnosila_automation.pages.PagesBase;
 
 public class Page_Catalog extends PagesBase{
 	private static Logger Log = LoggerFactory.getLogger(Page_Catalog.class);
@@ -39,6 +40,7 @@ public class Page_Catalog extends PagesBase{
 	private List<Integer> numberList = new ArrayList<>();
 	
 	@Override
+	protected
 	void tryToOpen() {
 	//	driver.get(this.URL_MATCH);
 	}

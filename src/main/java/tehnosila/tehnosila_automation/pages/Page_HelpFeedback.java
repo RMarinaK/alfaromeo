@@ -44,6 +44,7 @@ public class Page_HelpFeedback extends PagesBase{
 	private WebElement buttonBack; //Кнопка "Вернуться на главную"
 		
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

@@ -1,4 +1,4 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Desctop;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -8,6 +8,9 @@ import org.openqa.selenium.By;
  */
 import org.openqa.selenium.WebElement;
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
+import tehnosila.tehnosila_automation.pages.MyPageFactory;
+import tehnosila.tehnosila_automation.pages.PagesBase;
+
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -64,6 +67,7 @@ public class Page_Product extends PagesBase{
 	}
 	
 	@Override
+	protected
 	void tryToOpen() {
 		driver.get(this.URL_MATCH);
 	}

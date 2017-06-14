@@ -1,4 +1,4 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Desctop;
 
 import java.util.List;
 
@@ -7,6 +7,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import tehnosila.tehnosila_automation.pages.PagesBase;
 
 
 /**
@@ -20,7 +22,8 @@ public class Iframes extends PagesBase{
 	
 	
 	@Override
-	void tryToOpen() {
+	protected
+		void tryToOpen() {
 	//	driver.get(this.URL_MATCH);
 	}
 	

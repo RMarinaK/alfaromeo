@@ -3,7 +3,7 @@ package tehnosila.tehnosila_automation.pages;
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
 import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
-import tehnosila.tehnosila_automation.pages.Page_Tehnosila;
+import tehnosila.tehnosila_automation.pages.Desctop.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 
 import java.io.BufferedReader;

@@ -1,4 +1,4 @@
-package tehnosila.tehnosila_automation.pages;
+package tehnosila.tehnosila_automation.pages.Desctop;
 
 
 import java.util.regex.Matcher;
@@ -11,6 +11,10 @@ import org.slf4j.LoggerFactory;
 
 import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.AppManager.ScreenShot;
+import tehnosila.tehnosila_automation.pages.CommonMetods;
+import tehnosila.tehnosila_automation.pages.Desctop.Iframes;
+import tehnosila.tehnosila_automation.pages.MyPageFactory;
+import tehnosila.tehnosila_automation.pages.PagesBase;
 
 
 /**
@@ -39,6 +43,7 @@ public class Page_Action extends PagesBase{
 	private WebElement getcheaperprice; // Ценник в попапе Нашли этот товар дешевле?
 	
 	@Override
+	protected
 	void tryToOpen() {
 //		driver.get(this.URL_MATCH);
 	}
