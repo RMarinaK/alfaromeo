@@ -23,6 +23,9 @@ public class Mobile_Page_Tehnosila extends PagesBase{
 	@FindBy(id = "menu_trigger")
 	public WebElement menutrigger; // Меню
 	
+//	@FindBy(xpath = "//*[@id='menu_popup']/ul/li[1]/a/span")
+//	public WebElement authorization; // Войти на сайт
+	
 	@Override
 	protected
 	void tryToOpen() {
@@ -41,8 +44,8 @@ public class Mobile_Page_Tehnosila extends PagesBase{
 	
 	// жмаканье на кнопку "Каталог товаров"
 	public void clickCatalog() {
-	//	if(!app.getNavigationHelper().waitPresense(By.xpath("//div[@id='menu_popup']"), 0))
-	//	    return;
+		if(!app.getNavigationHelper().waitPresense(By.xpath("//div[@id='menu_popup']"), 0))
+		    return;
 		WebElement catalog = driver.findElement(By.xpath("//a[contains(@href,  '" + URL_MATCH + "catalog')]"));
 		catalog.click(); 
 	}	
@@ -64,4 +67,20 @@ public class Mobile_Page_Tehnosila extends PagesBase{
 		WebElement ledtv = driver.findElement(By.xpath("//a[contains(@href,  '" + URL_MATCH + "catalog/tv_i_video/televizory/televizory')]"));
 		ledtv.click(); 
 	}
+	
+	//клик по Войти на сайт
+	public void clickMenuCabinet() throws Exception {
+		if(!app.getNavigationHelper().waitPresense(By.xpath("//*[@id='menu_popup']/ul/li[1]/a/span"), 0))
+				return;
+		WebElement authorization = driver.findElement(By.xpath("//a[contains(@href,  '" + URL_MATCH + "passport/login')]"));
+		authorization.click();
+	}
+	/*	try {
+			authorization.click();
+			Log.info("Меню Кабинет");
+		} catch (Exception e) {
+			Log.info("Element Not Found");
+		//	ScreenShot.takeScreenShot();
+		} 
+	}*/
 }
