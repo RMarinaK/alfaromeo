@@ -615,5 +615,26 @@ public class Page_Tehnosila extends PagesBase {
 			Log.info("Element Not Found");
 		}
 	}	
+	// ----------------------------------------------------------------------------------------------------------------------------
+	
+	public void clickHamburgers(String value){
+		driver.findElement(By.xpath("//div[@id='content-wrapper']/div/div/div/a/div/div/div[contains(text(),'"+value+"')]")).click();
+
+	}	
+	
+	public void clickSubSubSubcategory(String value) throws Exception{
+	//	driver.findElement(By.xpath("//form[@id='filterForm']/div/div/div/div/h3/a[contains(text(),'"+value+"')]")).click();
+			if (app.getNavigationHelper().isElementPresent(By.xpath("//div[@class='filters children-categoryes']/div/div/div/h3/a[contains(text(),'"+value+"')]")) == true) {
+				driver.findElement(By.xpath("//div[@class='filters children-categoryes']/div/div/div/h3/a[contains(text(),'"+value+"')]")).click();	
+			}
+			else {
+				Log.info("Not found " + value);	
+			}
+	}
+	
+	public void navigateback(){
+		driver.navigate().back();
+	//	driver.navigate().refresh();
+	}	
 
 }

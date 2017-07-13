@@ -38,5 +38,9 @@
 	<classpathentry kind="lib" path="src/main/resources/xml-apis-2.0.2.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/jsch-0.1.54.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/jsoup-1.10.2.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/jackson-annotations-2.9.0.pr3.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/jackson-core-2.9.0.pr3.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/jackson-databind-2.9.0.pr3.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/jsonschema2pojo-0.4.37-javadoc.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
