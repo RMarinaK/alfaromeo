@@ -25,7 +25,7 @@ public class NavigationBase {
 	public static String prcreditinstore;
 	public static String prbank;
 	public static String psolrarticle;
-	public static String psolrurl = "http://10.9.1.226:8983/solr/master_technosila_Product_default/select?q=";
+	public static String psolrurl = "http://10.9.1.225:8983/solr/master_technosila_Product_default/select?q=";
 	public static String psolrassortmentLevelValues_17 = "assortmentLevelValues_int%3A%2217%22";
 	public static String psolrassortmentLevelValues_11 = "assortmentLevelValues_int%3A%2211%22";
 	public static String psolrassortmentLevelValues_1 = "assortmentLevelValues_int%3A%221%22";
