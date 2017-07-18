@@ -5,10 +5,8 @@
 		<parameter name="application.properties" value="src/main/resources/application.properties"/>
 		<classes>			
 			<class name="tehnosila.tehnosila_automation.tests.Actions.Action_FairPrice"/>
-			<class name="tehnosila.tehnosila_automation.tests.Actions.Action_Installment"/>
 			<class name="tehnosila.tehnosila_automation.tests.Actions.Action_Sale5"/>
 			<class name="tehnosila.tehnosila_automation.tests.Actions.Action_SaveMoney"/>
-			<class name="tehnosila.tehnosila_automation.tests.Actions.Action_SuperThree"/>
 		</classes>
 	</test>  
 </suite>

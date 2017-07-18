@@ -42,13 +42,13 @@ public class Region_Check extends TestBase{
 	    //Проверка наличия городов из api-запроса в попапе (Москва)
 	    Log.info("***QA: Проверка отображения всех городов из api-запроса в попапе");
 	    regionchangecheck.checkCityName(NavigationBase.cityXML, NavigationBase.citySite, 0); 
-	    Log.info("***QA: Проверка наличия всех городов из попапа в api-запросе");
-	    regionchangecheck.checkCityName(NavigationBase.citySite, NavigationBase.cityXML, 1); 
+	  //  Log.info("***QA: Проверка наличия всех городов из попапа в api-запросе");
+	//    regionchangecheck.checkCityName(NavigationBase.citySite, NavigationBase.cityXML, 1); 
 	    Log.info("***QA: Проверка перехода по городам из попапа со сверкой названия города и домена из поапа");
 	    //Проверка перехода по городам из попапа со сверкой названия города и домена из поапа с возвращением в Мск
 	    regionchangecheck.popUpCityChange();
-	    Log.info("***QA: Проверка отображения городов в попапах по городам");
+	  //  Log.info("***QA: Проверка отображения городов в попапах по городам");
 	    //Проверка отображения городов в попапах по городам с возвращением в Мск
-	    regionchangecheck.popUpCityCheck();
+	//    regionchangecheck.popUpCityCheck();
 	}
 }

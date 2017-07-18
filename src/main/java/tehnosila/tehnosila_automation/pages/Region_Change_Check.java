@@ -56,6 +56,7 @@ public class Region_Change_Check extends Page_AreaMenu {
 	        }
 	    	NavigationBase.acCount = NavigationBase.acCount + NavigationBase.count[j];
 	    }	
+	 //   Log.info("NavigationBase.acCount " + NavigationBase.acCount);
 	}
 	
 	//Сравнение кол-ва городов на сайте и в xml
@@ -77,7 +78,6 @@ public class Region_Change_Check extends Page_AreaMenu {
 								
 			//передаём полученные значения в глобальные переменные
 			NavigationBase.currCity = city;
-					
 			} catch (TimeoutException ignore) {
 				Log.info("Element Not Found");
 				ScreenShot.takeScreenShot();
@@ -90,6 +90,7 @@ public class Region_Change_Check extends Page_AreaMenu {
 	    int a = 1;
 	    int b = 1;
 	    cityAmount();
+	   
 		NavigationBase.citySite = new String[NavigationBase.acCount];
 	    for(int j = 0; j < NavigationBase.count.length; j++){
 	    	if (j != 0) a = 2;
@@ -98,9 +99,11 @@ public class Region_Change_Check extends Page_AreaMenu {
 		    	getNewCity(a,b,c);
 		    	NavigationBase.citySite[m] = NavigationBase.currCity;
 			    m++;
-			}
+			    Log.info("a,b,c " + a + " - " + b + " - " + c + NavigationBase.currCity);
+			} 
 	    }
-	    Log.info(" NavigationBase.currCity" +  NavigationBase.currCity);
+	    
+	    
 	}
 	
 	// вытягивание url страницы  
@@ -179,10 +182,12 @@ public class Region_Change_Check extends Page_AreaMenu {
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);       
 	    int a = 1;
 	    int b = 1;
+	    Log.info(" NavigationBase.count.length " +  NavigationBase.count.length);
 	    for(int j = 0; j < NavigationBase.count.length; j++){
 	    	if (j != 0) a = 2;
 	        if (j > 1) b++;
-		    for (int c = 1; c <= NavigationBase.count[j]; c++){ 
+		    for (int c = 1; c <= NavigationBase.count[j]; c++){
+		    	Log.info("a,b,c " + a + b + c);
 		    	clickNewCity(a,b,c);
 		    	commonmetods.getHTTPResponseCode();
 			    assertURL(NavigationBase.currDomain);
