@@ -146,9 +146,9 @@ private WebElement buttonordering; // Кнопка "Оформить заказ"
 	Iframes iframes = MyPageFactory.getPage(Iframes.class);
 	// жмаканье на "Офорить заказ"
 	public void clickButtonOrdering() throws InterruptedException {
-	/*	if (buttonordering.isEnabled()) {
+		if (buttonordering.isEnabled()) {
 			iframes.exitIframes();
-		}*/
+		}
 		int y = -100;
 		String code = "window.scroll(" + (buttonordering.getLocation().x) + "," + (buttonordering.getLocation().y + y) + ");";
 	    ((JavascriptExecutor)driver).executeScript(code, buttonordering);

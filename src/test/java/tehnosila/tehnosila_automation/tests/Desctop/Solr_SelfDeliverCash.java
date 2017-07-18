@@ -66,10 +66,10 @@ public class Solr_SelfDeliverCash extends TestBase{
 		app.getNavigationHelper().refreshPage();
 		pageproduct.clickButtonBuy();
 		pageproduct.clickPopupButtonToCart();
-	//	commonmetods.getHTTPResponseCode();
+		commonmetods.getHTTPResponseCode();
 	//	app.getNavigationHelper().refreshPage();
 		pagecart.clickButtonOrdering();
-//		commonmetods.getHTTPResponseCode();
+		commonmetods.getHTTPResponseCode();
 		pageorder.setOrderFromOrderContactFio(fio);
 		pageorder.setOrderFromOrderContactPhone(phone);
 		pageorder.setOrderFromOrderContactEmail(email);

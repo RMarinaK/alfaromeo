@@ -95,7 +95,7 @@ public class WebDriverHelper {
 		case "chromemobile":
 			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 			Map<String, String> mobileEmulation = new HashMap<String, String>();
-			mobileEmulation.put("deviceName", "Google Nexus 5");  //
+			mobileEmulation.put("deviceName", "iPhone 6");  //
 			Map<String, Object> chromeOptions = new HashMap<String, Object>();
 			chromeOptions.put("mobileEmulation", mobileEmulation);
 			capabilities = DesiredCapabilities.chrome();

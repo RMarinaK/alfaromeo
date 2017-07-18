@@ -351,7 +351,7 @@
     <profile>
 		<id>chrome_ff_test</id>
 	<activation>
-        	<activeByDefault>true</activeByDefault>
+        	<activeByDefault>false</activeByDefault>
       	</activation>
 	    
       <build>
@@ -386,7 +386,7 @@
     <profile>
 		<id>remote_chrome_test_mobile</id>
 		<activation>
-        	<activeByDefault>false</activeByDefault>
+        	<activeByDefault>true</activeByDefault>
       	</activation>
       <build>
         <plugins>
