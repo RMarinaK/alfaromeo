@@ -52,6 +52,7 @@ public class NavigationBase {
 	public static int pcode;
 	public static String papicatalog = "http://hybris.tehnosila.ru/api/v2/ts/1/catalogs/parsePath?path=/catalog"; 
 	public static String papicatalogonline = "http://hybris.tehnosila.ru/api/v2/ts/1/catalogs/technosilaProductCatalog/Online";
+	public static String papicities = "https://api-hybris.tehnosila.ru/api/v2/ts/1/cities?fields=FULL";
 
 	public static String currCity;
 	public static String currDomain;

@@ -6,10 +6,7 @@ import tehnosila.tehnosila_automation.pages.Page_AreaMenu;
 import tehnosila.tehnosila_automation.pages.Desctop.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.CommonMetods;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
@@ -23,7 +20,7 @@ import org.slf4j.LoggerFactory;
  *
  */
 
-public class WorkWithArr extends Page_AreaMenu {
+public class Region_Change_Check extends Page_AreaMenu {
 	
 	private static Logger Log = LoggerFactory.getLogger(CommonMetods.class);
 	
@@ -34,29 +31,7 @@ public class WorkWithArr extends Page_AreaMenu {
 	
 	@FindBy(id="current-region")
 	public WebElement currentRegion; // Текущий город   @author EDanilova	
-	//a[contains(text(),'Москва')]
-	@FindBy(xpath="//div[@id='popup-region-chooser']/div/a")
-	public WebElement clreg;
-	
-	//Извлекаем данные из txt-файла и записываем их в массив
-	public void getDataFromTxt(String PathToCreateFile) throws IOException{
-		FileInputStream fstream = new FileInputStream(PathToCreateFile);
-		BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-		String strLine;
-		int i = 0;
-		NavigationBase.cityXML = new String[NavigationBase.arrSize];
-		NavigationBase.domainXML = new String[NavigationBase.arrSize];
-		while ((strLine = br.readLine()) != null){
-			if (strLine.trim().length() != 0){
-				String[] cutStr = strLine.split(",");
-				NavigationBase.cityXML[i] = cutStr[0];
-				NavigationBase.domainXML[i] = cutStr[1];
-			    i++;
-			}
-		}
-		br.close();
-	}
-	
+		
 	//подсчитываем кол-во больших городов в попапе
 	public int bigCityCount() {
 		int bcCount = driver.findElement(By.xpath("//td[@class='big-cities']/ul")).findElements(By.tagName("li")).size(); 
@@ -81,15 +56,14 @@ public class WorkWithArr extends Page_AreaMenu {
 	        }
 	    	NavigationBase.acCount = NavigationBase.acCount + NavigationBase.count[j];
 	    }	
-	    Log.info("NavigationBase.acCount = " + NavigationBase.acCount);
 	}
 	
 	//Сравнение кол-ва городов на сайте и в xml
 	public void CityCountCheck (int x, int y){
 		if(x == y){
-			Log.info("***QA: Количество городов в xml и попапе совпадает = " + x);
+			Log.info("***QA: Количество городов в api-запросе и попапе совпадает = " + x);
 			} else {
-				Log.info("***QA: Количество городов НЕ совпадает! В xml: " + y + ", в попапе:  " + x);
+				Log.info("***QA: Количество городов НЕ совпадает! В api-запросе: " + y + ", в попапе:  " + x);
 			}
 	}
 	
@@ -112,10 +86,11 @@ public class WorkWithArr extends Page_AreaMenu {
 	
 	//Собираем в массив все города из попапа в Москве
 	public void getPopUpCity() throws Exception{ 	
-		NavigationBase.citySite = new String[NavigationBase.acCount];
 	    int m = 0;
 	    int a = 1;
 	    int b = 1;
+	    cityAmount();
+		NavigationBase.citySite = new String[NavigationBase.acCount];
 	    for(int j = 0; j < NavigationBase.count.length; j++){
 	    	if (j != 0) a = 2;
 	        if (j > 1) b++;
@@ -198,50 +173,83 @@ public class WorkWithArr extends Page_AreaMenu {
 	}
 	
 	//Проход по таблице с городами в попапе и запись данных (название, домен) в массивы + валидация с url и названием города с сайта
-	public void popUpCity() throws Exception{
+	public void popUpCityChange() throws Exception{
 		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
-		//CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
-			
-		NavigationBase.domainSite = new String[NavigationBase.acCount];
-	         
-		clreg.click();
-	    int m = 0;
+		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);       
 	    int a = 1;
 	    int b = 1;
 	    for(int j = 0; j < NavigationBase.count.length; j++){
 	    	if (j != 0) a = 2;
 	        if (j > 1) b++;
 		    for (int c = 1; c <= NavigationBase.count[j]; c++){ 
-
 		    	clickNewCity(a,b,c);
-		    	NavigationBase.citySite[m] = NavigationBase.currCity;
-		    	NavigationBase.domainSite[m] = NavigationBase.currDomain;
-			    
-			    assertURL(NavigationBase.domainSite[m]);
-			    assertCity(NavigationBase.citySite[m]);
+		    	commonmetods.getHTTPResponseCode();
+			    assertURL(NavigationBase.currDomain);
+			    assertCity(NavigationBase.currCity);
+			    returnStart();
 		    	pagetehnosila.clickCityPopup();
-			    //commonmetods.getHTTPResponseCode();
-			    m++;
 			}
 	    }
 	}
+	
+	//Проход по таблице с городами в попапе и сравнение городов из попапа с xml-массивом
+	public void popUpCityCheck() throws Exception{
+		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);      
+	    int a = 1;
+	    int b = 1;
+	    for(int j = 0; j < NavigationBase.count.length; j++){
+	    	if (j != 0) a = 2;
+	        if (j > 1) b++;
+		    for (int c = 1; c <= NavigationBase.count[j]; c++){
+		    	clickNewCity(a,b,c);
+		    	pagetehnosila.clickCityPopup();
+		    	Log.info("Города, доступные из региона " + NavigationBase.currCity);
+		    	getPopUpCity();
+		    	checkCityName(NavigationBase.cityXML, NavigationBase.citySite, 0);
+			    returnStart();
+		    	pagetehnosila.clickCityPopup();
+			}
+	    }
+	}
+	
+	//Возвращение в МСК
+	public void returnStart() throws Exception{
+		
+		Page_Tehnosila pagetehnosila = MyPageFactory.getPage(Page_Tehnosila.class);
+		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
+		
+		pagetehnosila.clickCityPopup();
+		clickNewCity(1,1,1);
+		commonmetods.getHTTPResponseCode();
+	}
 
 	//Проверка наличия городов из xml в попапе (Москва)
-	public void checkCityName(String[] args, String[] args1) throws Exception{
+	public void checkCityName(String[] args, String[] args1, int f) throws Exception{
 		int l;
-		Log.info("***QA: Проверка наличия городов из xml в попапе смены региона " + NavigationBase.currCity);
-		getPopUpCity();
-		CityCountCheck (NavigationBase.acCount, NavigationBase.arrSize);
-	    for (int y = 0; y < NavigationBase.arrSize; y++){
-	    	for (l = 0; l < NavigationBase.acCount; l++){
+		int counter = 0;
+		int limA;
+		int limB;
+		if(f==0){
+			limA = NavigationBase.arrSize;
+			limB = NavigationBase.acCount;
+		}else{
+			limA = NavigationBase.acCount;
+			limB = NavigationBase.arrSize;
+		}
+	    for (int y = 0; y < limA; y++){
+	    	for (l = 0; l < limB; l++){
 	    		if(args[y].trim().equals(args1[l].trim())){
 	    		    //Log.info("***QA: " + args[y] + " - есть");
+	    			counter++;
 	    			break;
 	    		}
 	        } 
-	    	if (l == NavigationBase.acCount) {
+	    	if (l == limB) {
 	    			Log.info("***QA: ОШИБКА! " + args[y] + " - нет!");
 	    	}
+	    }
+	    if(counter == limA){
+	    	Log.info("***QA: города в api-запросе и попапе совпадают");
 	    }
 	}
 }
