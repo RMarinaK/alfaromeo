@@ -100,6 +100,7 @@ public class Region_Change_Check extends Page_AreaMenu {
 			    m++;
 			}
 	    }
+	    Log.info(" NavigationBase.currCity" +  NavigationBase.currCity);
 	}
 	
 	// вытягивание url страницы  
