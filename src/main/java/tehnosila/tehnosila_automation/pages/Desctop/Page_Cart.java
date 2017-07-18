@@ -148,7 +148,8 @@ private WebElement buttonordering; // Кнопка "Оформить заказ"
 	/*	if (buttonordering.isEnabled()) {
 			iframes.exitIframes();
 		}*/
-			buttonordering.getText();
+			
+			Log.info(" " + buttonordering.getText());
 			buttonordering.click(); 
 			Log.info("жмаканье на Офорить заказ");
 	} 
