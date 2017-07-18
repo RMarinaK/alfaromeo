@@ -14,7 +14,6 @@
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_OnlineSelfDeliverBank"/>
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_OnlineSelfDeliveryCardOnDelivery"/>
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_OnlineCourierCardOnDelivery_17assortment"/>
-			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_BonusAccrue"/>
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Change_Goods"/>
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Authorization"/>
 		</classes>
