@@ -7,6 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
@@ -148,7 +149,9 @@ private WebElement buttonordering; // Кнопка "Оформить заказ"
 	/*	if (buttonordering.isEnabled()) {
 			iframes.exitIframes();
 		}*/
-			
+		int y = -100;
+		String code = "window.scroll(" + (buttonordering.getLocation().x) + "," + (buttonordering.getLocation().y + y) + ");";
+	    ((JavascriptExecutor)driver).executeScript(code, buttonordering);
 			Log.info(" " + buttonordering.getText());
 			buttonordering.click(); 
 			Log.info("жмаканье на Офорить заказ");
