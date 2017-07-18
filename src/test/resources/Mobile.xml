@@ -4,7 +4,6 @@
 	<test name="Interchange">
 		<parameter name="application.properties" value="src/main/resources/application.properties"/>
 		<classes>
-			<class name="tehnosila.tehnosila_automation.tests.Mobile.Mobile_Solr_SelfDeliveryBonusCard"/>
 			<class name="tehnosila.tehnosila_automation.tests.Mobile.Mobile_Solr_SelfDeliveryCardOnDelivery"/>
 			<class name="tehnosila.tehnosila_automation.tests.Mobile.Mobile_Solr_SelfDeliveryCash"/>
 			<class name="tehnosila.tehnosila_automation.tests.Mobile.Mobile_Solr_SelfDeliveryCreditInStoe"/>
