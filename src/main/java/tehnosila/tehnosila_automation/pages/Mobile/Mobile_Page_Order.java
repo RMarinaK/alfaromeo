@@ -1,5 +1,6 @@
 package tehnosila.tehnosila_automation.pages.Mobile;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -132,7 +133,12 @@ public class Mobile_Page_Order extends PagesBase{
 	
 	// Пункты вывоза
 	public void clickRadioButtonDelivery() {
-		radiobuttondelivery.click(); 
+		if(app.getNavigationHelper().isElementPresent(By.xpath("//*[@id='choose-pvz']")) == false) {
+			radiobuttondelivery.click();
+			Log.info("жмаканье на пункты самовывоза");
+		} else {
+			Log.info("Пункт самовывоза уже выбран");
+		}
 	}
 	
 	// жмаканье на "Завершить оформление"
@@ -142,9 +148,13 @@ public class Mobile_Page_Order extends PagesBase{
 	
 	// Выбор первого пункта самовывоза
 	public void clickFirstDeliveryButton() {
-		clickfirstdeliverybutton.click();
+		if(app.getNavigationHelper().isElementPresent(By.xpath("//div[1]/div[2]/div[6]/div[1]/a[@class='point-chooser-order']")) == true) {
+				clickfirstdeliverybutton.click();
+				Log.info("жмаканье на пункт самовывоза");
+		} else {
+			Log.info("Пункт самовывоза уже выбран");
+		}
 	}
-	
 	// Оплата банковской картой
 	public void clickCardOnDelivery(String paymentName) throws Exception {
 		cardondelivery.click(); 
