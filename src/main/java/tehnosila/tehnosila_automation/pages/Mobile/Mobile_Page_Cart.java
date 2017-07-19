@@ -21,7 +21,7 @@ public class Mobile_Page_Cart extends PagesBase{
 	@FindBy(id="order-button")
 	private WebElement buttonorder; // Кнопка "Оформить заказ"
 	
-	@FindBy(xpath="//*[@id='delivery-type-select']/div[2]/div[1]/label")
+	@FindBy(xpath="//*[contains(text(),'Курьерская доставка')]")
 	private WebElement rcourierdelivery; // Радиобаттон "Курьерская доставка"
 	
 	@FindBy(xpath="//*[@id='cart-form']/div[5]/div[1]/div[2]/div[1]")
