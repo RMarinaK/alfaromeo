@@ -82,7 +82,7 @@ public class Page_Catalog extends PagesBase{
 		Log.info("***QA: Массив numbers " + list);
 		
 	}
-	
+
 	// Суммирование всех товаров из массива numbers
 	public void summAllProducts(List<String> list) {
 		AllProducts(list);
@@ -140,11 +140,11 @@ public class Page_Catalog extends PagesBase{
 		for (int i =1; i<itemsHtef.size()+1; i++) {
 			WebElement we = driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]"));
 			
-			Log.info("массивчик " + we.getAttribute("href"));
+			Log.info("Ссылка на категорию " + we.getAttribute("href"));
 			we.click();
 			Log.info("title " + header.getText());
 			summAllProducts(list);
-			
+
 			driver.navigate().back();
 			/*	driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]")).click();
 				Log.info(" " + driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]")).getText());
