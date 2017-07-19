@@ -8,7 +8,6 @@ package tehnosila.tehnosila_automation.tests.Desctop;
 import java.io.File;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Desctop.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.WorkWithArr;

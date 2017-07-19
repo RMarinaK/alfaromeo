@@ -101,6 +101,7 @@ public class Region_Change_Check extends Page_AreaMenu {
 			    m++;
 			    Log.info("a,b,c " + a + " - " + b + " - " + c + NavigationBase.currCity);
 			} 
+		
 	    }
 	    
 	    
@@ -192,7 +193,10 @@ public class Region_Change_Check extends Page_AreaMenu {
 		    	commonmetods.getHTTPResponseCode();
 			    assertURL(NavigationBase.currDomain);
 			    assertCity(NavigationBase.currCity);
-			    returnStart();
+			    if (c <= NavigationBase.count[j]) {
+			    	returnStart();
+			    	}
+	 
 		    	pagetehnosila.clickCityPopup();
 			}
 	    }
