@@ -216,4 +216,7 @@ public class CommonMetods extends Page_AreaMenu {
 			Log.info("***QA: Закрыли всплывающее окно");
 		}  				
 	}
+	
+
+	
 }

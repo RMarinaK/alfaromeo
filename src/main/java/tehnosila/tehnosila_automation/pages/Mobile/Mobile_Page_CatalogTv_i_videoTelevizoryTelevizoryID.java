@@ -1,6 +1,7 @@
 package tehnosila.tehnosila_automation.pages.Mobile;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -33,10 +34,13 @@ public class Mobile_Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBa
 	
 	// жмаканье на "Купить"
     public void clickButtonBuy() throws Exception {
+    	int y = -100;
         List<WebElement> itemsCount = driver.findElements(By.xpath("//div[@class='product__buttons-wrap']"));
         for(WebElement count: itemsCount)
         {    
             if (count.isDisplayed()) {
+				String code = "window.scroll(" + (count.getLocation().x) + "," + (count.getLocation().y + y) + ");";
+			    ((JavascriptExecutor)driver).executeScript(code, count);
                 count.click();
                 Log.info("жмаканье на Купить");
                 break;

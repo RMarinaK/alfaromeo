@@ -5,7 +5,6 @@
 		<parameter name="application.properties" value="src/main/resources/application.properties"/>
 		<classes>			
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Links_Footer"/>
-			<class name="tehnosila.tehnosila_automation.tests.Desctop.RegionCheck"/>
 		</classes>
 	</test>  
 </suite>

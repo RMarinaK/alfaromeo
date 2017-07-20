@@ -25,7 +25,7 @@ public class NavigationBase {
 	public static String prcreditinstore;
 	public static String prbank;
 	public static String psolrarticle;
-	public static String psolrurl = "http://10.9.1.226:8983/solr/master_technosila_Product_default/select?q=";
+	public static String psolrurl = "http://10.9.1.225:8983/solr/master_technosila_Product_default/select?q=";
 	public static String psolrassortmentLevelValues_17 = "assortmentLevelValues_int%3A%2217%22";
 	public static String psolrassortmentLevelValues_11 = "assortmentLevelValues_int%3A%2211%22";
 	public static String psolrassortmentLevelValues_1 = "assortmentLevelValues_int%3A%221%22";
@@ -52,6 +52,7 @@ public class NavigationBase {
 	public static int pcode;
 	public static String papicatalog = "http://hybris.tehnosila.ru/api/v2/ts/1/catalogs/parsePath?path=/catalog"; 
 	public static String papicatalogonline = "http://hybris.tehnosila.ru/api/v2/ts/1/catalogs/technosilaProductCatalog/Online";
+	public static String papicities = "https://api-hybris.tehnosila.ru/api/v2/ts/1/cities?fields=FULL";
 
 	public static String currCity;
 	public static String currDomain;

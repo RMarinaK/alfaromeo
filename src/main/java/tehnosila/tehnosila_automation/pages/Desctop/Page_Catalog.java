@@ -83,6 +83,21 @@ public class Page_Catalog extends PagesBase{
 		
 	}
 	
+	
+	private static String colorText(String text, String color) {
+        int x = color.equals("RED") ? 31 :
+                color.equals("GREEN") ? 32 :
+                color.equals("YELLOW") ? 33 :
+                color.equals("BLUE") ? 34 :
+                color.equals("MAGENTA") ? 35 :
+                color.equals("CYAN") ? 36 :
+                color.equals("WHITE") ? 37 :
+                color.equals("BLACK") ? 30 :
+                color.equals("BRIGHT") ? 1 : 0;
+
+        return (char) 27 + "[" + x + "m" + text + (char) 27 + "[0m";
+}
+
 	// Суммирование всех товаров из массива numbers
 	public void summAllProducts(List<String> list) {
 		AllProducts(list);
@@ -92,7 +107,7 @@ public class Page_Catalog extends PagesBase{
 			numberList.add(intnumber); 
 			presult = presult + intnumber;
 		}
-		Log.info("***QA: summAllProducts in catalog " + presult);
+		Log.info("***QA: summAllProducts in catalog " + presult + (char) 27 + "[31mWarning! " + (char)27 + "[0m");
 	}
 		
 	// Общее кол-во товаров по API < maxnumber или кол-во товаров в каталоге < maxnumber или Разница кол-ва товаров в каталоге и в API < 10%
@@ -140,11 +155,11 @@ public class Page_Catalog extends PagesBase{
 		for (int i =1; i<itemsHtef.size()+1; i++) {
 			WebElement we = driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]"));
 			
-			Log.info("массивчик " + we.getAttribute("href"));
+			Log.info("Ссылка на категорию " + we.getAttribute("href"));
 			we.click();
 			Log.info("title " + header.getText());
 			summAllProducts(list);
-			
+
 			driver.navigate().back();
 			/*	driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]")).click();
 				Log.info(" " + driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]")).getText());

@@ -38,11 +38,11 @@ public class Change_Goods extends TestBase{
 		pagecart.waitCartLoadingLayer();
 		pagecart.itemPrice();
 		pagecart.getCartPrice();
-		pagecart.clickServiceCheckBox();
+//		pagecart.clickServiceCheckBox();
 		pagecart.waitCartLoadingLayer();
-		pagecart.getServicePrice();
-		pagecart.getItemPlusServicePrice();
-		pagecart.assertCartItemPlusService();
+//		pagecart.getServicePrice();
+//		pagecart.getItemPlusServicePrice();
+//		pagecart.assertCartItemPlusService();
 		pagecart.clickButtonAccessories();
 		pagecart.waitCartLoadingLayer();
 		pagecart.clickAccessoriesButtonCart(); //

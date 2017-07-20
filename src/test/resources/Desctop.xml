@@ -3,18 +3,17 @@
 <suite name="Tests" verbose="5" data-provider-thread-count="1">
 	<test name="Interchange">
 		<parameter name="application.properties" value="src/main/resources/application.properties"/>
-		<classes>			
+		<classes>	
+			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_CourierCardOnDelivery"/>		
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_SelfDeliverCash"/>
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_SelfDeliveryCardOnDelivery"/>
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_SelfDeliveryCreditInStore"/>
-			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_CourierCash"/>
-			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_CourierCardOnDelivery"/>
+			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_CourierCash"/>	
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_OnlineCourierBank"/>
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_OnlineCourierCardOnDelivery"/>
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_OnlineSelfDeliverBank"/>
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_OnlineSelfDeliveryCardOnDelivery"/>
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_OnlineCourierCardOnDelivery_17assortment"/>
-			<class name="tehnosila.tehnosila_automation.tests.Desctop.Solr_BonusAccrue"/>
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Change_Goods"/>
 			<class name="tehnosila.tehnosila_automation.tests.Desctop.Authorization"/>
 		</classes>

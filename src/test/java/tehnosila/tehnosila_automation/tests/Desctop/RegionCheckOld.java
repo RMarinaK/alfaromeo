@@ -8,7 +8,6 @@ package tehnosila.tehnosila_automation.tests.Desctop;
 import java.io.File;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import tehnosila.tehnosila_automation.AppManager.NavigationBase;
 import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.Desctop.Page_Tehnosila;
 import tehnosila.tehnosila_automation.pages.WorkWithArr;
@@ -16,7 +15,7 @@ import tehnosila.tehnosila_automation.pages.WorkWithSFTP;
 import tehnosila.tehnosila_automation.pages.WorkWithXML;
 import tehnosila.tehnosila_automation.tests.TestBase;
 
-public class RegionCheck extends TestBase{
+public class RegionCheckOld extends TestBase{
 		
 	@DataProvider(name = "DP1")
     public Object[][] createData1() throws Exception{
@@ -39,14 +38,17 @@ public class RegionCheck extends TestBase{
 	    workwithxml.ReadXMLFileDOM(PathToCreateFile, FullPathToPutFile);
 	    workwitharr.getDataFromTxt(PathToCreateFile);
 	    app.getNavigationHelper().refreshPage();
-	    pagetehnosila.clickCityPopup(0);
+	    pagetehnosila.clickCityPopup();
 	    workwitharr.cityAmount();
-	    workwitharr.CityCountCheck(NavigationBase.acCount, NavigationBase.arrSize);
+
+	    //workwitharr.CityCountCheck(NavigationBase.acCount, NavigationBase.arrSize);
+	   // workwitharr.getPopUpCity();
+	   // workwitharr.checkCityName(NavigationBase.cityXML, NavigationBase.citySite);
 		workwitharr.popUpCity();
-		workwitharr.checkCityName(NavigationBase.cityXML, NavigationBase.citySite, 0);
-		workwitharr.checkCityName(NavigationBase.citySite, NavigationBase.cityXML, 1);
-		workwitharr.checkCityDomain(NavigationBase.domainXML, NavigationBase.domainSite, 0);
-		workwitharr.checkCityDomain(NavigationBase.domainSite, NavigationBase.domainXML, 1);       
+		//workwitharr.checkCityName(NavigationBase.cityXML, NavigationBase.citySite, 0);
+		//workwitharr.checkCityName(NavigationBase.citySite, NavigationBase.cityXML, 1);
+		//workwitharr.checkCityDomain(NavigationBase.domainXML, NavigationBase.domainSite, 0);
+		//workwitharr.checkCityDomain(NavigationBase.domainSite, NavigationBase.domainXML, 1);       
 
 	}
 }
