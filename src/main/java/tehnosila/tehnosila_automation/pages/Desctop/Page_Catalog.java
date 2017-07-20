@@ -68,6 +68,7 @@ public class Page_Catalog extends PagesBase{
          } 
 	}
 	
+	
 	@FindBy(xpath="//div[@class='list']/a[4]/div[@class='count']")//
 	private WebElement count1; // Количество товаров
 
@@ -94,6 +95,8 @@ public class Page_Catalog extends PagesBase{
 		}
 		Log.info("***QA: summAllProducts in catalog " + presult);
 	}
+	
+	
 		
 	// Общее кол-во товаров по API < maxnumber или кол-во товаров в каталоге < maxnumber или Разница кол-ва товаров в каталоге и в API < 10%
 	public void checkPtotatlnumber(int maxnumber) {		
@@ -140,11 +143,11 @@ public class Page_Catalog extends PagesBase{
 		for (int i =1; i<itemsHtef.size()+1; i++) {
 			WebElement we = driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]"));
 			
-			Log.info("массивчик " + we.getAttribute("href"));
+			Log.info("Ссылка на категорию " + we.getAttribute("href"));
 			we.click();
 			Log.info("title " + header.getText());
 			summAllProducts(list);
-			
+
 			driver.navigate().back();
 			/*	driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]")).click();
 				Log.info(" " + driver.findElement(By.xpath("//div[@class='subcategories']/div[@class='list']/a["+i+"]")).getText());
