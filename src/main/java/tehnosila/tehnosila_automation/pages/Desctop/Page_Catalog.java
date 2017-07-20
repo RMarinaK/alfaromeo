@@ -68,6 +68,7 @@ public class Page_Catalog extends PagesBase{
          } 
 	}
 	
+	
 	@FindBy(xpath="//div[@class='list']/a[4]/div[@class='count']")//
 	private WebElement count1; // Количество товаров
 
@@ -109,6 +110,8 @@ public class Page_Catalog extends PagesBase{
 		}
 		Log.info("***QA: summAllProducts in catalog " + presult + (char) 27 + "[31mWarning! " + (char)27 + "[0m");
 	}
+	
+	
 		
 	// Общее кол-во товаров по API < maxnumber или кол-во товаров в каталоге < maxnumber или Разница кол-ва товаров в каталоге и в API < 10%
 	public void checkPtotatlnumber(int maxnumber) {		

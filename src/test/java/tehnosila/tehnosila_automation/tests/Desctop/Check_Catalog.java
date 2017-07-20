@@ -36,6 +36,7 @@ public class Check_Catalog extends TestBase{
 		pagetehnosila.getPageCatalog();
 		app.getNavigationHelper().refreshPage();
 		pagecatalog.summAllProducts(numbersSubcategories);
+		//сюда добавить взятие кол-ва товаров со страницы каталога главного 
 		pagecatalog.AllSubcategories(numbersSubSubcategories);
 		pagecatalog.checkPtotatlnumber(maxnumber);
 	}
