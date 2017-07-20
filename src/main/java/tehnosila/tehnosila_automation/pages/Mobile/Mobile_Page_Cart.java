@@ -114,7 +114,7 @@ public class Mobile_Page_Cart extends PagesBase{
 	// Ожидание лоэдера
 	public void waitCartLoadingLayer() throws Exception {
 		try {
-			app.getNavigationHelper().waitInvisible(By.xpath("//div[@id='cart-loading-layer']"), 5);
+			app.getNavigationHelper().waitInvisible(By.xpath("//div[@id='cart-loading-layer']"), 0);
 			Log.info("Лоэдер отработал");
 		}
 	    catch(Exception e) {      
@@ -326,9 +326,9 @@ public class Mobile_Page_Cart extends PagesBase{
 			Log.info("жмаканье на плюс");
 			String qis = quantityitem.getAttribute("value");
 			int a = Integer.parseInt(qi);
-			int summ = a+1;
+			a++;
 			int b = Integer.parseInt(qis);
-			if (summ == b) Log.info("Количество товара равно " + qis); else Log.info("Не равно");
+			if (a == b) Log.info("Количество товара равно " + qis); else Log.info("Не равно");
 		} catch (Exception e){
 			Log.info("Не жмакнулось на плюс");
 		} 	
@@ -342,9 +342,9 @@ public class Mobile_Page_Cart extends PagesBase{
 			Log.info("жмаканье на минус");
 			String qis = quantityitem.getAttribute("value");
 			int a = Integer.parseInt(qi);
-			int summ = a-1;
+			a--;
 			int b = Integer.parseInt(qis);
-			if (summ == b) Log.info("Количество товара равно " + qis); else Log.info("Не равно");
+			if (a == b) Log.info("Количество товара равно " + qis); else Log.info("Не равно");
 		} catch (Exception e){
 			Log.info("Не жмакнулось на минус");
 		} 

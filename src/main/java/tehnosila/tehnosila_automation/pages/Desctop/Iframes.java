@@ -56,6 +56,37 @@ public class Iframes extends PagesBase{
         }
     }
 	}
+	
+	// поиск всех iframes на странице, выход из iframe, для мобилки
+	public void exitMobileIframes() {
+		JavascriptExecutor exe = (JavascriptExecutor) driver;
+		Integer numberOfFrames = Integer.parseInt(exe.executeScript("return window.length").toString());
+		Log.info("Number of iframes on the page are " + numberOfFrames);
+		//By finding all the web elements using iframe tag
+		List<WebElement> iframeElements = driver.findElements(By.tagName("iframe"));
+		Log.info("The total number of iframes are " + iframeElements.size());
+        
+		for(WebElement count: iframeElements)
+		{        
+			if (count.isDisplayed())
+			{ 
+				if (app.getNavigationHelper().isElementPresent(By.xpath("//*[@id='easyXDM_fl29629_provider']")) == true) {
+					driver.switchTo().defaultContent();
+					driver.switchTo().frame(driver.findElement(By.xpath("//*[@id='easyXDM_fl29629_provider']")));      
+					driver.findElement(By.xpath("//div[@id='close']/img")).click();
+				}
+				if (app.getNavigationHelper().isElementPresent(By.xpath("//*[@id='easyXDM_fl29372_provider']")) == true) {
+					driver.switchTo().defaultContent();
+					driver.switchTo().frame(driver.findElement(By.xpath("//*[@id='easyXDM_fl29372_provider']")));      
+					driver.findElement(By.xpath("//div[@id='close']/img")).click();
+					//driver.switchTo().defaultContent();	
+				}
+				
+				break;
+        }
+    }
+	}
+	
 }
 /*/html/body/div/div[3]/a[1]
 		body > div > div.Notification-buttons > a.Notification-button.Notification-buttonBlock

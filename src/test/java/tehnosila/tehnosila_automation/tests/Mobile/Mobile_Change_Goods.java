@@ -30,7 +30,7 @@ public class Mobile_Change_Goods extends TestBase{
 	
 	@Test (dataProvider = "DP1")
 	public void loginTest(String fio, String phone, String email, String paymentName, String deliveryName) throws Exception{
-		Log.info("***QA: Самовывоз оплата в кредит Mobile_Solr_SelfDeliveryCash");
+		Log.info("***QA: Изменение количества товара Mobile_Change_Goods");
 		
 		Page_AreaMenu areamenu = MyPageFactory.getPage(Page_AreaMenu.class);
 		CommonMetods commonmetods = MyPageFactory.getPage(CommonMetods.class);
@@ -49,16 +49,17 @@ public class Mobile_Change_Goods extends TestBase{
 		pagetehnosilamobile.clickTV();
 		pagetehnosilamobile.clickLEDTV();
 		mobilepagecatalogtvivideotelevizorytelevizory.clickItemInFowrapFirst();
+//		mobilepagecatalogtvivideotelevizorytelevizoryid.closeIFrame();
 		mobilepagecatalogtvivideotelevizorytelevizoryid.clickButtonBuy();
 		commonmetods.WaitingMobile();
 		mobilepagecatalogtvivideotelevizorytelevizoryid.clickPopupButtonToCart();
 		mobilepagecart.itemPrice();
 		mobilepagecart.getCartPrice();
-		mobilepagecart.clickServiceCheckBox();
+//		mobilepagecart.clickServiceCheckBox();
 		mobilepagecart.waitCartLoadingLayer();
-		mobilepagecart.getServicePrice();
-		mobilepagecart.getItemPlusServicePrice();
-		mobilepagecart.assertCartItemPlusService();
+//		mobilepagecart.getServicePrice();
+//		mobilepagecart.getItemPlusServicePrice();
+//		mobilepagecart.assertCartItemPlusService();
 		mobilepagecart.clickButtonAccessories();
 		mobilepagecart.waitCartLoadingLayer();
 		mobilepagecart.firstAccessories();

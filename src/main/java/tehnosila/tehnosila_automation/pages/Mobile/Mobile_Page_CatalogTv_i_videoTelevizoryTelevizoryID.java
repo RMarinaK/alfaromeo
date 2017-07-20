@@ -5,7 +5,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import tehnosila.tehnosila_automation.pages.MyPageFactory;
 import tehnosila.tehnosila_automation.pages.PagesBase;
+import tehnosila.tehnosila_automation.pages.Desctop.Iframes;
 
 import java.util.List;
 
@@ -35,7 +37,8 @@ public class Mobile_Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBa
 	// жмаканье на "Купить"
     public void clickButtonBuy() throws Exception {
     	int y = -100;
-        List<WebElement> itemsCount = driver.findElements(By.xpath("//div[@class='product__buttons-wrap']"));
+        List<WebElement> itemsCount = driver.findElements(By.xpath("//div[1]/a[contains(text(), 'Купить')]"));
+        Log.info("нашелся элемент Купить" + itemsCount);
         for(WebElement count: itemsCount)
         {    
             if (count.isDisplayed()) {
@@ -55,4 +58,13 @@ public class Mobile_Page_CatalogTv_i_videoTelevizoryTelevizoryID extends PagesBa
 		Log.info("жмаканье на Перейти в корзину");
 	}
 	
+	Iframes iframes = MyPageFactory.getPage(Iframes.class);
+	
+	// закрыть айфрейм
+	public void closeIFrame() throws Exception {
+		if (buttonbuy.isEnabled()) {
+			iframes.exitMobileIframes();
+			Log.info("айфрейм закрыт");
+		}
+	}
 }
